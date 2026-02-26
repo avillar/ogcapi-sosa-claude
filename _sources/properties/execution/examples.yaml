@@ -1,0 +1,9 @@
+- title: Example of SOSA Execution (as Observation)
+  snippets:
+    - language: json
+      ref: examples/execution.json
+
+- title: Example of SOSA Execution with start/end time
+  snippets:
+    - language: json
+      ref: examples/execution-with-time.json

@@ -1,0 +1,9 @@
+- title: Procedure as IRI reference
+  snippets:
+    - language: json
+      ref: examples/procedure-iri.json
+
+- title: Procedure as inline object
+  snippets:
+    - language: json
+      ref: examples/procedure.json

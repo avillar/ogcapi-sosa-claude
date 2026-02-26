@@ -1,0 +1,9 @@
+- title: System as IRI reference
+  snippets:
+    - language: json
+      ref: examples/system-iri.json
+
+- title: System with subsystems
+  snippets:
+    - language: json
+      ref: examples/system.json

@@ -1,0 +1,11 @@
+{
+
+  "hasFeatureOfInterest": {
+    "id": "http://something.org/1"
+  },
+  "observedProperty": "something",
+  "resultTime": "2016-05-04T02:27:02.0Z",
+  "phenomenonTime": "2016-05-04T02:27:02.0Z",
+  "hasSimpleResult": "frogginess",
+  "madeBySensor": "ea est culpa esse"
+}
