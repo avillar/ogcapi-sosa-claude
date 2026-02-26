@@ -1,0 +1,17 @@
+"$schema": https://json-schema.org/draft/2020-12/schema
+description: 'SOSA FeatureOfInterest'
+x-jsonld-context: ../../../sosa-ssn.jsonld
+$defs:
+  FeatureOfInterest:
+    anyOf:
+      - $ref: bblocks://ogc.ogc-utils.iri-or-curie
+      - type: object
+        properties:
+          id:
+            $ref: bblocks://ogc.ogc-utils.iri-or-curie
+          hasProperty:
+            type: array
+            items:
+              $ref: bblocks://ogc.sosa.properties.property
+allOf:
+  - $ref: '#/$defs/FeatureOfInterest'

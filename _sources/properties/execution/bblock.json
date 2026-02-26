@@ -1,0 +1,26 @@
+{
+  "name": "SOSA Execution",
+  "abstract": "An act of carrying out a Procedure by a System on or about a FeatureOfInterest, with the objective of producing a Result. Execution is the common abstract class for Observation, Actuation and Sampling.",
+  "status": "under-development",
+  "dateTimeAddition": "2024-01-01T00:00:00Z",
+  "itemClass": "schema",
+  "register": "ogc-building-block-register",
+  "version": "1.0",
+  "dateOfLastChange": "2024-01-01",
+  "sources": [
+    {
+      "title": "Semantic Sensor Network Ontology",
+      "link": "https://www.w3.org/TR/vocab-ssn/"
+    }
+  ],
+  "maturity": "development",
+  "scope": "development",
+  "tags": [
+    "sosa",
+    "ssn",
+    "observations",
+    "o&m",
+    "o&m&s"
+  ],
+  "group": "SOSA"
+}

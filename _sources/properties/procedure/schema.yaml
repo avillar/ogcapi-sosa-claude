@@ -1,0 +1,23 @@
+"$schema": https://json-schema.org/draft/2020-12/schema
+description: 'SOSA Procedure'
+x-jsonld-context: ../../../sosa-ssn.jsonld
+$defs:
+  Procedure:
+    anyOf:
+      - $ref: bblocks://ogc.ogc-utils.iri-or-curie
+      - type: object
+        properties:
+          id:
+            $ref: bblocks://ogc.ogc-utils.iri-or-curie
+          implementedBy:
+            type: array
+            items:
+              $ref: bblocks://ogc.sosa.properties.system
+          hasInput: true
+          hasOutput: true
+          isProcedureFor:
+            type: array
+            items:
+              $ref: bblocks://ogc.sosa.properties.property
+allOf:
+  - $ref: '#/$defs/Procedure'

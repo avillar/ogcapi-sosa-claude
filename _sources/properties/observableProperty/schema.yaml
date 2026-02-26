@@ -1,0 +1,9 @@
+"$schema": https://json-schema.org/draft/2020-12/schema
+description: 'SOSA ObservableProperty'
+x-jsonld-context: ../../../sosa-ssn.jsonld
+$defs:
+  ObservableProperty:
+    allOf:
+      - $ref: bblocks://ogc.sosa.properties.property
+allOf:
+  - $ref: '#/$defs/ObservableProperty'

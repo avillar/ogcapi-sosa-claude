@@ -1,0 +1,26 @@
+{
+  "name": "SOSA System",
+  "abstract": "System is a unit of abstraction for pieces of infrastructure that implement Procedures. A System may have components (implemented as subsystems), and may be deployed at a Platform. Sensor, Actuator and Sampler are all types of System.",
+  "status": "under-development",
+  "dateTimeAddition": "2024-01-01T00:00:00Z",
+  "itemClass": "schema",
+  "register": "ogc-building-block-register",
+  "version": "1.0",
+  "dateOfLastChange": "2024-01-01",
+  "sources": [
+    {
+      "title": "Semantic Sensor Network Ontology",
+      "link": "https://www.w3.org/TR/vocab-ssn/"
+    }
+  ],
+  "maturity": "development",
+  "scope": "development",
+  "tags": [
+    "sosa",
+    "ssn",
+    "observations",
+    "o&m",
+    "o&m&s"
+  ],
+  "group": "SOSA"
+}

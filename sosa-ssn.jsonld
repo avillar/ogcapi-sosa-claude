@@ -270,6 +270,56 @@
       "@id": "sosa:wasOriginatedBy",
       "@type": "@id"
     },
+    "startTime": "sosa:startTime",
+    "endTime": "sosa:endTime",
+    "madeBySystem": {
+      "@id": "sosa:madeBySystem",
+      "@type": "@id"
+    },
+    "hasInputValue": {
+      "@id": "sosa:hasInputValue",
+      "@type": "@id"
+    },
+    "isMemberOf": {
+      "@id": "sosa:isMemberOf",
+      "@type": "@id"
+    },
+    "isUltimateFeatureOfInterestOf": {
+      "@id": "sosa:isUltimateFeatureOfInterestOf",
+      "@type": "@id"
+    },
+    "hasProcedure": {
+      "@id": "sosa:hasProcedure",
+      "@type": "@id"
+    },
+    "isProcedureFor": {
+      "@id": "sosa:isProcedureFor",
+      "@type": "@id"
+    },
+    "propertyFor": {
+      "@id": "sosa:propertyFor",
+      "@type": "@id"
+    },
+    "usedForExecution": {
+      "@id": "sosa:usedForExecution",
+      "@type": "@id"
+    },
+    "isSubSystemOf": {
+      "@id": "sosa:isSubSystemOf",
+      "@type": "@id"
+    },
+    "madeExecution": {
+      "@id": "sosa:madeExecution",
+      "@type": "@id"
+    },
+    "systemDeployment": {
+      "@id": "sosa:systemDeployment",
+      "@type": "@id"
+    },
+    "deployedAsset": {
+      "@id": "sosa:deployedAsset",
+      "@type": "@id"
+    },
     "Accuracy":  {
       "@id": "ssn-system:Accuracy",
       "@type": "@id"

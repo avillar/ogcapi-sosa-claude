@@ -1,0 +1,26 @@
+{
+  "name": "SOSA Procedure",
+  "abstract": "A workflow, protocol, plan, algorithm, or computational method specifying how to make an Observation, create a Sample, or make a change to the state of the world via an Actuator. A Procedure is implemented by a System; the same Procedure may be implemented by multiple Systems.",
+  "status": "under-development",
+  "dateTimeAddition": "2024-01-01T00:00:00Z",
+  "itemClass": "schema",
+  "register": "ogc-building-block-register",
+  "version": "1.0",
+  "dateOfLastChange": "2024-01-01",
+  "sources": [
+    {
+      "title": "Semantic Sensor Network Ontology",
+      "link": "https://www.w3.org/TR/vocab-ssn/"
+    }
+  ],
+  "maturity": "development",
+  "scope": "development",
+  "tags": [
+    "sosa",
+    "ssn",
+    "observations",
+    "o&m",
+    "o&m&s"
+  ],
+  "group": "SOSA"
+}

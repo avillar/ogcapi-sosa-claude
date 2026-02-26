@@ -1,0 +1,29 @@
+"$schema": https://json-schema.org/draft/2020-12/schema
+description: 'SOSA Execution'
+x-jsonld-context: ../../../sosa-ssn.jsonld
+type: object
+properties:
+  resultTime:
+    type: string
+    format: date-time
+  phenomenonTime:
+    type:
+      - object
+      - string
+  startTime:
+    type: string
+    format: date-time
+  endTime:
+    type: string
+    format: date-time
+  hasFeatureOfInterest:
+    $ref: bblocks://ogc.sosa.properties.featureOfInterest
+  hasUltimateFeatureOfInterest:
+    $ref: bblocks://ogc.sosa.properties.featureOfInterest
+  usedProcedure:
+    $ref: bblocks://ogc.sosa.properties.procedure
+  madeBySystem:
+    $ref: bblocks://ogc.sosa.properties.system
+  hasResult: true
+  hasSimpleResult: true
+  hasInputValue: true

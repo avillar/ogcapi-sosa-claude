@@ -1,0 +1,26 @@
+{
+  "name": "SOSA Property",
+  "abstract": "An identifiable quality (property, characteristic) of a FeatureOfInterest. A Property can be associated with different Features of Interest, may be observed by a Procedure, and can be acted upon by an Actuator. ObservableProperty, ActuatableProperty, and SampledProperty are all types of Property.",
+  "status": "under-development",
+  "dateTimeAddition": "2024-01-01T00:00:00Z",
+  "itemClass": "schema",
+  "register": "ogc-building-block-register",
+  "version": "1.0",
+  "dateOfLastChange": "2024-01-01",
+  "sources": [
+    {
+      "title": "Semantic Sensor Network Ontology",
+      "link": "https://www.w3.org/TR/vocab-ssn/"
+    }
+  ],
+  "maturity": "development",
+  "scope": "development",
+  "tags": [
+    "sosa",
+    "ssn",
+    "observations",
+    "o&m",
+    "o&m&s"
+  ],
+  "group": "SOSA"
+}
