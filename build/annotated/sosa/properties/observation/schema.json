@@ -4,7 +4,7 @@
   "type": "object",
   "allOf": [
     {
-      "$ref": "https://opengeospatial.github.io/ogcapi-sosa/build/annotated/sosa/properties/observation-owa/schema.json"
+      "$ref": "https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/observation-owa/schema.json"
     },
     {
       "anyOf": [
@@ -286,6 +286,56 @@
     },
     "wasOriginatedBy": {
       "x-jsonld-id": "http://www.w3.org/ns/sosa/wasOriginatedBy",
+      "x-jsonld-type": "@id"
+    },
+    "startTime": "http://www.w3.org/ns/sosa/startTime",
+    "endTime": "http://www.w3.org/ns/sosa/endTime",
+    "madeBySystem": {
+      "x-jsonld-id": "http://www.w3.org/ns/sosa/madeBySystem",
+      "x-jsonld-type": "@id"
+    },
+    "hasInputValue": {
+      "x-jsonld-id": "http://www.w3.org/ns/sosa/hasInputValue",
+      "x-jsonld-type": "@id"
+    },
+    "isMemberOf": {
+      "x-jsonld-id": "http://www.w3.org/ns/sosa/isMemberOf",
+      "x-jsonld-type": "@id"
+    },
+    "isUltimateFeatureOfInterestOf": {
+      "x-jsonld-id": "http://www.w3.org/ns/sosa/isUltimateFeatureOfInterestOf",
+      "x-jsonld-type": "@id"
+    },
+    "hasProcedure": {
+      "x-jsonld-id": "http://www.w3.org/ns/sosa/hasProcedure",
+      "x-jsonld-type": "@id"
+    },
+    "isProcedureFor": {
+      "x-jsonld-id": "http://www.w3.org/ns/sosa/isProcedureFor",
+      "x-jsonld-type": "@id"
+    },
+    "propertyFor": {
+      "x-jsonld-id": "http://www.w3.org/ns/sosa/propertyFor",
+      "x-jsonld-type": "@id"
+    },
+    "usedForExecution": {
+      "x-jsonld-id": "http://www.w3.org/ns/sosa/usedForExecution",
+      "x-jsonld-type": "@id"
+    },
+    "isSubSystemOf": {
+      "x-jsonld-id": "http://www.w3.org/ns/sosa/isSubSystemOf",
+      "x-jsonld-type": "@id"
+    },
+    "madeExecution": {
+      "x-jsonld-id": "http://www.w3.org/ns/sosa/madeExecution",
+      "x-jsonld-type": "@id"
+    },
+    "systemDeployment": {
+      "x-jsonld-id": "http://www.w3.org/ns/sosa/systemDeployment",
+      "x-jsonld-type": "@id"
+    },
+    "deployedAsset": {
+      "x-jsonld-id": "http://www.w3.org/ns/sosa/deployedAsset",
       "x-jsonld-type": "@id"
     },
     "Accuracy": {

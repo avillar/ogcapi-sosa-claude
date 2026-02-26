@@ -211,7 +211,6 @@ ex:Room145Deployment a sosa:Deployment ;
 ### Example dht22.ttl
 #### ttl
 ```ttl
-@prefix cdt: <http://w3id.org/lindt/custom_datatypes#> .
 @prefix ex: <https://example.org/data/> .
 @prefix et: <http://vocabs.lter-europe.net/EnvThes/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
@@ -739,15 +738,16 @@ ex:12gth456a-23190-T a sensor:IBS-TH2-Plus-T ;
 ### Example IBS-TH2-PLUS.ttl
 #### ttl
 ```ttl
-@prefix cdt: <http://w3id.org/lindt/custom_datatypes#> .
 @prefix ex: <https://example.org/data/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix qk: <http://qudt.org/vocab/quantitykind/> .
+@prefix qudt: <http://qudt.org/schema/qudt/>.
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sensor: <https://example.org/sensor/> .
 @prefix sosa: <http://www.w3.org/ns/sosa/> .
+@prefix unit: <http://qudt.org/vocab/unit/>.
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix sosa-cap: <http://www.w3.org/ns/sosa/system-capability-properties#> .
 @base <https://example.org/data/TH2-PLUS/> .
@@ -774,15 +774,16 @@ sensor:IBS-TH2-Plus
   prov:wasDerivedFrom <https://inkbird.com/products/ibs-th2-plus> ;
 .
 sensor:IBS-TH2-Plus-systemCapability a sosa:ObservationCollection ;
+  qudt:hasUnit unit:HZ ;
   sosa:hasMember [
       a sosa:Observation ;
       sosa:observedProperty sosa-cap:MaxFrequency ;
-      sosa:hasSimpleResult "0.1 Hz"^^cdt:ucum ;
+      sosa:hasSimpleResult 0.1 ;
   ] ,
   [
       a sosa:Observation ;
       sosa:observedProperty sosa-cap:MinFrequency ;
-      sosa:hasSimpleResult "5.556e-4 Hz"^^cdt:ucum ;
+      sosa:hasSimpleResult ".0005556"^^xsd:decimal ;
   ]
 .
 sensor:IBS-TH2-Plus-H
@@ -816,37 +817,39 @@ sensor:IBS-TH2-Plus-T
     ] ;
 .
 sensor:IBS-TH2-Plus-H-systemCapability a sosa:ObservationCollection ;
+  qudt:hasUnit unit:PERCENT ;
   sosa:hasMember [
       a sosa:Observation ;
       sosa:observedProperty sosa-cap:HumidityAccuracy ;
-      sosa:hasSimpleResult "4.5 %"^^cdt:ucum ;
+      sosa:hasSimpleResult 4.5 ;
   ] ,
   [
       a sosa:Observation ;
       sosa:observedProperty sosa-cap:MaxMeasurableHumidity ;
-      sosa:hasSimpleResult "99.0 %"^^cdt:ucum ;
+      sosa:hasSimpleResult 99.0 ;
   ] ,
   [
       a sosa:Observation ;
       sosa:observedProperty sosa-cap:MinMeasurableHumidity ;
-      sosa:hasSimpleResult "0.0 %"^^cdt:ucum ;
+      sosa:hasSimpleResult 0.0 ;
   ]
 .
 sensor:IBS-TH2-Plus-T-systemCapability a sosa:ObservationCollection ;
+  qudt:hasUnit unit:DEG_C ;
   sosa:hasMember [
       a sosa:Observation ;
       sosa:observedProperty sosa-cap:TemperatureAccuracy ;
-      sosa:hasSimpleResult "0.5 Cel"^^cdt:ucum ;
+      sosa:hasSimpleResult 0.5 ;
   ] ,
   [
       a sosa:Observation ;
       sosa:observedProperty sosa-cap:MaxMeasurableTemperature ;
-      sosa:hasSimpleResult "60.0 Cel"^^cdt:ucum ;
+      sosa:hasSimpleResult 60.0 ;
   ] ,
   [
       a sosa:Observation ;
       sosa:observedProperty sosa-cap:MinMeasurableTemperature ;
-      sosa:hasSimpleResult "-40.0 Cel"^^cdt:ucum ;
+      sosa:hasSimpleResult -40.0 ;
   ]
 .
 
@@ -860,12 +863,13 @@ sensor:IBS-TH2-Plus-T-systemCapability a sosa:ObservationCollection ;
 @prefix ex: <https://example.org/data/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix qk: <http://qudt.org/vocab/quantitykind/> .
+@prefix qudt: <http://qudt.org/schema/qudt/>.
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#>.
 @prefix sosa: <http://www.w3.org/ns/sosa#> .
+@prefix unit: <http://qudt.org/vocab/unit/>.
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix cdt: <http://w3id.org/lindt/custom_datatypes#>.
 @base <https://example.org/data/IDEA/> .
 
 # Temperature and Humidity at Coal Oil Point Reserve
@@ -908,7 +912,11 @@ ex:RH_avg_1_COPR_15min_201706020300PM a sosa:Observation ;
    rdfs:label "Relative humidity, AVG, 15min, COPR, 06.02.2017, 3:00 PM"@en ;
    sosa:madeBySensor ex:HUMICAP-H ;
    sosa:hasFeatureOfInterest ex:COPR_SL ;
-   sosa:hasSimpleResult "92.5 %"^^cdt:ucum ;
+   sosa:hasResult [
+      a qudt:QuantityValue ;
+      qudt:hasUnit unit:PERCENT ;
+      qudt:value 92.5 ;
+   ] ;
    sosa:resultTime "2017-06-02T15:00:00-07:00"^^xsd:dateTime ;
    sosa:observedProperty ex:RelativeHumidity ;
    sosa:usedProcedure ex:MeasuringRelativeHumidity ;
@@ -1013,7 +1021,6 @@ ex:IBSTH2SurvivalRange a sosa:ObservationCollection , sosa:SurvivableConditions 
 @prefix gr: <http://purl.org/goodrelations/v1#> .
 @prefix prov: <http://www.w3.org/ns/prov#>.
 @prefix seas: <https://w3id.org/seas/>.
-@prefix cdt: <http://w3id.org/lindt/custom_datatypes#>.
 @prefix sosa-cap: <http://www.w3.org/ns/sosa/system-capability-properties#> .
 @prefix sosa-env: <http://www.w3.org/ns/sosa/system-environment-properties#> .
 @base <https://data.grandlyon.com/> .
@@ -1099,14 +1106,20 @@ ex:Deployment_SL-T-P1_2017-06-06 a sosa:Deployment ;
   sosa:deployedOnPlatform ex:Tree_1 ;
 .
 ex:Observation_5872357_temperature a sosa:Observation ;
-    sosa:hasSimpleResult "64.5244681928429 Cel"^^cdt:ucum ;
+    sosa:hasResult [
+      qudt:hasUnit unit:DEG_C ;
+      qudt:value 64.5244681928429 ;
+    ] ;
     sosa:madeBySensor ex:Sensor_SL-T-P1 ;
     sosa:hasFeatureOfInterest ex:Air_4575_485 ;
     sosa:observedProperty qk:Temperature ;
     sosa:resultTime "2017-06-20T21:49:18+00:00"^^xsd:dateTime ;
 .
 ex:Observation_5872357_battery a sosa:Observation ;
-    sosa:hasSimpleResult "73.2 %"^^cdt:ucum ;
+    sosa:hasResult [
+      qudt:hasUnit unit:PERCENT ;
+      qudt:value 73.2 ;
+    ] ;
     sosa:madeBySensor ex:Sensor_SL-T-P1 ;
     sosa:hasFeatureOfInterest ex:Sensor_SL-T-P1 ;
     sosa:observedProperty ex:Sensor_SL-T-P1_battery ;
@@ -1118,7 +1131,6 @@ ex:Observation_5872357_battery a sosa:Observation ;
 ### Example iphone_barometer-sosa.ttl
 #### ttl
 ```ttl
-@prefix cdt: <http://w3id.org/lindt/custom_datatypes#> .
 @prefix ex: <https://example.org/data/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix qudt: <http://qudt.org/schema/qudt/> .
@@ -1132,45 +1144,56 @@ ex:Observation_5872357_battery a sosa:Observation ;
 
 # iPhone Barometer
 
-ex:iphone_barometer-sosa a owl:Ontology ;
+ex:iphone_barometer-sosa 
+  a owl:Ontology ;
   rdfs:comment "The barometric readings from a Bosch Sensortec BMP282 sensor in an Apple IPhone 7 observed on June 6 2017 using only the SOSA core."@en ;
 .
 # The barometric readings from a Bosch Sensortec BMP282 sensor in an Apple IPhone 7 observed on June 6 2017
 # using only the SOSA core
 
-ex:EarthAtmosphere rdf:type sosa:FeatureOfInterest ;
+ex:EarthAtmosphere 
+  a sosa:FeatureOfInterest ;
   rdfs:label "Atmosphere of Earth"@en ;
 .
 # An iPhone 7 as the Platform that hosts several sensors, among others the Bosch Sensortec BMP282 atmospheric pressure sensor
 
-ex:iphone7_35-207306-844818-0 a sosa:Platform ;
+ex:iphone7_35-207306-844818-0 
+  a sosa:Platform ;
   rdfs:label "IPhone 7 - IMEI 35-207306-844818-0"@en ;
   rdfs:comment "IPhone 7 - IMEI 35-207306-844818-0 - John Doe"@en ;
   sosa:hosts ex:sensor_35-207306-844818-0_BMP282 ;
 .
-ex:sensor_35-207306-844818-0_BMP282 rdf:type sosa:Sensor ;
+ex:sensor_35-207306-844818-0_BMP282 
+  a sosa:Sensor ;
   rdfs:label "Bosch Sensortec BMP282"@en ;
   sosa:observes qk:AtmosphericPressure ;
 .
 # An observation made by the Bosch Sensortec BMP282 atmospheric pressure sensor
 
-ex:Observation_346344 rdf:type sosa:Observation ;
-  sosa:observedProperty qk:AtmosphericPressure ;
-  sosa:hasFeatureOfInterest ex:EarthAtmosphere ;
-  sosa:madeBySensor ex:sensor_35-207306-844818-0_BMP282 ;
-  sosa:hasSimpleResult "1021.45 hPa"^^cdt:ucum ;
-  sosa:resultTime "2017-06-06T12:36:12+00:00"^^xsd:dateTime ;
-.
-# Another observation made a second later by the Bosch Sensortec BMP282 atmospheric pressure sensor
-
-<Observation/346345> rdf:type sosa:Observation ;
+ex:Observation_346344 
+  a sosa:Observation ;
   sosa:observedProperty qk:AtmosphericPressure ;
   sosa:hasFeatureOfInterest ex:EarthAtmosphere ;
   sosa:madeBySensor ex:sensor_35-207306-844818-0_BMP282 ;
   sosa:hasResult [
-    rdf:type qudt:QuantityValue ;
+      a qudt:QuantityValue ;
+      qudt:hasUnit unit:HectoPA ;
+      qudt:value 1021.45 ;
+  ] ;
+  sosa:resultTime "2017-06-06T12:36:12+00:00"^^xsd:dateTime ;
+.
+# Another observation made a second later by the Bosch Sensortec BMP282 atmospheric pressure sensor
+
+<Observation/346345> 
+  a sosa:Observation ;
+  sosa:observedProperty qk:AtmosphericPressure ;
+  sosa:hasFeatureOfInterest ex:EarthAtmosphere ;
+  sosa:madeBySensor ex:sensor_35-207306-844818-0_BMP282 ;
+  sosa:hasResult [
+    a qudt:QuantityValue ;
     qudt:value "101936"^^xsd:decimal ;
-    qudt:hasUnit unit:PA ] ;
+    qudt:hasUnit unit:PA 
+  ] ;
   sosa:resultTime "2017-06-06T12:36:13+00:00"^^xsd:dateTime ;
 .
 ```
@@ -1313,12 +1336,13 @@ ex:serialNumber a rdfs:Datatype ;
 ### Example obs-sample-foi.ttl
 #### ttl
 ```ttl
-@prefix cdt: <http://w3id.org/lindt/custom_datatypes#> .
 @prefix ex: <https://example.org/data/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix qudt: <http://qudt.org/schema/qudt/>.
 @prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix sosa: <http://www.w3.org/ns/sosa/> .
+@prefix unit: <http://qudt.org/vocab/unit/>.
 
 ex:Bubble873 a sosa:Sample ;
   sosa:isSampleOf ex:EarthAtmosphere;
@@ -1327,7 +1351,11 @@ ex:Ob873c4 a sosa:Observation ;
   sosa:observedProperty ex:CO2-Concentration ;
   sosa:hasFeatureOfInterest ex:Bubble873 ;
   sosa:hasUltimateFeatureOfInterest ex:EarthAtmosphere ;
-  sosa:hasSimpleResult "240 [ppm]"^^cdt:ucum ;
+  sosa:hasResult [
+      a qudt:QuantityValue ;
+      qudt:hasUnit unit:PPM ;
+      qudt:value 240.0 ;
+  ] ;
 .
 ex:EarthAtmosphere a sosa:FeatureOfInterest ;
   skos:exactMatch <https://www.wikidata.org/wiki/Q3230> ;
@@ -1374,9 +1402,9 @@ ex:A188 rdf:type sosa:Actuation ;
 ### Example paleo-atmosphere.ttl
 #### ttl
 ```ttl
-@prefix cdt: <http://w3id.org/lindt/custom_datatypes#> .
 @prefix ex: <https://example.org/data/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix qudt: <http://qudt.org/schema/qudt/>.
 @prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
@@ -1394,20 +1422,32 @@ ex:Ob873t2 a sosa:Observation ;
   sosa:observedProperty ex:C14-Age ;
   sosa:hasFeatureOfInterest ex:Bubble873 ;
   sosa:hasUltimateFeatureOfInterest ex:EarthAtmosphere ;
-  sosa:hasSimpleResult "7530 a"^^cdt:ucum ;
+  sosa:hasResult [
+      a qudt:QuantityValue ;
+      qudt:hasUnit unit:YR ;
+      qudt:value 7530.0 ;
+  ] ;
   sosa:resultTime "2018-01-09T14:15:00+00:00"^^xsd:dateTime ;
 .
 ex:Ob873c4 a sosa:Observation ;
   sosa:observedProperty ex:CO2-Concentration ;
   sosa:hasFeatureOfInterest ex:Bubble873 ;
   sosa:hasUltimateFeatureOfInterest ex:EarthAtmosphere ;
-  sosa:hasSimpleResult "240 [ppm]"^^cdt:ucum ;
+  sosa:hasResult [
+      a qudt:QuantityValue ;
+      qudt:hasUnit unit:PPM ;
+      qudt:value 240.0 ;
+  ] ;
   sosa:resultTime "2018-01-09T14:16:00+00:00"^^xsd:dateTime ;
 .
 ex:Oatc349 a sosa:Observation ;
   sosa:observedProperty ex:CO2-Concentration ;
   sosa:hasFeatureOfInterest ex:EarthAtmosphere ;
-  sosa:hasSimpleResult "240 [ppm]"^^cdt:ucum ;
+  sosa:hasResult [
+      a qudt:QuantityValue ;
+      qudt:hasUnit unit:PPM ;
+      qudt:value 240.0 ;
+  ] ;
   sosa:phenomenonTime [ 
     time:inTimePosition [
       time:hasTRS ex:BP ;
@@ -1624,14 +1664,15 @@ ex:SmileySampling
 ### Example spinning-cups.ttl
 #### ttl
 ```ttl
-@prefix cdt: <http://w3id.org/lindt/custom_datatypes#> .
 @prefix ex: <https://example.org/data/> .
 @prefix qk: <http://qudt.org/vocab/quantitykind/> .
+@prefix qudt: <http://qudt.org/schema/qudt/>.
 @prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix sosa: <http://www.w3.org/ns/sosa/> .
 @prefix time: <http://www.w3.org/2006/time#>.
+@prefix unit: <http://qudt.org/vocab/unit/>.
 @prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
 @base <https://example.org/data/wind/> .
 
@@ -1657,7 +1698,11 @@ ex:observation_147 rdf:type sosa:Observation ;
   sosa:madeBySensor ex:windSensor_14 ;
   sosa:wasOriginatedBy ex:observation_147_spinningCupsMovement ;
   sosa:resultTime "2017-04-12T12:00:00+00:00"^^xsd:dateTime ;
-  sosa:hasSimpleResult "47 km/h"^^cdt:ucum ;
+  sosa:hasResult [
+      a qudt:QuantityValue ;
+      qudt:hasUnit unit:KiloM-PER-HR ;
+      qudt:value 47.0 ;
+  ] ;
 .
 # wind sensor #14 detected some movement of spinning cups, from which originated the
 # observations #147 and #148
@@ -1676,7 +1721,11 @@ ex:observation_148 rdf:type sosa:Observation ;
   sosa:madeBySensor ex:windSensor_14 ;
   sosa:wasOriginatedBy ex:observation_148_spinningCupsMovement ;
   sosa:resultTime "2017-04-12T12:01:00+00:00"^^xsd:dateTime ;
-  sosa:hasSimpleResult "47 km/h"^^cdt:ucum ;
+  sosa:hasResult [
+      a qudt:QuantityValue ;
+      qudt:hasUnit unit:KiloM-PER-HR ;
+      qudt:value 47.0 ;
+  ] ;
 .
 ex:observation_148_spinningCupsMovement rdf:type sosa:Stimulus ;
   sosa:isProxyFor ex:windSpeed ;
@@ -1785,14 +1834,15 @@ ex:SickChildATemperature
 ### Example Thermometer.ttl
 #### ttl
 ```ttl
-@prefix cdt: <http://w3id.org/lindt/custom_datatypes#> .
 @prefix ex: <https://example.org/data/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix qk: <http://qudt.org/vocab/quantitykind/> .
+@prefix qudt: <http://qudt.org/schema/qudt/>.
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sensor: <https://example.org/sensor/> .
 @prefix sosa: <http://www.w3.org/ns/sosa/> .
+@prefix unit: <http://qudt.org/vocab/unit/>.
 
 qk:Temperature
   a sosa:Property ;
@@ -1824,7 +1874,11 @@ ex:SickChildA
 ex:SickChildATempObs
   a sosa:Observation ;
   sosa:hasFeatureOfInterest ex:SickChildA ;
-  sosa:hasSimpleResult "38.2 Cel"^^cdt:ucum ;
+  sosa:hasResult [
+      a qudt:QuantityValue ;
+      qudt:hasUnit unit:DEG_C ;
+      qudt:value 38.2 ;
+  ] ;
   sosa:madeBySensor ex:Mums-clinical-thermometer ;
   sosa:observedProperty qk:Temperature ;
 .
@@ -1835,8 +1889,8 @@ ex:SickChildATempObs
 ### Example timeseries-oc.ttl
 #### ttl
 ```ttl
-@prefix cdt: <http://w3id.org/lindt/custom_datatypes#> .
 @prefix ex: <https://example.org/data/> .
+@prefix qudt: <http://qudt.org/schema/qudt/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sosa: <http://www.w3.org/ns/sosa/> .
@@ -1866,6 +1920,7 @@ ex:ts159c
   sosa:hasMember ex:t2 ;
   sosa:hasMember ex:t3 ;
   sosa:hasMember ex:t4 ;
+  qudt:hasUnit unit:M-PER-SEC ;
 .
 ex:t1
   a sosa:Observation ;
@@ -1873,7 +1928,7 @@ ex:t1
     a time:Instant ;
     time:inXSDDateTime "2017-04-15T20:00:00+00:00"^^xsd:dateTime ;
   ] ;
-  sosa:hasSimpleResult "3.24 m/s"^^cdt:ucum ;
+  sosa:hasSimpleResult 3.24 ;
 .
 ex:t2
   a sosa:Observation ;
@@ -1881,7 +1936,7 @@ ex:t2
     a time:Instant ;
     time:inXSDDateTime "2017-04-15T20:01:00+00:00"^^xsd:dateTime ;
   ] ;
-  sosa:hasSimpleResult "3.21 m/s"^^cdt:ucum ;
+  sosa:hasSimpleResult 3.21 ;
 .
 ex:t3
   a sosa:Observation ;
@@ -1889,7 +1944,7 @@ ex:t3
     a time:Instant ;
     time:inXSDDateTime "2017-04-15T20:02:00+00:00"^^xsd:dateTime ;
   ] ;
-  sosa:hasSimpleResult "3.15 m/s"^^cdt:ucum ;
+  sosa:hasSimpleResult 3.15 ;
 .
 ex:t4
   a sosa:Observation ;
@@ -1897,7 +1952,7 @@ ex:t4
     a time:Instant ;
     time:inXSDDateTime "2017-04-15T20:03:00+00:00"^^xsd:dateTime ;
   ] ;
-  sosa:hasSimpleResult "3.15 m/s"^^cdt:ucum ;
+  sosa:hasSimpleResult 3.15 ;
 .
 ex:station223 a sosa:FeatureOfInterest .
 ex:p1 a sosa:Property .
@@ -2046,7 +2101,8 @@ ex:observation_1087 a sosa:Observation ;
   sosa:madeBySensor ex:rangefinder_30 ;
   sosa:hasResult [ 
     qudt:hasUnit unit:M ; 
-    qudt:value "15.3"^^xsd:decimal ] ;
+    qudt:value 15.3 ;
+  ] ;
 .
 ex:tree_124 a sosa:FeatureOfInterest ;
   rdfs:label "tree #124"@en ;
@@ -2120,6 +2176,6 @@ qk:Temperature
 
 The source code for this Building Block can be found in the following repository:
 
-* URL: [https://github.com/opengeospatial/ogcapi-sosa](https://github.com/opengeospatial/ogcapi-sosa)
+* URL: [https://github.com/avillar/ogcapi-sosa-claude](https://github.com/avillar/ogcapi-sosa-claude)
 * Path: `_sources/properties/spec-examples`
 

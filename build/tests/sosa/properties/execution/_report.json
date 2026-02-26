@@ -1,0 +1,14 @@
+{
+  "title": "Validation report for ogc.sosa.properties.execution - SOSA Execution",
+  "bblockName": "SOSA Execution",
+  "bblockId": "ogc.sosa.properties.execution",
+  "generated": "2026-02-26T22:09:29.138211+00:00",
+  "result": true,
+  "items": [],
+  "globalErrors": {},
+  "counts": {
+    "total": 0,
+    "passed": 0,
+    "failed": 0
+  }
+}

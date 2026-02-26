@@ -1,0 +1,14 @@
+{
+  "title": "Validation report for ogc.sosa.properties.system - SOSA System",
+  "bblockName": "SOSA System",
+  "bblockId": "ogc.sosa.properties.system",
+  "generated": "2026-02-26T22:09:28.927188+00:00",
+  "result": true,
+  "items": [],
+  "globalErrors": {},
+  "counts": {
+    "total": 0,
+    "passed": 0,
+    "failed": 0
+  }
+}

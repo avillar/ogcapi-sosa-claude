@@ -156,10 +156,6 @@
       "@type": "@id",
       "@container": "@set"
     },
-    "hasUltimateFeatureOfInterest": {
-      "@id": "sosa:hasUltimateFeatureOfInterest",
-      "@type": "@id"
-    },
     "hosts": {
       "@id": "sosa:hosts",
       "@type": "@id",
@@ -229,6 +225,10 @@
       "@id": "sosa:madeBySampler",
       "@type": "@id"
     },
+    "madeBySensor": {
+      "@id": "sosa:madeBySensor",
+      "@type": "@id"
+    },
     "madeObservation": {
       "@id": "sosa:madeObservation",
       "@type": "@id"
@@ -237,12 +237,60 @@
       "@id": "sosa:madeSampling",
       "@type": "@id"
     },
+    "observedProperty": {
+      "@id": "sosa:observedProperty",
+      "@type": "@id"
+    },
     "observes": {
       "@id": "sosa:observes",
       "@type": "@id"
     },
     "wasOriginatedBy": {
       "@id": "sosa:wasOriginatedBy",
+      "@type": "@id"
+    },
+    "hasInputValue": {
+      "@id": "sosa:hasInputValue",
+      "@type": "@id"
+    },
+    "isMemberOf": {
+      "@id": "sosa:isMemberOf",
+      "@type": "@id"
+    },
+    "isUltimateFeatureOfInterestOf": {
+      "@id": "sosa:isUltimateFeatureOfInterestOf",
+      "@type": "@id"
+    },
+    "hasProcedure": {
+      "@id": "sosa:hasProcedure",
+      "@type": "@id"
+    },
+    "isProcedureFor": {
+      "@id": "sosa:isProcedureFor",
+      "@type": "@id"
+    },
+    "propertyFor": {
+      "@id": "sosa:propertyFor",
+      "@type": "@id"
+    },
+    "usedForExecution": {
+      "@id": "sosa:usedForExecution",
+      "@type": "@id"
+    },
+    "isSubSystemOf": {
+      "@id": "sosa:isSubSystemOf",
+      "@type": "@id"
+    },
+    "madeExecution": {
+      "@id": "sosa:madeExecution",
+      "@type": "@id"
+    },
+    "systemDeployment": {
+      "@id": "sosa:systemDeployment",
+      "@type": "@id"
+    },
+    "deployedAsset": {
+      "@id": "sosa:deployedAsset",
       "@type": "@id"
     },
     "Accuracy": {
@@ -370,20 +418,22 @@
       "@id": "sosa:phenomenonTime",
       "@type": "@id"
     },
+    "startTime": "sosa:startTime",
+    "endTime": "sosa:endTime",
     "hasFeatureOfInterest": {
       "@id": "sosa:hasFeatureOfInterest",
       "@type": "@id"
     },
-    "observedProperty": {
-      "@id": "sosa:observedProperty",
+    "hasUltimateFeatureOfInterest": {
+      "@id": "sosa:hasUltimateFeatureOfInterest",
       "@type": "@id"
     },
     "usedProcedure": {
       "@id": "sosa:usedProcedure",
       "@type": "@id"
     },
-    "madeBySensor": {
-      "@id": "sosa:madeBySensor",
+    "madeBySystem": {
+      "@id": "sosa:madeBySystem",
       "@type": "@id"
     },
     "sosa": "http://www.w3.org/ns/sosa/",

@@ -2,7 +2,7 @@
   "title": "Validation report for ogc.sosa.properties.observation-owa - Observation Properties (SOSA OWA)",
   "bblockName": "Observation Properties (SOSA OWA)",
   "bblockId": "ogc.sosa.properties.observation-owa",
-  "generated": "2026-01-13T22:39:25.324909+00:00",
+  "generated": "2026-02-26T22:09:29.202209+00:00",
   "result": true,
   "items": [
     {
@@ -10,7 +10,7 @@
         "type": "EXAMPLE",
         "requireFail": false,
         "filename": "build/tests/sosa/properties/observation-owa/example_1_1.json",
-        "url": "https://opengeospatial.github.io/ogcapi-sosa/build/tests/sosa/properties/observation-owa/example_1_1.json",
+        "url": "https://avillar.github.io/ogcapi-sosa-claude/build/tests/sosa/properties/observation-owa/example_1_1.json",
         "exampleIndex": 1,
         "snippetIndex": 1,
         "language": "application/json"
@@ -65,7 +65,7 @@
         "type": "EXAMPLE",
         "requireFail": false,
         "filename": "build/tests/sosa/properties/observation-owa/example_1_2.ttl",
-        "url": "https://opengeospatial.github.io/ogcapi-sosa/build/tests/sosa/properties/observation-owa/example_1_2.ttl",
+        "url": "https://avillar.github.io/ogcapi-sosa-claude/build/tests/sosa/properties/observation-owa/example_1_2.ttl",
         "exampleIndex": 1,
         "snippetIndex": 2,
         "language": "text/turtle"
@@ -97,7 +97,7 @@
         "type": "EXAMPLE",
         "requireFail": false,
         "filename": "build/tests/sosa/properties/observation-owa/example_2_1.json",
-        "url": "https://opengeospatial.github.io/ogcapi-sosa/build/tests/sosa/properties/observation-owa/example_2_1.json",
+        "url": "https://avillar.github.io/ogcapi-sosa-claude/build/tests/sosa/properties/observation-owa/example_2_1.json",
         "exampleIndex": 2,
         "snippetIndex": 1,
         "language": "application/json"

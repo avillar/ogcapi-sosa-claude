@@ -1,11 +1,34 @@
 path	@id
-/resultTime	http://www.w3.org/ns/sosa/resultTime
-/phenomenonTime	http://www.w3.org/ns/sosa/phenomenonTime
-/hasFeatureOfInterest	http://www.w3.org/ns/sosa/hasFeatureOfInterest
-/observedProperty	http://www.w3.org/ns/sosa/observedProperty
-/usedProcedure	http://www.w3.org/ns/sosa/usedProcedure
-/madeBySensor	http://www.w3.org/ns/sosa/madeBySensor
-/hasResult	
-/result	
-/result@links	
-/hasSimpleResult	
+/resultTime	('http://www.w3.org/ns/sosa/resultTime', 'https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/execution/schema.yaml')
+/phenomenonTime	('http://www.w3.org/ns/sosa/phenomenonTime', 'https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/execution/schema.yaml')
+/startTime	('http://www.w3.org/ns/sosa/startTime', 'https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/execution/schema.yaml')
+/endTime	('http://www.w3.org/ns/sosa/endTime', 'https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/execution/schema.yaml')
+/hasFeatureOfInterest	('http://www.w3.org/ns/sosa/hasFeatureOfInterest', 'https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/execution/schema.yaml')
+/hasFeatureOfInterest/id	('@id', 'https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/featureOfInterest/schema.yaml')
+/hasFeatureOfInterest/hasProperty	('http://www.w3.org/ns/sosa/hasProperty', 'https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/featureOfInterest/schema.yaml')
+/hasFeatureOfInterest/hasProperty/id	('@id', 'https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/property/schema.yaml')
+/hasFeatureOfInterest/hasProperty/isPropertyOf	('http://www.w3.org/ns/sosa/isPropertyOf', 'https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/property/schema.yaml')
+/hasFeatureOfInterest/hasProperty/hasProcedure	('http://www.w3.org/ns/sosa/hasProcedure', 'https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/property/schema.yaml')
+/hasFeatureOfInterest/hasProperty/hasProcedure/id	('@id', 'https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/procedure/schema.yaml')
+/hasFeatureOfInterest/hasProperty/hasProcedure/implementedBy	('http://www.w3.org/ns/sosa/implementedBy', 'https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/procedure/schema.yaml')
+/hasFeatureOfInterest/hasProperty/hasProcedure/implementedBy/id	('@id', 'https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/system/schema.yaml')
+/hasFeatureOfInterest/hasProperty/hasProcedure/implementedBy/name	(None, 'https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/system/schema.yaml')
+/hasFeatureOfInterest/hasProperty/hasProcedure/implementedBy/implements	('http://www.w3.org/ns/sosa/implements', 'https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/system/schema.yaml')
+/hasFeatureOfInterest/hasProperty/hasProcedure/implementedBy/hasSubSystem	('http://www.w3.org/ns/sosa/hasSubSystem', 'https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/system/schema.yaml')
+/hasFeatureOfInterest/hasProperty/hasProcedure/implementedBy/isSubSystemOf	('http://www.w3.org/ns/sosa/isSubSystemOf', 'https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/system/schema.yaml')
+/hasFeatureOfInterest/hasProperty/hasProcedure/implementedBy/isHostedBy	('http://www.w3.org/ns/sosa/isHostedBy', 'https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/system/schema.yaml')
+/hasFeatureOfInterest/hasProperty/hasProcedure/hasInput	(None, 'https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/procedure/schema.yaml')
+/hasFeatureOfInterest/hasProperty/hasProcedure/hasOutput	(None, 'https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/procedure/schema.yaml')
+/hasFeatureOfInterest/hasProperty/hasProcedure/isProcedureFor	('http://www.w3.org/ns/sosa/isProcedureFor', 'https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/procedure/schema.yaml')
+/hasUltimateFeatureOfInterest	('http://www.w3.org/ns/sosa/hasUltimateFeatureOfInterest', 'https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/execution/schema.yaml')
+/usedProcedure	('http://www.w3.org/ns/sosa/usedProcedure', 'https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/execution/schema.yaml')
+/madeBySystem	('http://www.w3.org/ns/sosa/madeBySystem', 'https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/execution/schema.yaml')
+/hasResult	(None, 'https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/execution/schema.yaml')
+/hasSimpleResult	(None, 'https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/execution/schema.yaml')
+/hasInputValue	(None, 'https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/execution/schema.yaml')
+/observedProperty	('http://www.w3.org/ns/sosa/observedProperty', 'https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/observation-owa/schema.yaml')
+/madeBySensor	('http://www.w3.org/ns/sosa/madeBySensor', 'https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/observation-owa/schema.yaml')
+/madeBySensor/id	('@id', 'https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/sensor/schema.yaml')
+/madeBySensor/name	(None, 'https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/sensor/schema.yaml')
+/result	(None, 'https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/observation-owa/schema.yaml')
+/result@links	(None, 'https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/observation-owa/schema.yaml')

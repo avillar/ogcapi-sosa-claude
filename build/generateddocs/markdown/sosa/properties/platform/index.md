@@ -48,7 +48,7 @@ These properties are independent of the feature model implementation - for examp
 ```jsonld
 {
   "@context": [
-    "https://opengeospatial.github.io/ogcapi-sosa/build/annotated/sosa/properties/platform/context.jsonld",
+    "https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/platform/context.jsonld",
     {
       "eg": "http://example.org/sensors",
       "resolution": "http://camera-specs.org/params/imageResolution"
@@ -100,7 +100,7 @@ $definitions:
           items:
             anyOf:
             - $ref: '#/$definitions/Platform'
-            - $ref: https://opengeospatial.github.io/ogcapi-sosa/build/annotated/sosa/properties/sensor/schema.yaml#/$definitions/Sensor
+            - $ref: https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/sensor/schema.yaml#/$definitions/Sensor
           x-jsonld-id: http://www.w3.org/ns/sosa/hosts
           x-jsonld-type: '@id'
           x-jsonld-container: '@set'
@@ -304,6 +304,44 @@ x-jsonld-extra-terms:
   wasOriginatedBy:
     x-jsonld-id: http://www.w3.org/ns/sosa/wasOriginatedBy
     x-jsonld-type: '@id'
+  startTime: http://www.w3.org/ns/sosa/startTime
+  endTime: http://www.w3.org/ns/sosa/endTime
+  madeBySystem:
+    x-jsonld-id: http://www.w3.org/ns/sosa/madeBySystem
+    x-jsonld-type: '@id'
+  hasInputValue:
+    x-jsonld-id: http://www.w3.org/ns/sosa/hasInputValue
+    x-jsonld-type: '@id'
+  isMemberOf:
+    x-jsonld-id: http://www.w3.org/ns/sosa/isMemberOf
+    x-jsonld-type: '@id'
+  isUltimateFeatureOfInterestOf:
+    x-jsonld-id: http://www.w3.org/ns/sosa/isUltimateFeatureOfInterestOf
+    x-jsonld-type: '@id'
+  hasProcedure:
+    x-jsonld-id: http://www.w3.org/ns/sosa/hasProcedure
+    x-jsonld-type: '@id'
+  isProcedureFor:
+    x-jsonld-id: http://www.w3.org/ns/sosa/isProcedureFor
+    x-jsonld-type: '@id'
+  propertyFor:
+    x-jsonld-id: http://www.w3.org/ns/sosa/propertyFor
+    x-jsonld-type: '@id'
+  usedForExecution:
+    x-jsonld-id: http://www.w3.org/ns/sosa/usedForExecution
+    x-jsonld-type: '@id'
+  isSubSystemOf:
+    x-jsonld-id: http://www.w3.org/ns/sosa/isSubSystemOf
+    x-jsonld-type: '@id'
+  madeExecution:
+    x-jsonld-id: http://www.w3.org/ns/sosa/madeExecution
+    x-jsonld-type: '@id'
+  systemDeployment:
+    x-jsonld-id: http://www.w3.org/ns/sosa/systemDeployment
+    x-jsonld-type: '@id'
+  deployedAsset:
+    x-jsonld-id: http://www.w3.org/ns/sosa/deployedAsset
+    x-jsonld-type: '@id'
   Accuracy:
     x-jsonld-id: http://www.w3.org/ns/ssn/systems/Accuracy
     x-jsonld-type: '@id'
@@ -403,8 +441,8 @@ x-jsonld-prefixes:
 
 Links to the schema:
 
-* YAML version: [schema.yaml](https://opengeospatial.github.io/ogcapi-sosa/build/annotated/sosa/properties/platform/schema.json)
-* JSON version: [schema.json](https://opengeospatial.github.io/ogcapi-sosa/build/annotated/sosa/properties/platform/schema.yaml)
+* YAML version: [schema.yaml](https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/platform/schema.json)
+* JSON version: [schema.json](https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/platform/schema.yaml)
 
 
 # JSON-LD Context
@@ -678,6 +716,56 @@ Links to the schema:
       "@id": "sosa:wasOriginatedBy",
       "@type": "@id"
     },
+    "startTime": "sosa:startTime",
+    "endTime": "sosa:endTime",
+    "madeBySystem": {
+      "@id": "sosa:madeBySystem",
+      "@type": "@id"
+    },
+    "hasInputValue": {
+      "@id": "sosa:hasInputValue",
+      "@type": "@id"
+    },
+    "isMemberOf": {
+      "@id": "sosa:isMemberOf",
+      "@type": "@id"
+    },
+    "isUltimateFeatureOfInterestOf": {
+      "@id": "sosa:isUltimateFeatureOfInterestOf",
+      "@type": "@id"
+    },
+    "hasProcedure": {
+      "@id": "sosa:hasProcedure",
+      "@type": "@id"
+    },
+    "isProcedureFor": {
+      "@id": "sosa:isProcedureFor",
+      "@type": "@id"
+    },
+    "propertyFor": {
+      "@id": "sosa:propertyFor",
+      "@type": "@id"
+    },
+    "usedForExecution": {
+      "@id": "sosa:usedForExecution",
+      "@type": "@id"
+    },
+    "isSubSystemOf": {
+      "@id": "sosa:isSubSystemOf",
+      "@type": "@id"
+    },
+    "madeExecution": {
+      "@id": "sosa:madeExecution",
+      "@type": "@id"
+    },
+    "systemDeployment": {
+      "@id": "sosa:systemDeployment",
+      "@type": "@id"
+    },
+    "deployedAsset": {
+      "@id": "sosa:deployedAsset",
+      "@type": "@id"
+    },
     "Accuracy": {
       "@id": "ssn-system:Accuracy",
       "@type": "@id"
@@ -807,7 +895,7 @@ Links to the schema:
 ```
 
 You can find the full JSON-LD context here:
-[context.jsonld](https://opengeospatial.github.io/ogcapi-sosa/build/annotated/sosa/properties/platform/context.jsonld)
+[context.jsonld](https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/platform/context.jsonld)
 
 ## Sources
 
@@ -817,6 +905,6 @@ You can find the full JSON-LD context here:
 
 The source code for this Building Block can be found in the following repository:
 
-* URL: [https://github.com/opengeospatial/ogcapi-sosa](https://github.com/opengeospatial/ogcapi-sosa)
+* URL: [https://github.com/avillar/ogcapi-sosa-claude](https://github.com/avillar/ogcapi-sosa-claude)
 * Path: `_sources/properties/platform`
 

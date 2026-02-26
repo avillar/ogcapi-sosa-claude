@@ -1,7 +1,7 @@
 Validation report for ogc.sosa.properties.spec-examples - Tests for SOSA specification
-Generated 2026-01-13T22:39:25.425719+00:00
+Generated 2026-02-26T22:09:28.772261+00:00
 === Files ===
-Using example_13_1.ttl from examples
+Using https://w3c.github.io/sdw-sosa-ssn/ssn/rdf/examples/ip68.ttl from examples
 Output Turtle example_13_1.ttl created
 === End Files ===
 

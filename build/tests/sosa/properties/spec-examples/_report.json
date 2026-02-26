@@ -2,7 +2,7 @@
   "title": "Validation report for ogc.sosa.properties.spec-examples - Tests for SOSA specification",
   "bblockName": "Tests for SOSA specification",
   "bblockId": "ogc.sosa.properties.spec-examples",
-  "generated": "2026-01-13T22:39:25.516080+00:00",
+  "generated": "2026-02-26T22:09:28.861840+00:00",
   "result": true,
   "items": [
     {
@@ -10,7 +10,7 @@
         "type": "EXAMPLE",
         "requireFail": false,
         "filename": "build/tests/sosa/properties/spec-examples/example_1_1.ttl",
-        "url": "https://opengeospatial.github.io/ogcapi-sosa/build/tests/sosa/properties/spec-examples/example_1_1.ttl",
+        "url": "https://avillar.github.io/ogcapi-sosa-claude/build/tests/sosa/properties/spec-examples/example_1_1.ttl",
         "exampleIndex": 1,
         "snippetIndex": 1,
         "language": "text/turtle",
@@ -24,7 +24,7 @@
           "entries": [
             {
               "isError": false,
-              "message": "Using example_1_1.ttl from examples"
+              "message": "Using https://w3c.github.io/sdw-sosa-ssn/ssn/rdf/examples/apartment-134.ttl from examples"
             },
             {
               "op": "ttl-create",
@@ -53,7 +53,7 @@
         "type": "EXAMPLE",
         "requireFail": false,
         "filename": "build/tests/sosa/properties/spec-examples/example_2_1.ttl",
-        "url": "https://opengeospatial.github.io/ogcapi-sosa/build/tests/sosa/properties/spec-examples/example_2_1.ttl",
+        "url": "https://avillar.github.io/ogcapi-sosa-claude/build/tests/sosa/properties/spec-examples/example_2_1.ttl",
         "exampleIndex": 2,
         "snippetIndex": 1,
         "language": "text/turtle",
@@ -67,7 +67,7 @@
           "entries": [
             {
               "isError": false,
-              "message": "Using example_2_1.ttl from examples"
+              "message": "Using https://w3c.github.io/sdw-sosa-ssn/ssn/rdf/examples/dht22-deployment.ttl from examples"
             },
             {
               "op": "ttl-create",
@@ -96,7 +96,7 @@
         "type": "EXAMPLE",
         "requireFail": false,
         "filename": "build/tests/sosa/properties/spec-examples/example_3_1.ttl",
-        "url": "https://opengeospatial.github.io/ogcapi-sosa/build/tests/sosa/properties/spec-examples/example_3_1.ttl",
+        "url": "https://avillar.github.io/ogcapi-sosa-claude/build/tests/sosa/properties/spec-examples/example_3_1.ttl",
         "exampleIndex": 3,
         "snippetIndex": 1,
         "language": "text/turtle",
@@ -110,7 +110,7 @@
           "entries": [
             {
               "isError": false,
-              "message": "Using example_3_1.ttl from examples"
+              "message": "Using https://w3c.github.io/sdw-sosa-ssn/ssn/rdf/examples/dht22.ttl from examples"
             },
             {
               "op": "ttl-create",
@@ -139,7 +139,7 @@
         "type": "EXAMPLE",
         "requireFail": false,
         "filename": "build/tests/sosa/properties/spec-examples/example_4_1.ttl",
-        "url": "https://opengeospatial.github.io/ogcapi-sosa/build/tests/sosa/properties/spec-examples/example_4_1.ttl",
+        "url": "https://avillar.github.io/ogcapi-sosa-claude/build/tests/sosa/properties/spec-examples/example_4_1.ttl",
         "exampleIndex": 4,
         "snippetIndex": 1,
         "language": "text/turtle",
@@ -153,7 +153,7 @@
           "entries": [
             {
               "isError": false,
-              "message": "Using example_4_1.ttl from examples"
+              "message": "Using https://w3c.github.io/sdw-sosa-ssn/ssn/rdf/examples/diet.ttl from examples"
             },
             {
               "op": "ttl-create",
@@ -182,7 +182,7 @@
         "type": "EXAMPLE",
         "requireFail": false,
         "filename": "build/tests/sosa/properties/spec-examples/example_5_1.ttl",
-        "url": "https://opengeospatial.github.io/ogcapi-sosa/build/tests/sosa/properties/spec-examples/example_5_1.ttl",
+        "url": "https://avillar.github.io/ogcapi-sosa-claude/build/tests/sosa/properties/spec-examples/example_5_1.ttl",
         "exampleIndex": 5,
         "snippetIndex": 1,
         "language": "text/turtle",
@@ -196,7 +196,7 @@
           "entries": [
             {
               "isError": false,
-              "message": "Using example_5_1.ttl from examples"
+              "message": "Using https://w3c.github.io/sdw-sosa-ssn/ssn/rdf/examples/forecast.ttl from examples"
             },
             {
               "op": "ttl-create",
@@ -225,7 +225,7 @@
         "type": "EXAMPLE",
         "requireFail": false,
         "filename": "build/tests/sosa/properties/spec-examples/example_6_1.ttl",
-        "url": "https://opengeospatial.github.io/ogcapi-sosa/build/tests/sosa/properties/spec-examples/example_6_1.ttl",
+        "url": "https://avillar.github.io/ogcapi-sosa-claude/build/tests/sosa/properties/spec-examples/example_6_1.ttl",
         "exampleIndex": 6,
         "snippetIndex": 1,
         "language": "text/turtle",
@@ -239,7 +239,7 @@
           "entries": [
             {
               "isError": false,
-              "message": "Using example_6_1.ttl from examples"
+              "message": "Using https://w3c.github.io/sdw-sosa-ssn/ssn/rdf/examples/GeometryResult.ttl from examples"
             },
             {
               "op": "ttl-create",
@@ -268,7 +268,7 @@
         "type": "EXAMPLE",
         "requireFail": false,
         "filename": "build/tests/sosa/properties/spec-examples/example_7_1.ttl",
-        "url": "https://opengeospatial.github.io/ogcapi-sosa/build/tests/sosa/properties/spec-examples/example_7_1.ttl",
+        "url": "https://avillar.github.io/ogcapi-sosa-claude/build/tests/sosa/properties/spec-examples/example_7_1.ttl",
         "exampleIndex": 7,
         "snippetIndex": 1,
         "language": "text/turtle",
@@ -282,7 +282,7 @@
           "entries": [
             {
               "isError": false,
-              "message": "Using example_7_1.ttl from examples"
+              "message": "Using https://w3c.github.io/sdw-sosa-ssn/ssn/rdf/examples/GeometryResultSimple.ttl from examples"
             },
             {
               "op": "ttl-create",
@@ -311,7 +311,7 @@
         "type": "EXAMPLE",
         "requireFail": false,
         "filename": "build/tests/sosa/properties/spec-examples/example_8_1.ttl",
-        "url": "https://opengeospatial.github.io/ogcapi-sosa/build/tests/sosa/properties/spec-examples/example_8_1.ttl",
+        "url": "https://avillar.github.io/ogcapi-sosa-claude/build/tests/sosa/properties/spec-examples/example_8_1.ttl",
         "exampleIndex": 8,
         "snippetIndex": 1,
         "language": "text/turtle",
@@ -325,7 +325,7 @@
           "entries": [
             {
               "isError": false,
-              "message": "Using example_8_1.ttl from examples"
+              "message": "Using https://w3c.github.io/sdw-sosa-ssn/ssn/rdf/examples/historical-airtemp.ttl from examples"
             },
             {
               "op": "ttl-create",
@@ -354,7 +354,7 @@
         "type": "EXAMPLE",
         "requireFail": false,
         "filename": "build/tests/sosa/properties/spec-examples/example_9_1.ttl",
-        "url": "https://opengeospatial.github.io/ogcapi-sosa/build/tests/sosa/properties/spec-examples/example_9_1.ttl",
+        "url": "https://avillar.github.io/ogcapi-sosa-claude/build/tests/sosa/properties/spec-examples/example_9_1.ttl",
         "exampleIndex": 9,
         "snippetIndex": 1,
         "language": "text/turtle",
@@ -368,7 +368,7 @@
           "entries": [
             {
               "isError": false,
-              "message": "Using example_9_1.ttl from examples"
+              "message": "Using https://w3c.github.io/sdw-sosa-ssn/ssn/rdf/examples/IBS-TH2-PLUS-brief.ttl from examples"
             },
             {
               "op": "ttl-create",
@@ -397,7 +397,7 @@
         "type": "EXAMPLE",
         "requireFail": false,
         "filename": "build/tests/sosa/properties/spec-examples/example_10_1.ttl",
-        "url": "https://opengeospatial.github.io/ogcapi-sosa/build/tests/sosa/properties/spec-examples/example_10_1.ttl",
+        "url": "https://avillar.github.io/ogcapi-sosa-claude/build/tests/sosa/properties/spec-examples/example_10_1.ttl",
         "exampleIndex": 10,
         "snippetIndex": 1,
         "language": "text/turtle",
@@ -411,13 +411,13 @@
           "entries": [
             {
               "isError": false,
-              "message": "Using example_10_1.ttl from examples"
+              "message": "Using https://w3c.github.io/sdw-sosa-ssn/ssn/rdf/examples/IBS-TH2-PLUS.ttl from examples"
             },
             {
               "op": "ttl-create",
               "empty": false,
               "filename": "example_10_1.ttl",
-              "size": 73,
+              "size": 76,
               "isError": false,
               "message": "Output Turtle example_10_1.ttl created"
             }
@@ -440,7 +440,7 @@
         "type": "EXAMPLE",
         "requireFail": false,
         "filename": "build/tests/sosa/properties/spec-examples/example_11_1.ttl",
-        "url": "https://opengeospatial.github.io/ogcapi-sosa/build/tests/sosa/properties/spec-examples/example_11_1.ttl",
+        "url": "https://avillar.github.io/ogcapi-sosa-claude/build/tests/sosa/properties/spec-examples/example_11_1.ttl",
         "exampleIndex": 11,
         "snippetIndex": 1,
         "language": "text/turtle",
@@ -454,13 +454,13 @@
           "entries": [
             {
               "isError": false,
-              "message": "Using example_11_1.ttl from examples"
+              "message": "Using https://w3c.github.io/sdw-sosa-ssn/ssn/rdf/examples/IDEAS.ttl from examples"
             },
             {
               "op": "ttl-create",
               "empty": false,
               "filename": "example_11_1.ttl",
-              "size": 35,
+              "size": 38,
               "isError": false,
               "message": "Output Turtle example_11_1.ttl created"
             }
@@ -483,7 +483,7 @@
         "type": "EXAMPLE",
         "requireFail": false,
         "filename": "build/tests/sosa/properties/spec-examples/example_12_1.ttl",
-        "url": "https://opengeospatial.github.io/ogcapi-sosa/build/tests/sosa/properties/spec-examples/example_12_1.ttl",
+        "url": "https://avillar.github.io/ogcapi-sosa-claude/build/tests/sosa/properties/spec-examples/example_12_1.ttl",
         "exampleIndex": 12,
         "snippetIndex": 1,
         "language": "text/turtle",
@@ -497,7 +497,7 @@
           "entries": [
             {
               "isError": false,
-              "message": "Using example_12_1.ttl from examples"
+              "message": "Using https://w3c.github.io/sdw-sosa-ssn/ssn/rdf/examples/InkBird-IBS-TH2-Range.ttl from examples"
             },
             {
               "op": "ttl-create",
@@ -526,7 +526,7 @@
         "type": "EXAMPLE",
         "requireFail": false,
         "filename": "build/tests/sosa/properties/spec-examples/example_13_1.ttl",
-        "url": "https://opengeospatial.github.io/ogcapi-sosa/build/tests/sosa/properties/spec-examples/example_13_1.ttl",
+        "url": "https://avillar.github.io/ogcapi-sosa-claude/build/tests/sosa/properties/spec-examples/example_13_1.ttl",
         "exampleIndex": 13,
         "snippetIndex": 1,
         "language": "text/turtle",
@@ -540,13 +540,13 @@
           "entries": [
             {
               "isError": false,
-              "message": "Using example_13_1.ttl from examples"
+              "message": "Using https://w3c.github.io/sdw-sosa-ssn/ssn/rdf/examples/ip68.ttl from examples"
             },
             {
               "op": "ttl-create",
               "empty": false,
               "filename": "example_13_1.ttl",
-              "size": 90,
+              "size": 94,
               "isError": false,
               "message": "Output Turtle example_13_1.ttl created"
             }
@@ -569,7 +569,7 @@
         "type": "EXAMPLE",
         "requireFail": false,
         "filename": "build/tests/sosa/properties/spec-examples/example_14_1.ttl",
-        "url": "https://opengeospatial.github.io/ogcapi-sosa/build/tests/sosa/properties/spec-examples/example_14_1.ttl",
+        "url": "https://avillar.github.io/ogcapi-sosa-claude/build/tests/sosa/properties/spec-examples/example_14_1.ttl",
         "exampleIndex": 14,
         "snippetIndex": 1,
         "language": "text/turtle",
@@ -583,13 +583,13 @@
           "entries": [
             {
               "isError": false,
-              "message": "Using example_14_1.ttl from examples"
+              "message": "Using https://w3c.github.io/sdw-sosa-ssn/ssn/rdf/examples/iphone_barometer-sosa.ttl from examples"
             },
             {
               "op": "ttl-create",
               "empty": false,
               "filename": "example_14_1.ttl",
-              "size": 26,
+              "size": 29,
               "isError": false,
               "message": "Output Turtle example_14_1.ttl created"
             }
@@ -612,7 +612,7 @@
         "type": "EXAMPLE",
         "requireFail": false,
         "filename": "build/tests/sosa/properties/spec-examples/example_15_1.ttl",
-        "url": "https://opengeospatial.github.io/ogcapi-sosa/build/tests/sosa/properties/spec-examples/example_15_1.ttl",
+        "url": "https://avillar.github.io/ogcapi-sosa-claude/build/tests/sosa/properties/spec-examples/example_15_1.ttl",
         "exampleIndex": 15,
         "snippetIndex": 1,
         "language": "text/turtle",
@@ -626,7 +626,7 @@
           "entries": [
             {
               "isError": false,
-              "message": "Using example_15_1.ttl from examples"
+              "message": "Using https://w3c.github.io/sdw-sosa-ssn/ssn/rdf/examples/LocatedDeployment.ttl from examples"
             },
             {
               "op": "ttl-create",
@@ -655,7 +655,7 @@
         "type": "EXAMPLE",
         "requireFail": false,
         "filename": "build/tests/sosa/properties/spec-examples/example_16_1.ttl",
-        "url": "https://opengeospatial.github.io/ogcapi-sosa/build/tests/sosa/properties/spec-examples/example_16_1.ttl",
+        "url": "https://avillar.github.io/ogcapi-sosa-claude/build/tests/sosa/properties/spec-examples/example_16_1.ttl",
         "exampleIndex": 16,
         "snippetIndex": 1,
         "language": "text/turtle",
@@ -669,7 +669,7 @@
           "entries": [
             {
               "isError": false,
-              "message": "Using example_16_1.ttl from examples"
+              "message": "Using https://w3c.github.io/sdw-sosa-ssn/ssn/rdf/examples/LocatedPlatform.ttl from examples"
             },
             {
               "op": "ttl-create",
@@ -698,7 +698,7 @@
         "type": "EXAMPLE",
         "requireFail": false,
         "filename": "build/tests/sosa/properties/spec-examples/example_17_1.ttl",
-        "url": "https://opengeospatial.github.io/ogcapi-sosa/build/tests/sosa/properties/spec-examples/example_17_1.ttl",
+        "url": "https://avillar.github.io/ogcapi-sosa-claude/build/tests/sosa/properties/spec-examples/example_17_1.ttl",
         "exampleIndex": 17,
         "snippetIndex": 1,
         "language": "text/turtle",
@@ -712,7 +712,7 @@
           "entries": [
             {
               "isError": false,
-              "message": "Using example_17_1.ttl from examples"
+              "message": "Using https://w3c.github.io/sdw-sosa-ssn/ssn/rdf/examples/LocatedSample.ttl from examples"
             },
             {
               "op": "ttl-create",
@@ -741,7 +741,7 @@
         "type": "EXAMPLE",
         "requireFail": false,
         "filename": "build/tests/sosa/properties/spec-examples/example_18_1.ttl",
-        "url": "https://opengeospatial.github.io/ogcapi-sosa/build/tests/sosa/properties/spec-examples/example_18_1.ttl",
+        "url": "https://avillar.github.io/ogcapi-sosa-claude/build/tests/sosa/properties/spec-examples/example_18_1.ttl",
         "exampleIndex": 18,
         "snippetIndex": 1,
         "language": "text/turtle",
@@ -755,7 +755,7 @@
           "entries": [
             {
               "isError": false,
-              "message": "Using example_18_1.ttl from examples"
+              "message": "Using https://w3c.github.io/sdw-sosa-ssn/ssn/rdf/examples/LocatedSampling.ttl from examples"
             },
             {
               "op": "ttl-create",
@@ -784,7 +784,7 @@
         "type": "EXAMPLE",
         "requireFail": false,
         "filename": "build/tests/sosa/properties/spec-examples/example_19_1.ttl",
-        "url": "https://opengeospatial.github.io/ogcapi-sosa/build/tests/sosa/properties/spec-examples/example_19_1.ttl",
+        "url": "https://avillar.github.io/ogcapi-sosa-claude/build/tests/sosa/properties/spec-examples/example_19_1.ttl",
         "exampleIndex": 19,
         "snippetIndex": 1,
         "language": "text/turtle",
@@ -798,7 +798,7 @@
           "entries": [
             {
               "isError": false,
-              "message": "Using example_19_1.ttl from examples"
+              "message": "Using https://w3c.github.io/sdw-sosa-ssn/ssn/rdf/examples/LocatedSensor.ttl from examples"
             },
             {
               "op": "ttl-create",
@@ -827,7 +827,7 @@
         "type": "EXAMPLE",
         "requireFail": false,
         "filename": "build/tests/sosa/properties/spec-examples/example_20_1.ttl",
-        "url": "https://opengeospatial.github.io/ogcapi-sosa/build/tests/sosa/properties/spec-examples/example_20_1.ttl",
+        "url": "https://avillar.github.io/ogcapi-sosa-claude/build/tests/sosa/properties/spec-examples/example_20_1.ttl",
         "exampleIndex": 20,
         "snippetIndex": 1,
         "language": "text/turtle",
@@ -841,13 +841,13 @@
           "entries": [
             {
               "isError": false,
-              "message": "Using example_20_1.ttl from examples"
+              "message": "Using https://w3c.github.io/sdw-sosa-ssn/ssn/rdf/examples/obs-sample-foi.ttl from examples"
             },
             {
               "op": "ttl-create",
               "empty": false,
               "filename": "example_20_1.ttl",
-              "size": 12,
+              "size": 15,
               "isError": false,
               "message": "Output Turtle example_20_1.ttl created"
             }
@@ -870,7 +870,7 @@
         "type": "EXAMPLE",
         "requireFail": false,
         "filename": "build/tests/sosa/properties/spec-examples/example_21_1.ttl",
-        "url": "https://opengeospatial.github.io/ogcapi-sosa/build/tests/sosa/properties/spec-examples/example_21_1.ttl",
+        "url": "https://avillar.github.io/ogcapi-sosa-claude/build/tests/sosa/properties/spec-examples/example_21_1.ttl",
         "exampleIndex": 21,
         "snippetIndex": 1,
         "language": "text/turtle",
@@ -884,7 +884,7 @@
           "entries": [
             {
               "isError": false,
-              "message": "Using example_21_1.ttl from examples"
+              "message": "Using https://w3c.github.io/sdw-sosa-ssn/ssn/rdf/examples/open-window.ttl from examples"
             },
             {
               "op": "ttl-create",
@@ -913,7 +913,7 @@
         "type": "EXAMPLE",
         "requireFail": false,
         "filename": "build/tests/sosa/properties/spec-examples/example_22_1.ttl",
-        "url": "https://opengeospatial.github.io/ogcapi-sosa/build/tests/sosa/properties/spec-examples/example_22_1.ttl",
+        "url": "https://avillar.github.io/ogcapi-sosa-claude/build/tests/sosa/properties/spec-examples/example_22_1.ttl",
         "exampleIndex": 22,
         "snippetIndex": 1,
         "language": "text/turtle",
@@ -927,13 +927,13 @@
           "entries": [
             {
               "isError": false,
-              "message": "Using example_22_1.ttl from examples"
+              "message": "Using https://w3c.github.io/sdw-sosa-ssn/ssn/rdf/examples/paleo-atmosphere.ttl from examples"
             },
             {
               "op": "ttl-create",
               "empty": false,
               "filename": "example_22_1.ttl",
-              "size": 42,
+              "size": 51,
               "isError": false,
               "message": "Output Turtle example_22_1.ttl created"
             }
@@ -956,7 +956,7 @@
         "type": "EXAMPLE",
         "requireFail": false,
         "filename": "build/tests/sosa/properties/spec-examples/example_23_1.ttl",
-        "url": "https://opengeospatial.github.io/ogcapi-sosa/build/tests/sosa/properties/spec-examples/example_23_1.ttl",
+        "url": "https://avillar.github.io/ogcapi-sosa-claude/build/tests/sosa/properties/spec-examples/example_23_1.ttl",
         "exampleIndex": 23,
         "snippetIndex": 1,
         "language": "text/turtle",
@@ -970,7 +970,7 @@
           "entries": [
             {
               "isError": false,
-              "message": "Using example_23_1.ttl from examples"
+              "message": "Using https://w3c.github.io/sdw-sosa-ssn/ssn/rdf/examples/sample-relations.ttl from examples"
             },
             {
               "op": "ttl-create",
@@ -999,7 +999,7 @@
         "type": "EXAMPLE",
         "requireFail": false,
         "filename": "build/tests/sosa/properties/spec-examples/example_24_1.ttl",
-        "url": "https://opengeospatial.github.io/ogcapi-sosa/build/tests/sosa/properties/spec-examples/example_24_1.ttl",
+        "url": "https://avillar.github.io/ogcapi-sosa-claude/build/tests/sosa/properties/spec-examples/example_24_1.ttl",
         "exampleIndex": 24,
         "snippetIndex": 1,
         "language": "text/turtle",
@@ -1013,7 +1013,7 @@
           "entries": [
             {
               "isError": false,
-              "message": "Using example_24_1.ttl from examples"
+              "message": "Using https://w3c.github.io/sdw-sosa-ssn/ssn/rdf/examples/seismograph.ttl from examples"
             },
             {
               "op": "ttl-create",
@@ -1042,7 +1042,7 @@
         "type": "EXAMPLE",
         "requireFail": false,
         "filename": "build/tests/sosa/properties/spec-examples/example_25_1.ttl",
-        "url": "https://opengeospatial.github.io/ogcapi-sosa/build/tests/sosa/properties/spec-examples/example_25_1.ttl",
+        "url": "https://avillar.github.io/ogcapi-sosa-claude/build/tests/sosa/properties/spec-examples/example_25_1.ttl",
         "exampleIndex": 25,
         "snippetIndex": 1,
         "language": "text/turtle",
@@ -1056,7 +1056,7 @@
           "entries": [
             {
               "isError": false,
-              "message": "Using example_25_1.ttl from examples"
+              "message": "Using https://w3c.github.io/sdw-sosa-ssn/ssn/rdf/examples/smiley.ttl from examples"
             },
             {
               "op": "ttl-create",
@@ -1085,7 +1085,7 @@
         "type": "EXAMPLE",
         "requireFail": false,
         "filename": "build/tests/sosa/properties/spec-examples/example_26_1.ttl",
-        "url": "https://opengeospatial.github.io/ogcapi-sosa/build/tests/sosa/properties/spec-examples/example_26_1.ttl",
+        "url": "https://avillar.github.io/ogcapi-sosa-claude/build/tests/sosa/properties/spec-examples/example_26_1.ttl",
         "exampleIndex": 26,
         "snippetIndex": 1,
         "language": "text/turtle",
@@ -1099,13 +1099,13 @@
           "entries": [
             {
               "isError": false,
-              "message": "Using example_26_1.ttl from examples"
+              "message": "Using https://w3c.github.io/sdw-sosa-ssn/ssn/rdf/examples/spinning-cups.ttl from examples"
             },
             {
               "op": "ttl-create",
               "empty": false,
               "filename": "example_26_1.ttl",
-              "size": 27,
+              "size": 33,
               "isError": false,
               "message": "Output Turtle example_26_1.ttl created"
             }
@@ -1128,7 +1128,7 @@
         "type": "EXAMPLE",
         "requireFail": false,
         "filename": "build/tests/sosa/properties/spec-examples/example_27_1.ttl",
-        "url": "https://opengeospatial.github.io/ogcapi-sosa/build/tests/sosa/properties/spec-examples/example_27_1.ttl",
+        "url": "https://avillar.github.io/ogcapi-sosa-claude/build/tests/sosa/properties/spec-examples/example_27_1.ttl",
         "exampleIndex": 27,
         "snippetIndex": 1,
         "language": "text/turtle",
@@ -1142,7 +1142,7 @@
           "entries": [
             {
               "isError": false,
-              "message": "Using example_27_1.ttl from examples"
+              "message": "Using https://w3c.github.io/sdw-sosa-ssn/ssn/rdf/examples/sunspots.ttl from examples"
             },
             {
               "op": "ttl-create",
@@ -1171,7 +1171,7 @@
         "type": "EXAMPLE",
         "requireFail": false,
         "filename": "build/tests/sosa/properties/spec-examples/example_28_1.ttl",
-        "url": "https://opengeospatial.github.io/ogcapi-sosa/build/tests/sosa/properties/spec-examples/example_28_1.ttl",
+        "url": "https://avillar.github.io/ogcapi-sosa-claude/build/tests/sosa/properties/spec-examples/example_28_1.ttl",
         "exampleIndex": 28,
         "snippetIndex": 1,
         "language": "text/turtle",
@@ -1185,7 +1185,7 @@
           "entries": [
             {
               "isError": false,
-              "message": "Using example_28_1.ttl from examples"
+              "message": "Using https://w3c.github.io/sdw-sosa-ssn/ssn/rdf/examples/Temperature-i-adopt.ttl from examples"
             },
             {
               "op": "ttl-create",
@@ -1214,7 +1214,7 @@
         "type": "EXAMPLE",
         "requireFail": false,
         "filename": "build/tests/sosa/properties/spec-examples/example_29_1.ttl",
-        "url": "https://opengeospatial.github.io/ogcapi-sosa/build/tests/sosa/properties/spec-examples/example_29_1.ttl",
+        "url": "https://avillar.github.io/ogcapi-sosa-claude/build/tests/sosa/properties/spec-examples/example_29_1.ttl",
         "exampleIndex": 29,
         "snippetIndex": 1,
         "language": "text/turtle",
@@ -1228,7 +1228,7 @@
           "entries": [
             {
               "isError": false,
-              "message": "Using example_29_1.ttl from examples"
+              "message": "Using https://w3c.github.io/sdw-sosa-ssn/ssn/rdf/examples/Temperature-of-interest-specialization.ttl from examples"
             },
             {
               "op": "ttl-create",
@@ -1257,7 +1257,7 @@
         "type": "EXAMPLE",
         "requireFail": false,
         "filename": "build/tests/sosa/properties/spec-examples/example_30_1.ttl",
-        "url": "https://opengeospatial.github.io/ogcapi-sosa/build/tests/sosa/properties/spec-examples/example_30_1.ttl",
+        "url": "https://avillar.github.io/ogcapi-sosa-claude/build/tests/sosa/properties/spec-examples/example_30_1.ttl",
         "exampleIndex": 30,
         "snippetIndex": 1,
         "language": "text/turtle",
@@ -1271,13 +1271,13 @@
           "entries": [
             {
               "isError": false,
-              "message": "Using example_30_1.ttl from examples"
+              "message": "Using https://w3c.github.io/sdw-sosa-ssn/ssn/rdf/examples/Thermometer.ttl from examples"
             },
             {
               "op": "ttl-create",
               "empty": false,
               "filename": "example_30_1.ttl",
-              "size": 21,
+              "size": 24,
               "isError": false,
               "message": "Output Turtle example_30_1.ttl created"
             }
@@ -1300,7 +1300,7 @@
         "type": "EXAMPLE",
         "requireFail": false,
         "filename": "build/tests/sosa/properties/spec-examples/example_31_1.ttl",
-        "url": "https://opengeospatial.github.io/ogcapi-sosa/build/tests/sosa/properties/spec-examples/example_31_1.ttl",
+        "url": "https://avillar.github.io/ogcapi-sosa-claude/build/tests/sosa/properties/spec-examples/example_31_1.ttl",
         "exampleIndex": 31,
         "snippetIndex": 1,
         "language": "text/turtle",
@@ -1314,13 +1314,13 @@
           "entries": [
             {
               "isError": false,
-              "message": "Using example_31_1.ttl from examples"
+              "message": "Using https://w3c.github.io/sdw-sosa-ssn/ssn/rdf/examples/timeseries-oc.ttl from examples"
             },
             {
               "op": "ttl-create",
               "empty": false,
               "filename": "example_31_1.ttl",
-              "size": 40,
+              "size": 41,
               "isError": false,
               "message": "Output Turtle example_31_1.ttl created"
             }
@@ -1343,7 +1343,7 @@
         "type": "EXAMPLE",
         "requireFail": false,
         "filename": "build/tests/sosa/properties/spec-examples/example_32_1.ttl",
-        "url": "https://opengeospatial.github.io/ogcapi-sosa/build/tests/sosa/properties/spec-examples/example_32_1.ttl",
+        "url": "https://avillar.github.io/ogcapi-sosa-claude/build/tests/sosa/properties/spec-examples/example_32_1.ttl",
         "exampleIndex": 32,
         "snippetIndex": 1,
         "language": "text/turtle",
@@ -1357,7 +1357,7 @@
           "entries": [
             {
               "isError": false,
-              "message": "Using example_32_1.ttl from examples"
+              "message": "Using https://w3c.github.io/sdw-sosa-ssn/ssn/rdf/examples/timeseries-result-inline.ttl from examples"
             },
             {
               "op": "ttl-create",
@@ -1386,7 +1386,7 @@
         "type": "EXAMPLE",
         "requireFail": false,
         "filename": "build/tests/sosa/properties/spec-examples/example_33_1.ttl",
-        "url": "https://opengeospatial.github.io/ogcapi-sosa/build/tests/sosa/properties/spec-examples/example_33_1.ttl",
+        "url": "https://avillar.github.io/ogcapi-sosa-claude/build/tests/sosa/properties/spec-examples/example_33_1.ttl",
         "exampleIndex": 33,
         "snippetIndex": 1,
         "language": "text/turtle",
@@ -1400,7 +1400,7 @@
           "entries": [
             {
               "isError": false,
-              "message": "Using example_33_1.ttl from examples"
+              "message": "Using https://w3c.github.io/sdw-sosa-ssn/ssn/rdf/examples/timeseries-result-link.ttl from examples"
             },
             {
               "op": "ttl-create",
@@ -1429,7 +1429,7 @@
         "type": "EXAMPLE",
         "requireFail": false,
         "filename": "build/tests/sosa/properties/spec-examples/example_34_1.ttl",
-        "url": "https://opengeospatial.github.io/ogcapi-sosa/build/tests/sosa/properties/spec-examples/example_34_1.ttl",
+        "url": "https://avillar.github.io/ogcapi-sosa-claude/build/tests/sosa/properties/spec-examples/example_34_1.ttl",
         "exampleIndex": 34,
         "snippetIndex": 1,
         "language": "text/turtle",
@@ -1443,7 +1443,7 @@
           "entries": [
             {
               "isError": false,
-              "message": "Using example_34_1.ttl from examples"
+              "message": "Using https://w3c.github.io/sdw-sosa-ssn/ssn/rdf/examples/tree-height.ttl from examples"
             },
             {
               "op": "ttl-create",
@@ -1472,7 +1472,7 @@
         "type": "EXAMPLE",
         "requireFail": false,
         "filename": "build/tests/sosa/properties/spec-examples/example_35_1.ttl",
-        "url": "https://opengeospatial.github.io/ogcapi-sosa/build/tests/sosa/properties/spec-examples/example_35_1.ttl",
+        "url": "https://avillar.github.io/ogcapi-sosa-claude/build/tests/sosa/properties/spec-examples/example_35_1.ttl",
         "exampleIndex": 35,
         "snippetIndex": 1,
         "language": "text/turtle",
@@ -1486,7 +1486,7 @@
           "entries": [
             {
               "isError": false,
-              "message": "Using example_35_1.ttl from examples"
+              "message": "Using https://w3c.github.io/sdw-sosa-ssn/ssn/rdf/examples/UOM-cdt.ttl from examples"
             },
             {
               "op": "ttl-create",
@@ -1515,7 +1515,7 @@
         "type": "EXAMPLE",
         "requireFail": false,
         "filename": "build/tests/sosa/properties/spec-examples/example_36_1.ttl",
-        "url": "https://opengeospatial.github.io/ogcapi-sosa/build/tests/sosa/properties/spec-examples/example_36_1.ttl",
+        "url": "https://avillar.github.io/ogcapi-sosa-claude/build/tests/sosa/properties/spec-examples/example_36_1.ttl",
         "exampleIndex": 36,
         "snippetIndex": 1,
         "language": "text/turtle",
@@ -1529,7 +1529,7 @@
           "entries": [
             {
               "isError": false,
-              "message": "Using example_36_1.ttl from examples"
+              "message": "Using https://w3c.github.io/sdw-sosa-ssn/ssn/rdf/examples/UOM-qudt-object.ttl from examples"
             },
             {
               "op": "ttl-create",

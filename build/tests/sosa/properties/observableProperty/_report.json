@@ -1,0 +1,14 @@
+{
+  "title": "Validation report for ogc.sosa.properties.observableProperty - SOSA ObservableProperty",
+  "bblockName": "SOSA ObservableProperty",
+  "bblockId": "ogc.sosa.properties.observableProperty",
+  "generated": "2026-02-26T22:09:29.124717+00:00",
+  "result": true,
+  "items": [],
+  "globalErrors": {},
+  "counts": {
+    "total": 0,
+    "passed": 0,
+    "failed": 0
+  }
+}

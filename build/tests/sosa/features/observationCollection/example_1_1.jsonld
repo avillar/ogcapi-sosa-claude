@@ -1,6 +1,6 @@
 {
   "@context": [
-    "https://opengeospatial.github.io/ogcapi-sosa/build/annotated/sosa/features/observationCollection/context.jsonld",
+    "https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/features/observationCollection/context.jsonld",
     {
       "resultschema": "http//example.org/resultchema/",
       "a": "resultschema:a",

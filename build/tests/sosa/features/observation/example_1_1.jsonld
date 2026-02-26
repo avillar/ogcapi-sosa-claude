@@ -1,5 +1,5 @@
 {
-  "@context": "https://opengeospatial.github.io/ogcapi-sosa/build/annotated/sosa/features/observation/context.jsonld",
+  "@context": "https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/features/observation/context.jsonld",
   "id": "pop1999",
   "type": "Feature",
   "featureType": "sosa:Observation",
