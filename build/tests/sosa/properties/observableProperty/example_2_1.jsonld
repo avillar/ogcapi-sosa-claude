@@ -1,0 +1,10 @@
+{
+  "@context": [
+    "https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/observableProperty/context.jsonld",
+    {
+      "eg": "http://example.org/"
+    }
+  ],
+  "id": "eg:properties/waterTemperature",
+  "isPropertyOf": "eg:features/river-thames"
+}

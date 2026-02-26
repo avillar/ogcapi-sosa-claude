@@ -1,0 +1,4 @@
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
+
+<http://example.org/properties/waterTemperature> sosa:isPropertyOf <http://example.org/features/river-thames> .
+

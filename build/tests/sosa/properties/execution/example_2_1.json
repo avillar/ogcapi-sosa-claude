@@ -1,0 +1,12 @@
+{
+  "@context": {
+    "eg": "http://example.org/"
+  },
+  "hasFeatureOfInterest": "eg:features/river-thames",
+  "usedProcedure": "eg:procedures/water-sampling",
+  "madeBySystem": "eg:systems/sampler-1",
+  "startTime": "2024-03-15T09:00:00Z",
+  "endTime": "2024-03-15T09:30:00Z",
+  "resultTime": "2024-03-15T11:00:00Z",
+  "hasSimpleResult": "sample-collected"
+}

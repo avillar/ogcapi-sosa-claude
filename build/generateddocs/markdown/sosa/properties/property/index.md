@@ -7,6 +7,92 @@ An identifiable quality (property, characteristic) of a FeatureOfInterest. A Pro
 
 [*Status*](http://www.opengis.net/def/status): Under development
 
+## Description
+
+## SOSA Property Properties
+
+This building block describes the canonical set of properties for a **Property** object according to the SOSA/SSN specification.
+
+A Property is an identifiable quality (property, characteristic) of a FeatureOfInterest that can be observed, acted upon, or sampled. Properties can be associated with different Features of Interest and may be used by one or more Procedures.
+
+Specializations of Property include:
+- **ObservableProperty** — a property that can be observed by a Sensor
+- **ActuatableProperty** — a property that can be changed by an Actuator
+- **SampledProperty** — a property whose value can be assessed by a Sampler
+
+A Property can be expressed as:
+- a reference (IRI or CURIE) to an externally defined property, or
+- an inline object with an `id`, and optionally `isPropertyOf` (the associated FeatureOfInterest) and `hasProcedure` (Procedures that address this Property).
+
+These properties are independent of the feature model implementation.
+
+## Examples
+
+### Property as IRI reference
+#### json
+```json
+"http://example.org/properties/waterTemperature"
+
+```
+
+#### jsonld
+```jsonld
+{
+  "@context": "https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/property/context.jsonld",
+  "@graph": "http://example.org/properties/waterTemperature"
+}
+```
+
+#### ttl
+```ttl
+
+
+```
+
+
+### Property as inline object with associated procedure
+#### json
+```json
+{
+  "@context": {
+    "eg": "http://example.org/"
+  },
+  "id": "eg:properties/waterTemperature",
+  "isPropertyOf": "eg:features/river-thames",
+  "hasProcedure": [
+    "eg:procedures/thermometer-reading"
+  ]
+}
+
+```
+
+#### jsonld
+```jsonld
+{
+  "@context": [
+    "https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/property/context.jsonld",
+    {
+      "eg": "http://example.org/"
+    }
+  ],
+  "id": "eg:properties/waterTemperature",
+  "isPropertyOf": "eg:features/river-thames",
+  "hasProcedure": [
+    "eg:procedures/thermometer-reading"
+  ]
+}
+```
+
+#### ttl
+```ttl
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
+
+<http://example.org/properties/waterTemperature> sosa:hasProcedure <http://example.org/procedures/thermometer-reading> ;
+    sosa:isPropertyOf <http://example.org/features/river-thames> .
+
+
+```
+
 ## Schema
 
 ```yaml

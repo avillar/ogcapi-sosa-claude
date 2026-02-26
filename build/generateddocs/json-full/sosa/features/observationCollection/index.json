@@ -36,8 +36,8 @@
     ]
   },
   "dependsOn": [
-    "ogc.geo.json-fg.featureCollection-lenient",
     "ogc.sosa.features.observation",
+    "ogc.geo.json-fg.featureCollection-lenient",
     "ogc.sosa.properties.observationCollection"
   ],
   "schema": {

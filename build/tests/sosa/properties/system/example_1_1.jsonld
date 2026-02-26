@@ -1,0 +1,4 @@
+{
+  "@context": "https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/system/context.jsonld",
+  "@graph": "http://example.org/systems/weather-station-1"
+}

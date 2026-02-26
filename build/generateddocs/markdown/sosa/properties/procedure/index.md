@@ -7,6 +7,94 @@ A workflow, protocol, plan, algorithm, or computational method specifying how to
 
 [*Status*](http://www.opengis.net/def/status): Under development
 
+## Description
+
+## SOSA Procedure Properties
+
+This building block describes the canonical set of properties for a **Procedure** object according to the SOSA/SSN specification.
+
+A Procedure is a workflow, protocol, plan, algorithm, or computational method specifying how to make an Observation, create a Sample, or make a change to the state of the world via an Actuator. A Procedure is reusable and may be implemented by multiple Systems.
+
+A Procedure can be expressed as:
+- a reference (IRI or CURIE) to an externally defined procedure, or
+- an inline object with an `id` and optionally:
+  - `implementedBy` — the Systems that implement this Procedure
+  - `hasInput` / `hasOutput` — the inputs and outputs of the Procedure
+  - `isProcedureFor` — the Properties this Procedure can be used to observe or act upon
+
+These properties are independent of the feature model implementation.
+
+## Examples
+
+### Procedure as IRI reference
+#### json
+```json
+"http://example.org/procedures/thermometer-reading"
+
+```
+
+#### jsonld
+```jsonld
+{
+  "@context": "https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/procedure/context.jsonld",
+  "@graph": "http://example.org/procedures/thermometer-reading"
+}
+```
+
+#### ttl
+```ttl
+
+
+```
+
+
+### Procedure as inline object
+#### json
+```json
+{
+  "@context": {
+    "eg": "http://example.org/"
+  },
+  "id": "eg:procedures/thermometer-reading",
+  "isProcedureFor": [
+    "eg:properties/waterTemperature"
+  ],
+  "implementedBy": [
+    "eg:sensors/thermometer-1"
+  ]
+}
+
+```
+
+#### jsonld
+```jsonld
+{
+  "@context": [
+    "https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/procedure/context.jsonld",
+    {
+      "eg": "http://example.org/"
+    }
+  ],
+  "id": "eg:procedures/thermometer-reading",
+  "isProcedureFor": [
+    "eg:properties/waterTemperature"
+  ],
+  "implementedBy": [
+    "eg:sensors/thermometer-1"
+  ]
+}
+```
+
+#### ttl
+```ttl
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
+
+<http://example.org/procedures/thermometer-reading> sosa:implementedBy <http://example.org/sensors/thermometer-1> ;
+    sosa:isProcedureFor <http://example.org/properties/waterTemperature> .
+
+
+```
+
 ## Schema
 
 ```yaml

@@ -1,0 +1,12 @@
+{
+  "@context": {
+    "eg": "http://example.org/"
+  },
+  "id": "eg:procedures/thermometer-reading",
+  "isProcedureFor": [
+    "eg:properties/waterTemperature"
+  ],
+  "implementedBy": [
+    "eg:sensors/thermometer-1"
+  ]
+}

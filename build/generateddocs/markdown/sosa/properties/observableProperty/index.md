@@ -7,6 +7,80 @@ An observable quality (property, characteristic) of a FeatureOfInterest. An Obse
 
 [*Status*](http://www.opengis.net/def/status): Under development
 
+## Description
+
+## SOSA ObservableProperty Properties
+
+This building block describes the canonical set of properties for an **ObservableProperty** object according to the SOSA/SSN specification.
+
+An ObservableProperty is an observable quality (property, characteristic) of a FeatureOfInterest. It is the characteristic that a Sensor is designed to estimate or calculate a value of, by implementing an ObservingProcedure.
+
+An ObservableProperty can be expressed as:
+- a reference (IRI or CURIE) to an externally defined property, or
+- an inline object with an `id` and optionally a reference to the feature it belongs to (`isPropertyOf`).
+
+ObservableProperty is a specialization of [SOSA Property](../property/).
+
+## Examples
+
+### Observable Property as IRI reference
+#### json
+```json
+"http://example.org/properties/waterTemperature"
+
+```
+
+#### jsonld
+```jsonld
+{
+  "@context": "https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/observableProperty/context.jsonld",
+  "@graph": "http://example.org/properties/waterTemperature"
+}
+```
+
+#### ttl
+```ttl
+
+
+```
+
+
+### Observable Property as inline object
+#### json
+```json
+{
+  "@context": {
+    "eg": "http://example.org/"
+  },
+  "id": "eg:properties/waterTemperature",
+  "isPropertyOf": "eg:features/river-thames"
+}
+
+```
+
+#### jsonld
+```jsonld
+{
+  "@context": [
+    "https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/observableProperty/context.jsonld",
+    {
+      "eg": "http://example.org/"
+    }
+  ],
+  "id": "eg:properties/waterTemperature",
+  "isPropertyOf": "eg:features/river-thames"
+}
+```
+
+#### ttl
+```ttl
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
+
+<http://example.org/properties/waterTemperature> sosa:isPropertyOf <http://example.org/features/river-thames> .
+
+
+```
+
 ## Schema
 
 ```yaml

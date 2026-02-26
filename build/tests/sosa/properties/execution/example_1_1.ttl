@@ -1,0 +1,10 @@
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+[] sosa:hasFeatureOfInterest <http://example.org/features/river-thames> ;
+    sosa:hasSimpleResult 2.31e+01 ;
+    sosa:madeBySystem <http://example.org/sensors/thermometer-1> ;
+    sosa:phenomenonTime <2024-03-15T09:55:00Z> ;
+    sosa:resultTime "2024-03-15T10:00:00Z" ;
+    sosa:usedProcedure <http://example.org/procedures/thermometer-reading> .
+

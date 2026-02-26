@@ -1,0 +1,4 @@
+{
+  "@context": "https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/featureOfInterest/context.jsonld",
+  "@graph": "https://example.org/features/river-thames"
+}

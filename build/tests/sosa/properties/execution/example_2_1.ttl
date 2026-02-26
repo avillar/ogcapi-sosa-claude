@@ -1,0 +1,10 @@
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
+
+[] sosa:endTime "2024-03-15T09:30:00Z" ;
+    sosa:hasFeatureOfInterest <http://example.org/features/river-thames> ;
+    sosa:hasSimpleResult <file:///github/workspace/sample-collected> ;
+    sosa:madeBySystem <http://example.org/systems/sampler-1> ;
+    sosa:resultTime "2024-03-15T11:00:00Z" ;
+    sosa:startTime "2024-03-15T09:00:00Z" ;
+    sosa:usedProcedure <http://example.org/procedures/water-sampling> .
+

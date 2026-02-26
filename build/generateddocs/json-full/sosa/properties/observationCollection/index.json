@@ -32,9 +32,9 @@
     ]
   },
   "dependsOn": [
+    "ogc.sosa.properties.observation-owa",
     "ogc.sosa.properties.observation",
-    "ogc.ogc-utils.iri-or-curie",
-    "ogc.sosa.properties.observation-owa"
+    "ogc.ogc-utils.iri-or-curie"
   ],
   "schema": {
     "application/yaml": "https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/observationCollection/schema.yaml",

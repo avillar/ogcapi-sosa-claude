@@ -1,0 +1,4 @@
+{
+  "@context": "https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/procedure/context.jsonld",
+  "@graph": "http://example.org/procedures/thermometer-reading"
+}

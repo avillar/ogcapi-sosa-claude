@@ -1,0 +1,12 @@
+@prefix eg: <http://example.org/> .
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
+
+<http://example.org/systems/weather-station-1> sosa:hasSubSystem <http://example.org/sensors/barometer-1>,
+        <http://example.org/sensors/thermometer-1> ;
+    sosa:implements <http://example.org/procedures/barometer-reading>,
+        <http://example.org/procedures/thermometer-reading> .
+
+<http://example.org/sensors/barometer-1> sosa:sensorKind eg:BarometerSensor .
+
+<http://example.org/sensors/thermometer-1> sosa:sensorKind eg:ThermometerSensor .
+

@@ -1,0 +1,6 @@
+@prefix eg: <http://example.org/features/> .
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
+
+eg:river-thames sosa:hasProperty <http://example.org/properties/waterLevel>,
+        <http://example.org/properties/waterTemperature> .
+

@@ -1,5 +1,5 @@
 Validation report for ogc.sosa.properties.observation-owa - Observation Properties (SOSA OWA)
-Generated 2026-02-26T22:09:29.202157+00:00
+Generated 2026-02-26T22:19:54.351394+00:00
 === Files ===
 Using example_2_1.json from examples
 JSON-LD context is present - uplifting

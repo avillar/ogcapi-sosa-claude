@@ -7,6 +7,133 @@ An act of carrying out a Procedure by a System on or about a FeatureOfInterest, 
 
 [*Status*](http://www.opengis.net/def/status): Under development
 
+## Description
+
+## SOSA Execution Properties
+
+This building block describes the canonical set of properties for an **Execution** object according to the SOSA/SSN specification.
+
+An Execution is an act of carrying out a Procedure by a System on or about a FeatureOfInterest, with the objective of producing a Result. Execution is the common abstract class for:
+- **Observation** — estimating a value of a property of a FeatureOfInterest
+- **Actuation** — changing the state of the world
+- **Sampling** — creating a Sample of a FeatureOfInterest
+
+All executions share the following properties:
+- `hasFeatureOfInterest` / `hasUltimateFeatureOfInterest` — the target feature
+- `usedProcedure` — the procedure applied
+- `madeBySystem` — the system that performed the execution
+- `hasResult` / `hasSimpleResult` — the result produced
+- `resultTime` — when the result was produced
+- `phenomenonTime` — the time the phenomenon being estimated occurred
+- `startTime` / `endTime` — the temporal extent of the execution
+
+These properties are independent of the feature model implementation. For observations specifically, use the [SOSA Observation Properties](../observation-owa/) building block, which adds `observedProperty` and `madeBySensor`.
+
+## Examples
+
+### Example of SOSA Execution (as Observation)
+#### json
+```json
+{
+  "@context": {
+    "eg": "http://example.org/"
+  },
+  "hasFeatureOfInterest": "eg:features/river-thames",
+  "usedProcedure": "eg:procedures/thermometer-reading",
+  "madeBySystem": "eg:sensors/thermometer-1",
+  "hasSimpleResult": 23.1,
+  "resultTime": "2024-03-15T10:00:00Z",
+  "phenomenonTime": "2024-03-15T09:55:00Z"
+}
+
+```
+
+#### jsonld
+```jsonld
+{
+  "@context": [
+    "https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/execution/context.jsonld",
+    {
+      "eg": "http://example.org/"
+    }
+  ],
+  "hasFeatureOfInterest": "eg:features/river-thames",
+  "usedProcedure": "eg:procedures/thermometer-reading",
+  "madeBySystem": "eg:sensors/thermometer-1",
+  "hasSimpleResult": 23.1,
+  "resultTime": "2024-03-15T10:00:00Z",
+  "phenomenonTime": "2024-03-15T09:55:00Z"
+}
+```
+
+#### ttl
+```ttl
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+[] sosa:hasFeatureOfInterest <http://example.org/features/river-thames> ;
+    sosa:hasSimpleResult 2.31e+01 ;
+    sosa:madeBySystem <http://example.org/sensors/thermometer-1> ;
+    sosa:phenomenonTime <2024-03-15T09:55:00Z> ;
+    sosa:resultTime "2024-03-15T10:00:00Z" ;
+    sosa:usedProcedure <http://example.org/procedures/thermometer-reading> .
+
+
+```
+
+
+### Example of SOSA Execution with start/end time
+#### json
+```json
+{
+  "@context": {
+    "eg": "http://example.org/"
+  },
+  "hasFeatureOfInterest": "eg:features/river-thames",
+  "usedProcedure": "eg:procedures/water-sampling",
+  "madeBySystem": "eg:systems/sampler-1",
+  "startTime": "2024-03-15T09:00:00Z",
+  "endTime": "2024-03-15T09:30:00Z",
+  "resultTime": "2024-03-15T11:00:00Z",
+  "hasSimpleResult": "sample-collected"
+}
+
+```
+
+#### jsonld
+```jsonld
+{
+  "@context": [
+    "https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/execution/context.jsonld",
+    {
+      "eg": "http://example.org/"
+    }
+  ],
+  "hasFeatureOfInterest": "eg:features/river-thames",
+  "usedProcedure": "eg:procedures/water-sampling",
+  "madeBySystem": "eg:systems/sampler-1",
+  "startTime": "2024-03-15T09:00:00Z",
+  "endTime": "2024-03-15T09:30:00Z",
+  "resultTime": "2024-03-15T11:00:00Z",
+  "hasSimpleResult": "sample-collected"
+}
+```
+
+#### ttl
+```ttl
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
+
+[] sosa:endTime "2024-03-15T09:30:00Z" ;
+    sosa:hasFeatureOfInterest <http://example.org/features/river-thames> ;
+    sosa:hasSimpleResult <file:///github/workspace/sample-collected> ;
+    sosa:madeBySystem <http://example.org/systems/sampler-1> ;
+    sosa:resultTime "2024-03-15T11:00:00Z" ;
+    sosa:startTime "2024-03-15T09:00:00Z" ;
+    sosa:usedProcedure <http://example.org/procedures/water-sampling> .
+
+
+```
+
 ## Schema
 
 ```yaml

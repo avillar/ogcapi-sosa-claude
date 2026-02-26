@@ -1,0 +1,15 @@
+{
+  "@context": [
+    "https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/procedure/context.jsonld",
+    {
+      "eg": "http://example.org/"
+    }
+  ],
+  "id": "eg:procedures/thermometer-reading",
+  "isProcedureFor": [
+    "eg:properties/waterTemperature"
+  ],
+  "implementedBy": [
+    "eg:sensors/thermometer-1"
+  ]
+}

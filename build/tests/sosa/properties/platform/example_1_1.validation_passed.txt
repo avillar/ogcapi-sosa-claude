@@ -1,5 +1,5 @@
 Validation report for ogc.sosa.properties.platform - SOSA Platform
-Generated 2026-02-26T22:09:29.044458+00:00
+Generated 2026-02-26T22:19:53.951165+00:00
 === Files ===
 Using examples/platform.json from examples
 JSON-LD context is present - uplifting

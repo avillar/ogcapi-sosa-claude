@@ -30,9 +30,9 @@
   "highlighted": false,
   "shaclShapes": {},
   "dependsOn": [
-    "ogc.sosa.properties.execution",
+    "ogc.sosa.properties.observableProperty",
     "ogc.sosa.properties.sensor",
-    "ogc.sosa.properties.observableProperty"
+    "ogc.sosa.properties.execution"
   ],
   "schema": {
     "application/yaml": "https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/observation-owa/schema.yaml",
