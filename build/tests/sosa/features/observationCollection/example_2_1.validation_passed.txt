@@ -1,5 +1,5 @@
 Validation report for ogc.sosa.features.observationCollection - SOSA ObservationCollection Feature
-Generated 2026-02-26T22:20:02.547292+00:00
+Generated 2026-03-02T06:16:31.051733+00:00
 === Files ===
 Using example_2_1.ttl from examples
 Output Turtle example_2_1.ttl created
@@ -11,15 +11,15 @@ Validation result for _sources/properties/observation/shapes.shacl:
   Conforms: True
   
 Focus nodes for _sources/properties/observation/shapes.shacl:
- - Shape <https://www.ogc.org/rules/sosa/#testResult>: eg:pop1999,eg:pop2000
- - Shape <https://www.ogc.org/rules/sosa/#testObservedPropertyPresent>: eg:pop1999,eg:pop2000
- - Shape <https://www.ogc.org/rules/sosa/#testSimpleResultLiteral>: eg:pop1999/sosa:hasSimpleResult,eg:pop2000/sosa:hasSimpleResult
  - Shape <https://www.ogc.org/rules/sosa/#testFeatureOfInterest>: eg:pop1999,eg:pop2000
- - Shape <https://www.ogc.org/rules/sosa/#testCollectionPropertyValuesInterval>: eg:c1
- - Shape <https://www.ogc.org/rules/sosa/#testResultNotEmptyNode>: *none*
+ - Shape <https://www.ogc.org/rules/sosa/#testSimpleResultLiteral>: eg:pop1999/sosa:hasSimpleResult,eg:pop2000/sosa:hasSimpleResult
+ - Shape <https://www.ogc.org/rules/sosa/#testObservedPropertyPresent>: eg:pop1999,eg:pop2000
  - Shape <https://www.ogc.org/rules/sosa/#testRequiredTime>: eg:pop1999,eg:pop2000
- - Shape <https://www.ogc.org/rules/sosa/#testObservedPropertyConsistent>: eg:c1
+ - Shape <https://www.ogc.org/rules/sosa/#testResultNotEmptyNode>: *none*
+ - Shape <https://www.ogc.org/rules/sosa/#testCollectionPropertyValuesInterval>: eg:c1
  - Shape <https://www.ogc.org/rules/sosa/#testCollectionPropertyValues>: eg:c1
+ - Shape <https://www.ogc.org/rules/sosa/#testObservedPropertyConsistent>: eg:c1
+ - Shape <https://www.ogc.org/rules/sosa/#testResult>: eg:pop1999,eg:pop2000
 
 === End SHACL ===
 

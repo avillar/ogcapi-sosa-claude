@@ -1,5 +1,5 @@
 Validation report for ogc.sosa.properties.spec-examples - Tests for SOSA specification
-Generated 2026-02-26T22:19:53.251001+00:00
+Generated 2026-03-02T06:16:22.053753+00:00
 === Files ===
 Using https://w3c.github.io/sdw-sosa-ssn/ssn/rdf/examples/tree-height.ttl from examples
 Output Turtle example_34_1.ttl created

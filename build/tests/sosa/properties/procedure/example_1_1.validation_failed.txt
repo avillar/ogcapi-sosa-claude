@@ -1,5 +1,5 @@
 Validation report for ogc.sosa.properties.procedure - SOSA Procedure
-Generated 2026-02-26T22:19:54.056028+00:00
+Generated 2026-03-02T06:16:22.483179+00:00
 === Files ===
 Using examples/procedure-iri.json from examples
 JSON-LD context is present - uplifting

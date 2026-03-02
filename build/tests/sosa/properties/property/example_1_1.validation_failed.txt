@@ -1,5 +1,5 @@
 Validation report for ogc.sosa.properties.property - SOSA Property
-Generated 2026-02-26T22:19:53.375858+00:00
+Generated 2026-03-02T06:16:22.120965+00:00
 === Files ===
 Using examples/property-iri.json from examples
 JSON-LD context is present - uplifting

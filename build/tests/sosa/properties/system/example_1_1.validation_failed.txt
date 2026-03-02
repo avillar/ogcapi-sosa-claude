@@ -1,5 +1,5 @@
 Validation report for ogc.sosa.properties.system - SOSA System
-Generated 2026-02-26T22:19:53.595646+00:00
+Generated 2026-03-02T06:16:22.210019+00:00
 === Files ===
 Using examples/system-iri.json from examples
 JSON-LD context is present - uplifting

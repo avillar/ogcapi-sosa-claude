@@ -1,5 +1,5 @@
 Validation report for ogc.sosa.properties.sensor - SOSA Sensor
-Generated 2026-02-26T22:19:53.476008+00:00
+Generated 2026-03-02T06:16:22.172498+00:00
 === Files ===
 Using examples/compound.json from examples
 JSON-LD context is present - uplifting

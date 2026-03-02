@@ -1,5 +1,5 @@
 Validation report for ogc.sosa.properties.observation - Observation Properties
-Generated 2026-02-26T22:19:56.016615+00:00
+Generated 2026-03-02T06:16:24.240259+00:00
 === Files ===
 Using result-phenomenon-time.ttl from test resources
 === End Files ===
@@ -10,15 +10,15 @@ Validation result for _sources/properties/observation/shapes.shacl:
   Conforms: True
   
 Focus nodes for _sources/properties/observation/shapes.shacl:
- - Shape <https://www.ogc.org/rules/sosa/#testResult>: _:nff136a695317402288fbb80d80a1803bb1
- - Shape <https://www.ogc.org/rules/sosa/#testObservedPropertyPresent>: _:nff136a695317402288fbb80d80a1803bb1
+ - Shape <https://www.ogc.org/rules/sosa/#testFeatureOfInterest>: _:n660cf64a226f4a2eab937a52ff5826f4b1
  - Shape <https://www.ogc.org/rules/sosa/#testSimpleResultLiteral>: 
- - Shape <https://www.ogc.org/rules/sosa/#testFeatureOfInterest>: _:nff136a695317402288fbb80d80a1803bb1
- - Shape <https://www.ogc.org/rules/sosa/#testCollectionPropertyValuesInterval>: *none*
+ - Shape <https://www.ogc.org/rules/sosa/#testObservedPropertyPresent>: _:n660cf64a226f4a2eab937a52ff5826f4b1
+ - Shape <https://www.ogc.org/rules/sosa/#testRequiredTime>: _:n660cf64a226f4a2eab937a52ff5826f4b1
  - Shape <https://www.ogc.org/rules/sosa/#testResultNotEmptyNode>: *none*
- - Shape <https://www.ogc.org/rules/sosa/#testRequiredTime>: _:nff136a695317402288fbb80d80a1803bb1
- - Shape <https://www.ogc.org/rules/sosa/#testObservedPropertyConsistent>: *none*
+ - Shape <https://www.ogc.org/rules/sosa/#testCollectionPropertyValuesInterval>: *none*
  - Shape <https://www.ogc.org/rules/sosa/#testCollectionPropertyValues>: *none*
+ - Shape <https://www.ogc.org/rules/sosa/#testObservedPropertyConsistent>: *none*
+ - Shape <https://www.ogc.org/rules/sosa/#testResult>: _:n660cf64a226f4a2eab937a52ff5826f4b1
 
 === End SHACL ===
 

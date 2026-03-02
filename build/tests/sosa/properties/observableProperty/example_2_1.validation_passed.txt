@@ -1,5 +1,5 @@
 Validation report for ogc.sosa.properties.observableProperty - SOSA ObservableProperty
-Generated 2026-02-26T22:19:53.844451+00:00
+Generated 2026-03-02T06:16:22.385590+00:00
 === Files ===
 Using examples/property.json from examples
 JSON-LD context is present - uplifting
