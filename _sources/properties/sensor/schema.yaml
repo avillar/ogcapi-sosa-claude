@@ -3,6 +3,11 @@ description: 'SOSA Sensor'
 x-jsonld-context: ../../../sosa-ssn.jsonld
 $definitions:
   Sensor:
+    #TBD - need to blow this away and build using model
+    # sosa:madeObservation ONLY (sosa:Observation or sosa:ObservationCollection)
+    # sosa:observes ONLY sosa:Property
+    # sosa:detects ONLY sosa:Stimulus
+    # sosa:implements ONLY sosa:ObservingProcedure
     anyOf:
       - $ref: bblocks://ogc.ogc-utils.iri-or-curie
       - type: object

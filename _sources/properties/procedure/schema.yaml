@@ -6,6 +6,8 @@ $defs:
     anyOf:
       - $ref: bblocks://ogc.ogc-utils.iri-or-curie
       - type: object
+        # TBD - should this have a required set
+        # TBD name and description?
         properties:
           id:
             $ref: bblocks://ogc.ogc-utils.iri-or-curie
@@ -13,6 +15,7 @@ $defs:
             type: array
             items:
               $ref: bblocks://ogc.sosa.properties.system
+          # TBD - this should be a generic building block we use for processes too.
           hasInput: true
           hasOutput: true
           isProcedureFor:
