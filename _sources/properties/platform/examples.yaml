@@ -1,5 +1,9 @@
-- title: Example of Platform hosting multiple sensors
-
+- title: Platform hosting multiple sensors
   snippets:
     - language: json
       ref: examples/platform.json
+
+- title: Research vessel with nested sub-platforms and sensor arrays
+  snippets:
+    - language: json
+      ref: examples/platform-complex.json

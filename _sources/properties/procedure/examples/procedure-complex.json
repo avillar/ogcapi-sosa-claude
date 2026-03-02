@@ -1,0 +1,33 @@
+{
+  "@context": {
+    "eg": "http://example.org/"
+  },
+  "id": "eg:procedures/water-quality-monitoring",
+  "name": "Water Quality Monitoring Procedure",
+  "description": "Multi-parameter procedure for in-situ water quality assessment",
+  "isProcedureFor": [
+    {
+      "id": "eg:properties/waterTemperature",
+      "name": "Water Temperature"
+    },
+    {
+      "id": "eg:properties/waterPH",
+      "name": "Water pH"
+    },
+    {
+      "id": "eg:properties/dissolvedOxygen",
+      "name": "Dissolved Oxygen"
+    }
+  ],
+  "implementedBy": [
+    {
+      "id": "eg:sensors/multi-parameter-probe-1",
+      "name": "Multi-parameter Probe 1",
+      "hasSubSystem": [
+        { "id": "eg:sensors/temp-probe-1", "name": "Temperature Probe" },
+        { "id": "eg:sensors/ph-probe-1", "name": "pH Probe" },
+        { "id": "eg:sensors/do-probe-1", "name": "Dissolved Oxygen Probe" }
+      ]
+    }
+  ]
+}

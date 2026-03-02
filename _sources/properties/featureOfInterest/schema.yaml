@@ -3,15 +3,15 @@ description: 'SOSA FeatureOfInterest'
 x-jsonld-context: ../../../sosa-ssn.jsonld
 $defs:
   FeatureOfInterest:
-    anyOf:
-      - $ref: bblocks://ogc.ogc-utils.iri-or-curie
+    allOf:
+      - $ref: bblocks://ogc.sosa.properties.registerItem
       - type: object
         properties:
-          id:
-            $ref: bblocks://ogc.ogc-utils.iri-or-curie
           hasProperty:
             type: array
             items:
-              $ref: bblocks://ogc.sosa.properties.property
+              anyOf:
+                - $ref: bblocks://ogc.ogc-utils.iri-or-curie
+                - $ref: bblocks://ogc.sosa.properties.property
 allOf:
   - $ref: '#/$defs/FeatureOfInterest'

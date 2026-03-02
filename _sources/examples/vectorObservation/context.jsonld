@@ -1,0 +1,9 @@
+{
+  "@context": {
+    "pose": "http://example.com/properties/pose",
+    "distance": {
+      "@id": "http://example.com/properties/distance",
+      "@type": "http://www.w3.org/2001/XMLSchema#float"
+    }
+  }
+}

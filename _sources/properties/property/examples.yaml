@@ -1,9 +1,9 @@
-- title: Property as IRI reference
-  snippets:
-    - language: json
-      ref: examples/property-iri.json
-
 - title: Property as inline object with associated procedure
   snippets:
     - language: json
       ref: examples/property.json
+
+- title: Property with inline feature of interest and multiple procedures
+  snippets:
+    - language: json
+      ref: examples/property-complex.json

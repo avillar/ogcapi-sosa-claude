@@ -7,3 +7,8 @@
   snippets:
     - language: json
       ref: examples/execution-with-time.json
+
+- title: Execution with inline feature, procedure, and multi-sensor system
+  snippets:
+    - language: json
+      ref: examples/execution-complex.json

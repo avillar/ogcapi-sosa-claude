@@ -6,9 +6,13 @@ allOf:
   - type: object
     properties:
       observedProperty:
-        $ref: bblocks://ogc.sosa.properties.observableProperty
+        anyOf:
+          - $ref: bblocks://ogc.ogc-utils.iri-or-curie
+          - $ref: bblocks://ogc.sosa.properties.property
       madeBySensor:
-        $ref: bblocks://ogc.sosa.properties.sensor
+        anyOf:
+          - $ref: bblocks://ogc.ogc-utils.iri-or-curie
+          - $ref: bblocks://ogc.sosa.properties.sensor
       hasResult: true
       result: true
       result@links: true

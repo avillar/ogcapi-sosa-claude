@@ -1,19 +1,17 @@
 {
   "@context": {
-    "eg": "http://example.org/sensors",
+    "eg": "http://example.org/sensors/",
     "resolution": "http://camera-specs.org/params/imageResolution"
   },
   "id": "eg:myPhone",
-  "sensorType": "eg:phone",
   "hosts": [
     {
-      "sensorType": "eg:camera",
-      "id": "eg:123",
-      "resolution": 20000
+      "id": "eg:camera-1",
+      "observes": ["http://example.org/properties/image"]
     },
     {
-      "sensorType": "eg:compass",
-      "id": "eg:mkV"
+      "id": "eg:compass-1",
+      "observes": ["http://example.org/properties/heading"]
     }
   ]
 }

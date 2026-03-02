@@ -1,0 +1,33 @@
+{
+  "@context": {
+    "eg": "http://example.org/"
+  },
+  "id": "eg:systems/environmental-monitoring-network",
+  "name": "Environmental Monitoring Network",
+  "description": "A hierarchical network of sensor stations monitoring environmental conditions across a river basin",
+  "implements": [
+    {
+      "id": "eg:procedures/continuous-water-monitoring",
+      "name": "Continuous Water Monitoring Procedure"
+    }
+  ],
+  "hasSubSystem": [
+    {
+      "id": "eg:systems/station-upstream",
+      "name": "Upstream Station",
+      "hasSubSystem": [
+        { "id": "eg:sensors/temp-sensor-u1", "name": "Temperature Sensor U1" },
+        { "id": "eg:sensors/flow-sensor-u1", "name": "Flow Rate Sensor U1" }
+      ]
+    },
+    {
+      "id": "eg:systems/station-downstream",
+      "name": "Downstream Station",
+      "hasSubSystem": [
+        { "id": "eg:sensors/temp-sensor-d1", "name": "Temperature Sensor D1" },
+        { "id": "eg:sensors/flow-sensor-d1", "name": "Flow Rate Sensor D1" },
+        { "id": "eg:sensors/turbidity-sensor-d1", "name": "Turbidity Sensor D1" }
+      ]
+    }
+  ]
+}

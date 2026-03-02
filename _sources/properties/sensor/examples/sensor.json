@@ -1,0 +1,14 @@
+{
+  "@context": {
+    "eg": "http://example.org/",
+    "sensorType": {
+      "@type": "@id",
+      "@id": "sosa:sensorKind"
+    }
+  },
+  "id": "eg:sensors/thermometer-1",
+  "sensorType": "eg:ThermometerSensor",
+  "observes": [
+    "eg:properties/waterTemperature"
+  ]
+}

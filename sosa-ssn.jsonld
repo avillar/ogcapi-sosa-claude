@@ -4,6 +4,8 @@
     "sosa": "http://www.w3.org/ns/sosa/",
     "ssn": "http://www.w3.org/ns/ssn/",
     "ssn-system": "http://www.w3.org/ns/ssn/systems/",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "dct": "http://purl.org/dc/terms/",
     "id": "@id",
     "properties": "@nest",
     "featureType": "@type",
@@ -439,6 +441,8 @@
     "qualityOfObservation":  {
       "@id": "ssn-system:qualityOfObservation",
       "@type": "@id"
-    }
+    },
+    "name": "rdfs:label",
+    "description": "dct:description"
   }
 }

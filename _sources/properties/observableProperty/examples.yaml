@@ -1,9 +1,0 @@
-- title: Observable Property as IRI reference
-  snippets:
-    - language: json
-      ref: examples/property-iri.json
-
-- title: Observable Property as inline object
-  snippets:
-    - language: json
-      ref: examples/property.json

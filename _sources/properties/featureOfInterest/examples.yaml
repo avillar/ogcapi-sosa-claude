@@ -1,9 +1,9 @@
-- title: Feature of Interest as IRI reference
-  snippets:
-    - language: json
-      ref: examples/feature-iri.json
-
 - title: Feature of Interest as inline object
   snippets:
     - language: json
       ref: examples/feature.json
+
+- title: Feature of Interest with inline properties and procedures
+  snippets:
+    - language: json
+      ref: examples/feature-complex.json

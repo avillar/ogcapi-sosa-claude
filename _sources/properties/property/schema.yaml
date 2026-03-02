@@ -3,17 +3,19 @@ description: 'SOSA Property'
 x-jsonld-context: ../../../sosa-ssn.jsonld
 $defs:
   Property:
-    anyOf:
-      - $ref: bblocks://ogc.ogc-utils.iri-or-curie
+    allOf:
+      - $ref: bblocks://ogc.sosa.properties.registerItem
       - type: object
         properties:
-          id:
-            $ref: bblocks://ogc.ogc-utils.iri-or-curie
           isPropertyOf:
-            $ref: bblocks://ogc.ogc-utils.iri-or-curie
+            anyOf:
+              - $ref: bblocks://ogc.ogc-utils.iri-or-curie
+              - $ref: bblocks://ogc.sosa.properties.featureOfInterest
           hasProcedure:
             type: array
             items:
-              $ref: bblocks://ogc.sosa.properties.procedure
+              anyOf:
+                - $ref: bblocks://ogc.ogc-utils.iri-or-curie
+                - $ref: bblocks://ogc.sosa.properties.procedure
 allOf:
   - $ref: '#/$defs/Property'

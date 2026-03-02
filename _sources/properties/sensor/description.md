@@ -1,15 +1,14 @@
-## SOSA Platform Properties
+## SOSA Sensor Properties
 
-This building block describes the canonical set of properties for a System object.
+This building block describes the canonical set of properties for a **Sensor** object according to the SOSA/SSN specification.
 
-These properties are independent of the feature (or object) model implementation 
+A Sensor is a device, agent (including humans), or software (simulation) that can generate Observations pertaining to an ObservableProperty by implementing an ObservingProcedure. Sensors respond to a stimulus — e.g., a change in the environment or input data — and generate a Result.
 
-these properties may be combined with other sets of properties for polymorphic objects - for example a Sensor that has a complex result, but can be broken down into a set of subSystems (a System) or hosted Sensors (a Platform)
+Sensor is a specialization of [SOSA System](../system/): it inherits all System properties (including `implements`, `hasSubSystem`, `isHostedBy`) and additionally provides:
+- `observes` — the ObservableProperties this Sensor can observe
 
-Property sets are mix-in aspects that for example may be included in the "properties" component of a GeoJSON object, or used in any other schema.
+A Sensor can be expressed as:
+- a reference (IRI or CURIE) to an externally defined sensor, or
+- an inline object with an `id`, optional `name`, and optionally a list of subsystems or observed properties.
 
-The "id" property is assumed to be common and compatible with other mix-in aspects.
-
-
-
-
+These properties are independent of the feature model implementation — they may be included directly in a root JSON object or within the `properties` component of a GeoJSON feature.

@@ -17,13 +17,21 @@ properties:
     type: string
     format: date-time
   hasFeatureOfInterest:
-    $ref: bblocks://ogc.sosa.properties.featureOfInterest
+    anyOf:
+      - $ref: bblocks://ogc.ogc-utils.iri-or-curie
+      - $ref: bblocks://ogc.sosa.properties.featureOfInterest
   hasUltimateFeatureOfInterest:
-    $ref: bblocks://ogc.sosa.properties.featureOfInterest
+    anyOf:
+      - $ref: bblocks://ogc.ogc-utils.iri-or-curie
+      - $ref: bblocks://ogc.sosa.properties.featureOfInterest
   usedProcedure:
-    $ref: bblocks://ogc.sosa.properties.procedure
+    anyOf:
+      - $ref: bblocks://ogc.ogc-utils.iri-or-curie
+      - $ref: bblocks://ogc.sosa.properties.procedure
   madeBySystem:
-    $ref: bblocks://ogc.sosa.properties.system
+    anyOf:
+      - $ref: bblocks://ogc.ogc-utils.iri-or-curie
+      - $ref: bblocks://ogc.sosa.properties.system
   hasResult: true
   hasSimpleResult: true
   hasInputValue: true

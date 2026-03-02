@@ -3,24 +3,26 @@ description: 'SOSA System'
 x-jsonld-context: ../../../sosa-ssn.jsonld
 $defs:
   System:
-    anyOf:
-      - $ref: bblocks://ogc.ogc-utils.iri-or-curie
+    allOf:
+      - $ref: bblocks://ogc.sosa.properties.registerItem
       - type: object
         properties:
-          id:
-            $ref: bblocks://ogc.ogc-utils.iri-or-curie
-          name:
-            type: string
           implements:
             type: array
             items:
-              $ref: bblocks://ogc.sosa.properties.procedure
+              anyOf:
+                - $ref: bblocks://ogc.ogc-utils.iri-or-curie
+                - $ref: bblocks://ogc.sosa.properties.procedure
           hasSubSystem:
             type: array
             items:
-              $ref: '#/$defs/System'
+              anyOf:
+                - $ref: bblocks://ogc.ogc-utils.iri-or-curie
+                - $ref: '#/$defs/System'
           isSubSystemOf:
-            $ref: '#/$defs/System'
+            anyOf:
+              - $ref: bblocks://ogc.ogc-utils.iri-or-curie
+              - $ref: '#/$defs/System'
           isHostedBy:
             $ref: bblocks://ogc.ogc-utils.iri-or-curie
 allOf:

@@ -1,0 +1,11 @@
+"$schema": https://json-schema.org/draft/2020-12/schema
+description: 'SOSA Register Item'
+x-jsonld-context: ../../../sosa-ssn.jsonld
+type: object
+properties:
+  id:
+    $ref: bblocks://ogc.ogc-utils.iri-or-curie
+  name:
+    type: string
+  description:
+    type: string

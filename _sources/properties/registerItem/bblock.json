@@ -1,6 +1,6 @@
 {
-  "name": "SOSA ObservableProperty",
-  "abstract": "An observable quality (property, characteristic) of a FeatureOfInterest. An ObservableProperty is the characteristic that is observed by a Sensor. The property is always linked to a particular FeatureOfInterest.",
+  "name": "SOSA Register Item",
+  "abstract": "Common properties for identifiable, named, and described entities in the SOSA register: an identifier (id), a human-readable label (name), and a textual description.",
   "status": "under-development",
   "dateTimeAddition": "2024-01-01T00:00:00Z",
   "itemClass": "schema",
