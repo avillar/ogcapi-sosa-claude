@@ -9,35 +9,41 @@ An identifiable entity that can generate Observations pertaining to an Observabl
 
 ## Description
 
-## SOSA Platform Properties
+## SOSA Sensor Properties
 
-This building block describes the canonical set of properties for a System object.
+This building block describes the canonical set of properties for a **Sensor** object according to the SOSA/SSN specification.
 
-These properties are independent of the feature (or object) model implementation 
+A Sensor is a device, agent (including humans), or software (simulation) that can generate Observations pertaining to an ObservableProperty by implementing an ObservingProcedure. Sensors respond to a stimulus — e.g., a change in the environment or input data — and generate a Result.
 
-these properties may be combined with other sets of properties for polymorphic objects - for example a Sensor that has a complex result, but can be broken down into a set of subSystems (a System) or hosted Sensors (a Platform)
+Sensor is a specialization of [SOSA System](../system/): it inherits all System properties (including `implements`, `hasSubSystem`, `isHostedBy`) and additionally provides:
+- `observes` — the ObservableProperties this Sensor can observe
 
-Property sets are mix-in aspects that for example may be included in the "properties" component of a GeoJSON object, or used in any other schema.
+A Sensor can be expressed as:
+- a reference (IRI or CURIE) to an externally defined sensor, or
+- an inline object with an `id`, optional `name`, and optionally a list of subsystems or observed properties.
 
-The "id" property is assumed to be common and compatible with other mix-in aspects.
-
-
-
-
+These properties are independent of the feature model implementation — they may be included directly in a root JSON object or within the `properties` component of a GeoJSON feature.
 
 ## Examples
 
-### Example of of a basic sensor
+### Basic sensor with observed property
 #### json
 ```json
-{         "@context": { "eg": "http://example.org/sensors",
-            "sensorType": {
-                  "type": "@id",
-                  "@id": "sosa:sensorKind"
-                } },
-          "id": "eg:sensor1",
-          "sensorType": "eg:gnss-pair"
+{
+  "@context": {
+    "eg": "http://example.org/",
+    "sensorType": {
+      "@type": "@id",
+      "@id": "sosa:sensorKind"
+    }
+  },
+  "id": "eg:sensors/thermometer-1",
+  "sensorType": "eg:ThermometerSensor",
+  "observes": [
+    "eg:properties/waterTemperature"
+  ]
 }
+
 ```
 
 #### jsonld
@@ -46,41 +52,46 @@ The "id" property is assumed to be common and compatible with other mix-in aspec
   "@context": [
     "https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/sensor/context.jsonld",
     {
-      "eg": "http://example.org/sensors",
+      "eg": "http://example.org/",
       "sensorType": {
-        "type": "@id",
+        "@type": "@id",
         "@id": "sosa:sensorKind"
       }
     }
   ],
-  "id": "eg:sensor1",
-  "sensorType": "eg:gnss-pair"
+  "id": "eg:sensors/thermometer-1",
+  "sensorType": "eg:ThermometerSensor",
+  "observes": [
+    "eg:properties/waterTemperature"
+  ]
 }
 ```
 
 #### ttl
 ```ttl
+@prefix eg: <http://example.org/> .
 @prefix sosa: <http://www.w3.org/ns/sosa/> .
 
-<eg:sensor1> sosa:sensorKind "eg:gnss-pair" .
+<http://example.org/sensors/thermometer-1> sosa:observes <http://example.org/properties/waterTemperature> ;
+    sosa:sensorKind eg:ThermometerSensor .
 
 
 ```
 
 
-### Example of of a compound sensor using the System polymorphism option
+### Compound sensor using the System polymorphism option
 #### json
 ```json
 {
   "@context": {
-    "eg": "http://example.org/sensors",
+    "eg": "http://example.org/sensors/",
     "sensorType": {
       "type": "@id",
       "@id": "sosa:sensorKind"
     },
     "description": "eg:description",
     "lastCalibrated": "eg:calibrationDate",
-    "purpose": "eg.purpose"
+    "purpose": "eg:purpose"
   },
   "id": "eg:gnss-pair-1",
   "sensorType": "eg:gnss-pair",
@@ -101,6 +112,7 @@ The "id" property is assumed to be common and compatible with other mix-in aspec
     }
   ]
 }
+
 ```
 
 #### jsonld
@@ -109,14 +121,14 @@ The "id" property is assumed to be common and compatible with other mix-in aspec
   "@context": [
     "https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/sensor/context.jsonld",
     {
-      "eg": "http://example.org/sensors",
+      "eg": "http://example.org/sensors/",
       "sensorType": {
         "type": "@id",
         "@id": "sosa:sensorKind"
       },
       "description": "eg:description",
       "lastCalibrated": "eg:calibrationDate",
-      "purpose": "eg.purpose"
+      "purpose": "eg:purpose"
     }
   ],
   "id": "eg:gnss-pair-1",
@@ -142,22 +154,161 @@ The "id" property is assumed to be common and compatible with other mix-in aspec
 
 #### ttl
 ```ttl
-@prefix ns1: <http://example.org/> .
+@prefix eg: <http://example.org/sensors/> .
 @prefix sosa: <http://www.w3.org/ns/sosa/> .
 
-<eg:gnss-pair-1> sosa:hasSubSystem <eg:785439870523>,
-        <eg:785439870524> ;
+eg:gnss-pair-1 sosa:hasSubSystem eg:785439870523,
+        eg:785439870524 ;
     sosa:sensorKind "eg:gnss-pair" .
 
-<eg:785439870523> <eg.purpose> "eg:base" ;
-    ns1:sensorscalibrationDate "2022-09-14T15:32:45" ;
-    ns1:sensorsdescription "Leica Viva GS10" ;
+eg:785439870523 eg:calibrationDate "2022-09-14T15:32:45" ;
+    eg:description "Leica Viva GS10" ;
+    eg:purpose "eg:base" ;
     sosa:sensorKind "eg:gnss" .
 
-<eg:785439870524> <eg.purpose> "eg:rover" ;
-    ns1:sensorscalibrationDate "2022-09-14T15:35:05" ;
-    ns1:sensorsdescription "Leica Viva GS10" ;
+eg:785439870524 eg:calibrationDate "2022-09-14T15:35:05" ;
+    eg:description "Leica Viva GS10" ;
+    eg:purpose "eg:rover" ;
     sosa:sensorKind "eg:gnss" .
+
+
+```
+
+
+### Multi-parameter sensor with inline observed properties and subsystems
+#### json
+```json
+{
+  "@context": {
+    "eg": "http://example.org/"
+  },
+  "id": "eg:sensors/multi-parameter-probe-1",
+  "name": "Multi-parameter Water Quality Probe",
+  "description": "In-situ probe measuring multiple water quality parameters simultaneously",
+  "implements": [
+    { "id": "eg:procedures/water-quality-monitoring", "name": "Water Quality Monitoring Procedure" }
+  ],
+  "observes": [
+    {
+      "id": "eg:properties/waterTemperature",
+      "name": "Water Temperature",
+      "isPropertyOf": { "id": "eg:features/river-thames", "name": "River Thames" }
+    },
+    {
+      "id": "eg:properties/waterPH",
+      "name": "Water pH",
+      "isPropertyOf": { "id": "eg:features/river-thames", "name": "River Thames" }
+    },
+    {
+      "id": "eg:properties/dissolvedOxygen",
+      "name": "Dissolved Oxygen",
+      "isPropertyOf": { "id": "eg:features/river-thames", "name": "River Thames" }
+    }
+  ],
+  "hasSubSystem": [
+    { "id": "eg:sensors/temp-probe-1", "name": "Temperature Probe" },
+    { "id": "eg:sensors/ph-probe-1", "name": "pH Probe" },
+    { "id": "eg:sensors/do-probe-1", "name": "Dissolved Oxygen Probe" }
+  ]
+}
+
+```
+
+#### jsonld
+```jsonld
+{
+  "@context": [
+    "https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/sensor/context.jsonld",
+    {
+      "eg": "http://example.org/"
+    }
+  ],
+  "id": "eg:sensors/multi-parameter-probe-1",
+  "name": "Multi-parameter Water Quality Probe",
+  "description": "In-situ probe measuring multiple water quality parameters simultaneously",
+  "implements": [
+    {
+      "id": "eg:procedures/water-quality-monitoring",
+      "name": "Water Quality Monitoring Procedure"
+    }
+  ],
+  "observes": [
+    {
+      "id": "eg:properties/waterTemperature",
+      "name": "Water Temperature",
+      "isPropertyOf": {
+        "id": "eg:features/river-thames",
+        "name": "River Thames"
+      }
+    },
+    {
+      "id": "eg:properties/waterPH",
+      "name": "Water pH",
+      "isPropertyOf": {
+        "id": "eg:features/river-thames",
+        "name": "River Thames"
+      }
+    },
+    {
+      "id": "eg:properties/dissolvedOxygen",
+      "name": "Dissolved Oxygen",
+      "isPropertyOf": {
+        "id": "eg:features/river-thames",
+        "name": "River Thames"
+      }
+    }
+  ],
+  "hasSubSystem": [
+    {
+      "id": "eg:sensors/temp-probe-1",
+      "name": "Temperature Probe"
+    },
+    {
+      "id": "eg:sensors/ph-probe-1",
+      "name": "pH Probe"
+    },
+    {
+      "id": "eg:sensors/do-probe-1",
+      "name": "Dissolved Oxygen Probe"
+    }
+  ]
+}
+```
+
+#### ttl
+```ttl
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
+
+<http://example.org/sensors/multi-parameter-probe-1> rdfs:label "Multi-parameter Water Quality Probe" ;
+    dct:description "In-situ probe measuring multiple water quality parameters simultaneously" ;
+    sosa:hasSubSystem <http://example.org/sensors/do-probe-1>,
+        <http://example.org/sensors/ph-probe-1>,
+        <http://example.org/sensors/temp-probe-1> ;
+    sosa:implements <http://example.org/procedures/water-quality-monitoring> ;
+    sosa:observes <http://example.org/properties/dissolvedOxygen>,
+        <http://example.org/properties/waterPH>,
+        <http://example.org/properties/waterTemperature> .
+
+<http://example.org/procedures/water-quality-monitoring> rdfs:label "Water Quality Monitoring Procedure" .
+
+<http://example.org/properties/dissolvedOxygen> rdfs:label "Dissolved Oxygen" ;
+    sosa:isPropertyOf <http://example.org/features/river-thames> .
+
+<http://example.org/properties/waterPH> rdfs:label "Water pH" ;
+    sosa:isPropertyOf <http://example.org/features/river-thames> .
+
+<http://example.org/properties/waterTemperature> rdfs:label "Water Temperature" ;
+    sosa:isPropertyOf <http://example.org/features/river-thames> .
+
+<http://example.org/sensors/do-probe-1> rdfs:label "Dissolved Oxygen Probe" .
+
+<http://example.org/sensors/ph-probe-1> rdfs:label "pH Probe" .
+
+<http://example.org/sensors/temp-probe-1> rdfs:label "Temperature Probe" .
+
+<http://example.org/features/river-thames> rdfs:label "River Thames" .
 
 
 ```
@@ -167,20 +318,24 @@ The "id" property is assumed to be common and compatible with other mix-in aspec
 ```yaml
 $schema: https://json-schema.org/draft/2020-12/schema
 description: SOSA Sensor
-$definitions:
+$defs:
   Sensor:
-    anyOf:
-    - $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/iri-or-curie/schema.yaml
+    allOf:
+    - $ref: https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/system/schema.yaml
     - type: object
       properties:
-        id:
-          $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/iri-or-curie/schema.yaml
-          x-jsonld-id: '@id'
-        name:
-          type: string
+        observes:
+          type: array
+          items:
+            anyOf:
+            - $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/iri-or-curie/schema.yaml
+            - $ref: https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/property/schema.yaml
+          x-jsonld-id: http://www.w3.org/ns/sosa/observes
+          x-jsonld-type: '@id'
 allOf:
-- $ref: '#/$definitions/Sensor'
+- $ref: '#/$defs/Sensor'
 x-jsonld-extra-terms:
+  id: '@id'
   properties: '@nest'
   featureType: '@type'
   ActuatableProperty:
@@ -368,9 +523,6 @@ x-jsonld-extra-terms:
   observedProperty:
     x-jsonld-id: http://www.w3.org/ns/sosa/observedProperty
     x-jsonld-type: '@id'
-  observes:
-    x-jsonld-id: http://www.w3.org/ns/sosa/observes
-    x-jsonld-type: '@id'
   phenomenonTime:
     x-jsonld-id: http://www.w3.org/ns/sosa/phenomenonTime
     x-jsonld-type: '@id'
@@ -509,9 +661,13 @@ x-jsonld-extra-terms:
   qualityOfObservation:
     x-jsonld-id: http://www.w3.org/ns/ssn/systems/qualityOfObservation
     x-jsonld-type: '@id'
+  name: http://www.w3.org/2000/01/rdf-schema#label
+  description: http://purl.org/dc/terms/description
 x-jsonld-prefixes:
   sosa: http://www.w3.org/ns/sosa/
   ssn-system: http://www.w3.org/ns/ssn/systems/
+  rdfs: http://www.w3.org/2000/01/rdf-schema#
+  dct: http://purl.org/dc/terms/
   ssn: http://www.w3.org/ns/ssn/
 
 ```
@@ -527,7 +683,6 @@ Links to the schema:
 ```jsonld
 {
   "@context": {
-    "id": "@id",
     "properties": "@nest",
     "featureType": "@type",
     "ActuatableProperty": {
@@ -963,8 +1118,13 @@ Links to the schema:
       "@id": "ssn-system:qualityOfObservation",
       "@type": "@id"
     },
+    "id": "@id",
+    "name": "rdfs:label",
+    "description": "dct:description",
     "sosa": "http://www.w3.org/ns/sosa/",
     "ssn-system": "ssn:systems/",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "dct": "http://purl.org/dc/terms/",
     "ssn": "http://www.w3.org/ns/ssn/",
     "@version": 1.1
   }

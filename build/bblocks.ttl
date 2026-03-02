@@ -2,8 +2,8 @@
 @prefix dcat: <http://www.w3.org/ns/dcat#> .
 @prefix dct: <http://purl.org/dc/terms/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
-@prefix ns1: <http://www.w3.org/ns/oa#> .
-@prefix ns2: <http://www.iana.org/assignments/> .
+@prefix ns1: <http://www.iana.org/assignments/> .
+@prefix ns2: <http://www.w3.org/ns/oa#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix prof: <http://www.w3.org/ns/dx/prof/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
@@ -22,12 +22,12 @@
     rdfs:label "Sensor, Observation, Sample, and Actuator (SOSA)" ;
     dct:abstract "The SOSA (Sensor, Observation, Sample, and Actuator) ontology  is a realisation of the Observations, Measurements and Sampling (OMS) Conceptual model"^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2023-04-13T00:00:00+00:00"^^xsd:dateTime ;
-    dct:description [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy <https://avillar.github.io/ogcapi-sosa-claude/build/generateddocs/markdown/sosa/index.md> ],
-        [ dct:format "application/json" ;
+    dct:description [ dct:format "application/json" ;
             rdfs:isDefinedBy <https://avillar.github.io/ogcapi-sosa-claude/build/generateddocs/json-full/sosa/index.json> ],
         [ dct:format "text/html" ;
-            rdfs:isDefinedBy <https://avillar.github.io/ogcapi-sosa-claude/bblock/ogc.sosa> ] ;
+            rdfs:isDefinedBy <https://avillar.github.io/ogcapi-sosa-claude/bblock/ogc.sosa> ],
+        [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy <https://avillar.github.io/ogcapi-sosa-claude/build/generateddocs/markdown/sosa/index.md> ] ;
     dct:hasVersion "1.0" ;
     dct:modified "2026-03-02"^^xsd:date ;
     dct:source <https://www.w3.org/TR/vocab-ssn/> ;
@@ -49,10 +49,10 @@
     rdfs:label "SOSA ObservationCollection Feature" ;
     dct:abstract "This building blocks defines an ObservationCollection Feature according to the SOSA/SSN v1.1 specification."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2023-04-13T00:00:00+00:00"^^xsd:dateTime ;
-    dct:description [ dct:format "text/html" ;
-            rdfs:isDefinedBy <https://avillar.github.io/ogcapi-sosa-claude/bblock/ogc.sosa.features.observationCollection> ],
-        [ dct:format "text/markdown" ;
+    dct:description [ dct:format "text/markdown" ;
             rdfs:isDefinedBy <https://avillar.github.io/ogcapi-sosa-claude/build/generateddocs/markdown/sosa/features/observationCollection/index.md> ],
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy <https://avillar.github.io/ogcapi-sosa-claude/bblock/ogc.sosa.features.observationCollection> ],
         [ dct:format "application/json" ;
             rdfs:isDefinedBy <https://avillar.github.io/ogcapi-sosa-claude/build/generateddocs/json-full/sosa/features/observationCollection/index.json> ] ;
     dct:hasVersion "1.0" ;
@@ -67,7 +67,15 @@
         "observations",
         "sosa",
         "ssn" ;
-    prof:hasResource [ dct:conformsTo shacl: ;
+    prof:hasResource [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
+            dct:format "application/ld+json" ;
+            prof:hasArtifact <https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/features/observationCollection/context.jsonld> ;
+            prof:hasRole role:mapping ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/yaml" ;
+            prof:hasArtifact <https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/features/observationCollection/schema.yaml> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo shacl: ;
             dct:format "text/turtle" ;
             rdfs:seeAlso <bblocks://ogc.sosa.properties.observation> ;
             prof:hasArtifact <https://avillar.github.io/ogcapi-sosa-claude/_sources/properties/observation/shapes.shacl> ;
@@ -75,14 +83,6 @@
         [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
             dct:format "application/json" ;
             prof:hasArtifact <https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/features/observationCollection/schema.json> ;
-            prof:hasRole role:schema ],
-        [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
-            dct:format "application/ld+json" ;
-            prof:hasArtifact <https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/features/observationCollection/context.jsonld> ;
-            prof:hasRole role:mapping ],
-        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
-            dct:format "application/yaml" ;
-            prof:hasArtifact <https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/features/observationCollection/schema.yaml> ;
             prof:hasRole role:schema ] ;
     bblocks:dependsOn <bblocks://ogc.geo.json-fg.featureCollection-lenient>,
         <bblocks://ogc.sosa.features.observation>,
@@ -96,14 +96,14 @@
         bblocks:BBlock,
         bblocks:Schema ;
     rdfs:label "SOSA Platform" ;
-    dct:abstract "This building block defines the set of properties for an observation Platform according to the SOSA/SSN specification. These properties may be directly included into a root element of a JSON object or used in the properties container of a GeoJSON feature."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
+    dct:abstract "A Platform is an entity that hosts other Entities, particularly Assets (including Systems such as Sensors). A Platform may itself be hosted by another Platform. Platforms are commonly physical devices, vehicles, or fixed infrastructure on which sensors are mounted."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2023-12-05T00:00:00+00:00"^^xsd:dateTime ;
-    dct:description [ dct:format "application/json" ;
+    dct:description [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy <https://avillar.github.io/ogcapi-sosa-claude/build/generateddocs/markdown/sosa/properties/platform/index.md> ],
+        [ dct:format "application/json" ;
             rdfs:isDefinedBy <https://avillar.github.io/ogcapi-sosa-claude/build/generateddocs/json-full/sosa/properties/platform/index.json> ],
         [ dct:format "text/html" ;
-            rdfs:isDefinedBy <https://avillar.github.io/ogcapi-sosa-claude/bblock/ogc.sosa.properties.platform> ],
-        [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy <https://avillar.github.io/ogcapi-sosa-claude/build/generateddocs/markdown/sosa/properties/platform/index.md> ] ;
+            rdfs:isDefinedBy <https://avillar.github.io/ogcapi-sosa-claude/bblock/ogc.sosa.properties.platform> ] ;
     dct:hasVersion "1.0" ;
     dct:modified "2026-03-02"^^xsd:date ;
     dct:source <https://www.w3.org/TR/vocab-ssn/> ;
@@ -115,20 +115,21 @@
         "observations",
         "sosa",
         "ssn" ;
-    prof:hasResource [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
-            dct:format "application/ld+json" ;
-            prof:hasArtifact <https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/platform/context.jsonld> ;
-            prof:hasRole role:mapping ],
-        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+    prof:hasResource [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
             dct:format "application/json" ;
             prof:hasArtifact <https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/platform/schema.json> ;
             prof:hasRole role:schema ],
+        [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
+            dct:format "application/ld+json" ;
+            prof:hasArtifact <https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/platform/context.jsonld> ;
+            prof:hasRole role:mapping ],
         [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
             dct:format "application/yaml" ;
             prof:hasArtifact <https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/platform/schema.yaml> ;
             prof:hasRole role:schema ] ;
     bblocks:dependsOn <bblocks://ogc.ogc-utils.iri-or-curie>,
-        <bblocks://ogc.sosa.properties.sensor> ;
+        <bblocks://ogc.sosa.properties.registerItem>,
+        <bblocks://ogc.sosa.properties.system> ;
     bblocks:scope <http://www.opengis.net/def/bblocks/scope/development> ;
     bblocks:status <http://www.opengis.net/def/status/under-development> ;
     bblocks:validationPassed true .
@@ -140,12 +141,12 @@
     rdfs:label "Tests for SOSA specification" ;
     dct:abstract "This BuildingBlock adds test cases from the SOSA specification to the base Observation properties model"^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2023-04-13T00:00:00+00:00"^^xsd:dateTime ;
-    dct:description [ dct:format "text/html" ;
+    dct:description [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy <https://avillar.github.io/ogcapi-sosa-claude/build/generateddocs/markdown/sosa/properties/spec-examples/index.md> ],
+        [ dct:format "text/html" ;
             rdfs:isDefinedBy <https://avillar.github.io/ogcapi-sosa-claude/bblock/ogc.sosa.properties.spec-examples> ],
         [ dct:format "application/json" ;
-            rdfs:isDefinedBy <https://avillar.github.io/ogcapi-sosa-claude/build/generateddocs/json-full/sosa/properties/spec-examples/index.json> ],
-        [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy <https://avillar.github.io/ogcapi-sosa-claude/build/generateddocs/markdown/sosa/properties/spec-examples/index.md> ] ;
+            rdfs:isDefinedBy <https://avillar.github.io/ogcapi-sosa-claude/build/generateddocs/json-full/sosa/properties/spec-examples/index.json> ] ;
     dct:hasVersion "1.0" ;
     dct:modified "2026-03-02"^^xsd:date ;
     dct:source <https://www.w3.org/TR/vocab-ssn/> ;
@@ -164,18 +165,18 @@
 
 <https://avillar.github.io/ogcapi-sosa-claude/build/bblocks.ttl> a prov:Entity ;
     dct:format "text/turtle" ;
-    prov:wasAttributedTo _:N5271a0d1594543a9aa9db3400531fb12 ;
+    prov:wasAttributedTo _:Na5b17c290e8d4e4ca9c3874af0c13939 ;
     prov:wasGeneratedBy [ a prov:Activity ;
-            prov:endedAtTime "2026-03-02T06:16:31.411225"^^xsd:dateTime ;
-            prov:startedAtTime "2026-03-02T06:16:31.083521"^^xsd:dateTime ;
+            prov:endedAtTime "2026-03-02T12:12:17.350848"^^xsd:dateTime ;
+            prov:startedAtTime "2026-03-02T12:12:17.094411"^^xsd:dateTime ;
             prov:used [ a prov:Entity ;
                     dct:format "application/yaml" ;
                     rdfs:seeAlso <file:///src/ogc/bblocks/register-context.yaml> ],
                 [ a prov:Entity ;
                     dct:format "application/json" ;
-                    dct:hasVersion "git:96cb1aa4069662ea9935abfd1124fb238691ac7e" ;
+                    dct:hasVersion "git:98aa7ce000ab933ce916a0029cc8e6ce78a6ed3b" ;
                     rdfs:seeAlso <https://avillar.github.io/ogcapi-sosa-claude/build/register.json> ] ;
-            prov:wasAssociatedWith _:N5271a0d1594543a9aa9db3400531fb12 ] .
+            prov:wasAssociatedWith _:Na5b17c290e8d4e4ca9c3874af0c13939 ] .
 
 <https://www.w3.org/TR/vocab-ssn-ext/> rdfs:label "Extensions to the Semantic Sensor Network Ontology" .
 
@@ -188,10 +189,10 @@
     dct:created "2023-05-18T00:00:00+00:00"^^xsd:dateTime ;
     dct:description [ dct:format "text/html" ;
             rdfs:isDefinedBy <https://avillar.github.io/ogcapi-sosa-claude/bblock/ogc.sosa.features.observation> ],
-        [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy <https://avillar.github.io/ogcapi-sosa-claude/build/generateddocs/markdown/sosa/features/observation/index.md> ],
         [ dct:format "application/json" ;
-            rdfs:isDefinedBy <https://avillar.github.io/ogcapi-sosa-claude/build/generateddocs/json-full/sosa/features/observation/index.json> ] ;
+            rdfs:isDefinedBy <https://avillar.github.io/ogcapi-sosa-claude/build/generateddocs/json-full/sosa/features/observation/index.json> ],
+        [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy <https://avillar.github.io/ogcapi-sosa-claude/build/generateddocs/markdown/sosa/features/observation/index.md> ] ;
     dct:hasVersion "1.0" ;
     dct:modified "2026-03-02"^^xsd:date ;
     dct:source <https://www.w3.org/TR/vocab-ssn/> ;
@@ -203,11 +204,7 @@
         "observations",
         "sosa",
         "ssn" ;
-    prof:hasResource [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
-            dct:format "application/json" ;
-            prof:hasArtifact <https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/features/observation/schema.json> ;
-            prof:hasRole role:schema ],
-        [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
+    prof:hasResource [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
             dct:format "application/ld+json" ;
             prof:hasArtifact <https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/features/observation/context.jsonld> ;
             prof:hasRole role:mapping ],
@@ -219,7 +216,11 @@
             dct:format "text/turtle" ;
             rdfs:seeAlso <bblocks://ogc.sosa.properties.observation> ;
             prof:hasArtifact <https://avillar.github.io/ogcapi-sosa-claude/_sources/properties/observation/shapes.shacl> ;
-            prof:hasRole role:validation ] ;
+            prof:hasRole role:validation ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/json" ;
+            prof:hasArtifact <https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/features/observation/schema.json> ;
+            prof:hasRole role:schema ] ;
     bblocks:dependsOn <bblocks://ogc.geo.json-fg.feature-lenient>,
         <bblocks://ogc.sosa.properties.observation> ;
     bblocks:scope <http://www.opengis.net/def/bblocks/scope/development> ;
@@ -235,10 +236,10 @@
     dct:created "2024-01-01T00:00:00+00:00"^^xsd:dateTime ;
     dct:description [ dct:format "text/markdown" ;
             rdfs:isDefinedBy <https://avillar.github.io/ogcapi-sosa-claude/build/generateddocs/markdown/sosa/properties/execution/index.md> ],
-        [ dct:format "application/json" ;
-            rdfs:isDefinedBy <https://avillar.github.io/ogcapi-sosa-claude/build/generateddocs/json-full/sosa/properties/execution/index.json> ],
         [ dct:format "text/html" ;
-            rdfs:isDefinedBy <https://avillar.github.io/ogcapi-sosa-claude/bblock/ogc.sosa.properties.execution> ] ;
+            rdfs:isDefinedBy <https://avillar.github.io/ogcapi-sosa-claude/bblock/ogc.sosa.properties.execution> ],
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy <https://avillar.github.io/ogcapi-sosa-claude/build/generateddocs/json-full/sosa/properties/execution/index.json> ] ;
     dct:hasVersion "1.0" ;
     dct:modified "2026-03-02"^^xsd:date ;
     dct:source <https://www.w3.org/TR/vocab-ssn/> ;
@@ -251,19 +252,111 @@
         "sosa",
         "ssn" ;
     prof:hasResource [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/yaml" ;
+            prof:hasArtifact <https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/execution/schema.yaml> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
             dct:format "application/json" ;
             prof:hasArtifact <https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/execution/schema.json> ;
             prof:hasRole role:schema ],
         [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
             dct:format "application/ld+json" ;
             prof:hasArtifact <https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/execution/context.jsonld> ;
+            prof:hasRole role:mapping ] ;
+    bblocks:dependsOn <bblocks://ogc.ogc-utils.iri-or-curie>,
+        <bblocks://ogc.sosa.properties.featureOfInterest>,
+        <bblocks://ogc.sosa.properties.procedure>,
+        <bblocks://ogc.sosa.properties.system> ;
+    bblocks:scope <http://www.opengis.net/def/bblocks/scope/development> ;
+    bblocks:status <http://www.opengis.net/def/status/under-development> ;
+    bblocks:validationPassed true .
+
+<bblocks://ogc.sosa.properties.observationCollection> a skos:Concept,
+        dcat:Dataset,
+        bblocks:BBlock,
+        bblocks:Schema ;
+    rdfs:label "ObservationCollection Properties" ;
+    dct:abstract "This building block defines an ObservationCollection according to the SOSA/SSN v1.1 specification. It defines a set of logical rules regarding presence of mandatory properties anywhere within a potentially nested collection hierarchy. (implemented in SHACL, exploiting the semantic mapping to SOSA)"^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
+    dct:created "2023-04-13T00:00:00+00:00"^^xsd:dateTime ;
+    dct:description [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy <https://avillar.github.io/ogcapi-sosa-claude/build/generateddocs/markdown/sosa/properties/observationCollection/index.md> ],
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy <https://avillar.github.io/ogcapi-sosa-claude/bblock/ogc.sosa.properties.observationCollection> ],
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy <https://avillar.github.io/ogcapi-sosa-claude/build/generateddocs/json-full/sosa/properties/observationCollection/index.json> ] ;
+    dct:hasVersion "1.0" ;
+    dct:modified "2026-03-02"^^xsd:date ;
+    dct:source <https://www.w3.org/TR/vocab-ssn/> ;
+    skos:inScheme <https://avillar.github.io/ogcapi-sosa-claude/> ;
+    skos:prefLabel "ObservationCollection Properties" ;
+    skos:topConceptOf <https://avillar.github.io/ogcapi-sosa-claude/> ;
+    dcat:keyword "ISO19156",
+        "OMS",
+        "o&m",
+        "observations",
+        "sosa" ;
+    prof:hasResource [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/json" ;
+            prof:hasArtifact <https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/observationCollection/schema.json> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/yaml" ;
+            prof:hasArtifact <https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/observationCollection/schema.yaml> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo shacl: ;
+            dct:format "text/turtle" ;
+            rdfs:seeAlso <bblocks://ogc.sosa.properties.observation> ;
+            prof:hasArtifact <https://avillar.github.io/ogcapi-sosa-claude/_sources/properties/observation/shapes.shacl> ;
+            prof:hasRole role:validation ],
+        [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
+            dct:format "application/ld+json" ;
+            prof:hasArtifact <https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/observationCollection/context.jsonld> ;
+            prof:hasRole role:mapping ] ;
+    bblocks:dependsOn <bblocks://ogc.ogc-utils.iri-or-curie>,
+        <bblocks://ogc.sosa.properties.observation>,
+        <bblocks://ogc.sosa.properties.observation-owa> ;
+    bblocks:scope <http://www.opengis.net/def/bblocks/scope/development> ;
+    bblocks:status <http://www.opengis.net/def/status/under-development> ;
+    bblocks:validationPassed true .
+
+<bblocks://ogc.sosa.properties.sensor> a skos:Concept,
+        dcat:Dataset,
+        bblocks:BBlock,
+        bblocks:Schema ;
+    rdfs:label "SOSA Sensor" ;
+    dct:abstract "An identifiable entity that can generate Observations pertaining to an ObservableProperty by implementing an ObservingProcedure. Device, agent (including humans), or software (simulation) involved in, or implementing, a Procedure. Sensors respond to a stimulus, e.g., a change in the environment, or input data composed from the results of prior Observations, and generate a Result. Sensors can be hosted by Platforms."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
+    dct:created "2023-12-05T00:00:00+00:00"^^xsd:dateTime ;
+    dct:description [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy <https://avillar.github.io/ogcapi-sosa-claude/build/generateddocs/markdown/sosa/properties/sensor/index.md> ],
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy <https://avillar.github.io/ogcapi-sosa-claude/bblock/ogc.sosa.properties.sensor> ],
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy <https://avillar.github.io/ogcapi-sosa-claude/build/generateddocs/json-full/sosa/properties/sensor/index.json> ] ;
+    dct:hasVersion "1.0" ;
+    dct:modified "2026-03-02"^^xsd:date ;
+    dct:source <https://www.w3.org/TR/vocab-ssn/> ;
+    skos:inScheme <https://avillar.github.io/ogcapi-sosa-claude/> ;
+    skos:prefLabel "SOSA Sensor" ;
+    skos:topConceptOf <https://avillar.github.io/ogcapi-sosa-claude/> ;
+    dcat:keyword "o&m",
+        "o&m&s",
+        "observations",
+        "sosa",
+        "ssn" ;
+    prof:hasResource [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/json" ;
+            prof:hasArtifact <https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/sensor/schema.json> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
+            dct:format "application/ld+json" ;
+            prof:hasArtifact <https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/sensor/context.jsonld> ;
             prof:hasRole role:mapping ],
         [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
             dct:format "application/yaml" ;
-            prof:hasArtifact <https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/execution/schema.yaml> ;
+            prof:hasArtifact <https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/sensor/schema.yaml> ;
             prof:hasRole role:schema ] ;
-    bblocks:dependsOn <bblocks://ogc.sosa.properties.featureOfInterest>,
-        <bblocks://ogc.sosa.properties.procedure>,
+    bblocks:dependsOn <bblocks://ogc.ogc-utils.iri-or-curie>,
+        <bblocks://ogc.sosa.properties.property>,
         <bblocks://ogc.sosa.properties.system> ;
     bblocks:scope <http://www.opengis.net/def/bblocks/scope/development> ;
     bblocks:status <http://www.opengis.net/def/status/under-development> ;
@@ -276,12 +369,12 @@
     rdfs:label "SOSA FeatureOfInterest" ;
     dct:abstract "The thing whose property is being observed or acted upon. A feature of interest is an abstraction of a real-world phenomenon to which a property being observed, or acted on by an actuator, or sampled, belongs."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2024-01-01T00:00:00+00:00"^^xsd:dateTime ;
-    dct:description [ dct:format "text/html" ;
-            rdfs:isDefinedBy <https://avillar.github.io/ogcapi-sosa-claude/bblock/ogc.sosa.properties.featureOfInterest> ],
-        [ dct:format "application/json" ;
+    dct:description [ dct:format "application/json" ;
             rdfs:isDefinedBy <https://avillar.github.io/ogcapi-sosa-claude/build/generateddocs/json-full/sosa/properties/featureOfInterest/index.json> ],
         [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy <https://avillar.github.io/ogcapi-sosa-claude/build/generateddocs/markdown/sosa/properties/featureOfInterest/index.md> ] ;
+            rdfs:isDefinedBy <https://avillar.github.io/ogcapi-sosa-claude/build/generateddocs/markdown/sosa/properties/featureOfInterest/index.md> ],
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy <https://avillar.github.io/ogcapi-sosa-claude/bblock/ogc.sosa.properties.featureOfInterest> ] ;
     dct:hasVersion "1.0" ;
     dct:modified "2026-03-02"^^xsd:date ;
     dct:source <https://www.w3.org/TR/vocab-ssn/> ;
@@ -293,109 +386,21 @@
         "observations",
         "sosa",
         "ssn" ;
-    prof:hasResource [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+    prof:hasResource [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
+            dct:format "application/ld+json" ;
+            prof:hasArtifact <https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/featureOfInterest/context.jsonld> ;
+            prof:hasRole role:mapping ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
             dct:format "application/yaml" ;
             prof:hasArtifact <https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/featureOfInterest/schema.yaml> ;
             prof:hasRole role:schema ],
         [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
             dct:format "application/json" ;
             prof:hasArtifact <https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/featureOfInterest/schema.json> ;
-            prof:hasRole role:schema ],
-        [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
-            dct:format "application/ld+json" ;
-            prof:hasArtifact <https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/featureOfInterest/context.jsonld> ;
-            prof:hasRole role:mapping ] ;
-    bblocks:dependsOn <bblocks://ogc.ogc-utils.iri-or-curie>,
-        <bblocks://ogc.sosa.properties.property> ;
-    bblocks:scope <http://www.opengis.net/def/bblocks/scope/development> ;
-    bblocks:status <http://www.opengis.net/def/status/under-development> ;
-    bblocks:validationPassed false .
-
-<bblocks://ogc.sosa.properties.observableProperty> a skos:Concept,
-        dcat:Dataset,
-        bblocks:BBlock,
-        bblocks:Schema ;
-    rdfs:label "SOSA ObservableProperty" ;
-    dct:abstract "An observable quality (property, characteristic) of a FeatureOfInterest. An ObservableProperty is the characteristic that is observed by a Sensor. The property is always linked to a particular FeatureOfInterest."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
-    dct:created "2024-01-01T00:00:00+00:00"^^xsd:dateTime ;
-    dct:description [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy <https://avillar.github.io/ogcapi-sosa-claude/build/generateddocs/markdown/sosa/properties/observableProperty/index.md> ],
-        [ dct:format "text/html" ;
-            rdfs:isDefinedBy <https://avillar.github.io/ogcapi-sosa-claude/bblock/ogc.sosa.properties.observableProperty> ],
-        [ dct:format "application/json" ;
-            rdfs:isDefinedBy <https://avillar.github.io/ogcapi-sosa-claude/build/generateddocs/json-full/sosa/properties/observableProperty/index.json> ] ;
-    dct:hasVersion "1.0" ;
-    dct:modified "2026-03-02"^^xsd:date ;
-    dct:source <https://www.w3.org/TR/vocab-ssn/> ;
-    skos:inScheme <https://avillar.github.io/ogcapi-sosa-claude/> ;
-    skos:prefLabel "SOSA ObservableProperty" ;
-    skos:topConceptOf <https://avillar.github.io/ogcapi-sosa-claude/> ;
-    dcat:keyword "o&m",
-        "o&m&s",
-        "observations",
-        "sosa",
-        "ssn" ;
-    prof:hasResource [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
-            dct:format "application/yaml" ;
-            prof:hasArtifact <https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/observableProperty/schema.yaml> ;
-            prof:hasRole role:schema ],
-        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
-            dct:format "application/json" ;
-            prof:hasArtifact <https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/observableProperty/schema.json> ;
-            prof:hasRole role:schema ],
-        [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
-            dct:format "application/ld+json" ;
-            prof:hasArtifact <https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/observableProperty/context.jsonld> ;
-            prof:hasRole role:mapping ] ;
-    bblocks:dependsOn <bblocks://ogc.sosa.properties.property> ;
-    bblocks:scope <http://www.opengis.net/def/bblocks/scope/development> ;
-    bblocks:status <http://www.opengis.net/def/status/under-development> ;
-    bblocks:validationPassed false .
-
-<bblocks://ogc.sosa.properties.observationCollection> a skos:Concept,
-        dcat:Dataset,
-        bblocks:BBlock,
-        bblocks:Schema ;
-    rdfs:label "ObservationCollection Properties" ;
-    dct:abstract "This building block defines an ObservationCollection according to the SOSA/SSN v1.1 specification. It defines a set of logical rules regarding presence of mandatory properties anywhere within a potentially nested collection hierarchy. (implemented in SHACL, exploiting the semantic mapping to SOSA)"^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
-    dct:created "2023-04-13T00:00:00+00:00"^^xsd:dateTime ;
-    dct:description [ dct:format "application/json" ;
-            rdfs:isDefinedBy <https://avillar.github.io/ogcapi-sosa-claude/build/generateddocs/json-full/sosa/properties/observationCollection/index.json> ],
-        [ dct:format "text/html" ;
-            rdfs:isDefinedBy <https://avillar.github.io/ogcapi-sosa-claude/bblock/ogc.sosa.properties.observationCollection> ],
-        [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy <https://avillar.github.io/ogcapi-sosa-claude/build/generateddocs/markdown/sosa/properties/observationCollection/index.md> ] ;
-    dct:hasVersion "1.0" ;
-    dct:modified "2026-03-02"^^xsd:date ;
-    dct:source <https://www.w3.org/TR/vocab-ssn/> ;
-    skos:inScheme <https://avillar.github.io/ogcapi-sosa-claude/> ;
-    skos:prefLabel "ObservationCollection Properties" ;
-    skos:topConceptOf <https://avillar.github.io/ogcapi-sosa-claude/> ;
-    dcat:keyword "ISO19156",
-        "OMS",
-        "o&m",
-        "observations",
-        "sosa" ;
-    prof:hasResource [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
-            dct:format "application/ld+json" ;
-            prof:hasArtifact <https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/observationCollection/context.jsonld> ;
-            prof:hasRole role:mapping ],
-        [ dct:conformsTo shacl: ;
-            dct:format "text/turtle" ;
-            rdfs:seeAlso <bblocks://ogc.sosa.properties.observation> ;
-            prof:hasArtifact <https://avillar.github.io/ogcapi-sosa-claude/_sources/properties/observation/shapes.shacl> ;
-            prof:hasRole role:validation ],
-        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
-            dct:format "application/yaml" ;
-            prof:hasArtifact <https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/observationCollection/schema.yaml> ;
-            prof:hasRole role:schema ],
-        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
-            dct:format "application/json" ;
-            prof:hasArtifact <https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/observationCollection/schema.json> ;
             prof:hasRole role:schema ] ;
     bblocks:dependsOn <bblocks://ogc.ogc-utils.iri-or-curie>,
-        <bblocks://ogc.sosa.properties.observation>,
-        <bblocks://ogc.sosa.properties.observation-owa> ;
+        <bblocks://ogc.sosa.properties.property>,
+        <bblocks://ogc.sosa.properties.registerItem> ;
     bblocks:scope <http://www.opengis.net/def/bblocks/scope/development> ;
     bblocks:status <http://www.opengis.net/def/status/under-development> ;
     bblocks:validationPassed true .
@@ -425,107 +430,25 @@
         "observations",
         "sosa",
         "ssn" ;
-    prof:hasResource [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
-            dct:format "application/json" ;
-            prof:hasArtifact <https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/observation-owa/schema.json> ;
-            prof:hasRole role:schema ],
+    prof:hasResource [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
+            dct:format "application/ld+json" ;
+            prof:hasArtifact <https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/observation-owa/context.jsonld> ;
+            prof:hasRole role:mapping ],
         [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
             dct:format "application/yaml" ;
             prof:hasArtifact <https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/observation-owa/schema.yaml> ;
             prof:hasRole role:schema ],
-        [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
-            dct:format "application/ld+json" ;
-            prof:hasArtifact <https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/observation-owa/context.jsonld> ;
-            prof:hasRole role:mapping ] ;
-    bblocks:dependsOn <bblocks://ogc.sosa.properties.execution>,
-        <bblocks://ogc.sosa.properties.observableProperty>,
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/json" ;
+            prof:hasArtifact <https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/observation-owa/schema.json> ;
+            prof:hasRole role:schema ] ;
+    bblocks:dependsOn <bblocks://ogc.ogc-utils.iri-or-curie>,
+        <bblocks://ogc.sosa.properties.execution>,
+        <bblocks://ogc.sosa.properties.property>,
         <bblocks://ogc.sosa.properties.sensor> ;
     bblocks:scope <http://www.opengis.net/def/bblocks/scope/development> ;
     bblocks:status <http://www.opengis.net/def/status/under-development> ;
     bblocks:validationPassed true .
-
-<bblocks://ogc.sosa.properties.sensor> a skos:Concept,
-        dcat:Dataset,
-        bblocks:BBlock,
-        bblocks:Schema ;
-    rdfs:label "SOSA Sensor" ;
-    dct:abstract "An identifiable entity that can generate Observations pertaining to an ObservableProperty by implementing an ObservingProcedure. Device, agent (including humans), or software (simulation) involved in, or implementing, a Procedure. Sensors respond to a stimulus, e.g., a change in the environment, or input data composed from the results of prior Observations, and generate a Result. Sensors can be hosted by Platforms."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
-    dct:created "2023-12-05T00:00:00+00:00"^^xsd:dateTime ;
-    dct:description [ dct:format "application/json" ;
-            rdfs:isDefinedBy <https://avillar.github.io/ogcapi-sosa-claude/build/generateddocs/json-full/sosa/properties/sensor/index.json> ],
-        [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy <https://avillar.github.io/ogcapi-sosa-claude/build/generateddocs/markdown/sosa/properties/sensor/index.md> ],
-        [ dct:format "text/html" ;
-            rdfs:isDefinedBy <https://avillar.github.io/ogcapi-sosa-claude/bblock/ogc.sosa.properties.sensor> ] ;
-    dct:hasVersion "1.0" ;
-    dct:modified "2026-03-02"^^xsd:date ;
-    dct:source <https://www.w3.org/TR/vocab-ssn/> ;
-    skos:inScheme <https://avillar.github.io/ogcapi-sosa-claude/> ;
-    skos:prefLabel "SOSA Sensor" ;
-    skos:topConceptOf <https://avillar.github.io/ogcapi-sosa-claude/> ;
-    dcat:keyword "o&m",
-        "o&m&s",
-        "observations",
-        "sosa",
-        "ssn" ;
-    prof:hasResource [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
-            dct:format "application/ld+json" ;
-            prof:hasArtifact <https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/sensor/context.jsonld> ;
-            prof:hasRole role:mapping ],
-        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
-            dct:format "application/yaml" ;
-            prof:hasArtifact <https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/sensor/schema.yaml> ;
-            prof:hasRole role:schema ],
-        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
-            dct:format "application/json" ;
-            prof:hasArtifact <https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/sensor/schema.json> ;
-            prof:hasRole role:schema ] ;
-    bblocks:dependsOn <bblocks://ogc.ogc-utils.iri-or-curie> ;
-    bblocks:scope <http://www.opengis.net/def/bblocks/scope/development> ;
-    bblocks:status <http://www.opengis.net/def/status/under-development> ;
-    bblocks:validationPassed true .
-
-<bblocks://ogc.sosa.properties.system> a skos:Concept,
-        dcat:Dataset,
-        bblocks:BBlock,
-        bblocks:Schema ;
-    rdfs:label "SOSA System" ;
-    dct:abstract "System is a unit of abstraction for pieces of infrastructure that implement Procedures. A System may have components (implemented as subsystems), and may be deployed at a Platform. Sensor, Actuator and Sampler are all types of System."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
-    dct:created "2024-01-01T00:00:00+00:00"^^xsd:dateTime ;
-    dct:description [ dct:format "application/json" ;
-            rdfs:isDefinedBy <https://avillar.github.io/ogcapi-sosa-claude/build/generateddocs/json-full/sosa/properties/system/index.json> ],
-        [ dct:format "text/html" ;
-            rdfs:isDefinedBy <https://avillar.github.io/ogcapi-sosa-claude/bblock/ogc.sosa.properties.system> ],
-        [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy <https://avillar.github.io/ogcapi-sosa-claude/build/generateddocs/markdown/sosa/properties/system/index.md> ] ;
-    dct:hasVersion "1.0" ;
-    dct:modified "2026-03-02"^^xsd:date ;
-    dct:source <https://www.w3.org/TR/vocab-ssn/> ;
-    skos:inScheme <https://avillar.github.io/ogcapi-sosa-claude/> ;
-    skos:prefLabel "SOSA System" ;
-    skos:topConceptOf <https://avillar.github.io/ogcapi-sosa-claude/> ;
-    dcat:keyword "o&m",
-        "o&m&s",
-        "observations",
-        "sosa",
-        "ssn" ;
-    prof:hasResource [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
-            dct:format "application/ld+json" ;
-            prof:hasArtifact <https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/system/context.jsonld> ;
-            prof:hasRole role:mapping ],
-        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
-            dct:format "application/yaml" ;
-            prof:hasArtifact <https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/system/schema.yaml> ;
-            prof:hasRole role:schema ],
-        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
-            dct:format "application/json" ;
-            prof:hasArtifact <https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/system/schema.json> ;
-            prof:hasRole role:schema ] ;
-    bblocks:dependsOn <bblocks://ogc.ogc-utils.iri-or-curie>,
-        <bblocks://ogc.sosa.properties.procedure> ;
-    bblocks:scope <http://www.opengis.net/def/bblocks/scope/development> ;
-    bblocks:status <http://www.opengis.net/def/status/under-development> ;
-    bblocks:validationPassed false .
 
 <bblocks://ogc.sosa.properties.procedure> a skos:Concept,
         dcat:Dataset,
@@ -555,20 +478,21 @@
             dct:format "application/yaml" ;
             prof:hasArtifact <https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/procedure/schema.yaml> ;
             prof:hasRole role:schema ],
-        [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
-            dct:format "application/ld+json" ;
-            prof:hasArtifact <https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/procedure/context.jsonld> ;
-            prof:hasRole role:mapping ],
         [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
             dct:format "application/json" ;
             prof:hasArtifact <https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/procedure/schema.json> ;
-            prof:hasRole role:schema ] ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
+            dct:format "application/ld+json" ;
+            prof:hasArtifact <https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/procedure/context.jsonld> ;
+            prof:hasRole role:mapping ] ;
     bblocks:dependsOn <bblocks://ogc.ogc-utils.iri-or-curie>,
         <bblocks://ogc.sosa.properties.property>,
+        <bblocks://ogc.sosa.properties.registerItem>,
         <bblocks://ogc.sosa.properties.system> ;
     bblocks:scope <http://www.opengis.net/def/bblocks/scope/development> ;
     bblocks:status <http://www.opengis.net/def/status/under-development> ;
-    bblocks:validationPassed false .
+    bblocks:validationPassed true .
 
 <bblocks://ogc.sosa.properties.property> a skos:Concept,
         dcat:Dataset,
@@ -577,12 +501,12 @@
     rdfs:label "SOSA Property" ;
     dct:abstract "An identifiable quality (property, characteristic) of a FeatureOfInterest. A Property can be associated with different Features of Interest, may be observed by a Procedure, and can be acted upon by an Actuator. ObservableProperty, ActuatableProperty, and SampledProperty are all types of Property."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2024-01-01T00:00:00+00:00"^^xsd:dateTime ;
-    dct:description [ dct:format "text/html" ;
-            rdfs:isDefinedBy <https://avillar.github.io/ogcapi-sosa-claude/bblock/ogc.sosa.properties.property> ],
-        [ dct:format "text/markdown" ;
+    dct:description [ dct:format "text/markdown" ;
             rdfs:isDefinedBy <https://avillar.github.io/ogcapi-sosa-claude/build/generateddocs/markdown/sosa/properties/property/index.md> ],
         [ dct:format "application/json" ;
-            rdfs:isDefinedBy <https://avillar.github.io/ogcapi-sosa-claude/build/generateddocs/json-full/sosa/properties/property/index.json> ] ;
+            rdfs:isDefinedBy <https://avillar.github.io/ogcapi-sosa-claude/build/generateddocs/json-full/sosa/properties/property/index.json> ],
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy <https://avillar.github.io/ogcapi-sosa-claude/bblock/ogc.sosa.properties.property> ] ;
     dct:hasVersion "1.0" ;
     dct:modified "2026-03-02"^^xsd:date ;
     dct:source <https://www.w3.org/TR/vocab-ssn/> ;
@@ -594,23 +518,109 @@
         "observations",
         "sosa",
         "ssn" ;
-    prof:hasResource [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+    prof:hasResource [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
+            dct:format "application/ld+json" ;
+            prof:hasArtifact <https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/property/context.jsonld> ;
+            prof:hasRole role:mapping ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
             dct:format "application/json" ;
             prof:hasArtifact <https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/property/schema.json> ;
             prof:hasRole role:schema ],
         [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
             dct:format "application/yaml" ;
             prof:hasArtifact <https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/property/schema.yaml> ;
+            prof:hasRole role:schema ] ;
+    bblocks:dependsOn <bblocks://ogc.ogc-utils.iri-or-curie>,
+        <bblocks://ogc.sosa.properties.featureOfInterest>,
+        <bblocks://ogc.sosa.properties.procedure>,
+        <bblocks://ogc.sosa.properties.registerItem> ;
+    bblocks:scope <http://www.opengis.net/def/bblocks/scope/development> ;
+    bblocks:status <http://www.opengis.net/def/status/under-development> ;
+    bblocks:validationPassed true .
+
+<bblocks://ogc.sosa.properties.system> a skos:Concept,
+        dcat:Dataset,
+        bblocks:BBlock,
+        bblocks:Schema ;
+    rdfs:label "SOSA System" ;
+    dct:abstract "System is a unit of abstraction for pieces of infrastructure that implement Procedures. A System may have components (implemented as subsystems), and may be deployed at a Platform. Sensor, Actuator and Sampler are all types of System."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
+    dct:created "2024-01-01T00:00:00+00:00"^^xsd:dateTime ;
+    dct:description [ dct:format "text/html" ;
+            rdfs:isDefinedBy <https://avillar.github.io/ogcapi-sosa-claude/bblock/ogc.sosa.properties.system> ],
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy <https://avillar.github.io/ogcapi-sosa-claude/build/generateddocs/json-full/sosa/properties/system/index.json> ],
+        [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy <https://avillar.github.io/ogcapi-sosa-claude/build/generateddocs/markdown/sosa/properties/system/index.md> ] ;
+    dct:hasVersion "1.0" ;
+    dct:modified "2026-03-02"^^xsd:date ;
+    dct:source <https://www.w3.org/TR/vocab-ssn/> ;
+    skos:inScheme <https://avillar.github.io/ogcapi-sosa-claude/> ;
+    skos:prefLabel "SOSA System" ;
+    skos:topConceptOf <https://avillar.github.io/ogcapi-sosa-claude/> ;
+    dcat:keyword "o&m",
+        "o&m&s",
+        "observations",
+        "sosa",
+        "ssn" ;
+    prof:hasResource [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/json" ;
+            prof:hasArtifact <https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/system/schema.json> ;
             prof:hasRole role:schema ],
         [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
             dct:format "application/ld+json" ;
-            prof:hasArtifact <https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/property/context.jsonld> ;
-            prof:hasRole role:mapping ] ;
+            prof:hasArtifact <https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/system/context.jsonld> ;
+            prof:hasRole role:mapping ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/yaml" ;
+            prof:hasArtifact <https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/system/schema.yaml> ;
+            prof:hasRole role:schema ] ;
     bblocks:dependsOn <bblocks://ogc.ogc-utils.iri-or-curie>,
-        <bblocks://ogc.sosa.properties.procedure> ;
+        <bblocks://ogc.sosa.properties.procedure>,
+        <bblocks://ogc.sosa.properties.registerItem> ;
     bblocks:scope <http://www.opengis.net/def/bblocks/scope/development> ;
     bblocks:status <http://www.opengis.net/def/status/under-development> ;
-    bblocks:validationPassed false .
+    bblocks:validationPassed true .
+
+<bblocks://ogc.sosa.properties.registerItem> a skos:Concept,
+        dcat:Dataset,
+        bblocks:BBlock,
+        bblocks:Schema ;
+    rdfs:label "SOSA Register Item" ;
+    dct:abstract "Common properties for identifiable, named, and described entities in the SOSA register: an identifier (id), a human-readable label (name), and a textual description."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
+    dct:created "2024-01-01T00:00:00+00:00"^^xsd:dateTime ;
+    dct:description [ dct:format "application/json" ;
+            rdfs:isDefinedBy <https://avillar.github.io/ogcapi-sosa-claude/build/generateddocs/json-full/sosa/properties/registerItem/index.json> ],
+        [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy <https://avillar.github.io/ogcapi-sosa-claude/build/generateddocs/markdown/sosa/properties/registerItem/index.md> ],
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy <https://avillar.github.io/ogcapi-sosa-claude/bblock/ogc.sosa.properties.registerItem> ] ;
+    dct:hasVersion "1.0" ;
+    dct:modified "2026-03-02"^^xsd:date ;
+    dct:source <https://www.w3.org/TR/vocab-ssn/> ;
+    skos:inScheme <https://avillar.github.io/ogcapi-sosa-claude/> ;
+    skos:prefLabel "SOSA Register Item" ;
+    skos:topConceptOf <https://avillar.github.io/ogcapi-sosa-claude/> ;
+    dcat:keyword "o&m",
+        "o&m&s",
+        "observations",
+        "sosa",
+        "ssn" ;
+    prof:hasResource [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/yaml" ;
+            prof:hasArtifact <https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/registerItem/schema.yaml> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/json" ;
+            prof:hasArtifact <https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/registerItem/schema.json> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
+            dct:format "application/ld+json" ;
+            prof:hasArtifact <https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/registerItem/context.jsonld> ;
+            prof:hasRole role:mapping ] ;
+    bblocks:dependsOn <bblocks://ogc.ogc-utils.iri-or-curie> ;
+    bblocks:scope <http://www.opengis.net/def/bblocks/scope/development> ;
+    bblocks:status <http://www.opengis.net/def/status/under-development> ;
+    bblocks:validationPassed true .
 
 <bblocks://ogc.sosa.properties.observation> a skos:Concept,
         dcat:Dataset,
@@ -636,10 +646,10 @@
         "observations",
         "sosa",
         "ssn" ;
-    prof:hasResource [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
-            dct:format "application/yaml" ;
-            prof:hasArtifact <https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/observation/schema.yaml> ;
-            prof:hasRole role:schema ],
+    prof:hasResource [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
+            dct:format "application/ld+json" ;
+            prof:hasArtifact <https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/observation/context.jsonld> ;
+            prof:hasRole role:mapping ],
         [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
             dct:format "application/json" ;
             prof:hasArtifact <https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/observation/schema.json> ;
@@ -649,14 +659,14 @@
             rdfs:seeAlso <bblocks://ogc.sosa.properties.observation> ;
             prof:hasArtifact <https://avillar.github.io/ogcapi-sosa-claude/_sources/properties/observation/shapes.shacl> ;
             prof:hasRole role:validation ],
-        [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
-            dct:format "application/ld+json" ;
-            prof:hasArtifact <https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/observation/context.jsonld> ;
-            prof:hasRole role:mapping ] ;
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/yaml" ;
+            prof:hasArtifact <https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/observation/schema.yaml> ;
+            prof:hasRole role:schema ] ;
     bblocks:dependsOn <bblocks://ogc.sosa.properties.observation-owa> ;
     bblocks:scope <http://www.opengis.net/def/bblocks/scope/development> ;
     bblocks:status <http://www.opengis.net/def/status/under-development> ;
-    bblocks:validationPassed false .
+    bblocks:validationPassed true .
 
 <https://www.w3.org/TR/vocab-ssn/> rdfs:label "Semantic Sensor Network Ontology" .
 
@@ -673,7 +683,7 @@ Each fragment allows for transparent and validatable use of JSON-LD contexts to 
 
  Each building block allows for examples transformed to RDF, which in turn allows for the use of SHACL rules to enforce the semantics of the SOSA and OMS specifications.
 """^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
-    dct:modified "2026-03-02T06:16:10.502472"^^xsd:dateTime ;
+    dct:modified "2026-03-02T12:11:57.704428"^^xsd:dateTime ;
     void:sparqlEndpoint <https://defs-dev.opengis.net/fuseki/query> ;
     owl:imports <https://opengeospatial.github.io/bblocks/register.json> ;
     skos:hasTopConcept <bblocks://ogc.sosa>,
@@ -681,33 +691,33 @@ Each fragment allows for transparent and validatable use of JSON-LD contexts to 
         <bblocks://ogc.sosa.features.observationCollection>,
         <bblocks://ogc.sosa.properties.execution>,
         <bblocks://ogc.sosa.properties.featureOfInterest>,
-        <bblocks://ogc.sosa.properties.observableProperty>,
         <bblocks://ogc.sosa.properties.observation>,
         <bblocks://ogc.sosa.properties.observation-owa>,
         <bblocks://ogc.sosa.properties.observationCollection>,
         <bblocks://ogc.sosa.properties.platform>,
         <bblocks://ogc.sosa.properties.procedure>,
         <bblocks://ogc.sosa.properties.property>,
+        <bblocks://ogc.sosa.properties.registerItem>,
         <bblocks://ogc.sosa.properties.sensor>,
         <bblocks://ogc.sosa.properties.spec-examples>,
         <bblocks://ogc.sosa.properties.system> ;
     skos:prefLabel "Building Blocks - Observations (ISO 19156, OGC/W3C SOSA)" ;
-    prof:hasResource [ rdfs:label "This Building Blocks Register in JSON format" ;
-            dct:type "application/json" ;
-            ns2:relation <http://www.iana.org/assignments/relation/self> ;
-            ns1:hasTarget <https://avillar.github.io/ogcapi-sosa-claude/build/register.json> ],
-        [ rdfs:label "This Building Blocks Register in RDF Turtle format" ;
+    prof:hasResource [ rdfs:label "This Building Blocks Register in RDF Turtle format" ;
             dct:type "text/turtle" ;
-            ns2:relation <http://www.iana.org/assignments/relation/self> ;
-            ns1:hasTarget <https://avillar.github.io/ogcapi-sosa-claude/build/bblocks.ttl> ],
+            ns1:relation <http://www.iana.org/assignments/relation/self> ;
+            ns2:hasTarget <https://avillar.github.io/ogcapi-sosa-claude/build/bblocks.ttl> ],
+        [ rdfs:label "This Building Blocks Register in JSON format" ;
+            dct:type "application/json" ;
+            ns1:relation <http://www.iana.org/assignments/relation/self> ;
+            ns2:hasTarget <https://avillar.github.io/ogcapi-sosa-claude/build/register.json> ],
         [ rdfs:label "This Building Blocks Register in JSON-LD format" ;
             dct:type "application/ld+json" ;
-            ns2:relation <http://www.iana.org/assignments/relation/self> ;
-            ns1:hasTarget <https://avillar.github.io/ogcapi-sosa-claude/build/bblocks.jsonld> ] ;
+            ns1:relation <http://www.iana.org/assignments/relation/self> ;
+            ns2:hasTarget <https://avillar.github.io/ogcapi-sosa-claude/build/bblocks.jsonld> ] ;
     foaf:homepage <https://avillar.github.io/ogcapi-sosa-claude/> ;
     bblocks:hasValidationReport <https://avillar.github.io/ogcapi-sosa-claude/build/tests/report.html> .
 
-_:N5271a0d1594543a9aa9db3400531fb12 a prov:Agent,
+_:Na5b17c290e8d4e4ca9c3874af0c13939 a prov:Agent,
         schema:SoftwareApplication ;
     rdfs:label "OGC-NA tools" ;
     dct:hasVersion "0.5.17" ;

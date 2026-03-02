@@ -1,13 +1,13 @@
 {
   "@context": {
-    "eg": "http://example.org/sensors",
+    "eg": "http://example.org/sensors/",
     "sensorType": {
       "type": "@id",
       "@id": "sosa:sensorKind"
     },
     "description": "eg:description",
     "lastCalibrated": "eg:calibrationDate",
-    "purpose": "eg.purpose"
+    "purpose": "eg:purpose"
   },
   "id": "eg:gnss-pair-1",
   "sensorType": "eg:gnss-pair",

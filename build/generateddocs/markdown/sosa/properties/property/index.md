@@ -28,28 +28,6 @@ These properties are independent of the feature model implementation.
 
 ## Examples
 
-### Property as IRI reference
-#### json
-```json
-"http://example.org/properties/waterTemperature"
-
-```
-
-#### jsonld
-```jsonld
-{
-  "@context": "https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/property/context.jsonld",
-  "@graph": "http://example.org/properties/waterTemperature"
-}
-```
-
-#### ttl
-```ttl
-
-
-```
-
-
 ### Property as inline object with associated procedure
 #### json
 ```json
@@ -93,6 +71,88 @@ These properties are independent of the feature model implementation.
 
 ```
 
+
+### Property with inline feature of interest and multiple procedures
+#### json
+```json
+{
+  "@context": {
+    "eg": "http://example.org/"
+  },
+  "id": "eg:properties/airQualityIndex",
+  "name": "Air Quality Index",
+  "description": "Composite measure of air pollutant concentrations",
+  "isPropertyOf": {
+    "id": "eg:features/london-city-centre",
+    "name": "London City Centre",
+    "description": "Central London air quality monitoring zone"
+  },
+  "hasProcedure": [
+    {
+      "id": "eg:procedures/pm25-measurement",
+      "name": "PM2.5 Measurement Procedure"
+    },
+    {
+      "id": "eg:procedures/no2-measurement",
+      "name": "NO2 Measurement Procedure"
+    }
+  ]
+}
+
+```
+
+#### jsonld
+```jsonld
+{
+  "@context": [
+    "https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/property/context.jsonld",
+    {
+      "eg": "http://example.org/"
+    }
+  ],
+  "id": "eg:properties/airQualityIndex",
+  "name": "Air Quality Index",
+  "description": "Composite measure of air pollutant concentrations",
+  "isPropertyOf": {
+    "id": "eg:features/london-city-centre",
+    "name": "London City Centre",
+    "description": "Central London air quality monitoring zone"
+  },
+  "hasProcedure": [
+    {
+      "id": "eg:procedures/pm25-measurement",
+      "name": "PM2.5 Measurement Procedure"
+    },
+    {
+      "id": "eg:procedures/no2-measurement",
+      "name": "NO2 Measurement Procedure"
+    }
+  ]
+}
+```
+
+#### ttl
+```ttl
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
+
+<http://example.org/properties/airQualityIndex> rdfs:label "Air Quality Index" ;
+    dct:description "Composite measure of air pollutant concentrations" ;
+    sosa:hasProcedure <http://example.org/procedures/no2-measurement>,
+        <http://example.org/procedures/pm25-measurement> ;
+    sosa:isPropertyOf <http://example.org/features/london-city-centre> .
+
+<http://example.org/features/london-city-centre> rdfs:label "London City Centre" ;
+    dct:description "Central London air quality monitoring zone" .
+
+<http://example.org/procedures/no2-measurement> rdfs:label "NO2 Measurement Procedure" .
+
+<http://example.org/procedures/pm25-measurement> rdfs:label "PM2.5 Measurement Procedure" .
+
+
+```
+
 ## Schema
 
 ```yaml
@@ -100,26 +160,28 @@ $schema: https://json-schema.org/draft/2020-12/schema
 description: SOSA Property
 $defs:
   Property:
-    anyOf:
-    - $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/iri-or-curie/schema.yaml
+    allOf:
+    - $ref: https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/registerItem/schema.yaml
     - type: object
       properties:
-        id:
-          $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/iri-or-curie/schema.yaml
-          x-jsonld-id: '@id'
         isPropertyOf:
-          $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/iri-or-curie/schema.yaml
+          anyOf:
+          - $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/iri-or-curie/schema.yaml
+          - $ref: https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/featureOfInterest/schema.yaml
           x-jsonld-id: http://www.w3.org/ns/sosa/isPropertyOf
           x-jsonld-type: '@id'
         hasProcedure:
           type: array
           items:
-            $ref: https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/procedure/schema.yaml
+            anyOf:
+            - $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/iri-or-curie/schema.yaml
+            - $ref: https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/procedure/schema.yaml
           x-jsonld-id: http://www.w3.org/ns/sosa/hasProcedure
           x-jsonld-type: '@id'
 allOf:
 - $ref: '#/$defs/Property'
 x-jsonld-extra-terms:
+  id: '@id'
   properties: '@nest'
   featureType: '@type'
   ActuatableProperty:
@@ -442,9 +504,13 @@ x-jsonld-extra-terms:
   qualityOfObservation:
     x-jsonld-id: http://www.w3.org/ns/ssn/systems/qualityOfObservation
     x-jsonld-type: '@id'
+  name: http://www.w3.org/2000/01/rdf-schema#label
+  description: http://purl.org/dc/terms/description
 x-jsonld-prefixes:
   sosa: http://www.w3.org/ns/sosa/
   ssn-system: http://www.w3.org/ns/ssn/systems/
+  rdfs: http://www.w3.org/2000/01/rdf-schema#
+  dct: http://purl.org/dc/terms/
   ssn: http://www.w3.org/ns/ssn/
 
 ```
@@ -460,15 +526,6 @@ Links to the schema:
 ```jsonld
 {
   "@context": {
-    "id": "@id",
-    "isPropertyOf": {
-      "@id": "sosa:isPropertyOf",
-      "@type": "@id"
-    },
-    "hasProcedure": {
-      "@id": "sosa:hasProcedure",
-      "@type": "@id"
-    },
     "properties": "@nest",
     "featureType": "@type",
     "ActuatableProperty": {
@@ -665,6 +722,10 @@ Links to the schema:
       "@id": "sosa:isObservedBy",
       "@type": "@id"
     },
+    "isPropertyOf": {
+      "@id": "sosa:isPropertyOf",
+      "@type": "@id"
+    },
     "isProxyFor": {
       "@id": "sosa:isProxyFor",
       "@type": "@id"
@@ -746,6 +807,10 @@ Links to the schema:
     },
     "isUltimateFeatureOfInterestOf": {
       "@id": "sosa:isUltimateFeatureOfInterestOf",
+      "@type": "@id"
+    },
+    "hasProcedure": {
+      "@id": "sosa:hasProcedure",
       "@type": "@id"
     },
     "isProcedureFor": {
@@ -896,8 +961,13 @@ Links to the schema:
       "@id": "ssn-system:qualityOfObservation",
       "@type": "@id"
     },
+    "id": "@id",
+    "name": "rdfs:label",
+    "description": "dct:description",
     "sosa": "http://www.w3.org/ns/sosa/",
     "ssn-system": "ssn:systems/",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "dct": "http://purl.org/dc/terms/",
     "ssn": "http://www.w3.org/ns/ssn/",
     "@version": 1.1
   }

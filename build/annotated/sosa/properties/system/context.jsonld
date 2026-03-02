@@ -1,23 +1,5 @@
 {
   "@context": {
-    "id": "@id",
-    "implements": {
-      "@id": "sosa:implements",
-      "@type": "@id"
-    },
-    "hasSubSystem": {
-      "@id": "sosa:hasSubSystem",
-      "@type": "@id",
-      "@container": "@set"
-    },
-    "isSubSystemOf": {
-      "@id": "sosa:isSubSystemOf",
-      "@type": "@id"
-    },
-    "isHostedBy": {
-      "@id": "sosa:isHostedBy",
-      "@type": "@id"
-    },
     "properties": "@nest",
     "featureType": "@type",
     "ActuatableProperty": {
@@ -172,6 +154,11 @@
       "@id": "sosa:hasSimpleResult",
       "@type": "@id"
     },
+    "hasSubSystem": {
+      "@id": "sosa:hasSubSystem",
+      "@type": "@id",
+      "@container": "@set"
+    },
     "hasUltimateFeatureOfInterest": {
       "@id": "sosa:hasUltimateFeatureOfInterest",
       "@type": "@id"
@@ -185,6 +172,10 @@
       "@id": "sosa:implementedBy",
       "@type": "@id"
     },
+    "implements": {
+      "@id": "sosa:implements",
+      "@type": "@id"
+    },
     "inDeployment": {
       "@id": "sosa:inDeployment",
       "@type": "@id"
@@ -195,6 +186,10 @@
     },
     "isFeatureOfInterestOf": {
       "@id": "sosa:isFeatureOfInterestOf",
+      "@type": "@id"
+    },
+    "isHostedBy": {
+      "@id": "sosa:isHostedBy",
       "@type": "@id"
     },
     "isObservedBy": {
@@ -302,6 +297,10 @@
     },
     "usedForExecution": {
       "@id": "sosa:usedForExecution",
+      "@type": "@id"
+    },
+    "isSubSystemOf": {
+      "@id": "sosa:isSubSystemOf",
       "@type": "@id"
     },
     "madeExecution": {
@@ -436,8 +435,13 @@
       "@id": "ssn-system:qualityOfObservation",
       "@type": "@id"
     },
+    "id": "@id",
+    "name": "rdfs:label",
+    "description": "dct:description",
     "sosa": "http://www.w3.org/ns/sosa/",
     "ssn-system": "ssn:systems/",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "dct": "http://purl.org/dc/terms/",
     "ssn": "http://www.w3.org/ns/ssn/",
     "@version": 1.1
   }

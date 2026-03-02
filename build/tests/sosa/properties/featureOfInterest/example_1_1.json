@@ -1,1 +1,10 @@
-"https://example.org/features/river-thames"
+{
+  "@context": {
+    "eg": "http://example.org/features/"
+  },
+  "id": "eg:river-thames",
+  "hasProperty": [
+    "http://example.org/properties/waterTemperature",
+    "http://example.org/properties/waterLevel"
+  ]
+}

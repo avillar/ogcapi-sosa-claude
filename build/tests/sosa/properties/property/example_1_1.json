@@ -1,1 +1,10 @@
-"http://example.org/properties/waterTemperature"
+{
+  "@context": {
+    "eg": "http://example.org/"
+  },
+  "id": "eg:properties/waterTemperature",
+  "isPropertyOf": "eg:features/river-thames",
+  "hasProcedure": [
+    "eg:procedures/thermometer-reading"
+  ]
+}

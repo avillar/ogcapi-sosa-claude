@@ -2,8 +2,8 @@
   "title": "Validation report for ogc.sosa.properties.featureOfInterest - SOSA FeatureOfInterest",
   "bblockName": "SOSA FeatureOfInterest",
   "bblockId": "ogc.sosa.properties.featureOfInterest",
-  "generated": "2026-03-02T06:16:22.307422+00:00",
-  "result": false,
+  "generated": "2026-03-02T12:12:08.179132+00:00",
+  "result": true,
   "items": [
     {
       "source": {
@@ -15,7 +15,7 @@
         "snippetIndex": 1,
         "language": "application/json"
       },
-      "result": false,
+      "result": true,
       "sections": [
         {
           "name": "FILES",
@@ -23,7 +23,7 @@
           "entries": [
             {
               "isError": false,
-              "message": "Using examples/feature-iri.json from examples"
+              "message": "Using examples/feature.json from examples"
             },
             {
               "op": "jsonld-uplift",
@@ -38,11 +38,11 @@
             },
             {
               "op": "ttl-create",
-              "empty": true,
+              "empty": false,
               "filename": "example_1_1.ttl",
-              "size": 0,
-              "isError": true,
-              "message": "**Empty** output Turtle example_1_1.ttl created"
+              "size": 2,
+              "isError": false,
+              "message": "Output Turtle example_1_1.ttl created"
             }
           ]
         },
@@ -78,7 +78,7 @@
           "entries": [
             {
               "isError": false,
-              "message": "Using examples/feature.json from examples"
+              "message": "Using examples/feature-complex.json from examples"
             },
             {
               "op": "jsonld-uplift",
@@ -95,7 +95,7 @@
               "op": "ttl-create",
               "empty": false,
               "filename": "example_2_1.ttl",
-              "size": 2,
+              "size": 10,
               "isError": false,
               "message": "Output Turtle example_2_1.ttl created"
             }
@@ -119,7 +119,7 @@
   "globalErrors": {},
   "counts": {
     "total": 2,
-    "passed": 1,
-    "failed": 1
+    "passed": 2,
+    "failed": 0
   }
 }

@@ -1,0 +1,27 @@
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://example.org/features/thames-teddington> rdfs:label "River Thames at Teddington" ;
+    dct:description "Monitoring site on the River Thames at Teddington Lock" .
+
+<http://example.org/procedures/water-quality-monitoring> rdfs:label "Water Quality Monitoring Procedure" .
+
+<http://example.org/sensors/ph-probe-1> rdfs:label "pH Probe" .
+
+<http://example.org/sensors/temp-probe-1> rdfs:label "Temperature Probe" .
+
+<http://example.org/systems/mobile-unit-3> rdfs:label "Mobile Monitoring Unit 3" ;
+    sosa:hasSubSystem <http://example.org/sensors/ph-probe-1>,
+        <http://example.org/sensors/temp-probe-1> .
+
+[] sosa:endTime "2024-03-15T09:45:00Z" ;
+    sosa:hasFeatureOfInterest <http://example.org/features/thames-teddington> ;
+    sosa:hasSimpleResult 7.4e+00 ;
+    sosa:madeBySystem <http://example.org/systems/mobile-unit-3> ;
+    sosa:phenomenonTime <2024-03-15T09:00:00Z> ;
+    sosa:resultTime "2024-03-15T10:30:00Z" ;
+    sosa:startTime "2024-03-15T09:00:00Z" ;
+    sosa:usedProcedure <http://example.org/procedures/water-quality-monitoring> .
+

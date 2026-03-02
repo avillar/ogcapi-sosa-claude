@@ -2,9 +2,22 @@
   "@context": {
     "eg": "http://example.org/"
   },
-  "id": "eg:properties/waterTemperature",
-  "isPropertyOf": "eg:features/river-thames",
+  "id": "eg:properties/airQualityIndex",
+  "name": "Air Quality Index",
+  "description": "Composite measure of air pollutant concentrations",
+  "isPropertyOf": {
+    "id": "eg:features/london-city-centre",
+    "name": "London City Centre",
+    "description": "Central London air quality monitoring zone"
+  },
   "hasProcedure": [
-    "eg:procedures/thermometer-reading"
+    {
+      "id": "eg:procedures/pm25-measurement",
+      "name": "PM2.5 Measurement Procedure"
+    },
+    {
+      "id": "eg:procedures/no2-measurement",
+      "name": "NO2 Measurement Procedure"
+    }
   ]
 }

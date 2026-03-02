@@ -1,0 +1,62 @@
+{
+  "@context": [
+    "https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/platform/context.jsonld",
+    {
+      "eg": "http://example.org/"
+    }
+  ],
+  "id": "eg:platforms/research-vessel-endeavour",
+  "name": "Research Vessel Endeavour",
+  "description": "Oceanographic research vessel equipped with multiple sensor arrays",
+  "hosts": [
+    {
+      "id": "eg:platforms/weather-deck-array",
+      "name": "Weather Deck Sensor Array",
+      "hosts": [
+        {
+          "id": "eg:sensors/anemometer-1",
+          "name": "Anemometer",
+          "observes": [
+            {
+              "id": "eg:properties/windSpeed",
+              "name": "Wind Speed"
+            },
+            {
+              "id": "eg:properties/windDirection",
+              "name": "Wind Direction"
+            }
+          ]
+        },
+        {
+          "id": "eg:sensors/barometer-1",
+          "name": "Barometer",
+          "observes": [
+            {
+              "id": "eg:properties/atmosphericPressure",
+              "name": "Atmospheric Pressure"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "eg:sensors/ctd-probe-1",
+      "name": "CTD Probe",
+      "description": "Conductivity, Temperature and Depth probe",
+      "observes": [
+        {
+          "id": "eg:properties/seawaterTemperature",
+          "name": "Seawater Temperature"
+        },
+        {
+          "id": "eg:properties/salinity",
+          "name": "Salinity"
+        },
+        {
+          "id": "eg:properties/depth",
+          "name": "Depth"
+        }
+      ]
+    }
+  ]
+}

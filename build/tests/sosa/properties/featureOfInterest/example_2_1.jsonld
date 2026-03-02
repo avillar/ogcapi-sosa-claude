@@ -2,12 +2,32 @@
   "@context": [
     "https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/featureOfInterest/context.jsonld",
     {
-      "eg": "http://example.org/features/"
+      "eg": "http://example.org/"
     }
   ],
-  "id": "eg:river-thames",
+  "id": "eg:features/river-thames",
+  "name": "River Thames",
+  "description": "The River Thames flowing through London, UK",
   "hasProperty": [
-    "http://example.org/properties/waterTemperature",
-    "http://example.org/properties/waterLevel"
+    {
+      "id": "eg:properties/waterTemperature",
+      "name": "Water Temperature",
+      "hasProcedure": [
+        {
+          "id": "eg:procedures/thermometer-reading",
+          "name": "Thermometer Reading Procedure"
+        }
+      ]
+    },
+    {
+      "id": "eg:properties/waterLevel",
+      "name": "Water Level",
+      "hasProcedure": [
+        {
+          "id": "eg:procedures/level-gauge-reading",
+          "name": "Level Gauge Reading Procedure"
+        }
+      ]
+    }
   ]
 }

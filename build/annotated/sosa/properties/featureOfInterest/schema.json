@@ -3,21 +3,24 @@
   "description": "SOSA FeatureOfInterest",
   "$defs": {
     "FeatureOfInterest": {
-      "anyOf": [
+      "allOf": [
         {
-          "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/iri-or-curie/schema.json"
+          "$ref": "https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/registerItem/schema.json"
         },
         {
           "type": "object",
           "properties": {
-            "id": {
-              "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/iri-or-curie/schema.json",
-              "x-jsonld-id": "@id"
-            },
             "hasProperty": {
               "type": "array",
               "items": {
-                "$ref": "https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/property/schema.json"
+                "anyOf": [
+                  {
+                    "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/iri-or-curie/schema.json"
+                  },
+                  {
+                    "$ref": "https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/property/schema.json"
+                  }
+                ]
               },
               "x-jsonld-id": "http://www.w3.org/ns/sosa/hasProperty",
               "x-jsonld-type": "@id"
@@ -33,6 +36,7 @@
     }
   ],
   "x-jsonld-extra-terms": {
+    "id": "@id",
     "properties": "@nest",
     "featureType": "@type",
     "ActuatableProperty": {
@@ -463,11 +467,15 @@
     "qualityOfObservation": {
       "x-jsonld-id": "http://www.w3.org/ns/ssn/systems/qualityOfObservation",
       "x-jsonld-type": "@id"
-    }
+    },
+    "name": "http://www.w3.org/2000/01/rdf-schema#label",
+    "description": "http://purl.org/dc/terms/description"
   },
   "x-jsonld-prefixes": {
     "sosa": "http://www.w3.org/ns/sosa/",
     "ssn-system": "http://www.w3.org/ns/ssn/systems/",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "dct": "http://purl.org/dc/terms/",
     "ssn": "http://www.w3.org/ns/ssn/"
   }
 }

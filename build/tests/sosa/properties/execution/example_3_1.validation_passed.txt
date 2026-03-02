@@ -1,0 +1,13 @@
+Validation report for ogc.sosa.properties.execution - SOSA Execution
+Generated 2026-03-02T12:12:08.688240+00:00
+=== Files ===
+Using examples/execution-complex.json from examples
+JSON-LD context is present - uplifting
+Output JSON-LD example_3_1.jsonld created
+Output Turtle example_3_1.ttl created
+=== End Files ===
+
+=== JSON Schema ===
+Validation passed
+=== End JSON Schema ===
+

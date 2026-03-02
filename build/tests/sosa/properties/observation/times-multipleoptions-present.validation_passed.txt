@@ -1,5 +1,5 @@
 Validation report for ogc.sosa.properties.observation - Observation Properties
-Generated 2026-03-02T06:16:24.360769+00:00
+Generated 2026-03-02T12:12:10.668604+00:00
 === Files ===
 Using times-multipleoptions-present.json from test resources
 JSON-LD context is present - uplifting
@@ -8,17 +8,7 @@ Output Turtle times-multipleoptions-present.ttl created
 === End Files ===
 
 === JSON Schema ===
-
-** Validation error **
-ValidationError: 'ea est culpa esse' is not valid under any of the given schemas
-
-Failed validating 'anyOf' in schema[0]:
-    {'anyOf': [{'$ref': '#/$defs/IRI'},
-               {'$ref': '#/$defs/CURIE'},
-               {'$ref': '#/$defs/LocalPart'}]}
-
-On instance:
-    'ea est culpa esse'
+Validation passed
 === End JSON Schema ===
 
 === SHACL ===
@@ -27,15 +17,15 @@ Validation result for _sources/properties/observation/shapes.shacl:
   Conforms: True
   
 Focus nodes for _sources/properties/observation/shapes.shacl:
- - Shape <https://www.ogc.org/rules/sosa/#testFeatureOfInterest>: *none*
- - Shape <https://www.ogc.org/rules/sosa/#testSimpleResultLiteral>: <file:///github/workspace/frogginess>
- - Shape <https://www.ogc.org/rules/sosa/#testObservedPropertyPresent>: _:N3e56bb319637418bbbf63ad2124a7bf7
- - Shape <https://www.ogc.org/rules/sosa/#testRequiredTime>: *none*
- - Shape <https://www.ogc.org/rules/sosa/#testResultNotEmptyNode>: *none*
- - Shape <https://www.ogc.org/rules/sosa/#testCollectionPropertyValuesInterval>: *none*
- - Shape <https://www.ogc.org/rules/sosa/#testCollectionPropertyValues>: *none*
  - Shape <https://www.ogc.org/rules/sosa/#testObservedPropertyConsistent>: *none*
+ - Shape <https://www.ogc.org/rules/sosa/#testSimpleResultLiteral>: <file:///github/workspace/frogginess>
+ - Shape <https://www.ogc.org/rules/sosa/#testRequiredTime>: *none*
+ - Shape <https://www.ogc.org/rules/sosa/#testCollectionPropertyValues>: *none*
+ - Shape <https://www.ogc.org/rules/sosa/#testResultNotEmptyNode>: *none*
  - Shape <https://www.ogc.org/rules/sosa/#testResult>: *none*
+ - Shape <https://www.ogc.org/rules/sosa/#testObservedPropertyPresent>: _:Nf0e7df2728b3427e9c01bafcea729f5a
+ - Shape <https://www.ogc.org/rules/sosa/#testCollectionPropertyValuesInterval>: *none*
+ - Shape <https://www.ogc.org/rules/sosa/#testFeatureOfInterest>: *none*
 
 === End SHACL ===
 

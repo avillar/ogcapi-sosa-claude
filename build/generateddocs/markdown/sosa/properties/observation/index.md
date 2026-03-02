@@ -92,11 +92,11 @@ _:a1 a sosa:Observation ;
 
 #### ttl
 ```ttl
-@prefix ns1: <rdfs:> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sosa: <http://www.w3.org/ns/sosa/> .
 
 [] sosa:hasFeatureOfInterest <https://demo.pygeoapi.io/master/collections/utah_city_locations/items/Salem> ;
-    sosa:hasResult [ ns1:comment "I feel good" ] ;
+    sosa:hasResult [ rdfs:comment "I feel good" ] ;
     sosa:observedProperty <file:///github/workspace/p1> ;
     sosa:resultTime "2022-05-01T22:33:44Z" .
 
@@ -446,9 +446,13 @@ x-jsonld-extra-terms:
   qualityOfObservation:
     x-jsonld-id: http://www.w3.org/ns/ssn/systems/qualityOfObservation
     x-jsonld-type: '@id'
+  name: http://www.w3.org/2000/01/rdf-schema#label
+  description: http://purl.org/dc/terms/description
 x-jsonld-prefixes:
   sosa: http://www.w3.org/ns/sosa/
   ssn-system: http://www.w3.org/ns/ssn/systems/
+  rdfs: http://www.w3.org/2000/01/rdf-schema#
+  dct: http://purl.org/dc/terms/
   ssn: http://www.w3.org/ns/ssn/
 
 ```
@@ -877,6 +881,8 @@ Links to the schema:
       "@id": "ssn-system:qualityOfObservation",
       "@type": "@id"
     },
+    "name": "rdfs:label",
+    "description": "dct:description",
     "resultTime": "sosa:resultTime",
     "phenomenonTime": {
       "@id": "sosa:phenomenonTime",
@@ -902,6 +908,8 @@ Links to the schema:
     },
     "sosa": "http://www.w3.org/ns/sosa/",
     "ssn-system": "ssn:systems/",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "dct": "http://purl.org/dc/terms/",
     "ssn": "http://www.w3.org/ns/ssn/",
     "@version": 1.1
   }

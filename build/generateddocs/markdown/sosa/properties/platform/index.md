@@ -3,7 +3,7 @@
 
 `ogc.sosa.properties.platform` *v1.0*
 
-This building block defines the set of properties for an observation Platform according to the SOSA/SSN specification. These properties may be directly included into a root element of a JSON object or used in the properties container of a GeoJSON feature.
+A Platform is an entity that hosts other Entities, particularly Assets (including Systems such as Sensors). A Platform may itself be hosted by another Platform. Platforms are commonly physical devices, vehicles, or fixed infrastructure on which sensors are mounted.
 
 [*Status*](http://www.opengis.net/def/status): Under development
 
@@ -11,37 +11,42 @@ This building block defines the set of properties for an observation Platform ac
 
 ## SOSA Platform Properties
 
-This building block describes the canonical set of properties for an Platform object.
+This building block describes the canonical set of properties for a **Platform** object according to the SOSA/SSN specification.
 
-These properties are independent of the feature model implementation - for example may be included in the "properties" component of a GeoJSON object, or used in any other schema.
+A Platform is an entity that hosts other Assets, in particular Systems such as Sensors. A Platform may host multiple Sensors or other Systems, and may itself be hosted by another Platform (e.g. a satellite hosting an instrument, which in turn is mounted on a spacecraft).
 
+The key property of a Platform is:
+- `hosts` — an array of hosted Systems (Sensors, Actuators, etc.) or nested Platforms
 
+A Platform can be expressed as:
+- a reference (IRI or CURIE) to an externally defined platform, or
+- an inline object with an `id` and a list of hosted entities.
 
+These properties are independent of the feature model implementation — they may be included directly in a root JSON object or within the `properties` component of a GeoJSON feature.
 
 ## Examples
 
-### Example of Platform hosting multiple sensors
+### Platform hosting multiple sensors
 #### json
 ```json
 {
   "@context": {
-    "eg": "http://example.org/sensors",
+    "eg": "http://example.org/sensors/",
     "resolution": "http://camera-specs.org/params/imageResolution"
   },
   "id": "eg:myPhone",
-  "sensorType": "eg:phone",
   "hosts": [
     {
-      "sensorType": "eg:camera",
-      "id": "eg:123",
-      "resolution": 20000
+      "id": "eg:camera-1",
+      "observes": ["http://example.org/properties/image"]
     },
     {
-      "sensorType": "eg:compass",
-      "id": "eg:mkV"
+      "id": "eg:compass-1",
+      "observes": ["http://example.org/properties/heading"]
     }
   ]
 }
+
 ```
 
 #### jsonld
@@ -50,21 +55,23 @@ These properties are independent of the feature model implementation - for examp
   "@context": [
     "https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/platform/context.jsonld",
     {
-      "eg": "http://example.org/sensors",
+      "eg": "http://example.org/sensors/",
       "resolution": "http://camera-specs.org/params/imageResolution"
     }
   ],
   "id": "eg:myPhone",
-  "sensorType": "eg:phone",
   "hosts": [
     {
-      "sensorType": "eg:camera",
-      "id": "eg:123",
-      "resolution": 20000
+      "id": "eg:camera-1",
+      "observes": [
+        "http://example.org/properties/image"
+      ]
     },
     {
-      "sensorType": "eg:compass",
-      "id": "eg:mkV"
+      "id": "eg:compass-1",
+      "observes": [
+        "http://example.org/properties/heading"
+      ]
     }
   ]
 }
@@ -72,14 +79,172 @@ These properties are independent of the feature model implementation - for examp
 
 #### ttl
 ```ttl
-@prefix ns1: <http://camera-specs.org/params/> .
+@prefix eg: <http://example.org/sensors/> .
 @prefix sosa: <http://www.w3.org/ns/sosa/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<eg:myPhone> sosa:hosts <eg:123>,
-        <eg:mkV> .
+eg:myPhone sosa:hosts eg:camera-1,
+        eg:compass-1 .
 
-<eg:123> ns1:imageResolution 20000 .
+eg:camera-1 sosa:observes <http://example.org/properties/image> .
+
+eg:compass-1 sosa:observes <http://example.org/properties/heading> .
+
+
+```
+
+
+### Research vessel with nested sub-platforms and sensor arrays
+#### json
+```json
+{
+  "@context": {
+    "eg": "http://example.org/"
+  },
+  "id": "eg:platforms/research-vessel-endeavour",
+  "name": "Research Vessel Endeavour",
+  "description": "Oceanographic research vessel equipped with multiple sensor arrays",
+  "hosts": [
+    {
+      "id": "eg:platforms/weather-deck-array",
+      "name": "Weather Deck Sensor Array",
+      "hosts": [
+        {
+          "id": "eg:sensors/anemometer-1",
+          "name": "Anemometer",
+          "observes": [
+            { "id": "eg:properties/windSpeed", "name": "Wind Speed" },
+            { "id": "eg:properties/windDirection", "name": "Wind Direction" }
+          ]
+        },
+        {
+          "id": "eg:sensors/barometer-1",
+          "name": "Barometer",
+          "observes": [
+            { "id": "eg:properties/atmosphericPressure", "name": "Atmospheric Pressure" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "eg:sensors/ctd-probe-1",
+      "name": "CTD Probe",
+      "description": "Conductivity, Temperature and Depth probe",
+      "observes": [
+        { "id": "eg:properties/seawaterTemperature", "name": "Seawater Temperature" },
+        { "id": "eg:properties/salinity", "name": "Salinity" },
+        { "id": "eg:properties/depth", "name": "Depth" }
+      ]
+    }
+  ]
+}
+
+```
+
+#### jsonld
+```jsonld
+{
+  "@context": [
+    "https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/platform/context.jsonld",
+    {
+      "eg": "http://example.org/"
+    }
+  ],
+  "id": "eg:platforms/research-vessel-endeavour",
+  "name": "Research Vessel Endeavour",
+  "description": "Oceanographic research vessel equipped with multiple sensor arrays",
+  "hosts": [
+    {
+      "id": "eg:platforms/weather-deck-array",
+      "name": "Weather Deck Sensor Array",
+      "hosts": [
+        {
+          "id": "eg:sensors/anemometer-1",
+          "name": "Anemometer",
+          "observes": [
+            {
+              "id": "eg:properties/windSpeed",
+              "name": "Wind Speed"
+            },
+            {
+              "id": "eg:properties/windDirection",
+              "name": "Wind Direction"
+            }
+          ]
+        },
+        {
+          "id": "eg:sensors/barometer-1",
+          "name": "Barometer",
+          "observes": [
+            {
+              "id": "eg:properties/atmosphericPressure",
+              "name": "Atmospheric Pressure"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "eg:sensors/ctd-probe-1",
+      "name": "CTD Probe",
+      "description": "Conductivity, Temperature and Depth probe",
+      "observes": [
+        {
+          "id": "eg:properties/seawaterTemperature",
+          "name": "Seawater Temperature"
+        },
+        {
+          "id": "eg:properties/salinity",
+          "name": "Salinity"
+        },
+        {
+          "id": "eg:properties/depth",
+          "name": "Depth"
+        }
+      ]
+    }
+  ]
+}
+```
+
+#### ttl
+```ttl
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
+
+<http://example.org/platforms/research-vessel-endeavour> rdfs:label "Research Vessel Endeavour" ;
+    dct:description "Oceanographic research vessel equipped with multiple sensor arrays" ;
+    sosa:hosts <http://example.org/platforms/weather-deck-array>,
+        <http://example.org/sensors/ctd-probe-1> .
+
+<http://example.org/platforms/weather-deck-array> rdfs:label "Weather Deck Sensor Array" ;
+    sosa:hosts <http://example.org/sensors/anemometer-1>,
+        <http://example.org/sensors/barometer-1> .
+
+<http://example.org/properties/atmosphericPressure> rdfs:label "Atmospheric Pressure" .
+
+<http://example.org/properties/depth> rdfs:label "Depth" .
+
+<http://example.org/properties/salinity> rdfs:label "Salinity" .
+
+<http://example.org/properties/seawaterTemperature> rdfs:label "Seawater Temperature" .
+
+<http://example.org/properties/windDirection> rdfs:label "Wind Direction" .
+
+<http://example.org/properties/windSpeed> rdfs:label "Wind Speed" .
+
+<http://example.org/sensors/anemometer-1> rdfs:label "Anemometer" ;
+    sosa:observes <http://example.org/properties/windDirection>,
+        <http://example.org/properties/windSpeed> .
+
+<http://example.org/sensors/barometer-1> rdfs:label "Barometer" ;
+    sosa:observes <http://example.org/properties/atmosphericPressure> .
+
+<http://example.org/sensors/ctd-probe-1> rdfs:label "CTD Probe" ;
+    dct:description "Conductivity, Temperature and Depth probe" ;
+    sosa:observes <http://example.org/properties/depth>,
+        <http://example.org/properties/salinity>,
+        <http://example.org/properties/seawaterTemperature> .
 
 
 ```
@@ -89,23 +254,24 @@ These properties are independent of the feature model implementation - for examp
 ```yaml
 $schema: https://json-schema.org/draft/2020-12/schema
 description: SOSA Platform
-$definitions:
+$defs:
   Platform:
-    anyOf:
-    - $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/iri-or-curie/schema.yaml
+    allOf:
+    - $ref: https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/registerItem/schema.yaml
     - type: object
       properties:
         hosts:
           type: array
           items:
             anyOf:
-            - $ref: '#/$definitions/Platform'
-            - $ref: https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/sensor/schema.yaml#/$definitions/Sensor
+            - $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/iri-or-curie/schema.yaml
+            - $ref: '#/$defs/Platform'
+            - $ref: https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/system/schema.yaml
           x-jsonld-id: http://www.w3.org/ns/sosa/hosts
           x-jsonld-type: '@id'
           x-jsonld-container: '@set'
 allOf:
-- $ref: '#/$definitions/Platform'
+- $ref: '#/$defs/Platform'
 x-jsonld-extra-terms:
   id: '@id'
   properties: '@nest'
@@ -432,9 +598,13 @@ x-jsonld-extra-terms:
   qualityOfObservation:
     x-jsonld-id: http://www.w3.org/ns/ssn/systems/qualityOfObservation
     x-jsonld-type: '@id'
+  name: http://www.w3.org/2000/01/rdf-schema#label
+  description: http://purl.org/dc/terms/description
 x-jsonld-prefixes:
   sosa: http://www.w3.org/ns/sosa/
   ssn-system: http://www.w3.org/ns/ssn/systems/
+  rdfs: http://www.w3.org/2000/01/rdf-schema#
+  dct: http://purl.org/dc/terms/
   ssn: http://www.w3.org/ns/ssn/
 
 ```
@@ -450,12 +620,6 @@ Links to the schema:
 ```jsonld
 {
   "@context": {
-    "hosts": {
-      "@id": "sosa:hosts",
-      "@type": "@id",
-      "@container": "@set"
-    },
-    "id": "@id",
     "properties": "@nest",
     "featureType": "@type",
     "ActuatableProperty": {
@@ -618,6 +782,11 @@ Links to the schema:
     "hasUltimateFeatureOfInterest": {
       "@id": "sosa:hasUltimateFeatureOfInterest",
       "@type": "@id"
+    },
+    "hosts": {
+      "@id": "sosa:hosts",
+      "@type": "@id",
+      "@container": "@set"
     },
     "implementedBy": {
       "@id": "sosa:implementedBy",
@@ -886,8 +1055,13 @@ Links to the schema:
       "@id": "ssn-system:qualityOfObservation",
       "@type": "@id"
     },
+    "id": "@id",
+    "name": "rdfs:label",
+    "description": "dct:description",
     "sosa": "http://www.w3.org/ns/sosa/",
     "ssn-system": "ssn:systems/",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "dct": "http://purl.org/dc/terms/",
     "ssn": "http://www.w3.org/ns/ssn/",
     "@version": 1.1
   }

@@ -1,5 +1,28 @@
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sosa: <http://www.w3.org/ns/sosa/> .
 
-<http://example.org/procedures/thermometer-reading> sosa:implementedBy <http://example.org/sensors/thermometer-1> ;
-    sosa:isProcedureFor <http://example.org/properties/waterTemperature> .
+<http://example.org/procedures/water-quality-monitoring> rdfs:label "Water Quality Monitoring Procedure" ;
+    dct:description "Multi-parameter procedure for in-situ water quality assessment" ;
+    sosa:implementedBy <http://example.org/sensors/multi-parameter-probe-1> ;
+    sosa:isProcedureFor <http://example.org/properties/dissolvedOxygen>,
+        <http://example.org/properties/waterPH>,
+        <http://example.org/properties/waterTemperature> .
+
+<http://example.org/properties/dissolvedOxygen> rdfs:label "Dissolved Oxygen" .
+
+<http://example.org/properties/waterPH> rdfs:label "Water pH" .
+
+<http://example.org/properties/waterTemperature> rdfs:label "Water Temperature" .
+
+<http://example.org/sensors/do-probe-1> rdfs:label "Dissolved Oxygen Probe" .
+
+<http://example.org/sensors/multi-parameter-probe-1> rdfs:label "Multi-parameter Probe 1" ;
+    sosa:hasSubSystem <http://example.org/sensors/do-probe-1>,
+        <http://example.org/sensors/ph-probe-1>,
+        <http://example.org/sensors/temp-probe-1> .
+
+<http://example.org/sensors/ph-probe-1> rdfs:label "pH Probe" .
+
+<http://example.org/sensors/temp-probe-1> rdfs:label "Temperature Probe" .
 

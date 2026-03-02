@@ -2,13 +2,16 @@
   "@context": [
     "https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/sensor/context.jsonld",
     {
-      "eg": "http://example.org/sensors",
+      "eg": "http://example.org/",
       "sensorType": {
-        "type": "@id",
+        "@type": "@id",
         "@id": "sosa:sensorKind"
       }
     }
   ],
-  "id": "eg:sensor1",
-  "sensorType": "eg:gnss-pair"
+  "id": "eg:sensors/thermometer-1",
+  "sensorType": "eg:ThermometerSensor",
+  "observes": [
+    "eg:properties/waterTemperature"
+  ]
 }

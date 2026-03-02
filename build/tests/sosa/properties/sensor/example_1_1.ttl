@@ -1,4 +1,6 @@
+@prefix eg: <http://example.org/> .
 @prefix sosa: <http://www.w3.org/ns/sosa/> .
 
-<eg:sensor1> sosa:sensorKind "eg:gnss-pair" .
+<http://example.org/sensors/thermometer-1> sosa:observes <http://example.org/properties/waterTemperature> ;
+    sosa:sensorKind eg:ThermometerSensor .
 

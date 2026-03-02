@@ -26,28 +26,6 @@ These properties are independent of the feature model implementation.
 
 ## Examples
 
-### Procedure as IRI reference
-#### json
-```json
-"http://example.org/procedures/thermometer-reading"
-
-```
-
-#### jsonld
-```jsonld
-{
-  "@context": "https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/procedure/context.jsonld",
-  "@graph": "http://example.org/procedures/thermometer-reading"
-}
-```
-
-#### ttl
-```ttl
-
-
-```
-
-
 ### Procedure as inline object
 #### json
 ```json
@@ -95,6 +73,128 @@ These properties are independent of the feature model implementation.
 
 ```
 
+
+### Procedure with inline properties and implementing systems
+#### json
+```json
+{
+  "@context": {
+    "eg": "http://example.org/"
+  },
+  "id": "eg:procedures/water-quality-monitoring",
+  "name": "Water Quality Monitoring Procedure",
+  "description": "Multi-parameter procedure for in-situ water quality assessment",
+  "isProcedureFor": [
+    {
+      "id": "eg:properties/waterTemperature",
+      "name": "Water Temperature"
+    },
+    {
+      "id": "eg:properties/waterPH",
+      "name": "Water pH"
+    },
+    {
+      "id": "eg:properties/dissolvedOxygen",
+      "name": "Dissolved Oxygen"
+    }
+  ],
+  "implementedBy": [
+    {
+      "id": "eg:sensors/multi-parameter-probe-1",
+      "name": "Multi-parameter Probe 1",
+      "hasSubSystem": [
+        { "id": "eg:sensors/temp-probe-1", "name": "Temperature Probe" },
+        { "id": "eg:sensors/ph-probe-1", "name": "pH Probe" },
+        { "id": "eg:sensors/do-probe-1", "name": "Dissolved Oxygen Probe" }
+      ]
+    }
+  ]
+}
+
+```
+
+#### jsonld
+```jsonld
+{
+  "@context": [
+    "https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/procedure/context.jsonld",
+    {
+      "eg": "http://example.org/"
+    }
+  ],
+  "id": "eg:procedures/water-quality-monitoring",
+  "name": "Water Quality Monitoring Procedure",
+  "description": "Multi-parameter procedure for in-situ water quality assessment",
+  "isProcedureFor": [
+    {
+      "id": "eg:properties/waterTemperature",
+      "name": "Water Temperature"
+    },
+    {
+      "id": "eg:properties/waterPH",
+      "name": "Water pH"
+    },
+    {
+      "id": "eg:properties/dissolvedOxygen",
+      "name": "Dissolved Oxygen"
+    }
+  ],
+  "implementedBy": [
+    {
+      "id": "eg:sensors/multi-parameter-probe-1",
+      "name": "Multi-parameter Probe 1",
+      "hasSubSystem": [
+        {
+          "id": "eg:sensors/temp-probe-1",
+          "name": "Temperature Probe"
+        },
+        {
+          "id": "eg:sensors/ph-probe-1",
+          "name": "pH Probe"
+        },
+        {
+          "id": "eg:sensors/do-probe-1",
+          "name": "Dissolved Oxygen Probe"
+        }
+      ]
+    }
+  ]
+}
+```
+
+#### ttl
+```ttl
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
+
+<http://example.org/procedures/water-quality-monitoring> rdfs:label "Water Quality Monitoring Procedure" ;
+    dct:description "Multi-parameter procedure for in-situ water quality assessment" ;
+    sosa:implementedBy <http://example.org/sensors/multi-parameter-probe-1> ;
+    sosa:isProcedureFor <http://example.org/properties/dissolvedOxygen>,
+        <http://example.org/properties/waterPH>,
+        <http://example.org/properties/waterTemperature> .
+
+<http://example.org/properties/dissolvedOxygen> rdfs:label "Dissolved Oxygen" .
+
+<http://example.org/properties/waterPH> rdfs:label "Water pH" .
+
+<http://example.org/properties/waterTemperature> rdfs:label "Water Temperature" .
+
+<http://example.org/sensors/do-probe-1> rdfs:label "Dissolved Oxygen Probe" .
+
+<http://example.org/sensors/multi-parameter-probe-1> rdfs:label "Multi-parameter Probe 1" ;
+    sosa:hasSubSystem <http://example.org/sensors/do-probe-1>,
+        <http://example.org/sensors/ph-probe-1>,
+        <http://example.org/sensors/temp-probe-1> .
+
+<http://example.org/sensors/ph-probe-1> rdfs:label "pH Probe" .
+
+<http://example.org/sensors/temp-probe-1> rdfs:label "Temperature Probe" .
+
+
+```
+
 ## Schema
 
 ```yaml
@@ -102,17 +202,16 @@ $schema: https://json-schema.org/draft/2020-12/schema
 description: SOSA Procedure
 $defs:
   Procedure:
-    anyOf:
-    - $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/iri-or-curie/schema.yaml
+    allOf:
+    - $ref: https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/registerItem/schema.yaml
     - type: object
       properties:
-        id:
-          $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/iri-or-curie/schema.yaml
-          x-jsonld-id: '@id'
         implementedBy:
           type: array
           items:
-            $ref: https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/system/schema.yaml
+            anyOf:
+            - $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/iri-or-curie/schema.yaml
+            - $ref: https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/system/schema.yaml
           x-jsonld-id: http://www.w3.org/ns/sosa/implementedBy
           x-jsonld-type: '@id'
         hasInput: true
@@ -120,12 +219,15 @@ $defs:
         isProcedureFor:
           type: array
           items:
-            $ref: https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/property/schema.yaml
+            anyOf:
+            - $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/iri-or-curie/schema.yaml
+            - $ref: https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/property/schema.yaml
           x-jsonld-id: http://www.w3.org/ns/sosa/isProcedureFor
           x-jsonld-type: '@id'
 allOf:
 - $ref: '#/$defs/Procedure'
 x-jsonld-extra-terms:
+  id: '@id'
   properties: '@nest'
   featureType: '@type'
   ActuatableProperty:
@@ -448,9 +550,13 @@ x-jsonld-extra-terms:
   qualityOfObservation:
     x-jsonld-id: http://www.w3.org/ns/ssn/systems/qualityOfObservation
     x-jsonld-type: '@id'
+  name: http://www.w3.org/2000/01/rdf-schema#label
+  description: http://purl.org/dc/terms/description
 x-jsonld-prefixes:
   sosa: http://www.w3.org/ns/sosa/
   ssn-system: http://www.w3.org/ns/ssn/systems/
+  rdfs: http://www.w3.org/2000/01/rdf-schema#
+  dct: http://purl.org/dc/terms/
   ssn: http://www.w3.org/ns/ssn/
 
 ```
@@ -466,15 +572,6 @@ Links to the schema:
 ```jsonld
 {
   "@context": {
-    "id": "@id",
-    "implementedBy": {
-      "@id": "sosa:implementedBy",
-      "@type": "@id"
-    },
-    "isProcedureFor": {
-      "@id": "sosa:isProcedureFor",
-      "@type": "@id"
-    },
     "properties": "@nest",
     "featureType": "@type",
     "ActuatableProperty": {
@@ -643,6 +740,10 @@ Links to the schema:
       "@type": "@id",
       "@container": "@set"
     },
+    "implementedBy": {
+      "@id": "sosa:implementedBy",
+      "@type": "@id"
+    },
     "implements": {
       "@id": "sosa:implements",
       "@type": "@id"
@@ -756,6 +857,10 @@ Links to the schema:
     },
     "hasProcedure": {
       "@id": "sosa:hasProcedure",
+      "@type": "@id"
+    },
+    "isProcedureFor": {
+      "@id": "sosa:isProcedureFor",
       "@type": "@id"
     },
     "propertyFor": {
@@ -902,8 +1007,13 @@ Links to the schema:
       "@id": "ssn-system:qualityOfObservation",
       "@type": "@id"
     },
+    "id": "@id",
+    "name": "rdfs:label",
+    "description": "dct:description",
     "sosa": "http://www.w3.org/ns/sosa/",
     "ssn-system": "ssn:systems/",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "dct": "http://purl.org/dc/terms/",
     "ssn": "http://www.w3.org/ns/ssn/",
     "@version": 1.1
   }

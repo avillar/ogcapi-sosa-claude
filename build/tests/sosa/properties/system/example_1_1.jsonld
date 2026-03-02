@@ -1,4 +1,28 @@
 {
-  "@context": "https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/system/context.jsonld",
-  "@graph": "http://example.org/systems/weather-station-1"
+  "@context": [
+    "https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/system/context.jsonld",
+    {
+      "eg": "http://example.org/",
+      "sensorType": {
+        "@type": "@id",
+        "@id": "sosa:sensorKind"
+      }
+    }
+  ],
+  "id": "eg:systems/weather-station-1",
+  "name": "Weather Station Alpha",
+  "implements": [
+    "eg:procedures/thermometer-reading",
+    "eg:procedures/barometer-reading"
+  ],
+  "hasSubSystem": [
+    {
+      "id": "eg:sensors/thermometer-1",
+      "sensorType": "eg:ThermometerSensor"
+    },
+    {
+      "id": "eg:sensors/barometer-1",
+      "sensorType": "eg:BarometerSensor"
+    }
+  ]
 }

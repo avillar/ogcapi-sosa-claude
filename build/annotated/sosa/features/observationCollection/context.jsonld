@@ -457,6 +457,8 @@
       "@id": "ssn-system:qualityOfObservation",
       "@type": "@id"
     },
+    "name": "rdfs:label",
+    "description": "dct:description",
     "resultTime": "sosa:resultTime",
     "phenomenonTime": {
       "@id": "sosa:phenomenonTime",

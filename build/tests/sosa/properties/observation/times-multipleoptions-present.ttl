@@ -2,7 +2,7 @@
 
 [] sosa:hasFeatureOfInterest <http://something.org/1> ;
     sosa:hasSimpleResult <file:///github/workspace/frogginess> ;
-    sosa:madeBySensor <file:///github/workspace/> ;
+    sosa:madeBySensor <file:///github/workspace/sample-sensor> ;
     sosa:observedProperty <file:///github/workspace/something> ;
     sosa:phenomenonTime <2016-05-04T02:27:02.0Z> ;
     sosa:resultTime "2016-05-04T02:27:02.0Z" .

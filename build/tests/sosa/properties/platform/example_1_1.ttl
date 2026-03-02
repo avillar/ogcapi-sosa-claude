@@ -1,9 +1,10 @@
-@prefix ns1: <http://camera-specs.org/params/> .
+@prefix eg: <http://example.org/sensors/> .
 @prefix sosa: <http://www.w3.org/ns/sosa/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<eg:myPhone> sosa:hosts <eg:123>,
-        <eg:mkV> .
+eg:myPhone sosa:hosts eg:camera-1,
+        eg:compass-1 .
 
-<eg:123> ns1:imageResolution 20000 .
+eg:camera-1 sosa:observes <http://example.org/properties/image> .
+
+eg:compass-1 sosa:observes <http://example.org/properties/heading> .
 

@@ -1,1 +1,5 @@
-# Empty Turtle file
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
+
+<http://example.org/properties/waterTemperature> sosa:hasProcedure <http://example.org/procedures/thermometer-reading> ;
+    sosa:isPropertyOf <http://example.org/features/river-thames> .
+

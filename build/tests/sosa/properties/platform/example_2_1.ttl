@@ -1,0 +1,38 @@
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
+
+<http://example.org/platforms/research-vessel-endeavour> rdfs:label "Research Vessel Endeavour" ;
+    dct:description "Oceanographic research vessel equipped with multiple sensor arrays" ;
+    sosa:hosts <http://example.org/platforms/weather-deck-array>,
+        <http://example.org/sensors/ctd-probe-1> .
+
+<http://example.org/platforms/weather-deck-array> rdfs:label "Weather Deck Sensor Array" ;
+    sosa:hosts <http://example.org/sensors/anemometer-1>,
+        <http://example.org/sensors/barometer-1> .
+
+<http://example.org/properties/atmosphericPressure> rdfs:label "Atmospheric Pressure" .
+
+<http://example.org/properties/depth> rdfs:label "Depth" .
+
+<http://example.org/properties/salinity> rdfs:label "Salinity" .
+
+<http://example.org/properties/seawaterTemperature> rdfs:label "Seawater Temperature" .
+
+<http://example.org/properties/windDirection> rdfs:label "Wind Direction" .
+
+<http://example.org/properties/windSpeed> rdfs:label "Wind Speed" .
+
+<http://example.org/sensors/anemometer-1> rdfs:label "Anemometer" ;
+    sosa:observes <http://example.org/properties/windDirection>,
+        <http://example.org/properties/windSpeed> .
+
+<http://example.org/sensors/barometer-1> rdfs:label "Barometer" ;
+    sosa:observes <http://example.org/properties/atmosphericPressure> .
+
+<http://example.org/sensors/ctd-probe-1> rdfs:label "CTD Probe" ;
+    dct:description "Conductivity, Temperature and Depth probe" ;
+    sosa:observes <http://example.org/properties/depth>,
+        <http://example.org/properties/salinity>,
+        <http://example.org/properties/seawaterTemperature> .
+

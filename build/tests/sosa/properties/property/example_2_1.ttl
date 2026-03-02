@@ -1,5 +1,17 @@
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sosa: <http://www.w3.org/ns/sosa/> .
 
-<http://example.org/properties/waterTemperature> sosa:hasProcedure <http://example.org/procedures/thermometer-reading> ;
-    sosa:isPropertyOf <http://example.org/features/river-thames> .
+<http://example.org/properties/airQualityIndex> rdfs:label "Air Quality Index" ;
+    dct:description "Composite measure of air pollutant concentrations" ;
+    sosa:hasProcedure <http://example.org/procedures/no2-measurement>,
+        <http://example.org/procedures/pm25-measurement> ;
+    sosa:isPropertyOf <http://example.org/features/london-city-centre> .
+
+<http://example.org/features/london-city-centre> rdfs:label "London City Centre" ;
+    dct:description "Central London air quality monitoring zone" .
+
+<http://example.org/procedures/no2-measurement> rdfs:label "NO2 Measurement Procedure" .
+
+<http://example.org/procedures/pm25-measurement> rdfs:label "PM2.5 Measurement Procedure" .
 

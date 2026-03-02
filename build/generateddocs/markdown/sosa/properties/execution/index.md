@@ -134,6 +134,112 @@ These properties are independent of the feature model implementation. For observ
 
 ```
 
+
+### Execution with inline feature, procedure, and multi-sensor system
+#### json
+```json
+{
+  "@context": {
+    "eg": "http://example.org/"
+  },
+  "hasFeatureOfInterest": {
+    "id": "eg:features/thames-teddington",
+    "name": "River Thames at Teddington",
+    "description": "Monitoring site on the River Thames at Teddington Lock"
+  },
+  "usedProcedure": {
+    "id": "eg:procedures/water-quality-monitoring",
+    "name": "Water Quality Monitoring Procedure"
+  },
+  "madeBySystem": {
+    "id": "eg:systems/mobile-unit-3",
+    "name": "Mobile Monitoring Unit 3",
+    "hasSubSystem": [
+      { "id": "eg:sensors/temp-probe-1", "name": "Temperature Probe" },
+      { "id": "eg:sensors/ph-probe-1", "name": "pH Probe" }
+    ]
+  },
+  "startTime": "2024-03-15T09:00:00Z",
+  "endTime": "2024-03-15T09:45:00Z",
+  "resultTime": "2024-03-15T10:30:00Z",
+  "phenomenonTime": "2024-03-15T09:00:00Z",
+  "hasSimpleResult": 7.4
+}
+
+```
+
+#### jsonld
+```jsonld
+{
+  "@context": [
+    "https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/execution/context.jsonld",
+    {
+      "eg": "http://example.org/"
+    }
+  ],
+  "hasFeatureOfInterest": {
+    "id": "eg:features/thames-teddington",
+    "name": "River Thames at Teddington",
+    "description": "Monitoring site on the River Thames at Teddington Lock"
+  },
+  "usedProcedure": {
+    "id": "eg:procedures/water-quality-monitoring",
+    "name": "Water Quality Monitoring Procedure"
+  },
+  "madeBySystem": {
+    "id": "eg:systems/mobile-unit-3",
+    "name": "Mobile Monitoring Unit 3",
+    "hasSubSystem": [
+      {
+        "id": "eg:sensors/temp-probe-1",
+        "name": "Temperature Probe"
+      },
+      {
+        "id": "eg:sensors/ph-probe-1",
+        "name": "pH Probe"
+      }
+    ]
+  },
+  "startTime": "2024-03-15T09:00:00Z",
+  "endTime": "2024-03-15T09:45:00Z",
+  "resultTime": "2024-03-15T10:30:00Z",
+  "phenomenonTime": "2024-03-15T09:00:00Z",
+  "hasSimpleResult": 7.4
+}
+```
+
+#### ttl
+```ttl
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://example.org/features/thames-teddington> rdfs:label "River Thames at Teddington" ;
+    dct:description "Monitoring site on the River Thames at Teddington Lock" .
+
+<http://example.org/procedures/water-quality-monitoring> rdfs:label "Water Quality Monitoring Procedure" .
+
+<http://example.org/sensors/ph-probe-1> rdfs:label "pH Probe" .
+
+<http://example.org/sensors/temp-probe-1> rdfs:label "Temperature Probe" .
+
+<http://example.org/systems/mobile-unit-3> rdfs:label "Mobile Monitoring Unit 3" ;
+    sosa:hasSubSystem <http://example.org/sensors/ph-probe-1>,
+        <http://example.org/sensors/temp-probe-1> .
+
+[] sosa:endTime "2024-03-15T09:45:00Z" ;
+    sosa:hasFeatureOfInterest <http://example.org/features/thames-teddington> ;
+    sosa:hasSimpleResult 7.4e+00 ;
+    sosa:madeBySystem <http://example.org/systems/mobile-unit-3> ;
+    sosa:phenomenonTime <2024-03-15T09:00:00Z> ;
+    sosa:resultTime "2024-03-15T10:30:00Z" ;
+    sosa:startTime "2024-03-15T09:00:00Z" ;
+    sosa:usedProcedure <http://example.org/procedures/water-quality-monitoring> .
+
+
+```
+
 ## Schema
 
 ```yaml
@@ -160,19 +266,27 @@ properties:
     format: date-time
     x-jsonld-id: http://www.w3.org/ns/sosa/endTime
   hasFeatureOfInterest:
-    $ref: https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/featureOfInterest/schema.yaml
+    anyOf:
+    - $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/iri-or-curie/schema.yaml
+    - $ref: https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/featureOfInterest/schema.yaml
     x-jsonld-id: http://www.w3.org/ns/sosa/hasFeatureOfInterest
     x-jsonld-type: '@id'
   hasUltimateFeatureOfInterest:
-    $ref: https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/featureOfInterest/schema.yaml
+    anyOf:
+    - $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/iri-or-curie/schema.yaml
+    - $ref: https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/featureOfInterest/schema.yaml
     x-jsonld-id: http://www.w3.org/ns/sosa/hasUltimateFeatureOfInterest
     x-jsonld-type: '@id'
   usedProcedure:
-    $ref: https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/procedure/schema.yaml
+    anyOf:
+    - $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/iri-or-curie/schema.yaml
+    - $ref: https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/procedure/schema.yaml
     x-jsonld-id: http://www.w3.org/ns/sosa/usedProcedure
     x-jsonld-type: '@id'
   madeBySystem:
-    $ref: https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/system/schema.yaml
+    anyOf:
+    - $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/iri-or-curie/schema.yaml
+    - $ref: https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/system/schema.yaml
     x-jsonld-id: http://www.w3.org/ns/sosa/madeBySystem
     x-jsonld-type: '@id'
   hasResult: true
@@ -490,9 +604,13 @@ x-jsonld-extra-terms:
   qualityOfObservation:
     x-jsonld-id: http://www.w3.org/ns/ssn/systems/qualityOfObservation
     x-jsonld-type: '@id'
+  name: http://www.w3.org/2000/01/rdf-schema#label
+  description: http://purl.org/dc/terms/description
 x-jsonld-prefixes:
   sosa: http://www.w3.org/ns/sosa/
   ssn-system: http://www.w3.org/ns/ssn/systems/
+  rdfs: http://www.w3.org/2000/01/rdf-schema#
+  dct: http://purl.org/dc/terms/
   ssn: http://www.w3.org/ns/ssn/
 
 ```
@@ -921,6 +1039,8 @@ Links to the schema:
       "@id": "ssn-system:qualityOfObservation",
       "@type": "@id"
     },
+    "name": "rdfs:label",
+    "description": "dct:description",
     "resultTime": "sosa:resultTime",
     "phenomenonTime": {
       "@id": "sosa:phenomenonTime",
@@ -946,6 +1066,8 @@ Links to the schema:
     },
     "sosa": "http://www.w3.org/ns/sosa/",
     "ssn-system": "ssn:systems/",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "dct": "http://purl.org/dc/terms/",
     "ssn": "http://www.w3.org/ns/ssn/",
     "@version": 1.1
   }

@@ -1,0 +1,33 @@
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
+
+<http://example.org/sensors/multi-parameter-probe-1> rdfs:label "Multi-parameter Water Quality Probe" ;
+    dct:description "In-situ probe measuring multiple water quality parameters simultaneously" ;
+    sosa:hasSubSystem <http://example.org/sensors/do-probe-1>,
+        <http://example.org/sensors/ph-probe-1>,
+        <http://example.org/sensors/temp-probe-1> ;
+    sosa:implements <http://example.org/procedures/water-quality-monitoring> ;
+    sosa:observes <http://example.org/properties/dissolvedOxygen>,
+        <http://example.org/properties/waterPH>,
+        <http://example.org/properties/waterTemperature> .
+
+<http://example.org/procedures/water-quality-monitoring> rdfs:label "Water Quality Monitoring Procedure" .
+
+<http://example.org/properties/dissolvedOxygen> rdfs:label "Dissolved Oxygen" ;
+    sosa:isPropertyOf <http://example.org/features/river-thames> .
+
+<http://example.org/properties/waterPH> rdfs:label "Water pH" ;
+    sosa:isPropertyOf <http://example.org/features/river-thames> .
+
+<http://example.org/properties/waterTemperature> rdfs:label "Water Temperature" ;
+    sosa:isPropertyOf <http://example.org/features/river-thames> .
+
+<http://example.org/sensors/do-probe-1> rdfs:label "Dissolved Oxygen Probe" .
+
+<http://example.org/sensors/ph-probe-1> rdfs:label "pH Probe" .
+
+<http://example.org/sensors/temp-probe-1> rdfs:label "Temperature Probe" .
+
+<http://example.org/features/river-thames> rdfs:label "River Thames" .
+

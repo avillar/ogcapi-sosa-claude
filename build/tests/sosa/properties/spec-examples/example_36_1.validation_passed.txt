@@ -1,5 +1,5 @@
 Validation report for ogc.sosa.properties.spec-examples - Tests for SOSA specification
-Generated 2026-03-02T06:16:22.059172+00:00
+Generated 2026-03-02T12:12:08.038502+00:00
 === Files ===
 Using https://w3c.github.io/sdw-sosa-ssn/ssn/rdf/examples/UOM-qudt-object.ttl from examples
 Output Turtle example_36_1.ttl created

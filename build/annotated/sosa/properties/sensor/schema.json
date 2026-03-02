@@ -1,21 +1,29 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "description": "SOSA Sensor",
-  "$definitions": {
+  "$defs": {
     "Sensor": {
-      "anyOf": [
+      "allOf": [
         {
-          "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/iri-or-curie/schema.json"
+          "$ref": "https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/system/schema.json"
         },
         {
           "type": "object",
           "properties": {
-            "id": {
-              "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/iri-or-curie/schema.json",
-              "x-jsonld-id": "@id"
-            },
-            "name": {
-              "type": "string"
+            "observes": {
+              "type": "array",
+              "items": {
+                "anyOf": [
+                  {
+                    "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/iri-or-curie/schema.json"
+                  },
+                  {
+                    "$ref": "https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/property/schema.json"
+                  }
+                ]
+              },
+              "x-jsonld-id": "http://www.w3.org/ns/sosa/observes",
+              "x-jsonld-type": "@id"
             }
           }
         }
@@ -24,10 +32,11 @@
   },
   "allOf": [
     {
-      "$ref": "#/$definitions/Sensor"
+      "$ref": "#/$defs/Sensor"
     }
   ],
   "x-jsonld-extra-terms": {
+    "id": "@id",
     "properties": "@nest",
     "featureType": "@type",
     "ActuatableProperty": {
@@ -276,10 +285,6 @@
       "x-jsonld-id": "http://www.w3.org/ns/sosa/observedProperty",
       "x-jsonld-type": "@id"
     },
-    "observes": {
-      "x-jsonld-id": "http://www.w3.org/ns/sosa/observes",
-      "x-jsonld-type": "@id"
-    },
     "phenomenonTime": {
       "x-jsonld-id": "http://www.w3.org/ns/sosa/phenomenonTime",
       "x-jsonld-type": "@id"
@@ -462,11 +467,15 @@
     "qualityOfObservation": {
       "x-jsonld-id": "http://www.w3.org/ns/ssn/systems/qualityOfObservation",
       "x-jsonld-type": "@id"
-    }
+    },
+    "name": "http://www.w3.org/2000/01/rdf-schema#label",
+    "description": "http://purl.org/dc/terms/description"
   },
   "x-jsonld-prefixes": {
     "sosa": "http://www.w3.org/ns/sosa/",
     "ssn-system": "http://www.w3.org/ns/ssn/systems/",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "dct": "http://purl.org/dc/terms/",
     "ssn": "http://www.w3.org/ns/ssn/"
   }
 }

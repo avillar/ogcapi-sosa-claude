@@ -1,0 +1,36 @@
+{
+  "@context": [
+    "https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/execution/context.jsonld",
+    {
+      "eg": "http://example.org/"
+    }
+  ],
+  "hasFeatureOfInterest": {
+    "id": "eg:features/thames-teddington",
+    "name": "River Thames at Teddington",
+    "description": "Monitoring site on the River Thames at Teddington Lock"
+  },
+  "usedProcedure": {
+    "id": "eg:procedures/water-quality-monitoring",
+    "name": "Water Quality Monitoring Procedure"
+  },
+  "madeBySystem": {
+    "id": "eg:systems/mobile-unit-3",
+    "name": "Mobile Monitoring Unit 3",
+    "hasSubSystem": [
+      {
+        "id": "eg:sensors/temp-probe-1",
+        "name": "Temperature Probe"
+      },
+      {
+        "id": "eg:sensors/ph-probe-1",
+        "name": "pH Probe"
+      }
+    ]
+  },
+  "startTime": "2024-03-15T09:00:00Z",
+  "endTime": "2024-03-15T09:45:00Z",
+  "resultTime": "2024-03-15T10:30:00Z",
+  "phenomenonTime": "2024-03-15T09:00:00Z",
+  "hasSimpleResult": 7.4
+}

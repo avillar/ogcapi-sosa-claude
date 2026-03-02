@@ -23,28 +23,6 @@ These properties are independent of the feature model implementation — they ma
 
 ## Examples
 
-### Feature of Interest as IRI reference
-#### json
-```json
-"https://example.org/features/river-thames"
-
-```
-
-#### jsonld
-```jsonld
-{
-  "@context": "https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/featureOfInterest/context.jsonld",
-  "@graph": "https://example.org/features/river-thames"
-}
-```
-
-#### ttl
-```ttl
-
-
-```
-
-
 ### Feature of Interest as inline object
 #### json
 ```json
@@ -89,6 +67,104 @@ eg:river-thames sosa:hasProperty <http://example.org/properties/waterLevel>,
 
 ```
 
+
+### Feature of Interest with inline properties and procedures
+#### json
+```json
+{
+  "@context": {
+    "eg": "http://example.org/"
+  },
+  "id": "eg:features/river-thames",
+  "name": "River Thames",
+  "description": "The River Thames flowing through London, UK",
+  "hasProperty": [
+    {
+      "id": "eg:properties/waterTemperature",
+      "name": "Water Temperature",
+      "hasProcedure": [
+        {
+          "id": "eg:procedures/thermometer-reading",
+          "name": "Thermometer Reading Procedure"
+        }
+      ]
+    },
+    {
+      "id": "eg:properties/waterLevel",
+      "name": "Water Level",
+      "hasProcedure": [
+        {
+          "id": "eg:procedures/level-gauge-reading",
+          "name": "Level Gauge Reading Procedure"
+        }
+      ]
+    }
+  ]
+}
+
+```
+
+#### jsonld
+```jsonld
+{
+  "@context": [
+    "https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/featureOfInterest/context.jsonld",
+    {
+      "eg": "http://example.org/"
+    }
+  ],
+  "id": "eg:features/river-thames",
+  "name": "River Thames",
+  "description": "The River Thames flowing through London, UK",
+  "hasProperty": [
+    {
+      "id": "eg:properties/waterTemperature",
+      "name": "Water Temperature",
+      "hasProcedure": [
+        {
+          "id": "eg:procedures/thermometer-reading",
+          "name": "Thermometer Reading Procedure"
+        }
+      ]
+    },
+    {
+      "id": "eg:properties/waterLevel",
+      "name": "Water Level",
+      "hasProcedure": [
+        {
+          "id": "eg:procedures/level-gauge-reading",
+          "name": "Level Gauge Reading Procedure"
+        }
+      ]
+    }
+  ]
+}
+```
+
+#### ttl
+```ttl
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
+
+<http://example.org/features/river-thames> rdfs:label "River Thames" ;
+    dct:description "The River Thames flowing through London, UK" ;
+    sosa:hasProperty <http://example.org/properties/waterLevel>,
+        <http://example.org/properties/waterTemperature> .
+
+<http://example.org/procedures/level-gauge-reading> rdfs:label "Level Gauge Reading Procedure" .
+
+<http://example.org/procedures/thermometer-reading> rdfs:label "Thermometer Reading Procedure" .
+
+<http://example.org/properties/waterLevel> rdfs:label "Water Level" ;
+    sosa:hasProcedure <http://example.org/procedures/level-gauge-reading> .
+
+<http://example.org/properties/waterTemperature> rdfs:label "Water Temperature" ;
+    sosa:hasProcedure <http://example.org/procedures/thermometer-reading> .
+
+
+```
+
 ## Schema
 
 ```yaml
@@ -96,22 +172,22 @@ $schema: https://json-schema.org/draft/2020-12/schema
 description: SOSA FeatureOfInterest
 $defs:
   FeatureOfInterest:
-    anyOf:
-    - $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/iri-or-curie/schema.yaml
+    allOf:
+    - $ref: https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/registerItem/schema.yaml
     - type: object
       properties:
-        id:
-          $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/iri-or-curie/schema.yaml
-          x-jsonld-id: '@id'
         hasProperty:
           type: array
           items:
-            $ref: https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/property/schema.yaml
+            anyOf:
+            - $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/iri-or-curie/schema.yaml
+            - $ref: https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/property/schema.yaml
           x-jsonld-id: http://www.w3.org/ns/sosa/hasProperty
           x-jsonld-type: '@id'
 allOf:
 - $ref: '#/$defs/FeatureOfInterest'
 x-jsonld-extra-terms:
+  id: '@id'
   properties: '@nest'
   featureType: '@type'
   ActuatableProperty:
@@ -437,9 +513,13 @@ x-jsonld-extra-terms:
   qualityOfObservation:
     x-jsonld-id: http://www.w3.org/ns/ssn/systems/qualityOfObservation
     x-jsonld-type: '@id'
+  name: http://www.w3.org/2000/01/rdf-schema#label
+  description: http://purl.org/dc/terms/description
 x-jsonld-prefixes:
   sosa: http://www.w3.org/ns/sosa/
   ssn-system: http://www.w3.org/ns/ssn/systems/
+  rdfs: http://www.w3.org/2000/01/rdf-schema#
+  dct: http://purl.org/dc/terms/
   ssn: http://www.w3.org/ns/ssn/
 
 ```
@@ -455,11 +535,6 @@ Links to the schema:
 ```jsonld
 {
   "@context": {
-    "id": "@id",
-    "hasProperty": {
-      "@id": "sosa:hasProperty",
-      "@type": "@id"
-    },
     "properties": "@nest",
     "featureType": "@type",
     "ActuatableProperty": {
@@ -588,6 +663,10 @@ Links to the schema:
     },
     "hasOutput": {
       "@id": "sosa:hasOutput",
+      "@type": "@id"
+    },
+    "hasProperty": {
+      "@id": "sosa:hasProperty",
       "@type": "@id"
     },
     "hasResult": {
@@ -891,8 +970,13 @@ Links to the schema:
       "@id": "ssn-system:qualityOfObservation",
       "@type": "@id"
     },
+    "id": "@id",
+    "name": "rdfs:label",
+    "description": "dct:description",
     "sosa": "http://www.w3.org/ns/sosa/",
     "ssn-system": "ssn:systems/",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "dct": "http://purl.org/dc/terms/",
     "ssn": "http://www.w3.org/ns/ssn/",
     "@version": 1.1
   }

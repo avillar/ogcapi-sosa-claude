@@ -1,4 +1,13 @@
 {
-  "@context": "https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/property/context.jsonld",
-  "@graph": "http://example.org/properties/waterTemperature"
+  "@context": [
+    "https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/property/context.jsonld",
+    {
+      "eg": "http://example.org/"
+    }
+  ],
+  "id": "eg:properties/waterTemperature",
+  "isPropertyOf": "eg:features/river-thames",
+  "hasProcedure": [
+    "eg:procedures/thermometer-reading"
+  ]
 }

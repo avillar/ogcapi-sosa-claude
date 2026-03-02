@@ -33,28 +33,6 @@ These properties are independent of the feature model implementation. For sensor
 
 ## Examples
 
-### System as IRI reference
-#### json
-```json
-"http://example.org/systems/weather-station-1"
-
-```
-
-#### jsonld
-```jsonld
-{
-  "@context": "https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/system/context.jsonld",
-  "@graph": "http://example.org/systems/weather-station-1"
-}
-```
-
-#### ttl
-```ttl
-
-
-```
-
-
 ### System with subsystems
 #### json
 ```json
@@ -121,9 +99,11 @@ These properties are independent of the feature model implementation. For sensor
 #### ttl
 ```ttl
 @prefix eg: <http://example.org/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sosa: <http://www.w3.org/ns/sosa/> .
 
-<http://example.org/systems/weather-station-1> sosa:hasSubSystem <http://example.org/sensors/barometer-1>,
+<http://example.org/systems/weather-station-1> rdfs:label "Weather Station Alpha" ;
+    sosa:hasSubSystem <http://example.org/sensors/barometer-1>,
         <http://example.org/sensors/thermometer-1> ;
     sosa:implements <http://example.org/procedures/barometer-reading>,
         <http://example.org/procedures/thermometer-reading> .
@@ -135,6 +115,137 @@ These properties are independent of the feature model implementation. For sensor
 
 ```
 
+
+### Hierarchical monitoring network with nested subsystems
+#### json
+```json
+{
+  "@context": {
+    "eg": "http://example.org/"
+  },
+  "id": "eg:systems/environmental-monitoring-network",
+  "name": "Environmental Monitoring Network",
+  "description": "A hierarchical network of sensor stations monitoring environmental conditions across a river basin",
+  "implements": [
+    {
+      "id": "eg:procedures/continuous-water-monitoring",
+      "name": "Continuous Water Monitoring Procedure"
+    }
+  ],
+  "hasSubSystem": [
+    {
+      "id": "eg:systems/station-upstream",
+      "name": "Upstream Station",
+      "hasSubSystem": [
+        { "id": "eg:sensors/temp-sensor-u1", "name": "Temperature Sensor U1" },
+        { "id": "eg:sensors/flow-sensor-u1", "name": "Flow Rate Sensor U1" }
+      ]
+    },
+    {
+      "id": "eg:systems/station-downstream",
+      "name": "Downstream Station",
+      "hasSubSystem": [
+        { "id": "eg:sensors/temp-sensor-d1", "name": "Temperature Sensor D1" },
+        { "id": "eg:sensors/flow-sensor-d1", "name": "Flow Rate Sensor D1" },
+        { "id": "eg:sensors/turbidity-sensor-d1", "name": "Turbidity Sensor D1" }
+      ]
+    }
+  ]
+}
+
+```
+
+#### jsonld
+```jsonld
+{
+  "@context": [
+    "https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/system/context.jsonld",
+    {
+      "eg": "http://example.org/"
+    }
+  ],
+  "id": "eg:systems/environmental-monitoring-network",
+  "name": "Environmental Monitoring Network",
+  "description": "A hierarchical network of sensor stations monitoring environmental conditions across a river basin",
+  "implements": [
+    {
+      "id": "eg:procedures/continuous-water-monitoring",
+      "name": "Continuous Water Monitoring Procedure"
+    }
+  ],
+  "hasSubSystem": [
+    {
+      "id": "eg:systems/station-upstream",
+      "name": "Upstream Station",
+      "hasSubSystem": [
+        {
+          "id": "eg:sensors/temp-sensor-u1",
+          "name": "Temperature Sensor U1"
+        },
+        {
+          "id": "eg:sensors/flow-sensor-u1",
+          "name": "Flow Rate Sensor U1"
+        }
+      ]
+    },
+    {
+      "id": "eg:systems/station-downstream",
+      "name": "Downstream Station",
+      "hasSubSystem": [
+        {
+          "id": "eg:sensors/temp-sensor-d1",
+          "name": "Temperature Sensor D1"
+        },
+        {
+          "id": "eg:sensors/flow-sensor-d1",
+          "name": "Flow Rate Sensor D1"
+        },
+        {
+          "id": "eg:sensors/turbidity-sensor-d1",
+          "name": "Turbidity Sensor D1"
+        }
+      ]
+    }
+  ]
+}
+```
+
+#### ttl
+```ttl
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
+
+<http://example.org/systems/environmental-monitoring-network> rdfs:label "Environmental Monitoring Network" ;
+    dct:description "A hierarchical network of sensor stations monitoring environmental conditions across a river basin" ;
+    sosa:hasSubSystem <http://example.org/systems/station-downstream>,
+        <http://example.org/systems/station-upstream> ;
+    sosa:implements <http://example.org/procedures/continuous-water-monitoring> .
+
+<http://example.org/procedures/continuous-water-monitoring> rdfs:label "Continuous Water Monitoring Procedure" .
+
+<http://example.org/sensors/flow-sensor-d1> rdfs:label "Flow Rate Sensor D1" .
+
+<http://example.org/sensors/flow-sensor-u1> rdfs:label "Flow Rate Sensor U1" .
+
+<http://example.org/sensors/temp-sensor-d1> rdfs:label "Temperature Sensor D1" .
+
+<http://example.org/sensors/temp-sensor-u1> rdfs:label "Temperature Sensor U1" .
+
+<http://example.org/sensors/turbidity-sensor-d1> rdfs:label "Turbidity Sensor D1" .
+
+<http://example.org/systems/station-downstream> rdfs:label "Downstream Station" ;
+    sosa:hasSubSystem <http://example.org/sensors/flow-sensor-d1>,
+        <http://example.org/sensors/temp-sensor-d1>,
+        <http://example.org/sensors/turbidity-sensor-d1> .
+
+<http://example.org/systems/station-upstream> rdfs:label "Upstream Station" ;
+    sosa:hasSubSystem <http://example.org/sensors/flow-sensor-u1>,
+        <http://example.org/sensors/temp-sensor-u1> .
+
+
+```
+
 ## Schema
 
 ```yaml
@@ -142,30 +253,31 @@ $schema: https://json-schema.org/draft/2020-12/schema
 description: SOSA System
 $defs:
   System:
-    anyOf:
-    - $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/iri-or-curie/schema.yaml
+    allOf:
+    - $ref: https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/registerItem/schema.yaml
     - type: object
       properties:
-        id:
-          $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/iri-or-curie/schema.yaml
-          x-jsonld-id: '@id'
-        name:
-          type: string
         implements:
           type: array
           items:
-            $ref: https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/procedure/schema.yaml
+            anyOf:
+            - $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/iri-or-curie/schema.yaml
+            - $ref: https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/procedure/schema.yaml
           x-jsonld-id: http://www.w3.org/ns/sosa/implements
           x-jsonld-type: '@id'
         hasSubSystem:
           type: array
           items:
-            $ref: '#/$defs/System'
+            anyOf:
+            - $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/iri-or-curie/schema.yaml
+            - $ref: '#/$defs/System'
           x-jsonld-id: http://www.w3.org/ns/sosa/hasSubSystem
           x-jsonld-type: '@id'
           x-jsonld-container: '@set'
         isSubSystemOf:
-          $ref: '#/$defs/System'
+          anyOf:
+          - $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/iri-or-curie/schema.yaml
+          - $ref: '#/$defs/System'
           x-jsonld-id: http://www.w3.org/ns/sosa/isSubSystemOf
           x-jsonld-type: '@id'
         isHostedBy:
@@ -175,6 +287,7 @@ $defs:
 allOf:
 - $ref: '#/$defs/System'
 x-jsonld-extra-terms:
+  id: '@id'
   properties: '@nest'
   featureType: '@type'
   ActuatableProperty:
@@ -490,9 +603,13 @@ x-jsonld-extra-terms:
   qualityOfObservation:
     x-jsonld-id: http://www.w3.org/ns/ssn/systems/qualityOfObservation
     x-jsonld-type: '@id'
+  name: http://www.w3.org/2000/01/rdf-schema#label
+  description: http://purl.org/dc/terms/description
 x-jsonld-prefixes:
   sosa: http://www.w3.org/ns/sosa/
   ssn-system: http://www.w3.org/ns/ssn/systems/
+  rdfs: http://www.w3.org/2000/01/rdf-schema#
+  dct: http://purl.org/dc/terms/
   ssn: http://www.w3.org/ns/ssn/
 
 ```
@@ -508,24 +625,6 @@ Links to the schema:
 ```jsonld
 {
   "@context": {
-    "id": "@id",
-    "implements": {
-      "@id": "sosa:implements",
-      "@type": "@id"
-    },
-    "hasSubSystem": {
-      "@id": "sosa:hasSubSystem",
-      "@type": "@id",
-      "@container": "@set"
-    },
-    "isSubSystemOf": {
-      "@id": "sosa:isSubSystemOf",
-      "@type": "@id"
-    },
-    "isHostedBy": {
-      "@id": "sosa:isHostedBy",
-      "@type": "@id"
-    },
     "properties": "@nest",
     "featureType": "@type",
     "ActuatableProperty": {
@@ -680,6 +779,11 @@ Links to the schema:
       "@id": "sosa:hasSimpleResult",
       "@type": "@id"
     },
+    "hasSubSystem": {
+      "@id": "sosa:hasSubSystem",
+      "@type": "@id",
+      "@container": "@set"
+    },
     "hasUltimateFeatureOfInterest": {
       "@id": "sosa:hasUltimateFeatureOfInterest",
       "@type": "@id"
@@ -693,6 +797,10 @@ Links to the schema:
       "@id": "sosa:implementedBy",
       "@type": "@id"
     },
+    "implements": {
+      "@id": "sosa:implements",
+      "@type": "@id"
+    },
     "inDeployment": {
       "@id": "sosa:inDeployment",
       "@type": "@id"
@@ -703,6 +811,10 @@ Links to the schema:
     },
     "isFeatureOfInterestOf": {
       "@id": "sosa:isFeatureOfInterestOf",
+      "@type": "@id"
+    },
+    "isHostedBy": {
+      "@id": "sosa:isHostedBy",
       "@type": "@id"
     },
     "isObservedBy": {
@@ -810,6 +922,10 @@ Links to the schema:
     },
     "usedForExecution": {
       "@id": "sosa:usedForExecution",
+      "@type": "@id"
+    },
+    "isSubSystemOf": {
+      "@id": "sosa:isSubSystemOf",
       "@type": "@id"
     },
     "madeExecution": {
@@ -944,8 +1060,13 @@ Links to the schema:
       "@id": "ssn-system:qualityOfObservation",
       "@type": "@id"
     },
+    "id": "@id",
+    "name": "rdfs:label",
+    "description": "dct:description",
     "sosa": "http://www.w3.org/ns/sosa/",
     "ssn-system": "ssn:systems/",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "dct": "http://purl.org/dc/terms/",
     "ssn": "http://www.w3.org/ns/ssn/",
     "@version": 1.1
   }

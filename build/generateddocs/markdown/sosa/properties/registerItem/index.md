@@ -1,99 +1,29 @@
 
-# SOSA ObservableProperty (Schema)
+# SOSA Register Item (Schema)
 
-`ogc.sosa.properties.observableProperty` *v1.0*
+`ogc.sosa.properties.registerItem` *v1.0*
 
-An observable quality (property, characteristic) of a FeatureOfInterest. An ObservableProperty is the characteristic that is observed by a Sensor. The property is always linked to a particular FeatureOfInterest.
+Common properties for identifiable, named, and described entities in the SOSA register: an identifier (id), a human-readable label (name), and a textual description.
 
 [*Status*](http://www.opengis.net/def/status): Under development
-
-## Description
-
-## SOSA ObservableProperty Properties
-
-This building block describes the canonical set of properties for an **ObservableProperty** object according to the SOSA/SSN specification.
-
-An ObservableProperty is an observable quality (property, characteristic) of a FeatureOfInterest. It is the characteristic that a Sensor is designed to estimate or calculate a value of, by implementing an ObservingProcedure.
-
-An ObservableProperty can be expressed as:
-- a reference (IRI or CURIE) to an externally defined property, or
-- an inline object with an `id` and optionally a reference to the feature it belongs to (`isPropertyOf`).
-
-ObservableProperty is a specialization of [SOSA Property](../property/).
-
-## Examples
-
-### Observable Property as IRI reference
-#### json
-```json
-"http://example.org/properties/waterTemperature"
-
-```
-
-#### jsonld
-```jsonld
-{
-  "@context": "https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/observableProperty/context.jsonld",
-  "@graph": "http://example.org/properties/waterTemperature"
-}
-```
-
-#### ttl
-```ttl
-
-
-```
-
-
-### Observable Property as inline object
-#### json
-```json
-{
-  "@context": {
-    "eg": "http://example.org/"
-  },
-  "id": "eg:properties/waterTemperature",
-  "isPropertyOf": "eg:features/river-thames"
-}
-
-```
-
-#### jsonld
-```jsonld
-{
-  "@context": [
-    "https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/observableProperty/context.jsonld",
-    {
-      "eg": "http://example.org/"
-    }
-  ],
-  "id": "eg:properties/waterTemperature",
-  "isPropertyOf": "eg:features/river-thames"
-}
-```
-
-#### ttl
-```ttl
-@prefix sosa: <http://www.w3.org/ns/sosa/> .
-
-<http://example.org/properties/waterTemperature> sosa:isPropertyOf <http://example.org/features/river-thames> .
-
-
-```
 
 ## Schema
 
 ```yaml
 $schema: https://json-schema.org/draft/2020-12/schema
-description: SOSA ObservableProperty
-$defs:
-  ObservableProperty:
-    allOf:
-    - $ref: https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/property/schema.yaml
-allOf:
-- $ref: '#/$defs/ObservableProperty'
+description: SOSA Register Item
+type: object
+properties:
+  id:
+    $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/iri-or-curie/schema.yaml
+    x-jsonld-id: '@id'
+  name:
+    type: string
+    x-jsonld-id: http://www.w3.org/2000/01/rdf-schema#label
+  description:
+    type: string
+    x-jsonld-id: http://purl.org/dc/terms/description
 x-jsonld-extra-terms:
-  id: '@id'
   properties: '@nest'
   featureType: '@type'
   ActuatableProperty:
@@ -425,14 +355,16 @@ x-jsonld-extra-terms:
 x-jsonld-prefixes:
   sosa: http://www.w3.org/ns/sosa/
   ssn-system: http://www.w3.org/ns/ssn/systems/
+  rdfs: http://www.w3.org/2000/01/rdf-schema#
+  dct: http://purl.org/dc/terms/
   ssn: http://www.w3.org/ns/ssn/
 
 ```
 
 Links to the schema:
 
-* YAML version: [schema.yaml](https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/observableProperty/schema.json)
-* JSON version: [schema.json](https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/observableProperty/schema.yaml)
+* YAML version: [schema.yaml](https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/registerItem/schema.json)
+* JSON version: [schema.json](https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/registerItem/schema.yaml)
 
 
 # JSON-LD Context
@@ -440,15 +372,6 @@ Links to the schema:
 ```jsonld
 {
   "@context": {
-    "id": "@id",
-    "isPropertyOf": {
-      "@id": "sosa:isPropertyOf",
-      "@type": "@id"
-    },
-    "hasProcedure": {
-      "@id": "sosa:hasProcedure",
-      "@type": "@id"
-    },
     "properties": "@nest",
     "featureType": "@type",
     "ActuatableProperty": {
@@ -645,6 +568,10 @@ Links to the schema:
       "@id": "sosa:isObservedBy",
       "@type": "@id"
     },
+    "isPropertyOf": {
+      "@id": "sosa:isPropertyOf",
+      "@type": "@id"
+    },
     "isProxyFor": {
       "@id": "sosa:isProxyFor",
       "@type": "@id"
@@ -726,6 +653,10 @@ Links to the schema:
     },
     "isUltimateFeatureOfInterestOf": {
       "@id": "sosa:isUltimateFeatureOfInterestOf",
+      "@type": "@id"
+    },
+    "hasProcedure": {
+      "@id": "sosa:hasProcedure",
       "@type": "@id"
     },
     "isProcedureFor": {
@@ -876,8 +807,13 @@ Links to the schema:
       "@id": "ssn-system:qualityOfObservation",
       "@type": "@id"
     },
+    "id": "@id",
+    "name": "rdfs:label",
+    "description": "dct:description",
     "sosa": "http://www.w3.org/ns/sosa/",
     "ssn-system": "ssn:systems/",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "dct": "http://purl.org/dc/terms/",
     "ssn": "http://www.w3.org/ns/ssn/",
     "@version": 1.1
   }
@@ -885,7 +821,7 @@ Links to the schema:
 ```
 
 You can find the full JSON-LD context here:
-[context.jsonld](https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/observableProperty/context.jsonld)
+[context.jsonld](https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/registerItem/context.jsonld)
 
 ## Sources
 
@@ -896,5 +832,5 @@ You can find the full JSON-LD context here:
 The source code for this Building Block can be found in the following repository:
 
 * URL: [https://github.com/avillar/ogcapi-sosa-claude](https://github.com/avillar/ogcapi-sosa-claude)
-* Path: `_sources/properties/observableProperty`
+* Path: `_sources/properties/registerItem`
 

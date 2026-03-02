@@ -1,0 +1,14 @@
+{
+  "title": "Validation report for ogc.sosa.properties.registerItem - SOSA Register Item",
+  "bblockName": "SOSA Register Item",
+  "bblockId": "ogc.sosa.properties.registerItem",
+  "generated": "2026-03-02T12:12:08.056208+00:00",
+  "result": true,
+  "items": [],
+  "globalErrors": {},
+  "counts": {
+    "total": 0,
+    "passed": 0,
+    "failed": 0
+  }
+}
