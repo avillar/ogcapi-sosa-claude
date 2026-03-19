@@ -1,5 +1,5 @@
 Validation report for ogc.sosa.properties.execution - SOSA Execution
-Generated 2026-03-02T12:12:08.633404+00:00
+Generated 2026-03-19T11:33:57.367143+00:00
 === Files ===
 Using examples/execution.json from examples
 JSON-LD context is present - uplifting

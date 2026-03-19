@@ -1,5 +1,5 @@
 Validation report for ogc.sosa.properties.spec-examples - Tests for SOSA specification
-Generated 2026-03-02T12:12:08.004387+00:00
+Generated 2026-03-19T11:33:56.954800+00:00
 === Files ===
 Using https://w3c.github.io/sdw-sosa-ssn/ssn/rdf/examples/sunspots.ttl from examples
 Output Turtle example_27_1.ttl created

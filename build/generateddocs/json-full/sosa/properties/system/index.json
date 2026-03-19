@@ -9,7 +9,7 @@
   "itemClass": "schema",
   "register": "ogc-building-block-register",
   "version": "1.0",
-  "dateOfLastChange": "2026-03-02",
+  "dateOfLastChange": "2026-03-19",
   "sources": [
     {
       "title": "Semantic Sensor Network Ontology",
@@ -29,8 +29,8 @@
   "shaclShapes": {},
   "dependsOn": [
     "ogc.ogc-utils.iri-or-curie",
-    "ogc.sosa.properties.registerItem",
-    "ogc.sosa.properties.procedure"
+    "ogc.sosa.properties.procedure",
+    "ogc.sosa.properties.registerItem"
   ],
   "schema": {
     "application/yaml": "https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/system/schema.yaml",
@@ -38,6 +38,7 @@
   },
   "sourceSchema": "https://avillar.github.io/ogcapi-sosa-claude/_sources/properties/system/schema.yaml",
   "ldContext": "https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/system/context.jsonld",
+  "resolvedSchemaProperties": "https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/system/resolvedProperties.json",
   "sourceFiles": "https://avillar.github.io/ogcapi-sosa-claude/_sources/properties/system/",
   "rdfData": [],
   "validationPassed": true,

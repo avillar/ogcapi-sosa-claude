@@ -167,7 +167,7 @@ $defs:
         isPropertyOf:
           anyOf:
           - $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/iri-or-curie/schema.yaml
-          - $ref: https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/featureOfInterest/schema.yaml
+          - type: object
           x-jsonld-id: http://www.w3.org/ns/sosa/isPropertyOf
           x-jsonld-type: '@id'
         hasProcedure:

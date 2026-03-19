@@ -1,5 +1,5 @@
 Validation report for ogc.sosa.properties.observation - Observation Properties
-Generated 2026-03-02T12:12:10.469363+00:00
+Generated 2026-03-19T11:33:59.071372+00:00
 === General ===
 Test was expected to fail and it did.
 === End General ===

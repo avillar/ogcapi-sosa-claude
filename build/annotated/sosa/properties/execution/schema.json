@@ -32,7 +32,7 @@
           "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/iri-or-curie/schema.json"
         },
         {
-          "$ref": "https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/featureOfInterest/schema.json"
+          "type": "object"
         }
       ],
       "x-jsonld-id": "http://www.w3.org/ns/sosa/hasFeatureOfInterest",
@@ -44,7 +44,7 @@
           "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/iri-or-curie/schema.json"
         },
         {
-          "$ref": "https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/featureOfInterest/schema.json"
+          "type": "object"
         }
       ],
       "x-jsonld-id": "http://www.w3.org/ns/sosa/hasUltimateFeatureOfInterest",
@@ -74,9 +74,18 @@
       "x-jsonld-id": "http://www.w3.org/ns/sosa/madeBySystem",
       "x-jsonld-type": "@id"
     },
-    "hasResult": true,
-    "hasSimpleResult": true,
-    "hasInputValue": true
+    "hasResult": {
+      "x-jsonld-id": "http://www.w3.org/ns/sosa/hasResult",
+      "x-jsonld-type": "@id"
+    },
+    "hasSimpleResult": {
+      "x-jsonld-id": "http://www.w3.org/ns/sosa/hasSimpleResult",
+      "x-jsonld-type": "@id"
+    },
+    "hasInputValue": {
+      "x-jsonld-id": "http://www.w3.org/ns/sosa/hasInputValue",
+      "x-jsonld-type": "@id"
+    }
   },
   "x-jsonld-extra-terms": {
     "id": "@id",
@@ -210,10 +219,6 @@
       "x-jsonld-id": "http://www.w3.org/ns/sosa/hasProperty",
       "x-jsonld-type": "@id"
     },
-    "hasResult": {
-      "x-jsonld-id": "http://www.w3.org/ns/sosa/hasResult",
-      "x-jsonld-type": "@id"
-    },
     "hasResultQuality": {
       "x-jsonld-id": "http://www.w3.org/ns/sosa/hasResultQuality",
       "x-jsonld-type": "@id"
@@ -224,10 +229,6 @@
     },
     "hasSampledFeature": {
       "x-jsonld-id": "http://www.w3.org/ns/sosa/hasSampledFeature",
-      "x-jsonld-type": "@id"
-    },
-    "hasSimpleResult": {
-      "x-jsonld-id": "http://www.w3.org/ns/sosa/hasSimpleResult",
       "x-jsonld-type": "@id"
     },
     "hasSubSystem": {
@@ -326,10 +327,6 @@
     },
     "wasOriginatedBy": {
       "x-jsonld-id": "http://www.w3.org/ns/sosa/wasOriginatedBy",
-      "x-jsonld-type": "@id"
-    },
-    "hasInputValue": {
-      "x-jsonld-id": "http://www.w3.org/ns/sosa/hasInputValue",
       "x-jsonld-type": "@id"
     },
     "isMemberOf": {

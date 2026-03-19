@@ -604,10 +604,6 @@ Links to the schema:
       "@id": "sosa:hasProperty",
       "@type": "@id"
     },
-    "hasResult": {
-      "@id": "sosa:hasResult",
-      "@type": "@id"
-    },
     "hasResultQuality": {
       "@id": "sosa:hasResultQuality",
       "@type": "@id"
@@ -618,10 +614,6 @@ Links to the schema:
     },
     "hasSampledFeature": {
       "@id": "sosa:hasSampledFeature",
-      "@type": "@id"
-    },
-    "hasSimpleResult": {
-      "@id": "sosa:hasSimpleResult",
       "@type": "@id"
     },
     "hasSubSystem": {
@@ -720,10 +712,6 @@ Links to the schema:
     },
     "wasOriginatedBy": {
       "@id": "sosa:wasOriginatedBy",
-      "@type": "@id"
-    },
-    "hasInputValue": {
-      "@id": "sosa:hasInputValue",
       "@type": "@id"
     },
     "isMemberOf": {
@@ -909,6 +897,18 @@ Links to the schema:
     },
     "madeBySystem": {
       "@id": "sosa:madeBySystem",
+      "@type": "@id"
+    },
+    "hasResult": {
+      "@id": "sosa:hasResult",
+      "@type": "@id"
+    },
+    "hasSimpleResult": {
+      "@id": "sosa:hasSimpleResult",
+      "@type": "@id"
+    },
+    "hasInputValue": {
+      "@id": "sosa:hasInputValue",
       "@type": "@id"
     },
     "sosa": "http://www.w3.org/ns/sosa/",

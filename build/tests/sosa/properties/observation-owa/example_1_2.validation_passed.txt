@@ -1,5 +1,5 @@
 Validation report for ogc.sosa.properties.observation-owa - Observation Properties (SOSA OWA)
-Generated 2026-03-02T12:12:09.006722+00:00
+Generated 2026-03-19T11:33:57.666287+00:00
 === Files ===
 Using example_1_2.ttl from examples
 Output Turtle example_1_2.ttl created

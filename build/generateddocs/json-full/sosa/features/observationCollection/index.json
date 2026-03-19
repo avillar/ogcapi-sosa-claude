@@ -9,7 +9,7 @@
   "itemClass": "schema",
   "register": "ogc-building-block-register",
   "version": "1.0",
-  "dateOfLastChange": "2026-03-02",
+  "dateOfLastChange": "2026-03-19",
   "sources": [
     {
       "title": "Semantic Sensor Network Ontology",
@@ -36,9 +36,9 @@
     ]
   },
   "dependsOn": [
+    "ogc.geo.json-fg.featureCollection-lenient",
     "ogc.sosa.properties.observationCollection",
-    "ogc.sosa.features.observation",
-    "ogc.geo.json-fg.featureCollection-lenient"
+    "ogc.sosa.features.observation"
   ],
   "schema": {
     "application/yaml": "https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/features/observationCollection/schema.yaml",
@@ -46,6 +46,7 @@
   },
   "sourceSchema": "https://avillar.github.io/ogcapi-sosa-claude/_sources/features/observationCollection/schema.yaml",
   "ldContext": "https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/features/observationCollection/context.jsonld",
+  "resolvedSchemaProperties": "https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/features/observationCollection/resolvedProperties.json",
   "sourceFiles": "https://avillar.github.io/ogcapi-sosa-claude/_sources/features/observationCollection/",
   "rdfData": [],
   "validationPassed": true,

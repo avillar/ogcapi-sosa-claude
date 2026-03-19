@@ -1,132 +1,194 @@
-path	@id
-/type	('@type', 'https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection-lenient/schema.yaml')
-/featureType	('https://purl.org/geojson/vocab#collectionFeatureType', 'https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection-lenient/schema.yaml')
-/geometryDimension	(None, 'https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection-lenient/schema.yaml')
-/coordRefSys	(None, 'https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection-lenient/schema.yaml')
-/links	('http://www.w3.org/2000/01/rdf-schema#seeAlso', 'https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/featureCollection/schema.yaml')
-/links/href	('http://www.w3.org/ns/oa#hasTarget', 'https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/json-link/schema.yaml')
-/links/rel	('http://www.iana.org/assignments/relation', 'https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/json-link/schema.yaml')
-/links/anchor	(None, 'https://beta.schemas.opengis.net/json-fg/link.json')
-/links/type	('http://purl.org/dc/terms/type', 'https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/json-link/schema.yaml')
-/links/hreflang	('http://purl.org/dc/terms/language', 'https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/json-link/schema.yaml')
-/links/title	('http://www.w3.org/2000/01/rdf-schema#label', 'https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/json-link/schema.yaml')
-/links/length	('http://purl.org/dc/terms/extent', 'https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/json-link/schema.yaml')
-/features	('http://www.w3.org/ns/sosa/hasMember', PosixPath('/github/workspace/build/annotated/sosa/features/observationCollection/schema.yaml'))
-/features/type	('@type', 'https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/feature-lenient/schema.yaml')
-/features/id	('@id', 'https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/feature-lenient/schema.yaml')
-/features/properties	('@nest', 'https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/features/observation/schema.yaml')
-/features/geometry	('https://purl.org/geojson/vocab#geometry', 'https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/feature-lenient/schema.yaml')
-/features/geometry/type	('@type', 'https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml')
-/features/geometry/coordinates	('https://purl.org/geojson/vocab#coordinates', 'https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml')
-/features/geometry/bbox	('https://purl.org/geojson/vocab#bbox', 'https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml')
-/features/geometry/geometries	(None, 'https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml')
-/features/geometry/geometries/type	('@type', 'https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml')
-/features/geometry/geometries/coordinates	('https://purl.org/geojson/vocab#coordinates', 'https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml')
-/features/geometry/geometries/bbox	('https://purl.org/geojson/vocab#bbox', 'https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml')
-/features/bbox	('https://purl.org/geojson/vocab#bbox', 'https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml')
-/features/links	('http://www.w3.org/2000/01/rdf-schema#seeAlso', 'https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/feature-lenient/schema.yaml')
-/features/links/href	('http://www.w3.org/ns/oa#hasTarget', 'https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/json-link/schema.yaml')
-/features/links/rel	('http://www.iana.org/assignments/relation', 'https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/json-link/schema.yaml')
-/features/links/anchor	(None, 'https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/json-link/schema.yaml')
-/features/links/type	('http://purl.org/dc/terms/type', 'https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/json-link/schema.yaml')
-/features/links/hreflang	('http://purl.org/dc/terms/language', 'https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/json-link/schema.yaml')
-/features/links/title	('http://www.w3.org/2000/01/rdf-schema#label', 'https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/json-link/schema.yaml')
-/features/links/length	('http://purl.org/dc/terms/extent', 'https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/json-link/schema.yaml')
-/features/featureType	('@type', 'https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/feature-lenient/schema.yaml')
-/features/time	('http://purl.org/dc/terms/time', 'https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/feature-lenient/schema.yaml')
-/features/time/date	('http://www.w3.org/2006/time#hasTime', 'https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/time/schema.yaml')
-/features/time/timestamp	('http://www.w3.org/2006/time#hasTime', 'https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/time/schema.yaml')
-/features/time/interval	('http://www.w3.org/2006/time#hasTime', 'https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/time/schema.yaml')
-/features/coordRefSys	('http://www.opengis.net/def/glossary/term/CoordinateReferenceSystemCRS', 'https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/feature-lenient/schema.yaml')
-/features/coordRefSys/type	(None, 'https://beta.schemas.opengis.net/json-fg/coordrefsys.json')
-/features/coordRefSys/href	(None, 'https://beta.schemas.opengis.net/json-fg/coordrefsys.json')
-/features/coordRefSys/epoch	(None, 'https://beta.schemas.opengis.net/json-fg/coordrefsys.json')
-/features/place	('http://purl.org/dc/terms/spatial', 'https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/feature-lenient/schema.yaml')
-/features/place/type	(None, 'https://beta.schemas.opengis.net/json-fg/geometry-object.json')
-/features/place/coordRefSys	(None, 'https://beta.schemas.opengis.net/json-fg/geometry-object.json')
-/features/place/measures	(None, 'https://beta.schemas.opengis.net/json-fg/geometry-object.json')
-/features/place/coordinates	(None, 'https://beta.schemas.opengis.net/json-fg/geometry-object.json')
-/features/place/bbox	(None, 'https://beta.schemas.opengis.net/json-fg/geometry-object.json')
-/features/place/geometries	(None, 'https://beta.schemas.opengis.net/json-fg/geometry-object.json')
-/features/place/base	(None, 'https://beta.schemas.opengis.net/json-fg/geometry-object.json')
-/features/place/lower	(None, 'https://beta.schemas.opengis.net/json-fg/geometry-object.json')
-/features/place/upper	(None, 'https://beta.schemas.opengis.net/json-fg/geometry-object.json')
-/features/place/prisms	(None, 'https://beta.schemas.opengis.net/json-fg/geometry-object.json')
-/features/place/geometries/type	(None, 'https://beta.schemas.opengis.net/json-fg/geometry-object.json')
-/features/geometry/coordRefSys	(None, 'https://beta.schemas.opengis.net/json-fg/geometry-object.json')
-/features/geometry/measures	(None, 'https://beta.schemas.opengis.net/json-fg/geometry-object.json')
-/bbox	(None, 'https://geojson.org/schema/FeatureCollection.json')
-/timeStamp	(None, 'https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/featureCollection/schema.yaml')
-/numberMatched	(None, 'https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/featureCollection/schema.yaml')
-/numberReturned	(None, 'https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/featureCollection/schema.yaml')
-/properties	('@nest', PosixPath('/github/workspace/build/annotated/sosa/features/observationCollection/schema.yaml'))
-/properties/resultTime	('http://www.w3.org/ns/sosa/resultTime', 'https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/execution/schema.yaml')
-/properties/phenomenonTime	('http://www.w3.org/ns/sosa/phenomenonTime', 'https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/execution/schema.yaml')
-/properties/startTime	('http://www.w3.org/ns/sosa/startTime', 'https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/execution/schema.yaml')
-/properties/endTime	('http://www.w3.org/ns/sosa/endTime', 'https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/execution/schema.yaml')
-/properties/hasFeatureOfInterest	('http://www.w3.org/ns/sosa/hasFeatureOfInterest', 'https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/execution/schema.yaml')
-/properties/hasFeatureOfInterest/id	('@id', 'https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/registerItem/schema.yaml')
-/properties/hasFeatureOfInterest/name	('http://www.w3.org/2000/01/rdf-schema#label', 'https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/registerItem/schema.yaml')
-/properties/hasFeatureOfInterest/description	('http://purl.org/dc/terms/description', 'https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/registerItem/schema.yaml')
-/properties/hasFeatureOfInterest/hasProperty	('http://www.w3.org/ns/sosa/hasProperty', 'https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/featureOfInterest/schema.yaml')
-/properties/hasFeatureOfInterest/hasProperty/id	('@id', 'https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/registerItem/schema.yaml')
-/properties/hasFeatureOfInterest/hasProperty/name	('http://www.w3.org/2000/01/rdf-schema#label', 'https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/registerItem/schema.yaml')
-/properties/hasFeatureOfInterest/hasProperty/description	('http://purl.org/dc/terms/description', 'https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/registerItem/schema.yaml')
-/properties/hasFeatureOfInterest/hasProperty/isPropertyOf	('http://www.w3.org/ns/sosa/isPropertyOf', 'https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/property/schema.yaml')
-/properties/hasFeatureOfInterest/hasProperty/hasProcedure	('http://www.w3.org/ns/sosa/hasProcedure', 'https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/property/schema.yaml')
-/properties/hasFeatureOfInterest/hasProperty/hasProcedure/id	('@id', 'https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/registerItem/schema.yaml')
-/properties/hasFeatureOfInterest/hasProperty/hasProcedure/name	('http://www.w3.org/2000/01/rdf-schema#label', 'https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/registerItem/schema.yaml')
-/properties/hasFeatureOfInterest/hasProperty/hasProcedure/description	('http://purl.org/dc/terms/description', 'https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/registerItem/schema.yaml')
-/properties/hasFeatureOfInterest/hasProperty/hasProcedure/implementedBy	('http://www.w3.org/ns/sosa/implementedBy', 'https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/procedure/schema.yaml')
-/properties/hasFeatureOfInterest/hasProperty/hasProcedure/implementedBy/id	('@id', 'https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/registerItem/schema.yaml')
-/properties/hasFeatureOfInterest/hasProperty/hasProcedure/implementedBy/name	('http://www.w3.org/2000/01/rdf-schema#label', 'https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/registerItem/schema.yaml')
-/properties/hasFeatureOfInterest/hasProperty/hasProcedure/implementedBy/description	('http://purl.org/dc/terms/description', 'https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/registerItem/schema.yaml')
-/properties/hasFeatureOfInterest/hasProperty/hasProcedure/implementedBy/implements	('http://www.w3.org/ns/sosa/implements', 'https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/system/schema.yaml')
-/properties/hasFeatureOfInterest/hasProperty/hasProcedure/implementedBy/hasSubSystem	('http://www.w3.org/ns/sosa/hasSubSystem', 'https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/system/schema.yaml')
-/properties/hasFeatureOfInterest/hasProperty/hasProcedure/implementedBy/isSubSystemOf	('http://www.w3.org/ns/sosa/isSubSystemOf', 'https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/system/schema.yaml')
-/properties/hasFeatureOfInterest/hasProperty/hasProcedure/implementedBy/isHostedBy	('http://www.w3.org/ns/sosa/isHostedBy', 'https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/system/schema.yaml')
-/properties/hasFeatureOfInterest/hasProperty/hasProcedure/hasInput	(None, 'https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/procedure/schema.yaml')
-/properties/hasFeatureOfInterest/hasProperty/hasProcedure/hasOutput	(None, 'https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/procedure/schema.yaml')
-/properties/hasFeatureOfInterest/hasProperty/hasProcedure/isProcedureFor	('http://www.w3.org/ns/sosa/isProcedureFor', 'https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/procedure/schema.yaml')
-/properties/hasUltimateFeatureOfInterest	('http://www.w3.org/ns/sosa/hasUltimateFeatureOfInterest', 'https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/execution/schema.yaml')
-/properties/usedProcedure	('http://www.w3.org/ns/sosa/usedProcedure', 'https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/execution/schema.yaml')
-/properties/madeBySystem	('http://www.w3.org/ns/sosa/madeBySystem', 'https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/execution/schema.yaml')
-/properties/hasResult	(None, 'https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/execution/schema.yaml')
-/properties/hasSimpleResult	(None, 'https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/execution/schema.yaml')
-/properties/hasInputValue	(None, 'https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/execution/schema.yaml')
-/properties/observedProperty	('http://www.w3.org/ns/sosa/observedProperty', 'https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/observation-owa/schema.yaml')
-/properties/madeBySensor	('http://www.w3.org/ns/sosa/madeBySensor', 'https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/observation-owa/schema.yaml')
-/properties/madeBySensor/observes	('http://www.w3.org/ns/sosa/observes', 'https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/sensor/schema.yaml')
-/properties/result	(None, 'https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/observation-owa/schema.yaml')
-/properties/result@links	(None, 'https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/observation-owa/schema.yaml')
-/properties/hasMember	('http://www.w3.org/ns/sosa/hasMember', 'https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/observationCollection/schema.yaml')
-/properties/hasMember/resultTime	('http://www.w3.org/ns/sosa/resultTime', 'https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/execution/schema.yaml')
-/properties/hasMember/phenomenonTime	('http://www.w3.org/ns/sosa/phenomenonTime', 'https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/execution/schema.yaml')
-/properties/hasMember/startTime	('http://www.w3.org/ns/sosa/startTime', 'https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/execution/schema.yaml')
-/properties/hasMember/endTime	('http://www.w3.org/ns/sosa/endTime', 'https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/execution/schema.yaml')
-/properties/hasMember/hasFeatureOfInterest	('http://www.w3.org/ns/sosa/hasFeatureOfInterest', 'https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/execution/schema.yaml')
-/properties/hasMember/hasUltimateFeatureOfInterest	('http://www.w3.org/ns/sosa/hasUltimateFeatureOfInterest', 'https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/execution/schema.yaml')
-/properties/hasMember/usedProcedure	('http://www.w3.org/ns/sosa/usedProcedure', 'https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/execution/schema.yaml')
-/properties/hasMember/madeBySystem	('http://www.w3.org/ns/sosa/madeBySystem', 'https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/execution/schema.yaml')
-/properties/hasMember/hasResult	(None, 'https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/execution/schema.yaml')
-/properties/hasMember/hasSimpleResult	(None, 'https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/execution/schema.yaml')
-/properties/hasMember/hasInputValue	(None, 'https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/execution/schema.yaml')
-/properties/hasMember/observedProperty	('http://www.w3.org/ns/sosa/observedProperty', 'https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/observation-owa/schema.yaml')
-/properties/hasMember/madeBySensor	('http://www.w3.org/ns/sosa/madeBySensor', 'https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/observation-owa/schema.yaml')
-/properties/hasMember/result	(None, 'https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/observation-owa/schema.yaml')
-/properties/hasMember/result@links	(None, 'https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/observation-owa/schema.yaml')
-/features/properties/resultTime	('http://www.w3.org/ns/sosa/resultTime', 'https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/execution/schema.yaml')
-/features/properties/phenomenonTime	('http://www.w3.org/ns/sosa/phenomenonTime', 'https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/execution/schema.yaml')
-/features/properties/startTime	('http://www.w3.org/ns/sosa/startTime', 'https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/execution/schema.yaml')
-/features/properties/endTime	('http://www.w3.org/ns/sosa/endTime', 'https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/execution/schema.yaml')
-/features/properties/hasFeatureOfInterest	('http://www.w3.org/ns/sosa/hasFeatureOfInterest', 'https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/execution/schema.yaml')
-/features/properties/hasUltimateFeatureOfInterest	('http://www.w3.org/ns/sosa/hasUltimateFeatureOfInterest', 'https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/execution/schema.yaml')
-/features/properties/usedProcedure	('http://www.w3.org/ns/sosa/usedProcedure', 'https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/execution/schema.yaml')
-/features/properties/madeBySystem	('http://www.w3.org/ns/sosa/madeBySystem', 'https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/execution/schema.yaml')
-/features/properties/hasResult	(None, 'https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/execution/schema.yaml')
-/features/properties/hasSimpleResult	(None, 'https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/execution/schema.yaml')
-/features/properties/hasInputValue	(None, 'https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/execution/schema.yaml')
-/features/properties/observedProperty	('http://www.w3.org/ns/sosa/observedProperty', 'https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/observation-owa/schema.yaml')
-/features/properties/madeBySensor	('http://www.w3.org/ns/sosa/madeBySensor', 'https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/observation-owa/schema.yaml')
-/features/properties/result	(None, 'https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/observation-owa/schema.yaml')
-/features/properties/result@links	(None, 'https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/observation-owa/schema.yaml')
+path	@id	schema
+/type	@type	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection-lenient/schema.yaml
+/featureType	https://purl.org/geojson/vocab#collectionFeatureType	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection-lenient/schema.yaml
+/geometryDimension		https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection-lenient/schema.yaml
+/coordRefSys		https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection-lenient/schema.yaml
+/coordRefSys/_oneOf/0/_oneOf/1/type		https://beta.schemas.opengis.net/json-fg/coordrefsys.json
+/coordRefSys/_oneOf/0/_oneOf/1/href		https://beta.schemas.opengis.net/json-fg/coordrefsys.json
+/coordRefSys/_oneOf/0/_oneOf/1/epoch		https://beta.schemas.opengis.net/json-fg/coordrefsys.json
+/coordRefSys/_oneOf/0/_oneOf/2/type		https://beta.schemas.opengis.net/json-fg/coordrefsys.json
+/links	http://www.w3.org/2000/01/rdf-schema#seeAlso	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/featureCollection/schema.yaml
+/links/href	http://www.w3.org/ns/oa#hasTarget	https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/json-link/schema.yaml
+/links/rel	http://www.iana.org/assignments/relation	https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/json-link/schema.yaml
+/links/anchor		https://beta.schemas.opengis.net/json-fg/link.json
+/links/type	http://purl.org/dc/terms/type	https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/json-link/schema.yaml
+/links/hreflang	http://purl.org/dc/terms/language	https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/json-link/schema.yaml
+/links/title	http://www.w3.org/2000/01/rdf-schema#label	https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/json-link/schema.yaml
+/links/length	http://purl.org/dc/terms/extent	https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/json-link/schema.yaml
+/features	http://www.w3.org/ns/sosa/hasMember	/github/workspace/build/annotated/sosa/features/observationCollection/schema.yaml
+/features/type	@type	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/feature-lenient/schema.yaml
+/features/id	@id	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/feature-lenient/schema.yaml
+/features/properties	@nest	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/feature-lenient/schema.yaml
+/features/geometry	https://purl.org/geojson/vocab#geometry	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/feature-lenient/schema.yaml
+/features/geometry/_oneOf/1/type	@type	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml
+/features/geometry/_oneOf/1/coordinates	https://purl.org/geojson/vocab#coordinates	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml
+/features/geometry/_oneOf/1/bbox	https://purl.org/geojson/vocab#bbox	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml
+/features/geometry/_oneOf/2/type	@type	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml
+/features/geometry/_oneOf/2/coordinates	https://purl.org/geojson/vocab#coordinates	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml
+/features/geometry/_oneOf/2/bbox	https://purl.org/geojson/vocab#bbox	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml
+/features/geometry/_oneOf/3/type	@type	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml
+/features/geometry/_oneOf/3/coordinates	https://purl.org/geojson/vocab#coordinates	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml
+/features/geometry/_oneOf/3/bbox	https://purl.org/geojson/vocab#bbox	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml
+/features/geometry/_oneOf/4/type	@type	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml
+/features/geometry/_oneOf/4/coordinates	https://purl.org/geojson/vocab#coordinates	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml
+/features/geometry/_oneOf/4/bbox	https://purl.org/geojson/vocab#bbox	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml
+/features/geometry/_oneOf/5/type	@type	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml
+/features/geometry/_oneOf/5/coordinates	https://purl.org/geojson/vocab#coordinates	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml
+/features/geometry/_oneOf/5/bbox	https://purl.org/geojson/vocab#bbox	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml
+/features/geometry/_oneOf/6/type	@type	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml
+/features/geometry/_oneOf/6/coordinates	https://purl.org/geojson/vocab#coordinates	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml
+/features/geometry/_oneOf/6/bbox	https://purl.org/geojson/vocab#bbox	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml
+/features/geometry/_oneOf/7/type	@type	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml
+/features/geometry/_oneOf/7/geometries		https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml
+/features/geometry/_oneOf/7/geometries/_oneOf/0/type	@type	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml
+/features/geometry/_oneOf/7/geometries/_oneOf/0/coordinates	https://purl.org/geojson/vocab#coordinates	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml
+/features/geometry/_oneOf/7/geometries/_oneOf/0/bbox	https://purl.org/geojson/vocab#bbox	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml
+/features/geometry/_oneOf/7/geometries/_oneOf/1/type	@type	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml
+/features/geometry/_oneOf/7/geometries/_oneOf/1/coordinates	https://purl.org/geojson/vocab#coordinates	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml
+/features/geometry/_oneOf/7/geometries/_oneOf/1/bbox	https://purl.org/geojson/vocab#bbox	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml
+/features/geometry/_oneOf/7/geometries/_oneOf/2/type	@type	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml
+/features/geometry/_oneOf/7/geometries/_oneOf/2/coordinates	https://purl.org/geojson/vocab#coordinates	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml
+/features/geometry/_oneOf/7/geometries/_oneOf/2/bbox	https://purl.org/geojson/vocab#bbox	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml
+/features/geometry/_oneOf/7/geometries/_oneOf/3/type	@type	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml
+/features/geometry/_oneOf/7/geometries/_oneOf/3/coordinates	https://purl.org/geojson/vocab#coordinates	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml
+/features/geometry/_oneOf/7/geometries/_oneOf/3/bbox	https://purl.org/geojson/vocab#bbox	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml
+/features/geometry/_oneOf/7/geometries/_oneOf/4/type	@type	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml
+/features/geometry/_oneOf/7/geometries/_oneOf/4/coordinates	https://purl.org/geojson/vocab#coordinates	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml
+/features/geometry/_oneOf/7/geometries/_oneOf/4/bbox	https://purl.org/geojson/vocab#bbox	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml
+/features/geometry/_oneOf/7/geometries/_oneOf/5/type	@type	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml
+/features/geometry/_oneOf/7/geometries/_oneOf/5/coordinates	https://purl.org/geojson/vocab#coordinates	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml
+/features/geometry/_oneOf/7/geometries/_oneOf/5/bbox	https://purl.org/geojson/vocab#bbox	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml
+/features/geometry/_oneOf/7/bbox	https://purl.org/geojson/vocab#bbox	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml
+/features/bbox	https://purl.org/geojson/vocab#bbox	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml
+/features/links	http://www.w3.org/2000/01/rdf-schema#seeAlso	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/feature-lenient/schema.yaml
+/features/featureType	@type	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/feature-lenient/schema.yaml
+/features/time	http://purl.org/dc/terms/time	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/feature-lenient/schema.yaml
+/features/time/_oneOf/1/date	http://www.w3.org/2006/time#hasTime	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/time/schema.yaml
+/features/time/_oneOf/1/timestamp	http://www.w3.org/2006/time#hasTime	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/time/schema.yaml
+/features/time/_oneOf/1/interval	http://www.w3.org/2006/time#hasTime	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/time/schema.yaml
+/features/coordRefSys	http://www.opengis.net/def/glossary/term/CoordinateReferenceSystemCRS	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/feature-lenient/schema.yaml
+/features/place	http://purl.org/dc/terms/spatial	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/feature-lenient/schema.yaml
+/features/place/_oneOf/1/type		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/features/place/_oneOf/1/coordRefSys		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/features/place/_oneOf/1/measures		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/features/place/_oneOf/1/measures/enabled		https://beta.schemas.opengis.net/json-fg/measures.json
+/features/place/_oneOf/1/measures/unit		https://beta.schemas.opengis.net/json-fg/measures.json
+/features/place/_oneOf/1/measures/description		https://beta.schemas.opengis.net/json-fg/measures.json
+/features/place/_oneOf/1/coordinates		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/features/place/_oneOf/1/bbox		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/features/place/_oneOf/2/type		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/features/place/_oneOf/2/coordRefSys		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/features/place/_oneOf/2/measures		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/features/place/_oneOf/2/coordinates		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/features/place/_oneOf/2/bbox		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/features/place/_oneOf/3/type		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/features/place/_oneOf/3/coordRefSys		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/features/place/_oneOf/3/measures		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/features/place/_oneOf/3/coordinates		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/features/place/_oneOf/3/bbox		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/features/place/_oneOf/4/type		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/features/place/_oneOf/4/coordRefSys		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/features/place/_oneOf/4/measures		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/features/place/_oneOf/4/coordinates		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/features/place/_oneOf/4/bbox		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/features/place/_oneOf/5/type		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/features/place/_oneOf/5/coordRefSys		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/features/place/_oneOf/5/measures		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/features/place/_oneOf/5/coordinates		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/features/place/_oneOf/5/bbox		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/features/place/_oneOf/6/type		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/features/place/_oneOf/6/coordRefSys		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/features/place/_oneOf/6/measures		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/features/place/_oneOf/6/coordinates		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/features/place/_oneOf/6/bbox		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/features/place/_oneOf/7/type		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/features/place/_oneOf/7/coordRefSys		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/features/place/_oneOf/7/measures		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/features/place/_oneOf/7/geometries		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/features/place/_oneOf/7/bbox		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/features/place/_oneOf/8/type		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/features/place/_oneOf/8/coordRefSys		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/features/place/_oneOf/8/measures		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/features/place/_oneOf/8/coordinates		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/features/place/_oneOf/8/bbox		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/features/place/_oneOf/9/type		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/features/place/_oneOf/9/coordRefSys		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/features/place/_oneOf/9/measures		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/features/place/_oneOf/9/coordinates		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/features/place/_oneOf/9/bbox		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/features/place/_oneOf/10/type		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/features/place/_oneOf/10/coordRefSys		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/features/place/_oneOf/10/measures		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/features/place/_oneOf/10/base		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/features/place/_oneOf/10/lower		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/features/place/_oneOf/10/upper		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/features/place/_oneOf/10/bbox		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/features/place/_oneOf/11/type		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/features/place/_oneOf/11/coordRefSys		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/features/place/_oneOf/11/measures		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/features/place/_oneOf/11/prisms		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/features/place/_oneOf/11/bbox		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/features/place/_oneOf/12/type		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/features/place/_oneOf/12/coordRefSys		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/features/place/_oneOf/12/measures		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/features/place/_oneOf/12/coordinates		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/features/place/_oneOf/12/bbox		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/features/place/_oneOf/13/type		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/features/place/_oneOf/13/coordRefSys		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/features/place/_oneOf/13/measures		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/features/place/_oneOf/13/geometries		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/features/place/_oneOf/13/geometries/_oneOf/2/type		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/features/place/_oneOf/13/bbox		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/features/place/_oneOf/14/type		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/features/place/_oneOf/14/coordRefSys		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/features/place/_oneOf/14/measures		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/features/place/_oneOf/14/geometries		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/features/place/_oneOf/14/bbox		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/features/place/_oneOf/15/type		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/features/place/_oneOf/15/coordRefSys		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/features/place/_oneOf/15/measures		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/features/place/_oneOf/15/geometries		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/features/place/_oneOf/15/bbox		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/features/place/_oneOf/16/type		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/features/place/_oneOf/16/coordRefSys		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/features/place/_oneOf/16/measures		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/features/place/_oneOf/16/geometries		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/features/place/_oneOf/16/geometries/_oneOf/2/type		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/features/place/_oneOf/16/bbox		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/features/place/_oneOf/17/type		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/bbox		https://geojson.org/schema/FeatureCollection.json
+/timeStamp		https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/featureCollection/schema.yaml
+/numberMatched		https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/featureCollection/schema.yaml
+/numberReturned		https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/featureCollection/schema.yaml
+/properties	@nest	/github/workspace/build/annotated/sosa/features/observationCollection/schema.yaml
+/properties/resultTime	http://www.w3.org/ns/sosa/resultTime	https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/execution/schema.yaml
+/properties/phenomenonTime	http://www.w3.org/ns/sosa/phenomenonTime	https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/execution/schema.yaml
+/properties/startTime	http://www.w3.org/ns/sosa/startTime	https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/execution/schema.yaml
+/properties/endTime	http://www.w3.org/ns/sosa/endTime	https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/execution/schema.yaml
+/properties/hasFeatureOfInterest	http://www.w3.org/ns/sosa/hasFeatureOfInterest	https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/execution/schema.yaml
+/properties/hasUltimateFeatureOfInterest	http://www.w3.org/ns/sosa/hasUltimateFeatureOfInterest	https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/execution/schema.yaml
+/properties/usedProcedure	http://www.w3.org/ns/sosa/usedProcedure	https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/execution/schema.yaml
+/properties/usedProcedure/_anyOf/1/id	@id	https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/registerItem/schema.yaml
+/properties/usedProcedure/_anyOf/1/name	http://www.w3.org/2000/01/rdf-schema#label	https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/registerItem/schema.yaml
+/properties/usedProcedure/_anyOf/1/description	http://purl.org/dc/terms/description	https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/registerItem/schema.yaml
+/properties/usedProcedure/_anyOf/1/implementedBy	http://www.w3.org/ns/sosa/implementedBy	https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/procedure/schema.yaml
+/properties/usedProcedure/_anyOf/1/implementedBy/_anyOf/1/implements	http://www.w3.org/ns/sosa/implements	https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/system/schema.yaml
+/properties/usedProcedure/_anyOf/1/implementedBy/_anyOf/1/hasSubSystem	http://www.w3.org/ns/sosa/hasSubSystem	https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/system/schema.yaml
+/properties/usedProcedure/_anyOf/1/implementedBy/_anyOf/1/isSubSystemOf	http://www.w3.org/ns/sosa/isSubSystemOf	https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/system/schema.yaml
+/properties/usedProcedure/_anyOf/1/implementedBy/_anyOf/1/isHostedBy	http://www.w3.org/ns/sosa/isHostedBy	https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/system/schema.yaml
+/properties/usedProcedure/_anyOf/1/hasInput	http://www.w3.org/ns/sosa/hasInput	https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/procedure/schema.yaml
+/properties/usedProcedure/_anyOf/1/hasOutput	http://www.w3.org/ns/sosa/hasOutput	https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/procedure/schema.yaml
+/properties/usedProcedure/_anyOf/1/isProcedureFor	http://www.w3.org/ns/sosa/isProcedureFor	https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/procedure/schema.yaml
+/properties/usedProcedure/_anyOf/1/isProcedureFor/_anyOf/1/isPropertyOf	http://www.w3.org/ns/sosa/isPropertyOf	https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/property/schema.yaml
+/properties/usedProcedure/_anyOf/1/isProcedureFor/_anyOf/1/hasProcedure	http://www.w3.org/ns/sosa/hasProcedure	https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/property/schema.yaml
+/properties/madeBySystem	http://www.w3.org/ns/sosa/madeBySystem	https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/execution/schema.yaml
+/properties/hasResult	http://www.w3.org/ns/sosa/hasResult	https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/observation-owa/schema.yaml
+/properties/hasSimpleResult	http://www.w3.org/ns/sosa/hasSimpleResult	https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/observation-owa/schema.yaml
+/properties/hasInputValue	http://www.w3.org/ns/sosa/hasInputValue	https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/execution/schema.yaml
+/properties/observedProperty	http://www.w3.org/ns/sosa/observedProperty	https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/observation-owa/schema.yaml
+/properties/madeBySensor	http://www.w3.org/ns/sosa/madeBySensor	https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/observation-owa/schema.yaml
+/properties/madeBySensor/_anyOf/1/observes	http://www.w3.org/ns/sosa/observes	https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/sensor/schema.yaml
+/properties/result		https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/observation-owa/schema.yaml
+/properties/result@links		https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/observation-owa/schema.yaml
+/properties/hasMember	http://www.w3.org/ns/sosa/hasMember	https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/observationCollection/schema.yaml
+/features/_oneOf/0/properties	@nest	https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/features/observation/schema.yaml

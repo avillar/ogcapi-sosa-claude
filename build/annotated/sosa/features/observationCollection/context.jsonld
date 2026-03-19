@@ -5,8 +5,8 @@
     "links": {
       "@context": {
         "href": {
-          "@type": "@id",
-          "@id": "oa:hasTarget"
+          "@id": "oa:hasTarget",
+          "@type": "@id"
         },
         "rel": {
           "@context": {
@@ -25,6 +25,10 @@
     "features": {
       "@context": {
         "geometry": "geojson:geometry",
+        "bbox": {
+          "@container": "@list",
+          "@id": "geojson:bbox"
+        },
         "time": {
           "@context": {
             "date": {
@@ -175,10 +179,6 @@
       "@id": "sosa:hasProperty",
       "@type": "@id"
     },
-    "hasResult": {
-      "@id": "sosa:hasResult",
-      "@type": "@id"
-    },
     "hasResultQuality": {
       "@id": "sosa:hasResultQuality",
       "@type": "@id"
@@ -189,10 +189,6 @@
     },
     "hasSampledFeature": {
       "@id": "sosa:hasSampledFeature",
-      "@type": "@id"
-    },
-    "hasSimpleResult": {
-      "@id": "sosa:hasSimpleResult",
       "@type": "@id"
     },
     "hasSubSystem": {
@@ -291,10 +287,6 @@
     },
     "wasOriginatedBy": {
       "@id": "sosa:wasOriginatedBy",
-      "@type": "@id"
-    },
-    "hasInputValue": {
-      "@id": "sosa:hasInputValue",
       "@type": "@id"
     },
     "isMemberOf": {
@@ -482,6 +474,18 @@
       "@id": "sosa:madeBySystem",
       "@type": "@id"
     },
+    "hasResult": {
+      "@id": "sosa:hasResult",
+      "@type": "@id"
+    },
+    "hasSimpleResult": {
+      "@id": "sosa:hasSimpleResult",
+      "@type": "@id"
+    },
+    "hasInputValue": {
+      "@id": "sosa:hasInputValue",
+      "@type": "@id"
+    },
     "Feature": "geojson:Feature",
     "FeatureCollection": "geojson:FeatureCollection",
     "GeometryCollection": "geojson:GeometryCollection",
@@ -506,10 +510,6 @@
       "@context": {
         "prisms": "geojson:prisms"
       }
-    },
-    "bbox": {
-      "@container": "@list",
-      "@id": "geojson:bbox"
     },
     "coordinates": {
       "@container": "@list",

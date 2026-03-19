@@ -131,10 +131,6 @@
       "@id": "sosa:hasProperty",
       "@type": "@id"
     },
-    "hasResult": {
-      "@id": "sosa:hasResult",
-      "@type": "@id"
-    },
     "hasResultQuality": {
       "@id": "sosa:hasResultQuality",
       "@type": "@id"
@@ -145,10 +141,6 @@
     },
     "hasSampledFeature": {
       "@id": "sosa:hasSampledFeature",
-      "@type": "@id"
-    },
-    "hasSimpleResult": {
-      "@id": "sosa:hasSimpleResult",
       "@type": "@id"
     },
     "hasSubSystem": {
@@ -247,10 +239,6 @@
     },
     "wasOriginatedBy": {
       "@id": "sosa:wasOriginatedBy",
-      "@type": "@id"
-    },
-    "hasInputValue": {
-      "@id": "sosa:hasInputValue",
       "@type": "@id"
     },
     "isMemberOf": {
@@ -436,6 +424,18 @@
     },
     "madeBySystem": {
       "@id": "sosa:madeBySystem",
+      "@type": "@id"
+    },
+    "hasResult": {
+      "@id": "sosa:hasResult",
+      "@type": "@id"
+    },
+    "hasSimpleResult": {
+      "@id": "sosa:hasSimpleResult",
+      "@type": "@id"
+    },
+    "hasInputValue": {
+      "@id": "sosa:hasInputValue",
       "@type": "@id"
     },
     "sosa": "http://www.w3.org/ns/sosa/",

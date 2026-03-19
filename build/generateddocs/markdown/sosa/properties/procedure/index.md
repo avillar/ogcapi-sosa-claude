@@ -214,8 +214,12 @@ $defs:
             - $ref: https://avillar.github.io/ogcapi-sosa-claude/build/annotated/sosa/properties/system/schema.yaml
           x-jsonld-id: http://www.w3.org/ns/sosa/implementedBy
           x-jsonld-type: '@id'
-        hasInput: true
-        hasOutput: true
+        hasInput:
+          x-jsonld-id: http://www.w3.org/ns/sosa/hasInput
+          x-jsonld-type: '@id'
+        hasOutput:
+          x-jsonld-id: http://www.w3.org/ns/sosa/hasOutput
+          x-jsonld-type: '@id'
         isProcedureFor:
           type: array
           items:
@@ -314,17 +318,11 @@ x-jsonld-extra-terms:
   hasFeatureOfInterest:
     x-jsonld-id: http://www.w3.org/ns/sosa/hasFeatureOfInterest
     x-jsonld-type: '@id'
-  hasInput:
-    x-jsonld-id: http://www.w3.org/ns/sosa/hasInput
-    x-jsonld-type: '@id'
   hasMember:
     x-jsonld-id: http://www.w3.org/ns/sosa/hasMember
     x-jsonld-type: '@id'
   hasOriginalSample:
     x-jsonld-id: http://www.w3.org/ns/sosa/hasOriginalSample
-    x-jsonld-type: '@id'
-  hasOutput:
-    x-jsonld-id: http://www.w3.org/ns/sosa/hasOutput
     x-jsonld-type: '@id'
   hasProperty:
     x-jsonld-id: http://www.w3.org/ns/sosa/hasProperty

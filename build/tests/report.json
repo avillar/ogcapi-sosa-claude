@@ -1,7 +1,7 @@
 {
   "summary": {
-    "total": 15,
-    "passed": 15,
+    "total": 14,
+    "passed": 14,
     "failed": 0,
     "result": true
   },
@@ -10,7 +10,7 @@
       "title": "Validation report for ogc.sosa - Sensor, Observation, Sample, and Actuator (SOSA)",
       "bblockName": "Sensor, Observation, Sample, and Actuator (SOSA)",
       "bblockId": "ogc.sosa",
-      "generated": "2026-03-02T12:12:07.846182+00:00",
+      "generated": "2026-03-19T11:33:56.795247+00:00",
       "result": true,
       "items": [],
       "globalErrors": {},
@@ -24,7 +24,7 @@
       "title": "Validation report for ogc.sosa.properties.spec-examples - Tests for SOSA specification",
       "bblockName": "Tests for SOSA specification",
       "bblockId": "ogc.sosa.properties.spec-examples",
-      "generated": "2026-03-02T12:12:08.038582+00:00",
+      "generated": "2026-03-19T11:33:56.988149+00:00",
       "result": true,
       "items": [
         {
@@ -1587,7 +1587,7 @@
       "title": "Validation report for ogc.sosa.properties.registerItem - SOSA Register Item",
       "bblockName": "SOSA Register Item",
       "bblockId": "ogc.sosa.properties.registerItem",
-      "generated": "2026-03-02T12:12:08.056208+00:00",
+      "generated": "2026-03-19T11:33:57.005980+00:00",
       "result": true,
       "items": [],
       "globalErrors": {},
@@ -1597,386 +1597,11 @@
         "failed": 0
       }
     },
-    "ogc.sosa.properties.featureOfInterest": {
-      "title": "Validation report for ogc.sosa.properties.featureOfInterest - SOSA FeatureOfInterest",
-      "bblockName": "SOSA FeatureOfInterest",
-      "bblockId": "ogc.sosa.properties.featureOfInterest",
-      "generated": "2026-03-02T12:12:08.179132+00:00",
-      "result": true,
-      "items": [
-        {
-          "source": {
-            "type": "EXAMPLE",
-            "requireFail": false,
-            "filename": "build/tests/sosa/properties/featureOfInterest/example_1_1.json",
-            "url": "https://avillar.github.io/ogcapi-sosa-claude/build/tests/sosa/properties/featureOfInterest/example_1_1.json",
-            "exampleIndex": 1,
-            "snippetIndex": 1,
-            "language": "application/json"
-          },
-          "result": true,
-          "sections": [
-            {
-              "name": "FILES",
-              "title": "Files",
-              "entries": [
-                {
-                  "isError": false,
-                  "message": "Using examples/feature.json from examples"
-                },
-                {
-                  "op": "jsonld-uplift",
-                  "isError": false,
-                  "message": "JSON-LD context is present - uplifting"
-                },
-                {
-                  "op": "jsonld-create",
-                  "filename": "example_1_1.jsonld",
-                  "isError": false,
-                  "message": "Output JSON-LD example_1_1.jsonld created"
-                },
-                {
-                  "op": "ttl-create",
-                  "empty": false,
-                  "filename": "example_1_1.ttl",
-                  "size": 2,
-                  "isError": false,
-                  "message": "Output Turtle example_1_1.ttl created"
-                }
-              ]
-            },
-            {
-              "name": "JSON_SCHEMA",
-              "title": "JSON Schema",
-              "entries": [
-                {
-                  "op": "validation",
-                  "result": true,
-                  "isError": false,
-                  "message": "Validation passed"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "source": {
-            "type": "EXAMPLE",
-            "requireFail": false,
-            "filename": "build/tests/sosa/properties/featureOfInterest/example_2_1.json",
-            "url": "https://avillar.github.io/ogcapi-sosa-claude/build/tests/sosa/properties/featureOfInterest/example_2_1.json",
-            "exampleIndex": 2,
-            "snippetIndex": 1,
-            "language": "application/json"
-          },
-          "result": true,
-          "sections": [
-            {
-              "name": "FILES",
-              "title": "Files",
-              "entries": [
-                {
-                  "isError": false,
-                  "message": "Using examples/feature-complex.json from examples"
-                },
-                {
-                  "op": "jsonld-uplift",
-                  "isError": false,
-                  "message": "JSON-LD context is present - uplifting"
-                },
-                {
-                  "op": "jsonld-create",
-                  "filename": "example_2_1.jsonld",
-                  "isError": false,
-                  "message": "Output JSON-LD example_2_1.jsonld created"
-                },
-                {
-                  "op": "ttl-create",
-                  "empty": false,
-                  "filename": "example_2_1.ttl",
-                  "size": 10,
-                  "isError": false,
-                  "message": "Output Turtle example_2_1.ttl created"
-                }
-              ]
-            },
-            {
-              "name": "JSON_SCHEMA",
-              "title": "JSON Schema",
-              "entries": [
-                {
-                  "op": "validation",
-                  "result": true,
-                  "isError": false,
-                  "message": "Validation passed"
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "globalErrors": {},
-      "counts": {
-        "total": 2,
-        "passed": 2,
-        "failed": 0
-      }
-    },
-    "ogc.sosa.properties.procedure": {
-      "title": "Validation report for ogc.sosa.properties.procedure - SOSA Procedure",
-      "bblockName": "SOSA Procedure",
-      "bblockId": "ogc.sosa.properties.procedure",
-      "generated": "2026-03-02T12:12:08.287768+00:00",
-      "result": true,
-      "items": [
-        {
-          "source": {
-            "type": "EXAMPLE",
-            "requireFail": false,
-            "filename": "build/tests/sosa/properties/procedure/example_1_1.json",
-            "url": "https://avillar.github.io/ogcapi-sosa-claude/build/tests/sosa/properties/procedure/example_1_1.json",
-            "exampleIndex": 1,
-            "snippetIndex": 1,
-            "language": "application/json"
-          },
-          "result": true,
-          "sections": [
-            {
-              "name": "FILES",
-              "title": "Files",
-              "entries": [
-                {
-                  "isError": false,
-                  "message": "Using examples/procedure.json from examples"
-                },
-                {
-                  "op": "jsonld-uplift",
-                  "isError": false,
-                  "message": "JSON-LD context is present - uplifting"
-                },
-                {
-                  "op": "jsonld-create",
-                  "filename": "example_1_1.jsonld",
-                  "isError": false,
-                  "message": "Output JSON-LD example_1_1.jsonld created"
-                },
-                {
-                  "op": "ttl-create",
-                  "empty": false,
-                  "filename": "example_1_1.ttl",
-                  "size": 2,
-                  "isError": false,
-                  "message": "Output Turtle example_1_1.ttl created"
-                }
-              ]
-            },
-            {
-              "name": "JSON_SCHEMA",
-              "title": "JSON Schema",
-              "entries": [
-                {
-                  "op": "validation",
-                  "result": true,
-                  "isError": false,
-                  "message": "Validation passed"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "source": {
-            "type": "EXAMPLE",
-            "requireFail": false,
-            "filename": "build/tests/sosa/properties/procedure/example_2_1.json",
-            "url": "https://avillar.github.io/ogcapi-sosa-claude/build/tests/sosa/properties/procedure/example_2_1.json",
-            "exampleIndex": 2,
-            "snippetIndex": 1,
-            "language": "application/json"
-          },
-          "result": true,
-          "sections": [
-            {
-              "name": "FILES",
-              "title": "Files",
-              "entries": [
-                {
-                  "isError": false,
-                  "message": "Using examples/procedure-complex.json from examples"
-                },
-                {
-                  "op": "jsonld-uplift",
-                  "isError": false,
-                  "message": "JSON-LD context is present - uplifting"
-                },
-                {
-                  "op": "jsonld-create",
-                  "filename": "example_2_1.jsonld",
-                  "isError": false,
-                  "message": "Output JSON-LD example_2_1.jsonld created"
-                },
-                {
-                  "op": "ttl-create",
-                  "empty": false,
-                  "filename": "example_2_1.ttl",
-                  "size": 16,
-                  "isError": false,
-                  "message": "Output Turtle example_2_1.ttl created"
-                }
-              ]
-            },
-            {
-              "name": "JSON_SCHEMA",
-              "title": "JSON Schema",
-              "entries": [
-                {
-                  "op": "validation",
-                  "result": true,
-                  "isError": false,
-                  "message": "Validation passed"
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "globalErrors": {},
-      "counts": {
-        "total": 2,
-        "passed": 2,
-        "failed": 0
-      }
-    },
-    "ogc.sosa.properties.property": {
-      "title": "Validation report for ogc.sosa.properties.property - SOSA Property",
-      "bblockName": "SOSA Property",
-      "bblockId": "ogc.sosa.properties.property",
-      "generated": "2026-03-02T12:12:08.406538+00:00",
-      "result": true,
-      "items": [
-        {
-          "source": {
-            "type": "EXAMPLE",
-            "requireFail": false,
-            "filename": "build/tests/sosa/properties/property/example_1_1.json",
-            "url": "https://avillar.github.io/ogcapi-sosa-claude/build/tests/sosa/properties/property/example_1_1.json",
-            "exampleIndex": 1,
-            "snippetIndex": 1,
-            "language": "application/json"
-          },
-          "result": true,
-          "sections": [
-            {
-              "name": "FILES",
-              "title": "Files",
-              "entries": [
-                {
-                  "isError": false,
-                  "message": "Using examples/property.json from examples"
-                },
-                {
-                  "op": "jsonld-uplift",
-                  "isError": false,
-                  "message": "JSON-LD context is present - uplifting"
-                },
-                {
-                  "op": "jsonld-create",
-                  "filename": "example_1_1.jsonld",
-                  "isError": false,
-                  "message": "Output JSON-LD example_1_1.jsonld created"
-                },
-                {
-                  "op": "ttl-create",
-                  "empty": false,
-                  "filename": "example_1_1.ttl",
-                  "size": 2,
-                  "isError": false,
-                  "message": "Output Turtle example_1_1.ttl created"
-                }
-              ]
-            },
-            {
-              "name": "JSON_SCHEMA",
-              "title": "JSON Schema",
-              "entries": [
-                {
-                  "op": "validation",
-                  "result": true,
-                  "isError": false,
-                  "message": "Validation passed"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "source": {
-            "type": "EXAMPLE",
-            "requireFail": false,
-            "filename": "build/tests/sosa/properties/property/example_2_1.json",
-            "url": "https://avillar.github.io/ogcapi-sosa-claude/build/tests/sosa/properties/property/example_2_1.json",
-            "exampleIndex": 2,
-            "snippetIndex": 1,
-            "language": "application/json"
-          },
-          "result": true,
-          "sections": [
-            {
-              "name": "FILES",
-              "title": "Files",
-              "entries": [
-                {
-                  "isError": false,
-                  "message": "Using examples/property-complex.json from examples"
-                },
-                {
-                  "op": "jsonld-uplift",
-                  "isError": false,
-                  "message": "JSON-LD context is present - uplifting"
-                },
-                {
-                  "op": "jsonld-create",
-                  "filename": "example_2_1.jsonld",
-                  "isError": false,
-                  "message": "Output JSON-LD example_2_1.jsonld created"
-                },
-                {
-                  "op": "ttl-create",
-                  "empty": false,
-                  "filename": "example_2_1.ttl",
-                  "size": 9,
-                  "isError": false,
-                  "message": "Output Turtle example_2_1.ttl created"
-                }
-              ]
-            },
-            {
-              "name": "JSON_SCHEMA",
-              "title": "JSON Schema",
-              "entries": [
-                {
-                  "op": "validation",
-                  "result": true,
-                  "isError": false,
-                  "message": "Validation passed"
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "globalErrors": {},
-      "counts": {
-        "total": 2,
-        "passed": 2,
-        "failed": 0
-      }
-    },
     "ogc.sosa.properties.system": {
       "title": "Validation report for ogc.sosa.properties.system - SOSA System",
       "bblockName": "SOSA System",
       "bblockId": "ogc.sosa.properties.system",
-      "generated": "2026-03-02T12:12:08.531607+00:00",
+      "generated": "2026-03-19T11:33:57.095160+00:00",
       "result": true,
       "items": [
         {
@@ -2097,11 +1722,261 @@
         "failed": 0
       }
     },
+    "ogc.sosa.properties.platform": {
+      "title": "Validation report for ogc.sosa.properties.platform - SOSA Platform",
+      "bblockName": "SOSA Platform",
+      "bblockId": "ogc.sosa.properties.platform",
+      "generated": "2026-03-19T11:33:57.173085+00:00",
+      "result": true,
+      "items": [
+        {
+          "source": {
+            "type": "EXAMPLE",
+            "requireFail": false,
+            "filename": "build/tests/sosa/properties/platform/example_1_1.json",
+            "url": "https://avillar.github.io/ogcapi-sosa-claude/build/tests/sosa/properties/platform/example_1_1.json",
+            "exampleIndex": 1,
+            "snippetIndex": 1,
+            "language": "application/json"
+          },
+          "result": true,
+          "sections": [
+            {
+              "name": "FILES",
+              "title": "Files",
+              "entries": [
+                {
+                  "isError": false,
+                  "message": "Using examples/platform.json from examples"
+                },
+                {
+                  "op": "jsonld-uplift",
+                  "isError": false,
+                  "message": "JSON-LD context is present - uplifting"
+                },
+                {
+                  "op": "jsonld-create",
+                  "filename": "example_1_1.jsonld",
+                  "isError": false,
+                  "message": "Output JSON-LD example_1_1.jsonld created"
+                },
+                {
+                  "op": "ttl-create",
+                  "empty": false,
+                  "filename": "example_1_1.ttl",
+                  "size": 4,
+                  "isError": false,
+                  "message": "Output Turtle example_1_1.ttl created"
+                }
+              ]
+            },
+            {
+              "name": "JSON_SCHEMA",
+              "title": "JSON Schema",
+              "entries": [
+                {
+                  "op": "validation",
+                  "result": true,
+                  "isError": false,
+                  "message": "Validation passed"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "source": {
+            "type": "EXAMPLE",
+            "requireFail": false,
+            "filename": "build/tests/sosa/properties/platform/example_2_1.json",
+            "url": "https://avillar.github.io/ogcapi-sosa-claude/build/tests/sosa/properties/platform/example_2_1.json",
+            "exampleIndex": 2,
+            "snippetIndex": 1,
+            "language": "application/json"
+          },
+          "result": true,
+          "sections": [
+            {
+              "name": "FILES",
+              "title": "Files",
+              "entries": [
+                {
+                  "isError": false,
+                  "message": "Using examples/platform-complex.json from examples"
+                },
+                {
+                  "op": "jsonld-uplift",
+                  "isError": false,
+                  "message": "JSON-LD context is present - uplifting"
+                },
+                {
+                  "op": "jsonld-create",
+                  "filename": "example_2_1.jsonld",
+                  "isError": false,
+                  "message": "Output JSON-LD example_2_1.jsonld created"
+                },
+                {
+                  "op": "ttl-create",
+                  "empty": false,
+                  "filename": "example_2_1.ttl",
+                  "size": 23,
+                  "isError": false,
+                  "message": "Output Turtle example_2_1.ttl created"
+                }
+              ]
+            },
+            {
+              "name": "JSON_SCHEMA",
+              "title": "JSON Schema",
+              "entries": [
+                {
+                  "op": "validation",
+                  "result": true,
+                  "isError": false,
+                  "message": "Validation passed"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "globalErrors": {},
+      "counts": {
+        "total": 2,
+        "passed": 2,
+        "failed": 0
+      }
+    },
+    "ogc.sosa.properties.procedure": {
+      "title": "Validation report for ogc.sosa.properties.procedure - SOSA Procedure",
+      "bblockName": "SOSA Procedure",
+      "bblockId": "ogc.sosa.properties.procedure",
+      "generated": "2026-03-19T11:33:57.296412+00:00",
+      "result": true,
+      "items": [
+        {
+          "source": {
+            "type": "EXAMPLE",
+            "requireFail": false,
+            "filename": "build/tests/sosa/properties/procedure/example_1_1.json",
+            "url": "https://avillar.github.io/ogcapi-sosa-claude/build/tests/sosa/properties/procedure/example_1_1.json",
+            "exampleIndex": 1,
+            "snippetIndex": 1,
+            "language": "application/json"
+          },
+          "result": true,
+          "sections": [
+            {
+              "name": "FILES",
+              "title": "Files",
+              "entries": [
+                {
+                  "isError": false,
+                  "message": "Using examples/procedure.json from examples"
+                },
+                {
+                  "op": "jsonld-uplift",
+                  "isError": false,
+                  "message": "JSON-LD context is present - uplifting"
+                },
+                {
+                  "op": "jsonld-create",
+                  "filename": "example_1_1.jsonld",
+                  "isError": false,
+                  "message": "Output JSON-LD example_1_1.jsonld created"
+                },
+                {
+                  "op": "ttl-create",
+                  "empty": false,
+                  "filename": "example_1_1.ttl",
+                  "size": 2,
+                  "isError": false,
+                  "message": "Output Turtle example_1_1.ttl created"
+                }
+              ]
+            },
+            {
+              "name": "JSON_SCHEMA",
+              "title": "JSON Schema",
+              "entries": [
+                {
+                  "op": "validation",
+                  "result": true,
+                  "isError": false,
+                  "message": "Validation passed"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "source": {
+            "type": "EXAMPLE",
+            "requireFail": false,
+            "filename": "build/tests/sosa/properties/procedure/example_2_1.json",
+            "url": "https://avillar.github.io/ogcapi-sosa-claude/build/tests/sosa/properties/procedure/example_2_1.json",
+            "exampleIndex": 2,
+            "snippetIndex": 1,
+            "language": "application/json"
+          },
+          "result": true,
+          "sections": [
+            {
+              "name": "FILES",
+              "title": "Files",
+              "entries": [
+                {
+                  "isError": false,
+                  "message": "Using examples/procedure-complex.json from examples"
+                },
+                {
+                  "op": "jsonld-uplift",
+                  "isError": false,
+                  "message": "JSON-LD context is present - uplifting"
+                },
+                {
+                  "op": "jsonld-create",
+                  "filename": "example_2_1.jsonld",
+                  "isError": false,
+                  "message": "Output JSON-LD example_2_1.jsonld created"
+                },
+                {
+                  "op": "ttl-create",
+                  "empty": false,
+                  "filename": "example_2_1.ttl",
+                  "size": 16,
+                  "isError": false,
+                  "message": "Output Turtle example_2_1.ttl created"
+                }
+              ]
+            },
+            {
+              "name": "JSON_SCHEMA",
+              "title": "JSON Schema",
+              "entries": [
+                {
+                  "op": "validation",
+                  "result": true,
+                  "isError": false,
+                  "message": "Validation passed"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "globalErrors": {},
+      "counts": {
+        "total": 2,
+        "passed": 2,
+        "failed": 0
+      }
+    },
     "ogc.sosa.properties.execution": {
       "title": "Validation report for ogc.sosa.properties.execution - SOSA Execution",
       "bblockName": "SOSA Execution",
       "bblockId": "ogc.sosa.properties.execution",
-      "generated": "2026-03-02T12:12:08.688299+00:00",
+      "generated": "2026-03-19T11:33:57.390983+00:00",
       "result": true,
       "items": [
         {
@@ -2277,19 +2152,19 @@
         "failed": 0
       }
     },
-    "ogc.sosa.properties.platform": {
-      "title": "Validation report for ogc.sosa.properties.platform - SOSA Platform",
-      "bblockName": "SOSA Platform",
-      "bblockId": "ogc.sosa.properties.platform",
-      "generated": "2026-03-02T12:12:08.782721+00:00",
+    "ogc.sosa.properties.property": {
+      "title": "Validation report for ogc.sosa.properties.property - SOSA Property",
+      "bblockName": "SOSA Property",
+      "bblockId": "ogc.sosa.properties.property",
+      "generated": "2026-03-19T11:33:57.482367+00:00",
       "result": true,
       "items": [
         {
           "source": {
             "type": "EXAMPLE",
             "requireFail": false,
-            "filename": "build/tests/sosa/properties/platform/example_1_1.json",
-            "url": "https://avillar.github.io/ogcapi-sosa-claude/build/tests/sosa/properties/platform/example_1_1.json",
+            "filename": "build/tests/sosa/properties/property/example_1_1.json",
+            "url": "https://avillar.github.io/ogcapi-sosa-claude/build/tests/sosa/properties/property/example_1_1.json",
             "exampleIndex": 1,
             "snippetIndex": 1,
             "language": "application/json"
@@ -2302,7 +2177,7 @@
               "entries": [
                 {
                   "isError": false,
-                  "message": "Using examples/platform.json from examples"
+                  "message": "Using examples/property.json from examples"
                 },
                 {
                   "op": "jsonld-uplift",
@@ -2319,7 +2194,7 @@
                   "op": "ttl-create",
                   "empty": false,
                   "filename": "example_1_1.ttl",
-                  "size": 4,
+                  "size": 2,
                   "isError": false,
                   "message": "Output Turtle example_1_1.ttl created"
                 }
@@ -2343,8 +2218,8 @@
           "source": {
             "type": "EXAMPLE",
             "requireFail": false,
-            "filename": "build/tests/sosa/properties/platform/example_2_1.json",
-            "url": "https://avillar.github.io/ogcapi-sosa-claude/build/tests/sosa/properties/platform/example_2_1.json",
+            "filename": "build/tests/sosa/properties/property/example_2_1.json",
+            "url": "https://avillar.github.io/ogcapi-sosa-claude/build/tests/sosa/properties/property/example_2_1.json",
             "exampleIndex": 2,
             "snippetIndex": 1,
             "language": "application/json"
@@ -2357,7 +2232,7 @@
               "entries": [
                 {
                   "isError": false,
-                  "message": "Using examples/platform-complex.json from examples"
+                  "message": "Using examples/property-complex.json from examples"
                 },
                 {
                   "op": "jsonld-uplift",
@@ -2374,7 +2249,7 @@
                   "op": "ttl-create",
                   "empty": false,
                   "filename": "example_2_1.ttl",
-                  "size": 23,
+                  "size": 9,
                   "isError": false,
                   "message": "Output Turtle example_2_1.ttl created"
                 }
@@ -2406,7 +2281,7 @@
       "title": "Validation report for ogc.sosa.properties.sensor - SOSA Sensor",
       "bblockName": "SOSA Sensor",
       "bblockId": "ogc.sosa.properties.sensor",
-      "generated": "2026-03-02T12:12:08.919034+00:00",
+      "generated": "2026-03-19T11:33:57.590983+00:00",
       "result": true,
       "items": [
         {
@@ -2586,7 +2461,7 @@
       "title": "Validation report for ogc.sosa.properties.observation-owa - Observation Properties (SOSA OWA)",
       "bblockName": "Observation Properties (SOSA OWA)",
       "bblockId": "ogc.sosa.properties.observation-owa",
-      "generated": "2026-03-02T12:12:09.009990+00:00",
+      "generated": "2026-03-19T11:33:57.669736+00:00",
       "result": true,
       "items": [
         {
@@ -2743,7 +2618,7 @@
       "title": "Validation report for ogc.sosa.properties.observation - Observation Properties",
       "bblockName": "Observation Properties",
       "bblockId": "ogc.sosa.properties.observation",
-      "generated": "2026-03-02T12:12:10.793268+00:00",
+      "generated": "2026-03-19T11:33:59.398834+00:00",
       "result": true,
       "items": [
         {
@@ -2780,42 +2655,6 @@
                 {
                   "shaclFile": "_sources/properties/observation/shapes.shacl",
                   "focusNodes": {
-                    "<https://www.ogc.org/rules/sosa/#testObservedPropertyConsistent>": {
-                      "nodes": [
-                        "ex:ts159c"
-                      ]
-                    },
-                    "<https://www.ogc.org/rules/sosa/#testSimpleResultLiteral>": {
-                      "nodes": [
-                        "ex:t2/sosa:hasSimpleResult",
-                        "ex:t1/sosa:hasSimpleResult",
-                        "ex:t3/sosa:hasSimpleResult"
-                      ]
-                    },
-                    "<https://www.ogc.org/rules/sosa/#testRequiredTime>": {
-                      "nodes": [
-                        "ex:t1",
-                        "ex:t3",
-                        "ex:t4",
-                        "ex:t2"
-                      ]
-                    },
-                    "<https://www.ogc.org/rules/sosa/#testCollectionPropertyValues>": {
-                      "nodes": [
-                        "ex:ts159c"
-                      ]
-                    },
-                    "<https://www.ogc.org/rules/sosa/#testResultNotEmptyNode>": {
-                      "nodes": []
-                    },
-                    "<https://www.ogc.org/rules/sosa/#testResult>": {
-                      "nodes": [
-                        "ex:t1",
-                        "ex:t3",
-                        "ex:t4",
-                        "ex:t2"
-                      ]
-                    },
                     "<https://www.ogc.org/rules/sosa/#testObservedPropertyPresent>": {
                       "nodes": [
                         "ex:t4",
@@ -2824,22 +2663,58 @@
                         "ex:t2"
                       ]
                     },
+                    "<https://www.ogc.org/rules/sosa/#testResultNotEmptyNode>": {
+                      "nodes": []
+                    },
                     "<https://www.ogc.org/rules/sosa/#testCollectionPropertyValuesInterval>": {
+                      "nodes": [
+                        "ex:ts159c"
+                      ]
+                    },
+                    "<https://www.ogc.org/rules/sosa/#testObservedPropertyConsistent>": {
                       "nodes": [
                         "ex:ts159c"
                       ]
                     },
                     "<https://www.ogc.org/rules/sosa/#testFeatureOfInterest>": {
                       "nodes": [
-                        "ex:t1",
                         "ex:t3",
                         "ex:t4",
-                        "ex:t2"
+                        "ex:t2",
+                        "ex:t1"
+                      ]
+                    },
+                    "<https://www.ogc.org/rules/sosa/#testCollectionPropertyValues>": {
+                      "nodes": [
+                        "ex:ts159c"
+                      ]
+                    },
+                    "<https://www.ogc.org/rules/sosa/#testResult>": {
+                      "nodes": [
+                        "ex:t3",
+                        "ex:t4",
+                        "ex:t2",
+                        "ex:t1"
+                      ]
+                    },
+                    "<https://www.ogc.org/rules/sosa/#testSimpleResultLiteral>": {
+                      "nodes": [
+                        "ex:t1/sosa:hasSimpleResult",
+                        "ex:t2/sosa:hasSimpleResult",
+                        "ex:t3/sosa:hasSimpleResult"
+                      ]
+                    },
+                    "<https://www.ogc.org/rules/sosa/#testRequiredTime>": {
+                      "nodes": [
+                        "ex:t3",
+                        "ex:t4",
+                        "ex:t2",
+                        "ex:t1"
                       ]
                     }
                   },
                   "isError": false,
-                  "message": "Focus nodes for _sources/properties/observation/shapes.shacl:\n - Shape <https://www.ogc.org/rules/sosa/#testObservedPropertyConsistent>: ex:ts159c\n - Shape <https://www.ogc.org/rules/sosa/#testSimpleResultLiteral>: ex:t2/sosa:hasSimpleResult,ex:t1/sosa:hasSimpleResult,ex:t3/sosa:hasSimpleResult\n - Shape <https://www.ogc.org/rules/sosa/#testRequiredTime>: ex:t1,ex:t3,ex:t4,ex:t2\n - Shape <https://www.ogc.org/rules/sosa/#testCollectionPropertyValues>: ex:ts159c\n - Shape <https://www.ogc.org/rules/sosa/#testResultNotEmptyNode>: *none*\n - Shape <https://www.ogc.org/rules/sosa/#testResult>: ex:t1,ex:t3,ex:t4,ex:t2\n - Shape <https://www.ogc.org/rules/sosa/#testObservedPropertyPresent>: ex:t4,ex:t1,ex:t3,ex:t2\n - Shape <https://www.ogc.org/rules/sosa/#testCollectionPropertyValuesInterval>: ex:ts159c\n - Shape <https://www.ogc.org/rules/sosa/#testFeatureOfInterest>: ex:t1,ex:t3,ex:t4,ex:t2\n"
+                  "message": "Focus nodes for _sources/properties/observation/shapes.shacl:\n - Shape <https://www.ogc.org/rules/sosa/#testObservedPropertyPresent>: ex:t4,ex:t1,ex:t3,ex:t2\n - Shape <https://www.ogc.org/rules/sosa/#testResultNotEmptyNode>: *none*\n - Shape <https://www.ogc.org/rules/sosa/#testCollectionPropertyValuesInterval>: ex:ts159c\n - Shape <https://www.ogc.org/rules/sosa/#testObservedPropertyConsistent>: ex:ts159c\n - Shape <https://www.ogc.org/rules/sosa/#testFeatureOfInterest>: ex:t3,ex:t4,ex:t2,ex:t1\n - Shape <https://www.ogc.org/rules/sosa/#testCollectionPropertyValues>: ex:ts159c\n - Shape <https://www.ogc.org/rules/sosa/#testResult>: ex:t3,ex:t4,ex:t2,ex:t1\n - Shape <https://www.ogc.org/rules/sosa/#testSimpleResultLiteral>: ex:t1/sosa:hasSimpleResult,ex:t2/sosa:hasSimpleResult,ex:t3/sosa:hasSimpleResult\n - Shape <https://www.ogc.org/rules/sosa/#testRequiredTime>: ex:t3,ex:t4,ex:t2,ex:t1\n"
                 }
               ]
             }
@@ -2987,8 +2862,32 @@
                 {
                   "shaclFile": "_sources/properties/observation/shapes.shacl",
                   "focusNodes": {
+                    "<https://www.ogc.org/rules/sosa/#testObservedPropertyPresent>": {
+                      "nodes": [
+                        "_:nacc6a6a66f74466eabfbb13ca03b6a76b1"
+                      ]
+                    },
+                    "<https://www.ogc.org/rules/sosa/#testResultNotEmptyNode>": {
+                      "nodes": []
+                    },
+                    "<https://www.ogc.org/rules/sosa/#testCollectionPropertyValuesInterval>": {
+                      "nodes": []
+                    },
                     "<https://www.ogc.org/rules/sosa/#testObservedPropertyConsistent>": {
                       "nodes": []
+                    },
+                    "<https://www.ogc.org/rules/sosa/#testFeatureOfInterest>": {
+                      "nodes": [
+                        "_:nacc6a6a66f74466eabfbb13ca03b6a76b1"
+                      ]
+                    },
+                    "<https://www.ogc.org/rules/sosa/#testCollectionPropertyValues>": {
+                      "nodes": []
+                    },
+                    "<https://www.ogc.org/rules/sosa/#testResult>": {
+                      "nodes": [
+                        "_:nacc6a6a66f74466eabfbb13ca03b6a76b1"
+                      ]
                     },
                     "<https://www.ogc.org/rules/sosa/#testSimpleResultLiteral>": {
                       "nodes": [
@@ -2997,36 +2896,12 @@
                     },
                     "<https://www.ogc.org/rules/sosa/#testRequiredTime>": {
                       "nodes": [
-                        "_:nfbbcff74a9e94f50a5b711a53507423eb1"
-                      ]
-                    },
-                    "<https://www.ogc.org/rules/sosa/#testCollectionPropertyValues>": {
-                      "nodes": []
-                    },
-                    "<https://www.ogc.org/rules/sosa/#testResultNotEmptyNode>": {
-                      "nodes": []
-                    },
-                    "<https://www.ogc.org/rules/sosa/#testResult>": {
-                      "nodes": [
-                        "_:nfbbcff74a9e94f50a5b711a53507423eb1"
-                      ]
-                    },
-                    "<https://www.ogc.org/rules/sosa/#testObservedPropertyPresent>": {
-                      "nodes": [
-                        "_:nfbbcff74a9e94f50a5b711a53507423eb1"
-                      ]
-                    },
-                    "<https://www.ogc.org/rules/sosa/#testCollectionPropertyValuesInterval>": {
-                      "nodes": []
-                    },
-                    "<https://www.ogc.org/rules/sosa/#testFeatureOfInterest>": {
-                      "nodes": [
-                        "_:nfbbcff74a9e94f50a5b711a53507423eb1"
+                        "_:nacc6a6a66f74466eabfbb13ca03b6a76b1"
                       ]
                     }
                   },
                   "isError": false,
-                  "message": "Focus nodes for _sources/properties/observation/shapes.shacl:\n - Shape <https://www.ogc.org/rules/sosa/#testObservedPropertyConsistent>: *none*\n - Shape <https://www.ogc.org/rules/sosa/#testSimpleResultLiteral>: \n - Shape <https://www.ogc.org/rules/sosa/#testRequiredTime>: _:nfbbcff74a9e94f50a5b711a53507423eb1\n - Shape <https://www.ogc.org/rules/sosa/#testCollectionPropertyValues>: *none*\n - Shape <https://www.ogc.org/rules/sosa/#testResultNotEmptyNode>: *none*\n - Shape <https://www.ogc.org/rules/sosa/#testResult>: _:nfbbcff74a9e94f50a5b711a53507423eb1\n - Shape <https://www.ogc.org/rules/sosa/#testObservedPropertyPresent>: _:nfbbcff74a9e94f50a5b711a53507423eb1\n - Shape <https://www.ogc.org/rules/sosa/#testCollectionPropertyValuesInterval>: *none*\n - Shape <https://www.ogc.org/rules/sosa/#testFeatureOfInterest>: _:nfbbcff74a9e94f50a5b711a53507423eb1\n"
+                  "message": "Focus nodes for _sources/properties/observation/shapes.shacl:\n - Shape <https://www.ogc.org/rules/sosa/#testObservedPropertyPresent>: _:nacc6a6a66f74466eabfbb13ca03b6a76b1\n - Shape <https://www.ogc.org/rules/sosa/#testResultNotEmptyNode>: *none*\n - Shape <https://www.ogc.org/rules/sosa/#testCollectionPropertyValuesInterval>: *none*\n - Shape <https://www.ogc.org/rules/sosa/#testObservedPropertyConsistent>: *none*\n - Shape <https://www.ogc.org/rules/sosa/#testFeatureOfInterest>: _:nacc6a6a66f74466eabfbb13ca03b6a76b1\n - Shape <https://www.ogc.org/rules/sosa/#testCollectionPropertyValues>: *none*\n - Shape <https://www.ogc.org/rules/sosa/#testResult>: _:nacc6a6a66f74466eabfbb13ca03b6a76b1\n - Shape <https://www.ogc.org/rules/sosa/#testSimpleResultLiteral>: \n - Shape <https://www.ogc.org/rules/sosa/#testRequiredTime>: _:nacc6a6a66f74466eabfbb13ca03b6a76b1\n"
                 }
               ]
             }
@@ -3066,8 +2941,32 @@
                 {
                   "shaclFile": "_sources/properties/observation/shapes.shacl",
                   "focusNodes": {
+                    "<https://www.ogc.org/rules/sosa/#testObservedPropertyPresent>": {
+                      "nodes": [
+                        "_:n393ef6ae58f247febea99b5cc003bb0cb1"
+                      ]
+                    },
+                    "<https://www.ogc.org/rules/sosa/#testResultNotEmptyNode>": {
+                      "nodes": []
+                    },
+                    "<https://www.ogc.org/rules/sosa/#testCollectionPropertyValuesInterval>": {
+                      "nodes": []
+                    },
                     "<https://www.ogc.org/rules/sosa/#testObservedPropertyConsistent>": {
                       "nodes": []
+                    },
+                    "<https://www.ogc.org/rules/sosa/#testFeatureOfInterest>": {
+                      "nodes": [
+                        "_:n393ef6ae58f247febea99b5cc003bb0cb1"
+                      ]
+                    },
+                    "<https://www.ogc.org/rules/sosa/#testCollectionPropertyValues>": {
+                      "nodes": []
+                    },
+                    "<https://www.ogc.org/rules/sosa/#testResult>": {
+                      "nodes": [
+                        "_:n393ef6ae58f247febea99b5cc003bb0cb1"
+                      ]
                     },
                     "<https://www.ogc.org/rules/sosa/#testSimpleResultLiteral>": {
                       "nodes": [
@@ -3076,36 +2975,12 @@
                     },
                     "<https://www.ogc.org/rules/sosa/#testRequiredTime>": {
                       "nodes": [
-                        "_:n56e8bcb3630b4d1cabb9da2aa18ebd06b1"
-                      ]
-                    },
-                    "<https://www.ogc.org/rules/sosa/#testCollectionPropertyValues>": {
-                      "nodes": []
-                    },
-                    "<https://www.ogc.org/rules/sosa/#testResultNotEmptyNode>": {
-                      "nodes": []
-                    },
-                    "<https://www.ogc.org/rules/sosa/#testResult>": {
-                      "nodes": [
-                        "_:n56e8bcb3630b4d1cabb9da2aa18ebd06b1"
-                      ]
-                    },
-                    "<https://www.ogc.org/rules/sosa/#testObservedPropertyPresent>": {
-                      "nodes": [
-                        "_:n56e8bcb3630b4d1cabb9da2aa18ebd06b1"
-                      ]
-                    },
-                    "<https://www.ogc.org/rules/sosa/#testCollectionPropertyValuesInterval>": {
-                      "nodes": []
-                    },
-                    "<https://www.ogc.org/rules/sosa/#testFeatureOfInterest>": {
-                      "nodes": [
-                        "_:n56e8bcb3630b4d1cabb9da2aa18ebd06b1"
+                        "_:n393ef6ae58f247febea99b5cc003bb0cb1"
                       ]
                     }
                   },
                   "isError": false,
-                  "message": "Focus nodes for _sources/properties/observation/shapes.shacl:\n - Shape <https://www.ogc.org/rules/sosa/#testObservedPropertyConsistent>: *none*\n - Shape <https://www.ogc.org/rules/sosa/#testSimpleResultLiteral>: \n - Shape <https://www.ogc.org/rules/sosa/#testRequiredTime>: _:n56e8bcb3630b4d1cabb9da2aa18ebd06b1\n - Shape <https://www.ogc.org/rules/sosa/#testCollectionPropertyValues>: *none*\n - Shape <https://www.ogc.org/rules/sosa/#testResultNotEmptyNode>: *none*\n - Shape <https://www.ogc.org/rules/sosa/#testResult>: _:n56e8bcb3630b4d1cabb9da2aa18ebd06b1\n - Shape <https://www.ogc.org/rules/sosa/#testObservedPropertyPresent>: _:n56e8bcb3630b4d1cabb9da2aa18ebd06b1\n - Shape <https://www.ogc.org/rules/sosa/#testCollectionPropertyValuesInterval>: *none*\n - Shape <https://www.ogc.org/rules/sosa/#testFeatureOfInterest>: _:n56e8bcb3630b4d1cabb9da2aa18ebd06b1\n"
+                  "message": "Focus nodes for _sources/properties/observation/shapes.shacl:\n - Shape <https://www.ogc.org/rules/sosa/#testObservedPropertyPresent>: _:n393ef6ae58f247febea99b5cc003bb0cb1\n - Shape <https://www.ogc.org/rules/sosa/#testResultNotEmptyNode>: *none*\n - Shape <https://www.ogc.org/rules/sosa/#testCollectionPropertyValuesInterval>: *none*\n - Shape <https://www.ogc.org/rules/sosa/#testObservedPropertyConsistent>: *none*\n - Shape <https://www.ogc.org/rules/sosa/#testFeatureOfInterest>: _:n393ef6ae58f247febea99b5cc003bb0cb1\n - Shape <https://www.ogc.org/rules/sosa/#testCollectionPropertyValues>: *none*\n - Shape <https://www.ogc.org/rules/sosa/#testResult>: _:n393ef6ae58f247febea99b5cc003bb0cb1\n - Shape <https://www.ogc.org/rules/sosa/#testSimpleResultLiteral>: \n - Shape <https://www.ogc.org/rules/sosa/#testRequiredTime>: _:n393ef6ae58f247febea99b5cc003bb0cb1\n"
                 }
               ]
             }
@@ -3176,7 +3051,27 @@
                 {
                   "shaclFile": "_sources/properties/observation/shapes.shacl",
                   "focusNodes": {
+                    "<https://www.ogc.org/rules/sosa/#testObservedPropertyPresent>": {
+                      "nodes": [
+                        "_:N906f12340bb842018eb8f948d9971a43"
+                      ]
+                    },
+                    "<https://www.ogc.org/rules/sosa/#testResultNotEmptyNode>": {
+                      "nodes": []
+                    },
+                    "<https://www.ogc.org/rules/sosa/#testCollectionPropertyValuesInterval>": {
+                      "nodes": []
+                    },
                     "<https://www.ogc.org/rules/sosa/#testObservedPropertyConsistent>": {
+                      "nodes": []
+                    },
+                    "<https://www.ogc.org/rules/sosa/#testFeatureOfInterest>": {
+                      "nodes": []
+                    },
+                    "<https://www.ogc.org/rules/sosa/#testCollectionPropertyValues>": {
+                      "nodes": []
+                    },
+                    "<https://www.ogc.org/rules/sosa/#testResult>": {
                       "nodes": []
                     },
                     "<https://www.ogc.org/rules/sosa/#testSimpleResultLiteral>": {
@@ -3186,30 +3081,10 @@
                     },
                     "<https://www.ogc.org/rules/sosa/#testRequiredTime>": {
                       "nodes": []
-                    },
-                    "<https://www.ogc.org/rules/sosa/#testCollectionPropertyValues>": {
-                      "nodes": []
-                    },
-                    "<https://www.ogc.org/rules/sosa/#testResultNotEmptyNode>": {
-                      "nodes": []
-                    },
-                    "<https://www.ogc.org/rules/sosa/#testResult>": {
-                      "nodes": []
-                    },
-                    "<https://www.ogc.org/rules/sosa/#testObservedPropertyPresent>": {
-                      "nodes": [
-                        "_:Nf0e7df2728b3427e9c01bafcea729f5a"
-                      ]
-                    },
-                    "<https://www.ogc.org/rules/sosa/#testCollectionPropertyValuesInterval>": {
-                      "nodes": []
-                    },
-                    "<https://www.ogc.org/rules/sosa/#testFeatureOfInterest>": {
-                      "nodes": []
                     }
                   },
                   "isError": false,
-                  "message": "Focus nodes for _sources/properties/observation/shapes.shacl:\n - Shape <https://www.ogc.org/rules/sosa/#testObservedPropertyConsistent>: *none*\n - Shape <https://www.ogc.org/rules/sosa/#testSimpleResultLiteral>: <file:///github/workspace/frogginess>\n - Shape <https://www.ogc.org/rules/sosa/#testRequiredTime>: *none*\n - Shape <https://www.ogc.org/rules/sosa/#testCollectionPropertyValues>: *none*\n - Shape <https://www.ogc.org/rules/sosa/#testResultNotEmptyNode>: *none*\n - Shape <https://www.ogc.org/rules/sosa/#testResult>: *none*\n - Shape <https://www.ogc.org/rules/sosa/#testObservedPropertyPresent>: _:Nf0e7df2728b3427e9c01bafcea729f5a\n - Shape <https://www.ogc.org/rules/sosa/#testCollectionPropertyValuesInterval>: *none*\n - Shape <https://www.ogc.org/rules/sosa/#testFeatureOfInterest>: *none*\n"
+                  "message": "Focus nodes for _sources/properties/observation/shapes.shacl:\n - Shape <https://www.ogc.org/rules/sosa/#testObservedPropertyPresent>: _:N906f12340bb842018eb8f948d9971a43\n - Shape <https://www.ogc.org/rules/sosa/#testResultNotEmptyNode>: *none*\n - Shape <https://www.ogc.org/rules/sosa/#testCollectionPropertyValuesInterval>: *none*\n - Shape <https://www.ogc.org/rules/sosa/#testObservedPropertyConsistent>: *none*\n - Shape <https://www.ogc.org/rules/sosa/#testFeatureOfInterest>: *none*\n - Shape <https://www.ogc.org/rules/sosa/#testCollectionPropertyValues>: *none*\n - Shape <https://www.ogc.org/rules/sosa/#testResult>: *none*\n - Shape <https://www.ogc.org/rules/sosa/#testSimpleResultLiteral>: <file:///github/workspace/frogginess>\n - Shape <https://www.ogc.org/rules/sosa/#testRequiredTime>: *none*\n"
                 }
               ]
             }
@@ -3337,7 +3212,27 @@
                 {
                   "shaclFile": "_sources/properties/observation/shapes.shacl",
                   "focusNodes": {
+                    "<https://www.ogc.org/rules/sosa/#testObservedPropertyPresent>": {
+                      "nodes": [
+                        "_:N4df8e7027ed2484c872e71e4fce0f835"
+                      ]
+                    },
+                    "<https://www.ogc.org/rules/sosa/#testResultNotEmptyNode>": {
+                      "nodes": []
+                    },
+                    "<https://www.ogc.org/rules/sosa/#testCollectionPropertyValuesInterval>": {
+                      "nodes": []
+                    },
                     "<https://www.ogc.org/rules/sosa/#testObservedPropertyConsistent>": {
+                      "nodes": []
+                    },
+                    "<https://www.ogc.org/rules/sosa/#testFeatureOfInterest>": {
+                      "nodes": []
+                    },
+                    "<https://www.ogc.org/rules/sosa/#testCollectionPropertyValues>": {
+                      "nodes": []
+                    },
+                    "<https://www.ogc.org/rules/sosa/#testResult>": {
                       "nodes": []
                     },
                     "<https://www.ogc.org/rules/sosa/#testSimpleResultLiteral>": {
@@ -3347,30 +3242,10 @@
                     },
                     "<https://www.ogc.org/rules/sosa/#testRequiredTime>": {
                       "nodes": []
-                    },
-                    "<https://www.ogc.org/rules/sosa/#testCollectionPropertyValues>": {
-                      "nodes": []
-                    },
-                    "<https://www.ogc.org/rules/sosa/#testResultNotEmptyNode>": {
-                      "nodes": []
-                    },
-                    "<https://www.ogc.org/rules/sosa/#testResult>": {
-                      "nodes": []
-                    },
-                    "<https://www.ogc.org/rules/sosa/#testObservedPropertyPresent>": {
-                      "nodes": [
-                        "_:N028406d209784da9b3f1f6ec3cc5fcdb"
-                      ]
-                    },
-                    "<https://www.ogc.org/rules/sosa/#testCollectionPropertyValuesInterval>": {
-                      "nodes": []
-                    },
-                    "<https://www.ogc.org/rules/sosa/#testFeatureOfInterest>": {
-                      "nodes": []
                     }
                   },
                   "isError": false,
-                  "message": "Focus nodes for _sources/properties/observation/shapes.shacl:\n - Shape <https://www.ogc.org/rules/sosa/#testObservedPropertyConsistent>: *none*\n - Shape <https://www.ogc.org/rules/sosa/#testSimpleResultLiteral>: 33\n - Shape <https://www.ogc.org/rules/sosa/#testRequiredTime>: *none*\n - Shape <https://www.ogc.org/rules/sosa/#testCollectionPropertyValues>: *none*\n - Shape <https://www.ogc.org/rules/sosa/#testResultNotEmptyNode>: *none*\n - Shape <https://www.ogc.org/rules/sosa/#testResult>: *none*\n - Shape <https://www.ogc.org/rules/sosa/#testObservedPropertyPresent>: _:N028406d209784da9b3f1f6ec3cc5fcdb\n - Shape <https://www.ogc.org/rules/sosa/#testCollectionPropertyValuesInterval>: *none*\n - Shape <https://www.ogc.org/rules/sosa/#testFeatureOfInterest>: *none*\n"
+                  "message": "Focus nodes for _sources/properties/observation/shapes.shacl:\n - Shape <https://www.ogc.org/rules/sosa/#testObservedPropertyPresent>: _:N4df8e7027ed2484c872e71e4fce0f835\n - Shape <https://www.ogc.org/rules/sosa/#testResultNotEmptyNode>: *none*\n - Shape <https://www.ogc.org/rules/sosa/#testCollectionPropertyValuesInterval>: *none*\n - Shape <https://www.ogc.org/rules/sosa/#testObservedPropertyConsistent>: *none*\n - Shape <https://www.ogc.org/rules/sosa/#testFeatureOfInterest>: *none*\n - Shape <https://www.ogc.org/rules/sosa/#testCollectionPropertyValues>: *none*\n - Shape <https://www.ogc.org/rules/sosa/#testResult>: *none*\n - Shape <https://www.ogc.org/rules/sosa/#testSimpleResultLiteral>: 33\n - Shape <https://www.ogc.org/rules/sosa/#testRequiredTime>: *none*\n"
                 }
               ]
             }
@@ -3424,8 +3299,32 @@
                 {
                   "shaclFile": "_sources/properties/observation/shapes.shacl",
                   "focusNodes": {
+                    "<https://www.ogc.org/rules/sosa/#testObservedPropertyPresent>": {
+                      "nodes": [
+                        "_:nbda39d3809dd4cdfa27b9c8eb603d2b2b1"
+                      ]
+                    },
+                    "<https://www.ogc.org/rules/sosa/#testResultNotEmptyNode>": {
+                      "nodes": []
+                    },
+                    "<https://www.ogc.org/rules/sosa/#testCollectionPropertyValuesInterval>": {
+                      "nodes": []
+                    },
                     "<https://www.ogc.org/rules/sosa/#testObservedPropertyConsistent>": {
                       "nodes": []
+                    },
+                    "<https://www.ogc.org/rules/sosa/#testFeatureOfInterest>": {
+                      "nodes": [
+                        "_:nbda39d3809dd4cdfa27b9c8eb603d2b2b1"
+                      ]
+                    },
+                    "<https://www.ogc.org/rules/sosa/#testCollectionPropertyValues>": {
+                      "nodes": []
+                    },
+                    "<https://www.ogc.org/rules/sosa/#testResult>": {
+                      "nodes": [
+                        "_:nbda39d3809dd4cdfa27b9c8eb603d2b2b1"
+                      ]
                     },
                     "<https://www.ogc.org/rules/sosa/#testSimpleResultLiteral>": {
                       "nodes": [
@@ -3434,36 +3333,12 @@
                     },
                     "<https://www.ogc.org/rules/sosa/#testRequiredTime>": {
                       "nodes": [
-                        "_:nd9320daa460942018584f728df31b35bb1"
-                      ]
-                    },
-                    "<https://www.ogc.org/rules/sosa/#testCollectionPropertyValues>": {
-                      "nodes": []
-                    },
-                    "<https://www.ogc.org/rules/sosa/#testResultNotEmptyNode>": {
-                      "nodes": []
-                    },
-                    "<https://www.ogc.org/rules/sosa/#testResult>": {
-                      "nodes": [
-                        "_:nd9320daa460942018584f728df31b35bb1"
-                      ]
-                    },
-                    "<https://www.ogc.org/rules/sosa/#testObservedPropertyPresent>": {
-                      "nodes": [
-                        "_:nd9320daa460942018584f728df31b35bb1"
-                      ]
-                    },
-                    "<https://www.ogc.org/rules/sosa/#testCollectionPropertyValuesInterval>": {
-                      "nodes": []
-                    },
-                    "<https://www.ogc.org/rules/sosa/#testFeatureOfInterest>": {
-                      "nodes": [
-                        "_:nd9320daa460942018584f728df31b35bb1"
+                        "_:nbda39d3809dd4cdfa27b9c8eb603d2b2b1"
                       ]
                     }
                   },
                   "isError": false,
-                  "message": "Focus nodes for _sources/properties/observation/shapes.shacl:\n - Shape <https://www.ogc.org/rules/sosa/#testObservedPropertyConsistent>: *none*\n - Shape <https://www.ogc.org/rules/sosa/#testSimpleResultLiteral>: 33\n - Shape <https://www.ogc.org/rules/sosa/#testRequiredTime>: _:nd9320daa460942018584f728df31b35bb1\n - Shape <https://www.ogc.org/rules/sosa/#testCollectionPropertyValues>: *none*\n - Shape <https://www.ogc.org/rules/sosa/#testResultNotEmptyNode>: *none*\n - Shape <https://www.ogc.org/rules/sosa/#testResult>: _:nd9320daa460942018584f728df31b35bb1\n - Shape <https://www.ogc.org/rules/sosa/#testObservedPropertyPresent>: _:nd9320daa460942018584f728df31b35bb1\n - Shape <https://www.ogc.org/rules/sosa/#testCollectionPropertyValuesInterval>: *none*\n - Shape <https://www.ogc.org/rules/sosa/#testFeatureOfInterest>: _:nd9320daa460942018584f728df31b35bb1\n"
+                  "message": "Focus nodes for _sources/properties/observation/shapes.shacl:\n - Shape <https://www.ogc.org/rules/sosa/#testObservedPropertyPresent>: _:nbda39d3809dd4cdfa27b9c8eb603d2b2b1\n - Shape <https://www.ogc.org/rules/sosa/#testResultNotEmptyNode>: *none*\n - Shape <https://www.ogc.org/rules/sosa/#testCollectionPropertyValuesInterval>: *none*\n - Shape <https://www.ogc.org/rules/sosa/#testObservedPropertyConsistent>: *none*\n - Shape <https://www.ogc.org/rules/sosa/#testFeatureOfInterest>: _:nbda39d3809dd4cdfa27b9c8eb603d2b2b1\n - Shape <https://www.ogc.org/rules/sosa/#testCollectionPropertyValues>: *none*\n - Shape <https://www.ogc.org/rules/sosa/#testResult>: _:nbda39d3809dd4cdfa27b9c8eb603d2b2b1\n - Shape <https://www.ogc.org/rules/sosa/#testSimpleResultLiteral>: 33\n - Shape <https://www.ogc.org/rules/sosa/#testRequiredTime>: _:nbda39d3809dd4cdfa27b9c8eb603d2b2b1\n"
                 }
               ]
             }
@@ -3536,7 +3411,27 @@
                 {
                   "shaclFile": "_sources/properties/observation/shapes.shacl",
                   "focusNodes": {
+                    "<https://www.ogc.org/rules/sosa/#testObservedPropertyPresent>": {
+                      "nodes": [
+                        "_:Nf50ac4c61d9943a8854b709894b0fc0b"
+                      ]
+                    },
+                    "<https://www.ogc.org/rules/sosa/#testResultNotEmptyNode>": {
+                      "nodes": []
+                    },
+                    "<https://www.ogc.org/rules/sosa/#testCollectionPropertyValuesInterval>": {
+                      "nodes": []
+                    },
                     "<https://www.ogc.org/rules/sosa/#testObservedPropertyConsistent>": {
+                      "nodes": []
+                    },
+                    "<https://www.ogc.org/rules/sosa/#testFeatureOfInterest>": {
+                      "nodes": []
+                    },
+                    "<https://www.ogc.org/rules/sosa/#testCollectionPropertyValues>": {
+                      "nodes": []
+                    },
+                    "<https://www.ogc.org/rules/sosa/#testResult>": {
                       "nodes": []
                     },
                     "<https://www.ogc.org/rules/sosa/#testSimpleResultLiteral>": {
@@ -3544,30 +3439,10 @@
                     },
                     "<https://www.ogc.org/rules/sosa/#testRequiredTime>": {
                       "nodes": []
-                    },
-                    "<https://www.ogc.org/rules/sosa/#testCollectionPropertyValues>": {
-                      "nodes": []
-                    },
-                    "<https://www.ogc.org/rules/sosa/#testResultNotEmptyNode>": {
-                      "nodes": []
-                    },
-                    "<https://www.ogc.org/rules/sosa/#testResult>": {
-                      "nodes": []
-                    },
-                    "<https://www.ogc.org/rules/sosa/#testObservedPropertyPresent>": {
-                      "nodes": [
-                        "_:N86ce17e1e3e74c349745d48b7b05c8fa"
-                      ]
-                    },
-                    "<https://www.ogc.org/rules/sosa/#testCollectionPropertyValuesInterval>": {
-                      "nodes": []
-                    },
-                    "<https://www.ogc.org/rules/sosa/#testFeatureOfInterest>": {
-                      "nodes": []
                     }
                   },
                   "isError": false,
-                  "message": "Focus nodes for _sources/properties/observation/shapes.shacl:\n - Shape <https://www.ogc.org/rules/sosa/#testObservedPropertyConsistent>: *none*\n - Shape <https://www.ogc.org/rules/sosa/#testSimpleResultLiteral>: *none*\n - Shape <https://www.ogc.org/rules/sosa/#testRequiredTime>: *none*\n - Shape <https://www.ogc.org/rules/sosa/#testCollectionPropertyValues>: *none*\n - Shape <https://www.ogc.org/rules/sosa/#testResultNotEmptyNode>: *none*\n - Shape <https://www.ogc.org/rules/sosa/#testResult>: *none*\n - Shape <https://www.ogc.org/rules/sosa/#testObservedPropertyPresent>: _:N86ce17e1e3e74c349745d48b7b05c8fa\n - Shape <https://www.ogc.org/rules/sosa/#testCollectionPropertyValuesInterval>: *none*\n - Shape <https://www.ogc.org/rules/sosa/#testFeatureOfInterest>: *none*\n"
+                  "message": "Focus nodes for _sources/properties/observation/shapes.shacl:\n - Shape <https://www.ogc.org/rules/sosa/#testObservedPropertyPresent>: _:Nf50ac4c61d9943a8854b709894b0fc0b\n - Shape <https://www.ogc.org/rules/sosa/#testResultNotEmptyNode>: *none*\n - Shape <https://www.ogc.org/rules/sosa/#testCollectionPropertyValuesInterval>: *none*\n - Shape <https://www.ogc.org/rules/sosa/#testObservedPropertyConsistent>: *none*\n - Shape <https://www.ogc.org/rules/sosa/#testFeatureOfInterest>: *none*\n - Shape <https://www.ogc.org/rules/sosa/#testCollectionPropertyValues>: *none*\n - Shape <https://www.ogc.org/rules/sosa/#testResult>: *none*\n - Shape <https://www.ogc.org/rules/sosa/#testSimpleResultLiteral>: *none*\n - Shape <https://www.ogc.org/rules/sosa/#testRequiredTime>: *none*\n"
                 }
               ]
             }
@@ -3585,7 +3460,7 @@
       "title": "Validation report for ogc.sosa.features.observation - SOSA Observation Feature",
       "bblockName": "SOSA Observation Feature",
       "bblockId": "ogc.sosa.features.observation",
-      "generated": "2026-03-02T12:12:12.899304+00:00",
+      "generated": "2026-03-19T11:34:01.884860+00:00",
       "result": true,
       "items": [
         {
@@ -3655,8 +3530,32 @@
                 {
                   "shaclFile": "_sources/properties/observation/shapes.shacl",
                   "focusNodes": {
+                    "<https://www.ogc.org/rules/sosa/#testObservedPropertyPresent>": {
+                      "nodes": [
+                        "<http://example.com/pop1999>"
+                      ]
+                    },
+                    "<https://www.ogc.org/rules/sosa/#testResultNotEmptyNode>": {
+                      "nodes": []
+                    },
+                    "<https://www.ogc.org/rules/sosa/#testCollectionPropertyValuesInterval>": {
+                      "nodes": []
+                    },
                     "<https://www.ogc.org/rules/sosa/#testObservedPropertyConsistent>": {
                       "nodes": []
+                    },
+                    "<https://www.ogc.org/rules/sosa/#testFeatureOfInterest>": {
+                      "nodes": [
+                        "<http://example.com/pop1999>"
+                      ]
+                    },
+                    "<https://www.ogc.org/rules/sosa/#testCollectionPropertyValues>": {
+                      "nodes": []
+                    },
+                    "<https://www.ogc.org/rules/sosa/#testResult>": {
+                      "nodes": [
+                        "<http://example.com/pop1999>"
+                      ]
                     },
                     "<https://www.ogc.org/rules/sosa/#testSimpleResultLiteral>": {
                       "nodes": [
@@ -3667,34 +3566,10 @@
                       "nodes": [
                         "<http://example.com/pop1999>"
                       ]
-                    },
-                    "<https://www.ogc.org/rules/sosa/#testCollectionPropertyValues>": {
-                      "nodes": []
-                    },
-                    "<https://www.ogc.org/rules/sosa/#testResultNotEmptyNode>": {
-                      "nodes": []
-                    },
-                    "<https://www.ogc.org/rules/sosa/#testResult>": {
-                      "nodes": [
-                        "<http://example.com/pop1999>"
-                      ]
-                    },
-                    "<https://www.ogc.org/rules/sosa/#testObservedPropertyPresent>": {
-                      "nodes": [
-                        "<http://example.com/pop1999>"
-                      ]
-                    },
-                    "<https://www.ogc.org/rules/sosa/#testCollectionPropertyValuesInterval>": {
-                      "nodes": []
-                    },
-                    "<https://www.ogc.org/rules/sosa/#testFeatureOfInterest>": {
-                      "nodes": [
-                        "<http://example.com/pop1999>"
-                      ]
                     }
                   },
                   "isError": false,
-                  "message": "Focus nodes for _sources/properties/observation/shapes.shacl:\n - Shape <https://www.ogc.org/rules/sosa/#testObservedPropertyConsistent>: *none*\n - Shape <https://www.ogc.org/rules/sosa/#testSimpleResultLiteral>: <http://example.com/pop1999>/sosa:hasSimpleResult\n - Shape <https://www.ogc.org/rules/sosa/#testRequiredTime>: <http://example.com/pop1999>\n - Shape <https://www.ogc.org/rules/sosa/#testCollectionPropertyValues>: *none*\n - Shape <https://www.ogc.org/rules/sosa/#testResultNotEmptyNode>: *none*\n - Shape <https://www.ogc.org/rules/sosa/#testResult>: <http://example.com/pop1999>\n - Shape <https://www.ogc.org/rules/sosa/#testObservedPropertyPresent>: <http://example.com/pop1999>\n - Shape <https://www.ogc.org/rules/sosa/#testCollectionPropertyValuesInterval>: *none*\n - Shape <https://www.ogc.org/rules/sosa/#testFeatureOfInterest>: <http://example.com/pop1999>\n"
+                  "message": "Focus nodes for _sources/properties/observation/shapes.shacl:\n - Shape <https://www.ogc.org/rules/sosa/#testObservedPropertyPresent>: <http://example.com/pop1999>\n - Shape <https://www.ogc.org/rules/sosa/#testResultNotEmptyNode>: *none*\n - Shape <https://www.ogc.org/rules/sosa/#testCollectionPropertyValuesInterval>: *none*\n - Shape <https://www.ogc.org/rules/sosa/#testObservedPropertyConsistent>: *none*\n - Shape <https://www.ogc.org/rules/sosa/#testFeatureOfInterest>: <http://example.com/pop1999>\n - Shape <https://www.ogc.org/rules/sosa/#testCollectionPropertyValues>: *none*\n - Shape <https://www.ogc.org/rules/sosa/#testResult>: <http://example.com/pop1999>\n - Shape <https://www.ogc.org/rules/sosa/#testSimpleResultLiteral>: <http://example.com/pop1999>/sosa:hasSimpleResult\n - Shape <https://www.ogc.org/rules/sosa/#testRequiredTime>: <http://example.com/pop1999>\n"
                 }
               ]
             },
@@ -3754,8 +3629,32 @@
                 {
                   "shaclFile": "_sources/properties/observation/shapes.shacl",
                   "focusNodes": {
+                    "<https://www.ogc.org/rules/sosa/#testObservedPropertyPresent>": {
+                      "nodes": [
+                        "_:n03b18deb3caa4c2c9f54e1b7a4580eccb1"
+                      ]
+                    },
+                    "<https://www.ogc.org/rules/sosa/#testResultNotEmptyNode>": {
+                      "nodes": []
+                    },
+                    "<https://www.ogc.org/rules/sosa/#testCollectionPropertyValuesInterval>": {
+                      "nodes": []
+                    },
                     "<https://www.ogc.org/rules/sosa/#testObservedPropertyConsistent>": {
                       "nodes": []
+                    },
+                    "<https://www.ogc.org/rules/sosa/#testFeatureOfInterest>": {
+                      "nodes": [
+                        "_:n03b18deb3caa4c2c9f54e1b7a4580eccb1"
+                      ]
+                    },
+                    "<https://www.ogc.org/rules/sosa/#testCollectionPropertyValues>": {
+                      "nodes": []
+                    },
+                    "<https://www.ogc.org/rules/sosa/#testResult>": {
+                      "nodes": [
+                        "_:n03b18deb3caa4c2c9f54e1b7a4580eccb1"
+                      ]
                     },
                     "<https://www.ogc.org/rules/sosa/#testSimpleResultLiteral>": {
                       "nodes": [
@@ -3764,36 +3663,12 @@
                     },
                     "<https://www.ogc.org/rules/sosa/#testRequiredTime>": {
                       "nodes": [
-                        "_:na42a9e9a5e684bd6a410b834fe6effe3b1"
-                      ]
-                    },
-                    "<https://www.ogc.org/rules/sosa/#testCollectionPropertyValues>": {
-                      "nodes": []
-                    },
-                    "<https://www.ogc.org/rules/sosa/#testResultNotEmptyNode>": {
-                      "nodes": []
-                    },
-                    "<https://www.ogc.org/rules/sosa/#testResult>": {
-                      "nodes": [
-                        "_:na42a9e9a5e684bd6a410b834fe6effe3b1"
-                      ]
-                    },
-                    "<https://www.ogc.org/rules/sosa/#testObservedPropertyPresent>": {
-                      "nodes": [
-                        "_:na42a9e9a5e684bd6a410b834fe6effe3b1"
-                      ]
-                    },
-                    "<https://www.ogc.org/rules/sosa/#testCollectionPropertyValuesInterval>": {
-                      "nodes": []
-                    },
-                    "<https://www.ogc.org/rules/sosa/#testFeatureOfInterest>": {
-                      "nodes": [
-                        "_:na42a9e9a5e684bd6a410b834fe6effe3b1"
+                        "_:n03b18deb3caa4c2c9f54e1b7a4580eccb1"
                       ]
                     }
                   },
                   "isError": false,
-                  "message": "Focus nodes for _sources/properties/observation/shapes.shacl:\n - Shape <https://www.ogc.org/rules/sosa/#testObservedPropertyConsistent>: *none*\n - Shape <https://www.ogc.org/rules/sosa/#testSimpleResultLiteral>: 33\n - Shape <https://www.ogc.org/rules/sosa/#testRequiredTime>: _:na42a9e9a5e684bd6a410b834fe6effe3b1\n - Shape <https://www.ogc.org/rules/sosa/#testCollectionPropertyValues>: *none*\n - Shape <https://www.ogc.org/rules/sosa/#testResultNotEmptyNode>: *none*\n - Shape <https://www.ogc.org/rules/sosa/#testResult>: _:na42a9e9a5e684bd6a410b834fe6effe3b1\n - Shape <https://www.ogc.org/rules/sosa/#testObservedPropertyPresent>: _:na42a9e9a5e684bd6a410b834fe6effe3b1\n - Shape <https://www.ogc.org/rules/sosa/#testCollectionPropertyValuesInterval>: *none*\n - Shape <https://www.ogc.org/rules/sosa/#testFeatureOfInterest>: _:na42a9e9a5e684bd6a410b834fe6effe3b1\n"
+                  "message": "Focus nodes for _sources/properties/observation/shapes.shacl:\n - Shape <https://www.ogc.org/rules/sosa/#testObservedPropertyPresent>: _:n03b18deb3caa4c2c9f54e1b7a4580eccb1\n - Shape <https://www.ogc.org/rules/sosa/#testResultNotEmptyNode>: *none*\n - Shape <https://www.ogc.org/rules/sosa/#testCollectionPropertyValuesInterval>: *none*\n - Shape <https://www.ogc.org/rules/sosa/#testObservedPropertyConsistent>: *none*\n - Shape <https://www.ogc.org/rules/sosa/#testFeatureOfInterest>: _:n03b18deb3caa4c2c9f54e1b7a4580eccb1\n - Shape <https://www.ogc.org/rules/sosa/#testCollectionPropertyValues>: *none*\n - Shape <https://www.ogc.org/rules/sosa/#testResult>: _:n03b18deb3caa4c2c9f54e1b7a4580eccb1\n - Shape <https://www.ogc.org/rules/sosa/#testSimpleResultLiteral>: 33\n - Shape <https://www.ogc.org/rules/sosa/#testRequiredTime>: _:n03b18deb3caa4c2c9f54e1b7a4580eccb1\n"
                 }
               ]
             }
@@ -3866,8 +3741,32 @@
                 {
                   "shaclFile": "_sources/properties/observation/shapes.shacl",
                   "focusNodes": {
+                    "<https://www.ogc.org/rules/sosa/#testObservedPropertyPresent>": {
+                      "nodes": [
+                        "<http://example.com/pop1999>"
+                      ]
+                    },
+                    "<https://www.ogc.org/rules/sosa/#testResultNotEmptyNode>": {
+                      "nodes": []
+                    },
+                    "<https://www.ogc.org/rules/sosa/#testCollectionPropertyValuesInterval>": {
+                      "nodes": []
+                    },
                     "<https://www.ogc.org/rules/sosa/#testObservedPropertyConsistent>": {
                       "nodes": []
+                    },
+                    "<https://www.ogc.org/rules/sosa/#testFeatureOfInterest>": {
+                      "nodes": [
+                        "<http://example.com/pop1999>"
+                      ]
+                    },
+                    "<https://www.ogc.org/rules/sosa/#testCollectionPropertyValues>": {
+                      "nodes": []
+                    },
+                    "<https://www.ogc.org/rules/sosa/#testResult>": {
+                      "nodes": [
+                        "<http://example.com/pop1999>"
+                      ]
                     },
                     "<https://www.ogc.org/rules/sosa/#testSimpleResultLiteral>": {
                       "nodes": []
@@ -3876,34 +3775,10 @@
                       "nodes": [
                         "<http://example.com/pop1999>"
                       ]
-                    },
-                    "<https://www.ogc.org/rules/sosa/#testCollectionPropertyValues>": {
-                      "nodes": []
-                    },
-                    "<https://www.ogc.org/rules/sosa/#testResultNotEmptyNode>": {
-                      "nodes": []
-                    },
-                    "<https://www.ogc.org/rules/sosa/#testResult>": {
-                      "nodes": [
-                        "<http://example.com/pop1999>"
-                      ]
-                    },
-                    "<https://www.ogc.org/rules/sosa/#testObservedPropertyPresent>": {
-                      "nodes": [
-                        "<http://example.com/pop1999>"
-                      ]
-                    },
-                    "<https://www.ogc.org/rules/sosa/#testCollectionPropertyValuesInterval>": {
-                      "nodes": []
-                    },
-                    "<https://www.ogc.org/rules/sosa/#testFeatureOfInterest>": {
-                      "nodes": [
-                        "<http://example.com/pop1999>"
-                      ]
                     }
                   },
                   "isError": false,
-                  "message": "Focus nodes for _sources/properties/observation/shapes.shacl:\n - Shape <https://www.ogc.org/rules/sosa/#testObservedPropertyConsistent>: *none*\n - Shape <https://www.ogc.org/rules/sosa/#testSimpleResultLiteral>: *none*\n - Shape <https://www.ogc.org/rules/sosa/#testRequiredTime>: <http://example.com/pop1999>\n - Shape <https://www.ogc.org/rules/sosa/#testCollectionPropertyValues>: *none*\n - Shape <https://www.ogc.org/rules/sosa/#testResultNotEmptyNode>: *none*\n - Shape <https://www.ogc.org/rules/sosa/#testResult>: <http://example.com/pop1999>\n - Shape <https://www.ogc.org/rules/sosa/#testObservedPropertyPresent>: <http://example.com/pop1999>\n - Shape <https://www.ogc.org/rules/sosa/#testCollectionPropertyValuesInterval>: *none*\n - Shape <https://www.ogc.org/rules/sosa/#testFeatureOfInterest>: <http://example.com/pop1999>\n"
+                  "message": "Focus nodes for _sources/properties/observation/shapes.shacl:\n - Shape <https://www.ogc.org/rules/sosa/#testObservedPropertyPresent>: <http://example.com/pop1999>\n - Shape <https://www.ogc.org/rules/sosa/#testResultNotEmptyNode>: *none*\n - Shape <https://www.ogc.org/rules/sosa/#testCollectionPropertyValuesInterval>: *none*\n - Shape <https://www.ogc.org/rules/sosa/#testObservedPropertyConsistent>: *none*\n - Shape <https://www.ogc.org/rules/sosa/#testFeatureOfInterest>: <http://example.com/pop1999>\n - Shape <https://www.ogc.org/rules/sosa/#testCollectionPropertyValues>: *none*\n - Shape <https://www.ogc.org/rules/sosa/#testResult>: <http://example.com/pop1999>\n - Shape <https://www.ogc.org/rules/sosa/#testSimpleResultLiteral>: *none*\n - Shape <https://www.ogc.org/rules/sosa/#testRequiredTime>: <http://example.com/pop1999>\n"
                 }
               ]
             },
@@ -3931,7 +3806,7 @@
       "title": "Validation report for ogc.sosa.properties.observationCollection - ObservationCollection Properties",
       "bblockName": "ObservationCollection Properties",
       "bblockId": "ogc.sosa.properties.observationCollection",
-      "generated": "2026-03-02T12:12:13.881154+00:00",
+      "generated": "2026-03-19T11:34:02.840742+00:00",
       "result": true,
       "items": [
         {
@@ -3968,9 +3843,38 @@
                 {
                   "shaclFile": "_sources/properties/observation/shapes.shacl",
                   "focusNodes": {
+                    "<https://www.ogc.org/rules/sosa/#testObservedPropertyPresent>": {
+                      "nodes": [
+                        "<http://www.example.com/sosa/something>",
+                        "<http://www.example.com/sosa/pop1999>"
+                      ]
+                    },
+                    "<https://www.ogc.org/rules/sosa/#testResultNotEmptyNode>": {
+                      "nodes": []
+                    },
+                    "<https://www.ogc.org/rules/sosa/#testCollectionPropertyValuesInterval>": {
+                      "nodes": [
+                        "<http://www.example.com/sosa/c1>"
+                      ]
+                    },
                     "<https://www.ogc.org/rules/sosa/#testObservedPropertyConsistent>": {
                       "nodes": [
                         "<http://www.example.com/sosa/c1>"
+                      ]
+                    },
+                    "<https://www.ogc.org/rules/sosa/#testFeatureOfInterest>": {
+                      "nodes": [
+                        "<http://www.example.com/sosa/something>"
+                      ]
+                    },
+                    "<https://www.ogc.org/rules/sosa/#testCollectionPropertyValues>": {
+                      "nodes": [
+                        "<http://www.example.com/sosa/c1>"
+                      ]
+                    },
+                    "<https://www.ogc.org/rules/sosa/#testResult>": {
+                      "nodes": [
+                        "<http://www.example.com/sosa/something>"
                       ]
                     },
                     "<https://www.ogc.org/rules/sosa/#testSimpleResultLiteral>": {
@@ -3982,39 +3886,10 @@
                       "nodes": [
                         "<http://www.example.com/sosa/something>"
                       ]
-                    },
-                    "<https://www.ogc.org/rules/sosa/#testCollectionPropertyValues>": {
-                      "nodes": [
-                        "<http://www.example.com/sosa/c1>"
-                      ]
-                    },
-                    "<https://www.ogc.org/rules/sosa/#testResultNotEmptyNode>": {
-                      "nodes": []
-                    },
-                    "<https://www.ogc.org/rules/sosa/#testResult>": {
-                      "nodes": [
-                        "<http://www.example.com/sosa/something>"
-                      ]
-                    },
-                    "<https://www.ogc.org/rules/sosa/#testObservedPropertyPresent>": {
-                      "nodes": [
-                        "<http://www.example.com/sosa/something>",
-                        "<http://www.example.com/sosa/pop1999>"
-                      ]
-                    },
-                    "<https://www.ogc.org/rules/sosa/#testCollectionPropertyValuesInterval>": {
-                      "nodes": [
-                        "<http://www.example.com/sosa/c1>"
-                      ]
-                    },
-                    "<https://www.ogc.org/rules/sosa/#testFeatureOfInterest>": {
-                      "nodes": [
-                        "<http://www.example.com/sosa/something>"
-                      ]
                     }
                   },
                   "isError": false,
-                  "message": "Focus nodes for _sources/properties/observation/shapes.shacl:\n - Shape <https://www.ogc.org/rules/sosa/#testObservedPropertyConsistent>: <http://www.example.com/sosa/c1>\n - Shape <https://www.ogc.org/rules/sosa/#testSimpleResultLiteral>: <http://www.example.com/sosa/pop1999>/sosa:hasSimpleResult\n - Shape <https://www.ogc.org/rules/sosa/#testRequiredTime>: <http://www.example.com/sosa/something>\n - Shape <https://www.ogc.org/rules/sosa/#testCollectionPropertyValues>: <http://www.example.com/sosa/c1>\n - Shape <https://www.ogc.org/rules/sosa/#testResultNotEmptyNode>: *none*\n - Shape <https://www.ogc.org/rules/sosa/#testResult>: <http://www.example.com/sosa/something>\n - Shape <https://www.ogc.org/rules/sosa/#testObservedPropertyPresent>: <http://www.example.com/sosa/something>,<http://www.example.com/sosa/pop1999>\n - Shape <https://www.ogc.org/rules/sosa/#testCollectionPropertyValuesInterval>: <http://www.example.com/sosa/c1>\n - Shape <https://www.ogc.org/rules/sosa/#testFeatureOfInterest>: <http://www.example.com/sosa/something>\n"
+                  "message": "Focus nodes for _sources/properties/observation/shapes.shacl:\n - Shape <https://www.ogc.org/rules/sosa/#testObservedPropertyPresent>: <http://www.example.com/sosa/something>,<http://www.example.com/sosa/pop1999>\n - Shape <https://www.ogc.org/rules/sosa/#testResultNotEmptyNode>: *none*\n - Shape <https://www.ogc.org/rules/sosa/#testCollectionPropertyValuesInterval>: <http://www.example.com/sosa/c1>\n - Shape <https://www.ogc.org/rules/sosa/#testObservedPropertyConsistent>: <http://www.example.com/sosa/c1>\n - Shape <https://www.ogc.org/rules/sosa/#testFeatureOfInterest>: <http://www.example.com/sosa/something>\n - Shape <https://www.ogc.org/rules/sosa/#testCollectionPropertyValues>: <http://www.example.com/sosa/c1>\n - Shape <https://www.ogc.org/rules/sosa/#testResult>: <http://www.example.com/sosa/something>\n - Shape <https://www.ogc.org/rules/sosa/#testSimpleResultLiteral>: <http://www.example.com/sosa/pop1999>/sosa:hasSimpleResult\n - Shape <https://www.ogc.org/rules/sosa/#testRequiredTime>: <http://www.example.com/sosa/something>\n"
                 }
               ]
             }
@@ -4091,8 +3966,36 @@
                 {
                   "shaclFile": "_sources/properties/observation/shapes.shacl",
                   "focusNodes": {
+                    "<https://www.ogc.org/rules/sosa/#testObservedPropertyPresent>": {
+                      "nodes": [
+                        "<http://example.com/a1>"
+                      ]
+                    },
+                    "<https://www.ogc.org/rules/sosa/#testResultNotEmptyNode>": {
+                      "nodes": []
+                    },
+                    "<https://www.ogc.org/rules/sosa/#testCollectionPropertyValuesInterval>": {
+                      "nodes": [
+                        "<http://example.com/myObsCollection>"
+                      ]
+                    },
                     "<https://www.ogc.org/rules/sosa/#testObservedPropertyConsistent>": {
                       "nodes": []
+                    },
+                    "<https://www.ogc.org/rules/sosa/#testFeatureOfInterest>": {
+                      "nodes": [
+                        "<http://example.com/a1>"
+                      ]
+                    },
+                    "<https://www.ogc.org/rules/sosa/#testCollectionPropertyValues>": {
+                      "nodes": [
+                        "<http://example.com/myObsCollection>"
+                      ]
+                    },
+                    "<https://www.ogc.org/rules/sosa/#testResult>": {
+                      "nodes": [
+                        "<http://example.com/a1>"
+                      ]
                     },
                     "<https://www.ogc.org/rules/sosa/#testSimpleResultLiteral>": {
                       "nodes": [
@@ -4103,38 +4006,10 @@
                       "nodes": [
                         "<http://example.com/a1>"
                       ]
-                    },
-                    "<https://www.ogc.org/rules/sosa/#testCollectionPropertyValues>": {
-                      "nodes": [
-                        "<http://example.com/myObsCollection>"
-                      ]
-                    },
-                    "<https://www.ogc.org/rules/sosa/#testResultNotEmptyNode>": {
-                      "nodes": []
-                    },
-                    "<https://www.ogc.org/rules/sosa/#testResult>": {
-                      "nodes": [
-                        "<http://example.com/a1>"
-                      ]
-                    },
-                    "<https://www.ogc.org/rules/sosa/#testObservedPropertyPresent>": {
-                      "nodes": [
-                        "<http://example.com/a1>"
-                      ]
-                    },
-                    "<https://www.ogc.org/rules/sosa/#testCollectionPropertyValuesInterval>": {
-                      "nodes": [
-                        "<http://example.com/myObsCollection>"
-                      ]
-                    },
-                    "<https://www.ogc.org/rules/sosa/#testFeatureOfInterest>": {
-                      "nodes": [
-                        "<http://example.com/a1>"
-                      ]
                     }
                   },
                   "isError": false,
-                  "message": "Focus nodes for _sources/properties/observation/shapes.shacl:\n - Shape <https://www.ogc.org/rules/sosa/#testObservedPropertyConsistent>: *none*\n - Shape <https://www.ogc.org/rules/sosa/#testSimpleResultLiteral>: <http://example.com/a1>/sosa:hasSimpleResult\n - Shape <https://www.ogc.org/rules/sosa/#testRequiredTime>: <http://example.com/a1>\n - Shape <https://www.ogc.org/rules/sosa/#testCollectionPropertyValues>: <http://example.com/myObsCollection>\n - Shape <https://www.ogc.org/rules/sosa/#testResultNotEmptyNode>: *none*\n - Shape <https://www.ogc.org/rules/sosa/#testResult>: <http://example.com/a1>\n - Shape <https://www.ogc.org/rules/sosa/#testObservedPropertyPresent>: <http://example.com/a1>\n - Shape <https://www.ogc.org/rules/sosa/#testCollectionPropertyValuesInterval>: <http://example.com/myObsCollection>\n - Shape <https://www.ogc.org/rules/sosa/#testFeatureOfInterest>: <http://example.com/a1>\n"
+                  "message": "Focus nodes for _sources/properties/observation/shapes.shacl:\n - Shape <https://www.ogc.org/rules/sosa/#testObservedPropertyPresent>: <http://example.com/a1>\n - Shape <https://www.ogc.org/rules/sosa/#testResultNotEmptyNode>: *none*\n - Shape <https://www.ogc.org/rules/sosa/#testCollectionPropertyValuesInterval>: <http://example.com/myObsCollection>\n - Shape <https://www.ogc.org/rules/sosa/#testObservedPropertyConsistent>: *none*\n - Shape <https://www.ogc.org/rules/sosa/#testFeatureOfInterest>: <http://example.com/a1>\n - Shape <https://www.ogc.org/rules/sosa/#testCollectionPropertyValues>: <http://example.com/myObsCollection>\n - Shape <https://www.ogc.org/rules/sosa/#testResult>: <http://example.com/a1>\n - Shape <https://www.ogc.org/rules/sosa/#testSimpleResultLiteral>: <http://example.com/a1>/sosa:hasSimpleResult\n - Shape <https://www.ogc.org/rules/sosa/#testRequiredTime>: <http://example.com/a1>\n"
                 }
               ]
             }
@@ -4184,9 +4059,37 @@
                 {
                   "shaclFile": "_sources/properties/observation/shapes.shacl",
                   "focusNodes": {
+                    "<https://www.ogc.org/rules/sosa/#testObservedPropertyPresent>": {
+                      "nodes": [
+                        "eg:a1"
+                      ]
+                    },
+                    "<https://www.ogc.org/rules/sosa/#testResultNotEmptyNode>": {
+                      "nodes": []
+                    },
+                    "<https://www.ogc.org/rules/sosa/#testCollectionPropertyValuesInterval>": {
+                      "nodes": [
+                        "eg:c1"
+                      ]
+                    },
                     "<https://www.ogc.org/rules/sosa/#testObservedPropertyConsistent>": {
                       "nodes": [
                         "eg:c1"
+                      ]
+                    },
+                    "<https://www.ogc.org/rules/sosa/#testFeatureOfInterest>": {
+                      "nodes": [
+                        "eg:a1"
+                      ]
+                    },
+                    "<https://www.ogc.org/rules/sosa/#testCollectionPropertyValues>": {
+                      "nodes": [
+                        "eg:c1"
+                      ]
+                    },
+                    "<https://www.ogc.org/rules/sosa/#testResult>": {
+                      "nodes": [
+                        "eg:a1"
                       ]
                     },
                     "<https://www.ogc.org/rules/sosa/#testSimpleResultLiteral>": {
@@ -4198,38 +4101,10 @@
                       "nodes": [
                         "eg:a1"
                       ]
-                    },
-                    "<https://www.ogc.org/rules/sosa/#testCollectionPropertyValues>": {
-                      "nodes": [
-                        "eg:c1"
-                      ]
-                    },
-                    "<https://www.ogc.org/rules/sosa/#testResultNotEmptyNode>": {
-                      "nodes": []
-                    },
-                    "<https://www.ogc.org/rules/sosa/#testResult>": {
-                      "nodes": [
-                        "eg:a1"
-                      ]
-                    },
-                    "<https://www.ogc.org/rules/sosa/#testObservedPropertyPresent>": {
-                      "nodes": [
-                        "eg:a1"
-                      ]
-                    },
-                    "<https://www.ogc.org/rules/sosa/#testCollectionPropertyValuesInterval>": {
-                      "nodes": [
-                        "eg:c1"
-                      ]
-                    },
-                    "<https://www.ogc.org/rules/sosa/#testFeatureOfInterest>": {
-                      "nodes": [
-                        "eg:a1"
-                      ]
                     }
                   },
                   "isError": false,
-                  "message": "Focus nodes for _sources/properties/observation/shapes.shacl:\n - Shape <https://www.ogc.org/rules/sosa/#testObservedPropertyConsistent>: eg:c1\n - Shape <https://www.ogc.org/rules/sosa/#testSimpleResultLiteral>: eg:a1/sosa:hasSimpleResult\n - Shape <https://www.ogc.org/rules/sosa/#testRequiredTime>: eg:a1\n - Shape <https://www.ogc.org/rules/sosa/#testCollectionPropertyValues>: eg:c1\n - Shape <https://www.ogc.org/rules/sosa/#testResultNotEmptyNode>: *none*\n - Shape <https://www.ogc.org/rules/sosa/#testResult>: eg:a1\n - Shape <https://www.ogc.org/rules/sosa/#testObservedPropertyPresent>: eg:a1\n - Shape <https://www.ogc.org/rules/sosa/#testCollectionPropertyValuesInterval>: eg:c1\n - Shape <https://www.ogc.org/rules/sosa/#testFeatureOfInterest>: eg:a1\n"
+                  "message": "Focus nodes for _sources/properties/observation/shapes.shacl:\n - Shape <https://www.ogc.org/rules/sosa/#testObservedPropertyPresent>: eg:a1\n - Shape <https://www.ogc.org/rules/sosa/#testResultNotEmptyNode>: *none*\n - Shape <https://www.ogc.org/rules/sosa/#testCollectionPropertyValuesInterval>: eg:c1\n - Shape <https://www.ogc.org/rules/sosa/#testObservedPropertyConsistent>: eg:c1\n - Shape <https://www.ogc.org/rules/sosa/#testFeatureOfInterest>: eg:a1\n - Shape <https://www.ogc.org/rules/sosa/#testCollectionPropertyValues>: eg:c1\n - Shape <https://www.ogc.org/rules/sosa/#testResult>: eg:a1\n - Shape <https://www.ogc.org/rules/sosa/#testSimpleResultLiteral>: eg:a1/sosa:hasSimpleResult\n - Shape <https://www.ogc.org/rules/sosa/#testRequiredTime>: eg:a1\n"
                 }
               ]
             }
@@ -4247,7 +4122,7 @@
       "title": "Validation report for ogc.sosa.features.observationCollection - SOSA ObservationCollection Feature",
       "bblockName": "SOSA ObservationCollection Feature",
       "bblockId": "ogc.sosa.features.observationCollection",
-      "generated": "2026-03-02T12:12:17.063426+00:00",
+      "generated": "2026-03-19T11:34:06.368514+00:00",
       "result": true,
       "items": [
         {
@@ -4319,17 +4194,41 @@
                 {
                   "op": "shacl-report",
                   "shaclFile": "_sources/properties/observation/shapes.shacl",
-                  "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix sosa: <http://www.w3.org/ns/sosa/> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms false ;\n    sh:result [ a sh:ValidationResult ;\n            sh:focusNode <file:///github/workspace/pop1999> ;\n            sh:resultMessage \"sosa:observedProperty is required\" ;\n            sh:resultPath sosa:observedProperty ;\n            sh:resultSeverity sh:Violation ;\n            sh:sourceConstraint [ sh:message \"sosa:observedProperty is required\" ;\n                    sh:select \"\"\"\n            PREFIX sh: <http://www.w3.org/ns/shacl#>\n            PREFIX sosa: <http://www.w3.org/ns/sosa/>\n            PREFIX geojson: <https://purl.org/geojson/vocab#>\n            SELECT $this (sosa:observedProperty as ?path) (GROUP_CONCAT(?prop; separator=';') AS ?value)\n            WHERE {\n                OPTIONAL { $this sosa:observedProperty ?prop .\n                 $this (sosa:hasResult|sosa:hasSimpleResult) ?result_so_observation }\n                OPTIONAL { ?collection (sosa:hasMember|geojson:features)+ $this ; sosa:observedProperty ?prop }\n            }\n            GROUP BY ?prop\n            HAVING (count(?prop) < 1)\n        \"\"\" ] ;\n            sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;\n            sh:sourceShape <https://www.ogc.org/rules/sosa/#testObservedPropertyPresent> ;\n            sh:value \"\" ],\n        [ a sh:ValidationResult ;\n            sh:focusNode <file:///github/workspace/c1> ;\n            sh:resultMessage \"Collection members must match sosa:observedProperty if present\" ;\n            sh:resultPath sosa:observedProperty ;\n            sh:resultSeverity sh:Violation ;\n            sh:sourceConstraint [ sh:message \"Collection members must match sosa:observedProperty if present\" ;\n                    sh:select \"\"\"\n            PREFIX sh: <http://www.w3.org/ns/shacl#>\n            PREFIX sosa: <http://www.w3.org/ns/sosa/>\n            PREFIX geojson: <https://purl.org/geojson/vocab#>\n            SELECT $this (sosa:observedProperty as ?path) (GROUP_CONCAT(?prop; separator=';') AS ?value)\n             WHERE {\n                OPTIONAL { $this sosa:observedProperty ?prop }\n                OPTIONAL { $this (sosa:hasMember|geojson:features)+ ?obs .\n                    ?obs  sosa:observedProperty ?prop }\n            }\n            GROUP BY ?prop\n            HAVING (count(?prop) < 1)\n        \"\"\" ] ;\n            sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;\n            sh:sourceShape <https://www.ogc.org/rules/sosa/#testObservedPropertyConsistent> ;\n            sh:value \"\" ] .\n\n",
+                  "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix sosa: <http://www.w3.org/ns/sosa/> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms false ;\n    sh:result [ a sh:ValidationResult ;\n            sh:focusNode <file:///github/workspace/c1> ;\n            sh:resultMessage \"Collection members must match sosa:observedProperty if present\" ;\n            sh:resultPath sosa:observedProperty ;\n            sh:resultSeverity sh:Violation ;\n            sh:sourceConstraint [ sh:message \"Collection members must match sosa:observedProperty if present\" ;\n                    sh:select \"\"\"\n            PREFIX sh: <http://www.w3.org/ns/shacl#>\n            PREFIX sosa: <http://www.w3.org/ns/sosa/>\n            PREFIX geojson: <https://purl.org/geojson/vocab#>\n            SELECT $this (sosa:observedProperty as ?path) (GROUP_CONCAT(?prop; separator=';') AS ?value)\n             WHERE {\n                OPTIONAL { $this sosa:observedProperty ?prop }\n                OPTIONAL { $this (sosa:hasMember|geojson:features)+ ?obs .\n                    ?obs  sosa:observedProperty ?prop }\n            }\n            GROUP BY ?prop\n            HAVING (count(?prop) < 1)\n        \"\"\" ] ;\n            sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;\n            sh:sourceShape <https://www.ogc.org/rules/sosa/#testObservedPropertyConsistent> ;\n            sh:value \"\" ],\n        [ a sh:ValidationResult ;\n            sh:focusNode <file:///github/workspace/pop1999> ;\n            sh:resultMessage \"sosa:observedProperty is required\" ;\n            sh:resultPath sosa:observedProperty ;\n            sh:resultSeverity sh:Violation ;\n            sh:sourceConstraint [ sh:message \"sosa:observedProperty is required\" ;\n                    sh:select \"\"\"\n            PREFIX sh: <http://www.w3.org/ns/shacl#>\n            PREFIX sosa: <http://www.w3.org/ns/sosa/>\n            PREFIX geojson: <https://purl.org/geojson/vocab#>\n            SELECT $this (sosa:observedProperty as ?path) (GROUP_CONCAT(?prop; separator=';') AS ?value)\n            WHERE {\n                OPTIONAL { $this sosa:observedProperty ?prop .\n                 $this (sosa:hasResult|sosa:hasSimpleResult) ?result_so_observation }\n                OPTIONAL { ?collection (sosa:hasMember|geojson:features)+ $this ; sosa:observedProperty ?prop }\n            }\n            GROUP BY ?prop\n            HAVING (count(?prop) < 1)\n        \"\"\" ] ;\n            sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;\n            sh:sourceShape <https://www.ogc.org/rules/sosa/#testObservedPropertyPresent> ;\n            sh:value \"\" ] .\n\n",
                   "isError": true,
-                  "message": "Validation result for _sources/properties/observation/shapes.shacl:\n  Validation Report\n  Conforms: False\n  Results (2):\n  Constraint Violation in SPARQLConstraintComponent (http://www.w3.org/ns/shacl#SPARQLConstraintComponent):\n  \tSeverity: sh:Violation\n  \tSource Shape: <https://www.ogc.org/rules/sosa/#testObservedPropertyConsistent>\n  \tFocus Node: <file:///github/workspace/c1>\n  \tValue Node: Literal(\"\")\n  \tResult Path: sosa:observedProperty\n  \tSource Constraint: [ sh:message Literal(\"Collection members must match sosa:observedProperty if present\") ; sh:select Literal(\"\n              PREFIX sh: <http://www.w3.org/ns/shacl#>\n              PREFIX sosa: <http://www.w3.org/ns/sosa/>\n              PREFIX geojson: <https://purl.org/geojson/vocab#>\n              SELECT $this (sosa:observedProperty as ?path) (GROUP_CONCAT(?prop; separator=';') AS ?value)\n               WHERE {\n                  OPTIONAL { $this sosa:observedProperty ?prop }\n                  OPTIONAL { $this (sosa:hasMember|geojson:features)+ ?obs .\n                      ?obs  sosa:observedProperty ?prop }\n              }\n              GROUP BY ?prop\n              HAVING (count(?prop) < 1)\n          \") ]\n  \tMessage: Collection members must match sosa:observedProperty if present\n  Constraint Violation in SPARQLConstraintComponent (http://www.w3.org/ns/shacl#SPARQLConstraintComponent):\n  \tSeverity: sh:Violation\n  \tSource Shape: <https://www.ogc.org/rules/sosa/#testObservedPropertyPresent>\n  \tFocus Node: <file:///github/workspace/pop1999>\n  \tValue Node: Literal(\"\")\n  \tResult Path: sosa:observedProperty\n  \tSource Constraint: [ sh:message Literal(\"sosa:observedProperty is required\") ; sh:select Literal(\"\n              PREFIX sh: <http://www.w3.org/ns/shacl#>\n              PREFIX sosa: <http://www.w3.org/ns/sosa/>\n              PREFIX geojson: <https://purl.org/geojson/vocab#>\n              SELECT $this (sosa:observedProperty as ?path) (GROUP_CONCAT(?prop; separator=';') AS ?value)\n              WHERE {\n                  OPTIONAL { $this sosa:observedProperty ?prop .\n                   $this (sosa:hasResult|sosa:hasSimpleResult) ?result_so_observation }\n                  OPTIONAL { ?collection (sosa:hasMember|geojson:features)+ $this ; sosa:observedProperty ?prop }\n              }\n              GROUP BY ?prop\n              HAVING (count(?prop) < 1)\n          \") ]\n  \tMessage: sosa:observedProperty is required\n  "
+                  "message": "Validation result for _sources/properties/observation/shapes.shacl:\n  Validation Report\n  Conforms: False\n  Results (2):\n  Constraint Violation in SPARQLConstraintComponent (http://www.w3.org/ns/shacl#SPARQLConstraintComponent):\n  \tSeverity: sh:Violation\n  \tSource Shape: <https://www.ogc.org/rules/sosa/#testObservedPropertyPresent>\n  \tFocus Node: <file:///github/workspace/pop1999>\n  \tValue Node: Literal(\"\")\n  \tResult Path: sosa:observedProperty\n  \tSource Constraint: [ sh:message Literal(\"sosa:observedProperty is required\") ; sh:select Literal(\"\n              PREFIX sh: <http://www.w3.org/ns/shacl#>\n              PREFIX sosa: <http://www.w3.org/ns/sosa/>\n              PREFIX geojson: <https://purl.org/geojson/vocab#>\n              SELECT $this (sosa:observedProperty as ?path) (GROUP_CONCAT(?prop; separator=';') AS ?value)\n              WHERE {\n                  OPTIONAL { $this sosa:observedProperty ?prop .\n                   $this (sosa:hasResult|sosa:hasSimpleResult) ?result_so_observation }\n                  OPTIONAL { ?collection (sosa:hasMember|geojson:features)+ $this ; sosa:observedProperty ?prop }\n              }\n              GROUP BY ?prop\n              HAVING (count(?prop) < 1)\n          \") ]\n  \tMessage: sosa:observedProperty is required\n  Constraint Violation in SPARQLConstraintComponent (http://www.w3.org/ns/shacl#SPARQLConstraintComponent):\n  \tSeverity: sh:Violation\n  \tSource Shape: <https://www.ogc.org/rules/sosa/#testObservedPropertyConsistent>\n  \tFocus Node: <file:///github/workspace/c1>\n  \tValue Node: Literal(\"\")\n  \tResult Path: sosa:observedProperty\n  \tSource Constraint: [ sh:message Literal(\"Collection members must match sosa:observedProperty if present\") ; sh:select Literal(\"\n              PREFIX sh: <http://www.w3.org/ns/shacl#>\n              PREFIX sosa: <http://www.w3.org/ns/sosa/>\n              PREFIX geojson: <https://purl.org/geojson/vocab#>\n              SELECT $this (sosa:observedProperty as ?path) (GROUP_CONCAT(?prop; separator=';') AS ?value)\n               WHERE {\n                  OPTIONAL { $this sosa:observedProperty ?prop }\n                  OPTIONAL { $this (sosa:hasMember|geojson:features)+ ?obs .\n                      ?obs  sosa:observedProperty ?prop }\n              }\n              GROUP BY ?prop\n              HAVING (count(?prop) < 1)\n          \") ]\n  \tMessage: Collection members must match sosa:observedProperty if present\n  "
                 },
                 {
                   "shaclFile": "_sources/properties/observation/shapes.shacl",
                   "focusNodes": {
+                    "<https://www.ogc.org/rules/sosa/#testObservedPropertyPresent>": {
+                      "nodes": [
+                        "<file:///github/workspace/pop1999>"
+                      ]
+                    },
+                    "<https://www.ogc.org/rules/sosa/#testResultNotEmptyNode>": {
+                      "nodes": []
+                    },
+                    "<https://www.ogc.org/rules/sosa/#testCollectionPropertyValuesInterval>": {
+                      "nodes": [
+                        "<file:///github/workspace/c1>"
+                      ]
+                    },
                     "<https://www.ogc.org/rules/sosa/#testObservedPropertyConsistent>": {
                       "nodes": [
                         "<file:///github/workspace/c1>"
                       ]
+                    },
+                    "<https://www.ogc.org/rules/sosa/#testFeatureOfInterest>": {
+                      "nodes": []
+                    },
+                    "<https://www.ogc.org/rules/sosa/#testCollectionPropertyValues>": {
+                      "nodes": [
+                        "<file:///github/workspace/c1>"
+                      ]
+                    },
+                    "<https://www.ogc.org/rules/sosa/#testResult>": {
+                      "nodes": []
                     },
                     "<https://www.ogc.org/rules/sosa/#testSimpleResultLiteral>": {
                       "nodes": [
@@ -4338,34 +4237,10 @@
                     },
                     "<https://www.ogc.org/rules/sosa/#testRequiredTime>": {
                       "nodes": []
-                    },
-                    "<https://www.ogc.org/rules/sosa/#testCollectionPropertyValues>": {
-                      "nodes": [
-                        "<file:///github/workspace/c1>"
-                      ]
-                    },
-                    "<https://www.ogc.org/rules/sosa/#testResultNotEmptyNode>": {
-                      "nodes": []
-                    },
-                    "<https://www.ogc.org/rules/sosa/#testResult>": {
-                      "nodes": []
-                    },
-                    "<https://www.ogc.org/rules/sosa/#testObservedPropertyPresent>": {
-                      "nodes": [
-                        "<file:///github/workspace/pop1999>"
-                      ]
-                    },
-                    "<https://www.ogc.org/rules/sosa/#testCollectionPropertyValuesInterval>": {
-                      "nodes": [
-                        "<file:///github/workspace/c1>"
-                      ]
-                    },
-                    "<https://www.ogc.org/rules/sosa/#testFeatureOfInterest>": {
-                      "nodes": []
                     }
                   },
                   "isError": false,
-                  "message": "Focus nodes for _sources/properties/observation/shapes.shacl:\n - Shape <https://www.ogc.org/rules/sosa/#testObservedPropertyConsistent>: <file:///github/workspace/c1>\n - Shape <https://www.ogc.org/rules/sosa/#testSimpleResultLiteral>: <file:///github/workspace/pop1999>/sosa:hasSimpleResult\n - Shape <https://www.ogc.org/rules/sosa/#testRequiredTime>: *none*\n - Shape <https://www.ogc.org/rules/sosa/#testCollectionPropertyValues>: <file:///github/workspace/c1>\n - Shape <https://www.ogc.org/rules/sosa/#testResultNotEmptyNode>: *none*\n - Shape <https://www.ogc.org/rules/sosa/#testResult>: *none*\n - Shape <https://www.ogc.org/rules/sosa/#testObservedPropertyPresent>: <file:///github/workspace/pop1999>\n - Shape <https://www.ogc.org/rules/sosa/#testCollectionPropertyValuesInterval>: <file:///github/workspace/c1>\n - Shape <https://www.ogc.org/rules/sosa/#testFeatureOfInterest>: *none*\n"
+                  "message": "Focus nodes for _sources/properties/observation/shapes.shacl:\n - Shape <https://www.ogc.org/rules/sosa/#testObservedPropertyPresent>: <file:///github/workspace/pop1999>\n - Shape <https://www.ogc.org/rules/sosa/#testResultNotEmptyNode>: *none*\n - Shape <https://www.ogc.org/rules/sosa/#testCollectionPropertyValuesInterval>: <file:///github/workspace/c1>\n - Shape <https://www.ogc.org/rules/sosa/#testObservedPropertyConsistent>: <file:///github/workspace/c1>\n - Shape <https://www.ogc.org/rules/sosa/#testFeatureOfInterest>: *none*\n - Shape <https://www.ogc.org/rules/sosa/#testCollectionPropertyValues>: <file:///github/workspace/c1>\n - Shape <https://www.ogc.org/rules/sosa/#testResult>: *none*\n - Shape <https://www.ogc.org/rules/sosa/#testSimpleResultLiteral>: <file:///github/workspace/pop1999>/sosa:hasSimpleResult\n - Shape <https://www.ogc.org/rules/sosa/#testRequiredTime>: *none*\n"
                 }
               ]
             },
@@ -4446,9 +4321,38 @@
                 {
                   "shaclFile": "_sources/properties/observation/shapes.shacl",
                   "focusNodes": {
+                    "<https://www.ogc.org/rules/sosa/#testObservedPropertyPresent>": {
+                      "nodes": [
+                        "<file:///github/workspace/something>",
+                        "<file:///github/workspace/pop1999>"
+                      ]
+                    },
+                    "<https://www.ogc.org/rules/sosa/#testResultNotEmptyNode>": {
+                      "nodes": []
+                    },
+                    "<https://www.ogc.org/rules/sosa/#testCollectionPropertyValuesInterval>": {
+                      "nodes": [
+                        "<file:///github/workspace/c1>"
+                      ]
+                    },
                     "<https://www.ogc.org/rules/sosa/#testObservedPropertyConsistent>": {
                       "nodes": [
                         "<file:///github/workspace/c1>"
+                      ]
+                    },
+                    "<https://www.ogc.org/rules/sosa/#testFeatureOfInterest>": {
+                      "nodes": [
+                        "<file:///github/workspace/something>"
+                      ]
+                    },
+                    "<https://www.ogc.org/rules/sosa/#testCollectionPropertyValues>": {
+                      "nodes": [
+                        "<file:///github/workspace/c1>"
+                      ]
+                    },
+                    "<https://www.ogc.org/rules/sosa/#testResult>": {
+                      "nodes": [
+                        "<file:///github/workspace/something>"
                       ]
                     },
                     "<https://www.ogc.org/rules/sosa/#testSimpleResultLiteral>": {
@@ -4460,39 +4364,10 @@
                       "nodes": [
                         "<file:///github/workspace/something>"
                       ]
-                    },
-                    "<https://www.ogc.org/rules/sosa/#testCollectionPropertyValues>": {
-                      "nodes": [
-                        "<file:///github/workspace/c1>"
-                      ]
-                    },
-                    "<https://www.ogc.org/rules/sosa/#testResultNotEmptyNode>": {
-                      "nodes": []
-                    },
-                    "<https://www.ogc.org/rules/sosa/#testResult>": {
-                      "nodes": [
-                        "<file:///github/workspace/something>"
-                      ]
-                    },
-                    "<https://www.ogc.org/rules/sosa/#testObservedPropertyPresent>": {
-                      "nodes": [
-                        "<file:///github/workspace/something>",
-                        "<file:///github/workspace/pop1999>"
-                      ]
-                    },
-                    "<https://www.ogc.org/rules/sosa/#testCollectionPropertyValuesInterval>": {
-                      "nodes": [
-                        "<file:///github/workspace/c1>"
-                      ]
-                    },
-                    "<https://www.ogc.org/rules/sosa/#testFeatureOfInterest>": {
-                      "nodes": [
-                        "<file:///github/workspace/something>"
-                      ]
                     }
                   },
                   "isError": false,
-                  "message": "Focus nodes for _sources/properties/observation/shapes.shacl:\n - Shape <https://www.ogc.org/rules/sosa/#testObservedPropertyConsistent>: <file:///github/workspace/c1>\n - Shape <https://www.ogc.org/rules/sosa/#testSimpleResultLiteral>: <file:///github/workspace/pop1999>/sosa:hasSimpleResult\n - Shape <https://www.ogc.org/rules/sosa/#testRequiredTime>: <file:///github/workspace/something>\n - Shape <https://www.ogc.org/rules/sosa/#testCollectionPropertyValues>: <file:///github/workspace/c1>\n - Shape <https://www.ogc.org/rules/sosa/#testResultNotEmptyNode>: *none*\n - Shape <https://www.ogc.org/rules/sosa/#testResult>: <file:///github/workspace/something>\n - Shape <https://www.ogc.org/rules/sosa/#testObservedPropertyPresent>: <file:///github/workspace/something>,<file:///github/workspace/pop1999>\n - Shape <https://www.ogc.org/rules/sosa/#testCollectionPropertyValuesInterval>: <file:///github/workspace/c1>\n - Shape <https://www.ogc.org/rules/sosa/#testFeatureOfInterest>: <file:///github/workspace/something>\n"
+                  "message": "Focus nodes for _sources/properties/observation/shapes.shacl:\n - Shape <https://www.ogc.org/rules/sosa/#testObservedPropertyPresent>: <file:///github/workspace/something>,<file:///github/workspace/pop1999>\n - Shape <https://www.ogc.org/rules/sosa/#testResultNotEmptyNode>: *none*\n - Shape <https://www.ogc.org/rules/sosa/#testCollectionPropertyValuesInterval>: <file:///github/workspace/c1>\n - Shape <https://www.ogc.org/rules/sosa/#testObservedPropertyConsistent>: <file:///github/workspace/c1>\n - Shape <https://www.ogc.org/rules/sosa/#testFeatureOfInterest>: <file:///github/workspace/something>\n - Shape <https://www.ogc.org/rules/sosa/#testCollectionPropertyValues>: <file:///github/workspace/c1>\n - Shape <https://www.ogc.org/rules/sosa/#testResult>: <file:///github/workspace/something>\n - Shape <https://www.ogc.org/rules/sosa/#testSimpleResultLiteral>: <file:///github/workspace/pop1999>/sosa:hasSimpleResult\n - Shape <https://www.ogc.org/rules/sosa/#testRequiredTime>: <file:///github/workspace/something>\n"
                 }
               ]
             },
@@ -4575,9 +4450,38 @@
                 {
                   "shaclFile": "_sources/properties/observation/shapes.shacl",
                   "focusNodes": {
+                    "<https://www.ogc.org/rules/sosa/#testObservedPropertyPresent>": {
+                      "nodes": [
+                        "<http://www.example.com/sosa/something>",
+                        "<http://www.example.com/sosa/pop1999>"
+                      ]
+                    },
+                    "<https://www.ogc.org/rules/sosa/#testResultNotEmptyNode>": {
+                      "nodes": []
+                    },
+                    "<https://www.ogc.org/rules/sosa/#testCollectionPropertyValuesInterval>": {
+                      "nodes": [
+                        "<http://www.example.com/sosa/c1>"
+                      ]
+                    },
                     "<https://www.ogc.org/rules/sosa/#testObservedPropertyConsistent>": {
                       "nodes": [
                         "<http://www.example.com/sosa/c1>"
+                      ]
+                    },
+                    "<https://www.ogc.org/rules/sosa/#testFeatureOfInterest>": {
+                      "nodes": [
+                        "<http://www.example.com/sosa/something>"
+                      ]
+                    },
+                    "<https://www.ogc.org/rules/sosa/#testCollectionPropertyValues>": {
+                      "nodes": [
+                        "<http://www.example.com/sosa/c1>"
+                      ]
+                    },
+                    "<https://www.ogc.org/rules/sosa/#testResult>": {
+                      "nodes": [
+                        "<http://www.example.com/sosa/something>"
                       ]
                     },
                     "<https://www.ogc.org/rules/sosa/#testSimpleResultLiteral>": {
@@ -4589,39 +4493,10 @@
                       "nodes": [
                         "<http://www.example.com/sosa/something>"
                       ]
-                    },
-                    "<https://www.ogc.org/rules/sosa/#testCollectionPropertyValues>": {
-                      "nodes": [
-                        "<http://www.example.com/sosa/c1>"
-                      ]
-                    },
-                    "<https://www.ogc.org/rules/sosa/#testResultNotEmptyNode>": {
-                      "nodes": []
-                    },
-                    "<https://www.ogc.org/rules/sosa/#testResult>": {
-                      "nodes": [
-                        "<http://www.example.com/sosa/something>"
-                      ]
-                    },
-                    "<https://www.ogc.org/rules/sosa/#testObservedPropertyPresent>": {
-                      "nodes": [
-                        "<http://www.example.com/sosa/something>",
-                        "<http://www.example.com/sosa/pop1999>"
-                      ]
-                    },
-                    "<https://www.ogc.org/rules/sosa/#testCollectionPropertyValuesInterval>": {
-                      "nodes": [
-                        "<http://www.example.com/sosa/c1>"
-                      ]
-                    },
-                    "<https://www.ogc.org/rules/sosa/#testFeatureOfInterest>": {
-                      "nodes": [
-                        "<http://www.example.com/sosa/something>"
-                      ]
                     }
                   },
                   "isError": false,
-                  "message": "Focus nodes for _sources/properties/observation/shapes.shacl:\n - Shape <https://www.ogc.org/rules/sosa/#testObservedPropertyConsistent>: <http://www.example.com/sosa/c1>\n - Shape <https://www.ogc.org/rules/sosa/#testSimpleResultLiteral>: <http://www.example.com/sosa/pop1999>/sosa:hasSimpleResult\n - Shape <https://www.ogc.org/rules/sosa/#testRequiredTime>: <http://www.example.com/sosa/something>\n - Shape <https://www.ogc.org/rules/sosa/#testCollectionPropertyValues>: <http://www.example.com/sosa/c1>\n - Shape <https://www.ogc.org/rules/sosa/#testResultNotEmptyNode>: *none*\n - Shape <https://www.ogc.org/rules/sosa/#testResult>: <http://www.example.com/sosa/something>\n - Shape <https://www.ogc.org/rules/sosa/#testObservedPropertyPresent>: <http://www.example.com/sosa/something>,<http://www.example.com/sosa/pop1999>\n - Shape <https://www.ogc.org/rules/sosa/#testCollectionPropertyValuesInterval>: <http://www.example.com/sosa/c1>\n - Shape <https://www.ogc.org/rules/sosa/#testFeatureOfInterest>: <http://www.example.com/sosa/something>\n"
+                  "message": "Focus nodes for _sources/properties/observation/shapes.shacl:\n - Shape <https://www.ogc.org/rules/sosa/#testObservedPropertyPresent>: <http://www.example.com/sosa/something>,<http://www.example.com/sosa/pop1999>\n - Shape <https://www.ogc.org/rules/sosa/#testResultNotEmptyNode>: *none*\n - Shape <https://www.ogc.org/rules/sosa/#testCollectionPropertyValuesInterval>: <http://www.example.com/sosa/c1>\n - Shape <https://www.ogc.org/rules/sosa/#testObservedPropertyConsistent>: <http://www.example.com/sosa/c1>\n - Shape <https://www.ogc.org/rules/sosa/#testFeatureOfInterest>: <http://www.example.com/sosa/something>\n - Shape <https://www.ogc.org/rules/sosa/#testCollectionPropertyValues>: <http://www.example.com/sosa/c1>\n - Shape <https://www.ogc.org/rules/sosa/#testResult>: <http://www.example.com/sosa/something>\n - Shape <https://www.ogc.org/rules/sosa/#testSimpleResultLiteral>: <http://www.example.com/sosa/pop1999>/sosa:hasSimpleResult\n - Shape <https://www.ogc.org/rules/sosa/#testRequiredTime>: <http://www.example.com/sosa/something>\n"
                 }
               ]
             },
@@ -4681,18 +4556,26 @@
                 {
                   "shaclFile": "_sources/properties/observation/shapes.shacl",
                   "focusNodes": {
+                    "<https://www.ogc.org/rules/sosa/#testObservedPropertyPresent>": {
+                      "nodes": [
+                        "eg:pop1999",
+                        "eg:pop2000"
+                      ]
+                    },
+                    "<https://www.ogc.org/rules/sosa/#testResultNotEmptyNode>": {
+                      "nodes": []
+                    },
+                    "<https://www.ogc.org/rules/sosa/#testCollectionPropertyValuesInterval>": {
+                      "nodes": [
+                        "eg:c1"
+                      ]
+                    },
                     "<https://www.ogc.org/rules/sosa/#testObservedPropertyConsistent>": {
                       "nodes": [
                         "eg:c1"
                       ]
                     },
-                    "<https://www.ogc.org/rules/sosa/#testSimpleResultLiteral>": {
-                      "nodes": [
-                        "eg:pop2000/sosa:hasSimpleResult",
-                        "eg:pop1999/sosa:hasSimpleResult"
-                      ]
-                    },
-                    "<https://www.ogc.org/rules/sosa/#testRequiredTime>": {
+                    "<https://www.ogc.org/rules/sosa/#testFeatureOfInterest>": {
                       "nodes": [
                         "eg:pop1999",
                         "eg:pop2000"
@@ -4703,27 +4586,19 @@
                         "eg:c1"
                       ]
                     },
-                    "<https://www.ogc.org/rules/sosa/#testResultNotEmptyNode>": {
-                      "nodes": []
-                    },
                     "<https://www.ogc.org/rules/sosa/#testResult>": {
                       "nodes": [
                         "eg:pop1999",
                         "eg:pop2000"
                       ]
                     },
-                    "<https://www.ogc.org/rules/sosa/#testObservedPropertyPresent>": {
+                    "<https://www.ogc.org/rules/sosa/#testSimpleResultLiteral>": {
                       "nodes": [
-                        "eg:pop1999",
-                        "eg:pop2000"
+                        "eg:pop1999/sosa:hasSimpleResult",
+                        "eg:pop2000/sosa:hasSimpleResult"
                       ]
                     },
-                    "<https://www.ogc.org/rules/sosa/#testCollectionPropertyValuesInterval>": {
-                      "nodes": [
-                        "eg:c1"
-                      ]
-                    },
-                    "<https://www.ogc.org/rules/sosa/#testFeatureOfInterest>": {
+                    "<https://www.ogc.org/rules/sosa/#testRequiredTime>": {
                       "nodes": [
                         "eg:pop1999",
                         "eg:pop2000"
@@ -4731,7 +4606,7 @@
                     }
                   },
                   "isError": false,
-                  "message": "Focus nodes for _sources/properties/observation/shapes.shacl:\n - Shape <https://www.ogc.org/rules/sosa/#testObservedPropertyConsistent>: eg:c1\n - Shape <https://www.ogc.org/rules/sosa/#testSimpleResultLiteral>: eg:pop2000/sosa:hasSimpleResult,eg:pop1999/sosa:hasSimpleResult\n - Shape <https://www.ogc.org/rules/sosa/#testRequiredTime>: eg:pop1999,eg:pop2000\n - Shape <https://www.ogc.org/rules/sosa/#testCollectionPropertyValues>: eg:c1\n - Shape <https://www.ogc.org/rules/sosa/#testResultNotEmptyNode>: *none*\n - Shape <https://www.ogc.org/rules/sosa/#testResult>: eg:pop1999,eg:pop2000\n - Shape <https://www.ogc.org/rules/sosa/#testObservedPropertyPresent>: eg:pop1999,eg:pop2000\n - Shape <https://www.ogc.org/rules/sosa/#testCollectionPropertyValuesInterval>: eg:c1\n - Shape <https://www.ogc.org/rules/sosa/#testFeatureOfInterest>: eg:pop1999,eg:pop2000\n"
+                  "message": "Focus nodes for _sources/properties/observation/shapes.shacl:\n - Shape <https://www.ogc.org/rules/sosa/#testObservedPropertyPresent>: eg:pop1999,eg:pop2000\n - Shape <https://www.ogc.org/rules/sosa/#testResultNotEmptyNode>: *none*\n - Shape <https://www.ogc.org/rules/sosa/#testCollectionPropertyValuesInterval>: eg:c1\n - Shape <https://www.ogc.org/rules/sosa/#testObservedPropertyConsistent>: eg:c1\n - Shape <https://www.ogc.org/rules/sosa/#testFeatureOfInterest>: eg:pop1999,eg:pop2000\n - Shape <https://www.ogc.org/rules/sosa/#testCollectionPropertyValues>: eg:c1\n - Shape <https://www.ogc.org/rules/sosa/#testResult>: eg:pop1999,eg:pop2000\n - Shape <https://www.ogc.org/rules/sosa/#testSimpleResultLiteral>: eg:pop1999/sosa:hasSimpleResult,eg:pop2000/sosa:hasSimpleResult\n - Shape <https://www.ogc.org/rules/sosa/#testRequiredTime>: eg:pop1999,eg:pop2000\n"
                 }
               ]
             }

@@ -550,8 +550,8 @@ Links to the schema:
     "links": {
       "@context": {
         "href": {
-          "@type": "@id",
-          "@id": "oa:hasTarget"
+          "@id": "oa:hasTarget",
+          "@type": "@id"
         },
         "rel": {
           "@context": {
@@ -570,6 +570,10 @@ Links to the schema:
     "features": {
       "@context": {
         "geometry": "geojson:geometry",
+        "bbox": {
+          "@container": "@list",
+          "@id": "geojson:bbox"
+        },
         "time": {
           "@context": {
             "date": {
@@ -720,10 +724,6 @@ Links to the schema:
       "@id": "sosa:hasProperty",
       "@type": "@id"
     },
-    "hasResult": {
-      "@id": "sosa:hasResult",
-      "@type": "@id"
-    },
     "hasResultQuality": {
       "@id": "sosa:hasResultQuality",
       "@type": "@id"
@@ -734,10 +734,6 @@ Links to the schema:
     },
     "hasSampledFeature": {
       "@id": "sosa:hasSampledFeature",
-      "@type": "@id"
-    },
-    "hasSimpleResult": {
-      "@id": "sosa:hasSimpleResult",
       "@type": "@id"
     },
     "hasSubSystem": {
@@ -836,10 +832,6 @@ Links to the schema:
     },
     "wasOriginatedBy": {
       "@id": "sosa:wasOriginatedBy",
-      "@type": "@id"
-    },
-    "hasInputValue": {
-      "@id": "sosa:hasInputValue",
       "@type": "@id"
     },
     "isMemberOf": {
@@ -1027,6 +1019,18 @@ Links to the schema:
       "@id": "sosa:madeBySystem",
       "@type": "@id"
     },
+    "hasResult": {
+      "@id": "sosa:hasResult",
+      "@type": "@id"
+    },
+    "hasSimpleResult": {
+      "@id": "sosa:hasSimpleResult",
+      "@type": "@id"
+    },
+    "hasInputValue": {
+      "@id": "sosa:hasInputValue",
+      "@type": "@id"
+    },
     "Feature": "geojson:Feature",
     "FeatureCollection": "geojson:FeatureCollection",
     "GeometryCollection": "geojson:GeometryCollection",
@@ -1051,10 +1055,6 @@ Links to the schema:
       "@context": {
         "prisms": "geojson:prisms"
       }
-    },
-    "bbox": {
-      "@container": "@list",
-      "@id": "geojson:bbox"
     },
     "coordinates": {
       "@container": "@list",

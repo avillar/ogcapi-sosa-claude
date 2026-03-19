@@ -1,5 +1,5 @@
 Validation report for ogc.sosa.features.observation - SOSA Observation Feature
-Generated 2026-03-02T12:12:12.850604+00:00
+Generated 2026-03-19T11:34:01.835794+00:00
 === Files ===
 Using example_1_2.ttl from examples
 Output Turtle example_1_2.ttl created
@@ -11,15 +11,15 @@ Validation result for _sources/properties/observation/shapes.shacl:
   Conforms: True
   
 Focus nodes for _sources/properties/observation/shapes.shacl:
- - Shape <https://www.ogc.org/rules/sosa/#testObservedPropertyConsistent>: *none*
- - Shape <https://www.ogc.org/rules/sosa/#testSimpleResultLiteral>: 33
- - Shape <https://www.ogc.org/rules/sosa/#testRequiredTime>: _:na42a9e9a5e684bd6a410b834fe6effe3b1
- - Shape <https://www.ogc.org/rules/sosa/#testCollectionPropertyValues>: *none*
+ - Shape <https://www.ogc.org/rules/sosa/#testObservedPropertyPresent>: _:n03b18deb3caa4c2c9f54e1b7a4580eccb1
  - Shape <https://www.ogc.org/rules/sosa/#testResultNotEmptyNode>: *none*
- - Shape <https://www.ogc.org/rules/sosa/#testResult>: _:na42a9e9a5e684bd6a410b834fe6effe3b1
- - Shape <https://www.ogc.org/rules/sosa/#testObservedPropertyPresent>: _:na42a9e9a5e684bd6a410b834fe6effe3b1
  - Shape <https://www.ogc.org/rules/sosa/#testCollectionPropertyValuesInterval>: *none*
- - Shape <https://www.ogc.org/rules/sosa/#testFeatureOfInterest>: _:na42a9e9a5e684bd6a410b834fe6effe3b1
+ - Shape <https://www.ogc.org/rules/sosa/#testObservedPropertyConsistent>: *none*
+ - Shape <https://www.ogc.org/rules/sosa/#testFeatureOfInterest>: _:n03b18deb3caa4c2c9f54e1b7a4580eccb1
+ - Shape <https://www.ogc.org/rules/sosa/#testCollectionPropertyValues>: *none*
+ - Shape <https://www.ogc.org/rules/sosa/#testResult>: _:n03b18deb3caa4c2c9f54e1b7a4580eccb1
+ - Shape <https://www.ogc.org/rules/sosa/#testSimpleResultLiteral>: 33
+ - Shape <https://www.ogc.org/rules/sosa/#testRequiredTime>: _:n03b18deb3caa4c2c9f54e1b7a4580eccb1
 
 === End SHACL ===
 

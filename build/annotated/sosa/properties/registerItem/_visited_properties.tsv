@@ -1,4 +1,4 @@
-path	@id
-/id	('@id', PosixPath('/github/workspace/build/annotated/sosa/properties/registerItem/schema.yaml'))
-/name	('http://www.w3.org/2000/01/rdf-schema#label', PosixPath('/github/workspace/build/annotated/sosa/properties/registerItem/schema.yaml'))
-/description	('http://purl.org/dc/terms/description', PosixPath('/github/workspace/build/annotated/sosa/properties/registerItem/schema.yaml'))
+path	@id	schema
+/id	@id	/github/workspace/build/annotated/sosa/properties/registerItem/schema.yaml
+/name	http://www.w3.org/2000/01/rdf-schema#label	/github/workspace/build/annotated/sosa/properties/registerItem/schema.yaml
+/description	http://purl.org/dc/terms/description	/github/workspace/build/annotated/sosa/properties/registerItem/schema.yaml
