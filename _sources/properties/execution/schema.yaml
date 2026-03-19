@@ -19,11 +19,11 @@ properties:
   hasFeatureOfInterest:
     anyOf:
       - $ref: bblocks://ogc.ogc-utils.iri-or-curie
-      - $ref: bblocks://ogc.sosa.properties.featureOfInterest
+      - type: object
   hasUltimateFeatureOfInterest:
     anyOf:
       - $ref: bblocks://ogc.ogc-utils.iri-or-curie
-      - $ref: bblocks://ogc.sosa.properties.featureOfInterest
+      - type: object
   usedProcedure:
     anyOf:
       - $ref: bblocks://ogc.ogc-utils.iri-or-curie
